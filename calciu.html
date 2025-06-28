@@ -28,11 +28,17 @@
             padding-bottom: 10px;
             margin-top: 40px;
         }
-        ul {
+        h3 {
+            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        }
+        ul, ol {
             list-style: disc;
             margin-left: 20px;
         }
-        strong {
+        ol {
+            list-style: decimal;
+        }
+        b { /* Stil pentru text aldin */
             color: #34495e;
         }
         .back-link {
@@ -40,6 +46,7 @@
             margin-top: 30px;
             text-align: center;
             font-size: 1.1em;
+            margin-bottom: 20px;
         }
         a {
             color: #007bff;
@@ -47,6 +54,24 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        .internal-toc {
+            background-color: #eaf6ff;
+            border: 1px solid #cceeff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .internal-toc h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .internal-toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .internal-toc li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -56,89 +81,153 @@
 
         <h1>Calciu</h1>
 
-        <h2>Rolul calciului în organism</h2>
-        <p>Calciul este cel mai abundent mineral din corpul uman și joacă un rol fundamental în menținerea sănătății și funcționării optime a organismului. peste 99% din calciu se găsește în oase și dinți, conferindu-le structură și rezistență, dar acel procent mic rămas este la fel de crucial pentru alte procese vitale.</p>
+        <div class="internal-toc">
+            <h3>Pe această pagină:</h3>
+            <ul>
+                <li><a href="#rolul-fizic">Rolul calciului în organism (perspectivă fizică)</a></li>
+                <li><a href="#surse-alimentare">Surse alimentare de calciu</a></li>
+                <li><a href="#perspectiva-holistica">Calciul: Perspectivă holistică (cauze emoționale)</a></li>
+            </ul>
+        </div>
+
+        <h2 id="rolul-fizic">Rolul calciului în organism (perspectivă fizică)</h2>
+        <p>Calciul este cel mai abundent mineral din corpul uman și joacă un rol fundamental în menținerea sănătății și funcționării optime a organismului. Peste 99% din calciu se găsește în oase și dinți, conferindu-le structură și rezistență, dar acel procent mic rămas este la fel de crucial pentru alte procese vitale.</p>
 
         <h3>1. Sănătatea oaselor și a dinților</h3>
         <ul>
-            <li><strong>Mecanism:</strong> acesta este cel mai cunoscut rol al calciului. este componenta principală a oaselor și a dinților, esențial pentru dezvoltarea, creșterea și menținerea lor. pe parcursul vieții, calciul este constant extras și redepozitat în oase, iar un aport adecvat ajută la menținerea densității osoase și previne afecțiuni precum osteoporoza.</li>
-            <li><strong>Implicații:</strong> un aport adecvat este esențial pentru menținerea densității osoase și prevenirea osteoporozei.</li>
+            <li><b>Mecanism:</b> Acesta este cel mai cunoscut rol al calciului. Este componenta principală a oaselor și a dinților, esențial pentru dezvoltarea, creșterea și menținerea lor. Pe parcursul vieții, calciul este constant extras și redepozitat în oase, iar un aport adecvat ajută la menținerea densității osoase și previne afecțiuni precum osteoporoza.</li>
+            <li><b>Implicații:</b> Un aport adecvat este esențial pentru menținerea densității osoase și prevenirea osteoporozei.</li>
         </ul>
 
         <h3>2. Funcția musculară</h3>
         <ul>
-            <li><strong>Mecanism:</strong> calciul este indispensabil pentru contracția musculară. acesta ajută proteinele din mușchi să efectueze mișcarea. inclusiv mușchiul inimii (miocardul) are nevoie de calciu pentru a se contracta și a pompa sângele eficient.</li>
-            <li><strong>Implicații:</strong> crucial pentru funcția musculară, inclusiv cea cardiacă.</li>
+            <li><b>Mecanism:</b> Calciul este indispensabil pentru contracția musculară. Acesta ajută proteinele din mușchi să efectueze mișcarea. Inclusiv mușchiul inimii (miocardul) are nevoie de calciu pentru a se contracta și a pompa sângele eficient.</li>
+            <li><b>Implicații:</b> Crucial pentru funcția musculară, inclusiv cea cardiacă.</li>
         </ul>
 
         <h3>3. Transmiterea impulsurilor nervoase</h3>
         <ul>
-            <li><strong>Mecanism:</strong> calciul ionic este vital pentru funcționarea neuronilor. el joacă un rol cheie în eliberarea neurotransmițătorilor, substanțe chimice care transmit semnale între celulele nervoase, asigurând o comunicare sănătoasă între creier și restul corpului.</li>
+            <li><b>Mecanism:</b> Calciul ionic este vital pentru funcționarea neuronilor. El joacă un rol cheie în eliberarea neurotransmițătorilor, substanțe chimice care transmit semnale între celulele nervoase, asigurând o comunicare sănătoasă între creier și restul corpului.</li>
         </ul>
 
         <h3>4. Coagularea sângelui</h3>
         <ul>
-            <li><strong>Mecanism:</strong> calciul este un factor esențial în cascada coagulării sângelui, ajutând la formarea cheagurilor care opresc sângerarea după o rană.</li>
+            <li><b>Mecanism:</b> Calciul este un factor esențial în cascada coagulării sângelui, ajutând la formarea cheagurilor care opresc sângerarea după o rană.</li>
         </ul>
 
         <h3>5. Reglarea tensiunii arteriale</h3>
         <ul>
-            <li><strong>Mecanism:</strong> contribuie la menținerea unei tensiuni arteriale sănătoase și la funcționarea optimă a sistemului cardiovascular.</li>
+            <li><b>Mecanism:</b> Contribuie la menținerea unei tensiuni arteriale sănătoase și la funcționarea optimă a sistemului cardiovascular.</li>
         </ul>
 
         <h3>6. Activarea enzimelor și reglarea hormonală</h3>
         <ul>
-            <li><strong>Mecanism:</strong> calciul este un cofactor pentru numeroase enzime, ajutându-le să își îndeplinească funcțiile metabolice. de asemenea, influențează nivelul și acțiunea anumitor hormoni, cum ar fi cei tiroidieni.</li>
+            <li><b>Mecanism:</b> Calciul este un cofactor pentru numeroase enzime, ajutându-le să își îndeplinească funcțiile metabolice. De asemenea, influențează nivelul și acțiunea anumitor hormoni, cum ar fi cei tiroidieni.</li>
         </ul>
 
         <h3>7. Funcția celulară</h3>
         <ul>
-            <li><strong>Mecanism:</strong> joacă un rol în comunicarea intercelulară și în diverse procese metabolice la nivel celular.</li>
+            <li><b>Mecanism:</b> Joacă un rol în comunicarea intercelulară și în diverse procese metabolice la nivel celular.</li>
         </ul>
 
-        <h2>Surse alimentare de calciu</h2>
-        <p>Deoarece corpul uman nu produce calciu, trebuie să îl obținem zilnic din alimentație. vitamina D este, de asemenea, crucială, deoarece ajută organismul să absoarbă calciul din alimente.</p>
+        <h2 id="surse-alimentare">Surse alimentare de calciu</h2>
+        <p>Deoarece corpul uman nu produce calciu, trebuie să îl obținem zilnic din alimentație. Vitamina D este, de asemenea, crucială, deoarece ajută organismul să absoarbă calciul din alimente.</p>
 
         <ul>
-            <li><strong>Produse lactate:</strong> considerate cele mai bogate și mai ușor absorbabile surse de calciu.
+            <li><b>Produse lactate:</b> Considerate cele mai bogate și mai ușor absorbabile surse de calciu.
                 <ul>
-                    <li>lapte (de vacă, de capră, de oaie).</li>
-                    <li>iaurt (simplu, grecesc, kefir).</li>
-                    <li>brânzeturi (parmezan, cheddar, mozzarella, brânză de vaci - rețineți că brânzeturile tari și vechi sunt adesea mai bogate în calciu și mai sărace în lactoză).</li>
+                    <li>Lapte (de vacă, de capră, de oaie).</li>
+                    <li>Iaurt (simplu, grecesc, kefir).</li>
+                    <li>Brânzeturi (parmezan, cheddar, mozzarella, brânză de vaci - rețineți că brânzeturile tari și vechi sunt adesea mai bogate în calciu și mai sărace în lactoză).</li>
                 </ul>
             </li>
-            <li><strong>Pește cu oase comestibile:</strong>
+            <li><b>Pește cu oase comestibile:</b>
                 <ul>
-                    <li>sardine (la conservă, cu oase).</li>
-                    <li>somon (la conservă, cu oase).</li>
-                    <li>hering, macrou.</li>
+                    <li>Sardine (la conservă, cu oase).</li>
+                    <li>Somon (la conservă, cu oase).</li>
+                    <li>Hering, macrou.</li>
                 </ul>
             </li>
-            <li><strong>Legume cu frunze verzi:</strong> deși conțin calciu, unele (cum ar fi spanacul) au și oxalați care pot inhiba absorbția.
+            <li><b>Legume cu frunze verzi:</b> Deși conțin calciu, unele (cum ar fi spanacul) au și oxalați care pot inhiba absorbția.
                 <ul>
-                    <li>kale (varză creață).</li>
-                    <li>broccoli.</li>
-                    <li>varză chinezească (bok choy).</li>
-                    <li>rucola.</li>
+                    <li>Kale (varză creață).</li>
+                    <li>Broccoli.</li>
+                    <li>Varză chinezească (Bok Choy).</li>
+                    <li>Rucola.</li>
                 </ul>
             </li>
-            <li><strong>Leguminoase:</strong>
+            <li><b>Leguminoase:</b>
                 <ul>
-                    <li>năut.</li>
-                    <li>linte.</li>
-                    <li>fasole (albă, roșie, neagră).</li>
+                    <li>Năut.</li>
+                    <li>Linte.</li>
+                    <li>Fasole (albă, roșie, neagră).</li>
                 </ul>
             </li>
-            <li><strong>Nuci și semințe:</strong> semințe de susan (în special tahini), semințe de chia, migdale, semințe de mac.</li>
-            <li><strong>Produse fortificate:</strong>
+            <li><b>Nuci și semințe:</b> Semințe de susan (în special tahini), semințe de chia, migdale, semințe de mac.</li>
+            <li><b>Produse fortificate:</b>
                 <ul>
-                    <li>băuturi vegetale fortificate (lapte de soia, migdale, ovăz).</li>
-                    <li>cereale pentru micul dejun fortificate.</li>
-                    <li>sucuri de fructe fortificate.</li>
+                    <li>Băuturi vegetale fortificate (lapte de soia, migdale, ovăz).</li>
+                    <li>Cereale pentru micul dejun fortificate.</li>
+                    <li>Sucuri de fructe fortificate.</li>
                 </ul>
             </li>
-            <li><strong>Altele:</strong> tofu (preparat cu săruri de calciu), smochine uscate.</li>
+            <li><b>Altele:</b> Tofu (preparat cu săruri de calciu), smochine uscate.</li>
         </ul>
+
+        <h2 id="perspectiva-holistica">Calciul: Perspectivă holistică (cauze emoționale)</h2>
+        <p>Din perspectivă holistică, calciul este esențial pentru <b>structură, stabilitate, suport și sentimentul de siguranță</b>. Fiind principalul mineral al oaselor și dinților, calciul rezonează cu "scheletul" nostru emoțional și cu capacitatea de a ne simți susținuți și siguri pe noi înșine. El reflectă, de asemenea, legăturile noastre cu rădăcinile și cu sentimentul de apartenență.</p>
+
+        <h3>Cauze emoționale ale deficitului de calciu:</h3>
+        <p>Un deficit de calciu poate fi legat de următoarele aspecte emoționale:</p>
+        <ol>
+            <li><b>Lipsa de suport emoțional:</b> Un sentiment profund de a nu fi susținut sau iubit, de a te simți singur în fața dificultăților vieții, poate afecta "structura" internă. Aceasta se poate manifesta ca o dificultate de a te baza pe ceilalți sau de a cere ajutor.
+                <ul>
+                    <li><i>Manifestare fizică:</i> Fragilitate osoasă, osteoporoză.</li>
+                </ul>
+            </li>
+            <li><b>Nesiguranță și instabilitate:</b> Emoțiile de nesiguranță, teama de viitor, sentimentul de a nu avea o bază solidă în viață pot rezonă cu o lipsă de stabilitate fizică (oase fragile).
+                <ul>
+                    <li><i>Manifestare fizică:</i> Crampe musculare, spasme (deoarece calciul este esențial pentru contracția musculară).</li>
+                </ul>
+            </li>
+            <li><b>Dificultatea de a-ți stabili limite:</b> O lipsă de structură emoțională poate duce la dificultăți în a-ți stabili și menține limite personale, permițând altora să te copleșească.</li>
+            <li><b>Resentimente familiale sau lipsa de apartenență:</b> Calciul este legat de rădăcini și de familie. Problemele nerezolvate cu familia de origine sau un sentiment de a nu aparține undeva pot afecta echilibrul acestui mineral.</li>
+            <li><b>Teama de a "cădea" sau de a pierde controlul:</b> O anxietate legată de pierderea controlului sau de "prăbușire" (emoțională sau financiară) poate reflecta o lipsă de încredere în propria structură internă.</li>
+        </ol>
+
+        <h3>Cauze emoționale ale excesului de calciu:</h3>
+        <p>Un exces de calciu (hipercalcemie), deși adesea cauzat de afecțiuni medicale subiacente, ar putea sugera din perspectivă holistică:</p>
+        <ol>
+            <li><b>Rigiditate emoțională și încăpățânare:</b> Calciul aduce duritate și structură. Un exces ar putea simboliza o rigiditate excesivă în gândire, o dificultate de a te adapta, o încăpățânare sau o nevoie puternică de control.</li>
+            <li><b>Dificultate în a te "elibera" sau a te "înmuiere":</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" emoțional.</li>
+            <li><b>Nevoia de a fi puternic/perfect:</b> O presiune autoimpusă de a fi mereu cel puternic, cel care susține pe toată lumea, fără a-și permite vulnerabilitatea. Aceasta poate duce la suprasolicitare și la o "încărcare" emoțională.</li>
+            <li><b>Lipsa de flexibilitate:</b> Refuzul de a vedea alte perspective sau de a face compromisuri.</li>
+        </ol>
+
+        <h3>Recomandări holistice:</h3>
+        <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
+        <ul>
+            <li><b>Pentru deficit (lipsă de suport, nesiguranță):</b>
+                <ul>
+                    <li>Lucrul cu stima de sine și consolidarea valorii personale.</li>
+                    <li>Terapii care explorează relațiile familiale și sentimentul de apartenență.</li>
+                    <li>Practici de "împământare" (mers desculț, meditație de vizualizare a rădăcinilor).</li>
+                    <li>Dezvoltarea unei rețele de suport (prieteni, comunitate) și învățarea de a cere ajutor.</li>
+                    <li>Afirmații pozitive despre siguranță, stabilitate și suport.</li>
+                </ul>
+            </li>
+            <li><b>Pentru exces (rigiditate, control):</b>
+                <ul>
+                    <li>Practici de flexibilitate fizică și mentală (yoga, stretching, tai chi).</li>
+                    <li>Terapii care ajută la eliberarea controlului și la acceptarea imperfecțiunii.</li>
+                    <li>Jurnalism emoțional pentru a explora și elibera rigiditatea.</li>
+                    <li>Meditații pentru a cultiva acceptarea și a renunța la ceea ce nu poate fi controlat.</li>
+                    <li>Practici de "înmuiere" a inimii și de empatie.</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        
         <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
     </div>
 </body>
