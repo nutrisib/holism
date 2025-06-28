@@ -6,79 +6,173 @@
     <title>Ghid complet al mineralelor și oligoelementelor esențiale</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
         .container {
-            max-width: 900px;
+            max-width: 1000px; /* Lățime mărită pentru două coloane */
+            width: 100%;
             margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         h1 {
-            color: #2c3e50;
+            color: #2a6a8c;
             text-align: center;
             margin-bottom: 30px;
+            font-size: 2.8em;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
         }
         h2 {
             color: #34495e;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 12px;
+            margin-top: 50px;
+            font-size: 1.8em;
+            font-weight: 600;
+            text-align: center;
+        }
+        .intro-text {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        .columns-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite coloanelor să treacă pe rândul următor pe ecrane mici */
+            justify-content: center;
+            gap: 30px; /* Spațiu între coloane și rânduri */
+            margin-top: 30px;
+        }
+        .column {
+            flex: 1; /* Permite coloanelor să ocupe spațiul disponibil */
+            min-width: 380px; /* Lățimea minimă a unei coloane înainte de a se suprapune */
+            padding: 0 15px;
         }
         ul {
             list-style: none;
             padding: 0;
+            display: grid;
+            grid-template-columns: 1fr; /* O singură coloană implicit */
+            gap: 15px; /* Spațiu între elementele listei */
+        }
+        @media (min-width: 768px) {
+            ul {
+                grid-template-columns: 1fr 1fr; /* Două coloane pentru liste pe ecrane mai late */
+            }
         }
         li {
-            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         }
         a {
             color: #007bff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            width: 100%;
         }
         a:hover {
-            text-decoration: underline;
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .chemical-symbol {
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #2a6a8c;
+            margin-right: 15px;
+            width: 40px; /* Lățime fixă pentru simbol */
+            text-align: center;
         }
         footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 60px;
             font-size: 0.9em;
             color: #777;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        @media (max-width: 767px) {
+            .column {
+                min-width: unset; /* Resetează lățimea minimă pe mobil */
+                width: 100%;
+                padding: 0;
+            }
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Ghid complet al mineralelor și oligoelementelor esențiale</h1>
-        <p>Bun venit pe ghidul detaliat al mineralelor și oligoelementelor vitale pentru sănătatea umană. aici vei găsi informații aprofundate despre rolul fiecărui element în organism și cele mai bune surse alimentare pentru a-ți asigura necesarul zilnic.</p>
+        <p class="intro-text">bun venit pe ghidul detaliat al mineralelor și oligoelementelor vitale pentru sănătatea umană. aici vei găsi informații aprofundate despre rolul fiecărui element în organism și cele mai bune surse alimentare pentru a-ți asigura necesarul zilnic.</p>
 
         <h2>Cuprins</h2>
-        <ul>
-            <li><a href="bor.html">bor</a></li>
-            <li><a href="calciu.html">calciu</a></li>
-            <li><a href="cobalt.html">cobalt</a></li>
-            <li><a href="cupru.html">cupru</a></li>
-            <li><a href="fier.html">fier</a></li>
-            <li><a href="fosfor.html">fosfor</a></li>
-            <li><a href="iod.html">iod</a></li>
-            <li><a href="magneziu.html">magneziu</a></li>
-            <li><a href="mangan.html">mangan</a></li>
-            <li><a href="molibden.html">molibden</a></li>
-            <li><a href="nichel.html">nichel</a></li>
-            <li><a href="potasiu.html">potasiu</a></li>
-            <li><a href="seleniu.html">seleniu</a></li>
-            <li><a href="siliciu.html">siliciu</a></li>
-            <li><a href="staniu.html">staniu</a></li>
-            <li><a href="strontiu.html">stronțiu</a></li>
-            <li><a href="vanadiu.html">vanadiu</a></li>
-        </ul>
+        <div class="columns-container">
+            <div class="column">
+                <ul>
+                    <li><a href="bor.html"><span class="chemical-symbol">B</span> bor</a></li>
+                    <li><a href="calciu.html"><span class="chemical-symbol">Ca</span> calciu</a></li>
+                    <li><a href="cobalt.html"><span class="chemical-symbol">Co</span> cobalt</a></li>
+                    <li><a href="cupru.html"><span class="chemical-symbol">Cu</span> cupru</a></li>
+                    <li><a href="fier.html"><span class="chemical-symbol">Fe</span> fier</a></li>
+                    <li><a href="fosfor.html"><span class="chemical-symbol">P</span> fosfor</a></li>
+                    <li><a href="iod.html"><span class="chemical-symbol">I</span> iod</a></li>
+                    <li><a href="magneziu.html"><span class="chemical-symbol">Mg</span> magneziu</a></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li><a href="mangan.html"><span class="chemical-symbol">Mn</span> mangan</a></li>
+                    <li><a href="molibden.html"><span class="chemical-symbol">Mo</span> molibden</a></li>
+                    <li><a href="nichel.html"><span class="chemical-symbol">Ni</span> nichel</a></li>
+                    <li><a href="potasiu.html"><span class="chemical-symbol">K</span> potasiu</a></li>
+                    <li><a href="seleniu.html"><span class="chemical-symbol">Se</span> seleniu</a></li>
+                    <li><a href="siliciu.html"><span class="chemical-symbol">Si</span> siliciu</a></li>
+                    <li><a href="staniu.html"><span class="chemical-symbol">Sn</span> staniu</a></li>
+                    <li><a href="strontiu.html"><span class="chemical-symbol">Sr</span> stronțiu</a></li>
+                    <li><a href="vanadiu.html"><span class="chemical-symbol">V</span> vanadiu</a></li>
+                </ul>
+            </div>
+        </div>
 
         <footer>
             <p>*acest ghid este o resursă informativă și nu înlocuiește sfaturile medicale profesionale. consultați întotdeauna un specialist pentru nevoi individuale de sănătate.*</p>
