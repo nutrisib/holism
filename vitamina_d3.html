@@ -81,6 +81,17 @@
             gap: 25px;
             width: 100%;
         }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
         .subsection {
             flex: 1;
             min-width: 280px;
@@ -176,6 +187,21 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -191,68 +217,73 @@
         <div class="section">
             <h2 class="section-title">Vitamina D - Perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Vitamina D este o vitamină liposolubilă unică, deoarece organismul o poate produce la expunerea pielii la lumina ultravioletă B (UVB) de la soare. Există două forme principale: vitamina D2 (ergocalciferol, din plante și alimente fortificate) și vitamina D3 (colecalciferol, din expunerea la soare și produse animale). Vitamina D3 este considerată mai eficientă în creșterea nivelurilor sanguine. Rolurile sale sunt extinse și cruciale.</p>
-                    <ul>
-                        <li><b>Sănătatea oaselor și metabolismul calciului și fosforului:</b> Rolul său cel mai cunoscut. Vitamina D este esențială pentru absorbția calciului și fosforului din intestin și pentru depunerea lor în oase, contribuind la mineralizarea osoasă și menținerea densității osoase. Ajută la reglarea nivelurilor sanguine de calciu și fosfor.</li>
-                        <li><b>Sistemul imunitar:</b> Receptorii pentru vitamina D sunt prezenți pe multe celule imunitare, iar vitamina D modulează răspunsul imun, contribuind la apărarea organismului împotriva infecțiilor (virale și bacteriene) și la reglarea inflamației.</li>
-                        <li><b>Funcția musculară:</b> Este implicată în forța musculară și în funcția neuromusculară, reducând riscul de căzături, în special la vârstnici.</li>
-                        <li><b>Funcția celulară:</b> Joacă un rol în creșterea și diferențierea celulară, procese importante pentru prevenirea unor tipuri de cancer.</li>
-                        <li><b>Sănătatea cardiovasculară:</b> Cercetările sugerează un rol în reglarea tensiunii arteriale și a sănătății cardiovasculare.</li>
-                        <li><b>Funcția cerebrală și sănătatea mintală:</b> Receptori pentru vitamina D sunt găsiți și în creier, iar nivelurile adecvate au fost asociate cu o bună funcție cognitivă și un risc redus de depresie.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina D este o vitamină liposolubilă unică, deoarece organismul o poate produce la expunerea pielii la lumina ultravioletă B (UVB) de la soare. Există două forme principale: vitamina D2 (ergocalciferol, din plante și alimente fortificate) și vitamina D3 (colecalciferol, din expunerea la soare și produse animale). Vitamina D3 este considerată mai eficientă în creșterea nivelurilor sanguine. Rolurile sale sunt extinse și cruciale.</p>
+                        <ul>
+                            <li><b>Sănătatea oaselor și metabolismul calciului și fosforului:</b> Rolul său cel mai cunoscut. Vitamina D este esențială pentru absorbția calciului și fosforului din intestin și pentru depunerea lor în oase, contribuind la mineralizarea osoasă și menținerea densității osoase. Ajută la reglarea nivelurilor sanguine de calciu și fosfor.</li>
+                            <li><b>Sistemul imunitar:</b> Receptorii pentru vitamina D sunt prezenți pe multe celule imunitare, iar vitamina D modulează răspunsul imun, contribuind la apărarea organismului împotriva infecțiilor (virale și bacteriene) și la reglarea inflamației.</li>
+                            <li><b>Funcția musculară:</b> Este implicată în forța musculară și în funcția neuromusculară, reducând riscul de căzături, în special la vârstnici.</li>
+                            <li><b>Funcția celulară:</b> Joacă un rol în creșterea și diferențierea celulară, procese importante pentru prevenirea unor tipuri de cancer.</li>
+                            <li><b>Sănătatea cardiovasculară:</b> Cercetările sugerează un rol în reglarea tensiunii arteriale și a sănătății cardiovasculare.</li>
+                            <li><b>Funcția cerebrală și sănătatea mintală:</b> Receptori pentru vitamina D sunt găsiți și în creier, iar nivelurile adecvate au fost asociate cu o bună funcție cognitivă și un risc redus de depresie.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Sunt puține alimente care conțin în mod natural cantități semnificative de vitamina D. Principala sursă rămâne expunerea la soare.</p>
+                        <p><b>1. Surse alimentare naturale (Vitamina D3):</b></p>
+                        <ul>
+                            <li><b>Pește gras:</b> Somon (în special somon sălbatic), macrou, sardine, hering, ton (în cantități mai mici).</li>
+                            <li><b>Ulei de ficat de cod</b>.</li>
+                            <li><b>Gălbenuș de ou</b>.</li>
+                            <li><b>Ficat de vită</b> (cantități mici).</li>
+                        </ul>
+                        <p><b>2. Alimente fortificate:</b></p>
+                        <ul>
+                            <li><b>Lapte și băuturi vegetale</b> (lapte de soia, migdale, ovăz).</li>
+                            <li><b>Cereale pentru micul dejun</b>.</li>
+                            <li><b>Iaurt și brânză</b> (mai rar fortificate).</li>
+                            <li><b>Suc de portocale fortificat.</b></li>
+                        </ul>
+                        <p><b>3. Ciuperci (Vitamina D2):</b> Anumite ciuperci expuse la lumina UV (mai puțin obișnuit).</p>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză D)</h3>
-                    <p>Deficiența de vitamina D este extrem de răspândită la nivel global, afectând o mare parte a populației.</p>
-                    <ol>
-                        <li><b>Probleme osoase:</b>
-                            <ul>
-                                <li><b>Rahitism (la copii):</b> Înmuierea și slăbirea oaselor, ducând la deformări scheletice (picioare în paranteză, cutie toracică deformată) și creștere întârziată.</li>
-                                <li><b>Osteomalacie (la adulți):</b> Înmuierea oaselor, ducând la dureri osoase, slăbiciune musculară și fracturi.</li>
-                                <li><b>Osteoporoză:</b> Contribuie la pierderea densității osoase și la creșterea riscului de fracturi la vârstnici.</li>
-                            </ul>
-                        </li>
-                        <li><b>Slăbiciune musculară și dureri:</b> Dureri musculare cronice și slăbiciune, în special la nivelul coapselor și brațelor.</li>
-                        <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții, răceli și gripă.</li>
-                        <li><b>Oboseală cronică.</b></li>
-                        <li><b>Afecțiuni autoimune:</b> A fost asociată cu un risc crescut de boli autoimune (ex: scleroza multiplă, diabet de tip 1).</li>
-                        <li><b>Tulburări de dispoziție:</b> Posibilă legătură cu depresia și tulburările afective sezoniere.</li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză D)</h3>
-                    <p>Toxicitatea vitaminei D este rară și apare aproape exclusiv din suplimentarea excesivă (doze foarte mari și prelungite), nu din expunerea la soare sau din alimente.</p>
-                    <ol>
-                        <li><b>Hipercalcemie:</b> Niveluri periculos de ridicate de calciu în sânge, cauzate de absorbția excesivă a calciului.
-                            <ul>
-                                <li><b>Simptome:</b> Greață, vărsături, constipație, sete excesivă, urinare frecventă, oboseală, slăbiciune musculară.</li>
-                                <li><b>Complicații grave:</b> Depuneri de calciu în țesuturile moi (rinichi, inimă, vase de sânge), ducând la leziuni renale ireversibile și probleme cardiovasculare.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dureri osoase și decalcifiere (în cazuri extreme).</b></li>
-                        <li><b>Probleme renale.</b></li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Sunt puține alimente care conțin în mod natural cantități semnificative de vitamina D. Principala sursă rămâne expunerea la soare.</p>
-                    <p><b>1. Surse alimentare naturale (Vitamina D3):</b></p>
-                    <ul>
-                        <li><b>Pește gras:</b> Somon (în special somon sălbatic), macrou, sardine, hering, ton (în cantități mai mici).</li>
-                        <li><b>Ulei de ficat de cod</b>.</li>
-                        <li><b>Gălbenuș de ou</b>.</li>
-                        <li><b>Ficat de vită</b> (cantități mici).</li>
-                    </ul>
-                    <p><b>2. Alimente fortificate:</b></p>
-                    <ul>
-                        <li><b>Lapte și băuturi vegetale</b> (lapte de soia, migdale, ovăz).</li>
-                        <li><b>Cereale pentru micul dejun</b>.</li>
-                        <li><b>Iaurt și brânză</b> (mai rar fortificate).</li>
-                        <li><b>Suc de portocale fortificat.</b></li>
-                    </ul>
-                    <p><b>3. Ciuperci (Vitamina D2):</b> Anumite ciuperci expuse la lumina UV (mai puțin obișnuit).</p>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză D)</h3>
+                        <p>Deficiența de vitamina D este extrem de răspândită la nivel global, afectând o mare parte a populației.</p>
+                        <ol>
+                            <li><b>Probleme osoase:</b>
+                                <ul>
+                                    <li><b>Rahitism (la copii):</b> Înmuierea și slăbirea oaselor, ducând la deformări scheletice (picioare în paranteză, cutie toracică deformată) și creștere întârziată.</li>
+                                    <li><b>Osteomalacie (la adulți):</b> Înmuierea oaselor, ducând la dureri osoase, slăbiciune musculară și fracturi.</li>
+                                    <li><b>Osteoporoză:</b> Contribuie la pierderea densității osoase și la creșterea riscului de fracturi la vârstnici.</li>
+                                </ul>
+                            </li>
+                            <li><b>Slăbiciune musculară și dureri:</b> Dureri musculare cronice și slăbiciune, în special la nivelul coapselor și brațelor.</li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții, răceli și gripă.</li>
+                            <li><b>Oboseală cronică.</b></li>
+                            <li><b>Afecțiuni autoimune:</b> A fost asociată cu un risc crescut de boli autoimune (ex: scleroza multiplă, diabet de tip 1).</li>
+                            <li><b>Tulburări de dispoziție:</b> Posibilă legătură cu depresia și tulburările afective sezoniere.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză D)</h3>
+                        <p>Toxicitatea vitaminei D este rară și apare aproape exclusiv din suplimentarea excesivă (doze foarte mari și prelungite), nu din expunerea la soare sau din alimente.</p>
+                        <ol>
+                            <li><b>Hipercalcemie:</b> Niveluri periculos de ridicate de calciu în sânge, cauzate de absorbția excesivă a calciului.
+                                <ul>
+                                    <li><b>Simptome:</b> Greață, vărsături, constipație, sete excesivă, urinare frecventă, oboseală, slăbiciune musculară.</li>
+                                    <li><b>Complicații grave:</b> Depuneri de calciu în țesuturile moi (rinichi, inimă, vase de sânge), ducând la leziuni renale ireversibile și probleme cardiovasculare.</li>
+                                </ul>
+                            </li>
+                            <li><b>Dureri osoase și decalcifiere (în cazuri extreme).</b></li>
+                            <li><b>Probleme renale.</b></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
