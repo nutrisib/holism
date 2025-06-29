@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina K și Coagularea Emoțiilor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina K și Coagularea Emoțiilor
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina K - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina K este o vitamină liposolubilă esențială, cunoscută în principal pentru rolul său vital în coagularea sângelui. Există două forme principale: vitamina K1 (filochinona), găsită în plante, și vitamina K2 (menachinonele), produsă de bacteriile din intestin și găsită în produse animale fermentate.</p>
+                        <ul>
+                            <li><b>Coagularea sângelui:</b> Este indispensabilă pentru producerea mai multor proteine implicate în cascada coagulării sângelui (factorii de coagulare II, VII, IX, X, și proteinele C și S) în ficat. Fără vitamina K, sângele nu s-ar coagula, ducând la sângerări necontrolate.</li>
+                            <li><b>Sănătatea oaselor:</b> Joacă un rol crucial în sănătatea oaselor prin activarea osteocalcinei, o proteină care ajută la legarea calciului în matricea osoasă. Contribuie la menținerea densității minerale osoase și la reducerea riscului de fracturi.</li>
+                            <li><b>Sănătatea cardiovasculară:</b> Vitamina K2, în special, este implicată în prevenirea calcificării arterelor prin activarea proteinei Gla a matricei (MGP), care inhibă depunerea calciului în pereții vaselor de sânge.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Cele mai bune surse sunt legumele cu frunze verzi și unele produse fermentate.</p>
+                        <p><b>1. Vitamina K1 (Filochinonă):</b></p>
+                        <ul>
+                            <li><b>Legume cu frunze verzi închise:</b> Kale (cea mai bogată sursă), spanac, varză collard, broccoli, varză de Bruxelles, salată verde.</li>
+                            <li><b>Pătrunjel.</b></li>
+                            <li><b>Uleiuri vegetale:</b> Ulei de soia, ulei de rapiță (canola), ulei de măsline (cantități mai mici).</li>
+                        </ul>
+                        <p><b>2. Vitamina K2 (Menachinone):</b></p>
+                        <ul>
+                            <li><b>Natto:</b> Un aliment japonez din soia fermentată, extrem de bogat în K2 (forma MK-7).</li>
+                            <li><b>Produse lactate fermentate:</b> Unele brânzeturi (în special cele maturate, ex: Gouda, Brie), iaurt (în cantități mai mici, depinde de culturile bacteriene).</li>
+                            <li><b>Ficat:</b> De pui, de gâscă.</li>
+                            <li><b>Gălbenuș de ou.</b></li>
+                            <li><b>Carne:</b> Cantități mici în carne de pui și vită.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză K)</h3>
+                        <p>Deficiența de vitamina K este rară la adulții sănătoși, dar este mai frecventă la nou-născuți sau la persoanele cu afecțiuni care afectează absorbția grăsimilor.</p>
+                        <ol>
+                            <li><b>Sângerări excesive și necontrolate:</b> Acesta este cel mai caracteristic simptom. Poate include:
+                                <ul>
+                                    <li>Vânătaie ușoară.</li>
+                                    <li>Sângerări nazale și gingivale.</li>
+                                    <li>Sângerări gastrointestinale.</li>
+                                    <li>Sângerări la nivelul pielii (peteșii).</li>
+                                    <li>Hemoragii interne (în cazuri severe).</li>
+                                    <li>Hemoragie la nou-născuți (boala hemoragică a nou-născutului), motiv pentru care nou-născuților li se administrează profilactic vitamina K la naștere.</li>
+                                </ul>
+                            </li>
+                            <li><b>Probleme osoase:</b> La deficitul cronic, poate crește riscul de osteoporoză și fracturi.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză K)</h3>
+                        <p>Toxicitatea din vitamina K provenită din alimente sau suplimente orale este extrem de rară și puțin probabilă. Cu toate acestea, formele sintetice de vitamina K (menadionă sau K3, care nu mai sunt folosite terapeutic) pot fi toxice, provocând:</p>
+                        <ol>
+                            <li><b>Anemie hemolitică:</b> Distrugerea celulelor roșii din sânge.</li>
+                            <li><b>Icter.</b></li>
+                            <li><b>Toxicitate hepatică.</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina K: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, vitamina K este adesea asociată cu <b>integritatea, coeziunea, capacitatea de a "ține la un loc" (fizic și emoțional), gestionarea "sângerărilor" (pierderilor emoționale) și echilibrul între eliberare și reținere</b>. Prin rolul său vital în coagularea sângelui și sănătatea oaselor, vitamina K rezonează cu structura noastră interioară, cu abilitatea de a ne proteja de "hemoragiile" emoționale și de a menține o fundație solidă.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de vitamina K poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>"Sângerări" emoționale și pierderi necontrolate:</b> Un sentiment de a-ți pierde energia emoțională, de a te "drena" în situații sau relații, sau de a suferi pierderi emoționale repetate fără a te putea recupera.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Vânătaie ușoară, sângerări gingivale sau nazale, sângerări gastrointestinale.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de integritate sau de coeziune interioară:</b> O senzație de a fi "destrămat", de a nu te simți întreg, o lipsă de aliniere între gânduri, sentimente și acțiuni.</li>
+                        <li><b>Vulnerabilitate și lipsă de protecție:</b> Incapacitatea de a-ți stabili granițe, de a te proteja de influențe dăunătoare sau de a te recupera după "lovituri" emoționale.</li>
+                        <li><b>Dificultăți în a "ține la un loc" relațiile sau proiectele:</b> O tendință de a renunța ușor, de a nu persista sau de a nu putea menține legăturile puternice.</li>
+                        <li><b>Frica de a te "destrăma" sau de a pierde controlul:</b> O anxietate legată de vulnerabilitate, de posibilitatea de a pierde ceea ce este important.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de vitamina K (rar din alimente, de obicei din suplimente sintetice) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Rigiditate excesivă și "încordare":</b> O nevoie de a controla totul prea puternic, de a nu permite fluiditatea sau spontaneitatea, teama de a "slăbi" controlul.</li>
+                        <li><b>"Coagularea" emoțiilor:</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" sau blocat emoțional.</li>
+                        <li><b>Dificultăți în a elibera trecutul sau resentimentele:</b> O incapacitate de a "renunța" la vechi răni sau furii, menținând o tensiune internă cronică.</li>
+                        <li><b>Control obsesiv asupra securității:</b> O preocupare exagerată pentru siguranță și protecție, care poate duce la lipsă de flexibilitate și la izolare.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de întărire a integrității personale</b> și a stimei de sine.</li>
+                        <li><b>Terapii</b> pentru procesarea și eliberarea "pierderilor" emoționale și a traumelor.</li>
+                        <li><b>Meditații</b> pentru cultivarea rezilienței și a capacității de recuperare.</li>
+                        <li><b>Exerciții de stabilire a granițelor sănătoase</b> și de autoapărare energetică.</li>
+                        <li><b>Lucrul cu încrederea</b> în propria forță de a "ține la un loc" viața și relațiile.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de eliberare a controlului</b> și de cultivare a fluidității (yoga, dans, respirație profundă).</li>
+                        <li><b>Terapii</b> care ajută la explorarea și eliberarea rigidității emoționale și a resentimentelor.</li>
+                        <li><b>Lucrul cu iertarea</b> (de sine și de alții) pentru a debloca fluxul emoțional.</li>
+                        <li><b>Meditații</b> pentru a cultiva acceptarea schimbării și a imperfecțiunii.</li>
+                        <li><b>Activități</b> care încurajează spontaneitatea și renunțarea la planuri rigide.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
