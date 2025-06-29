@@ -3,86 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fosfor - Ghid Minerale</title>
+    <title>Fosforul și Energia Creativă</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Fosforul și Energia Creativă
+        </div>
 
-        <h1>Fosfor</h1>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul fosforului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Sur
+        <div class="section">
+            <h2 class="section-title">Fosfor - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Fosforul este al doilea cel mai abundent mineral din corpul uman, după calciu, și este la fel de esențial pentru menținerea sănătății și a funcționării normale a organismului. Joacă un rol vital în formarea oaselor și a dinților, dar și în numeroase procese metabolice la nivel celular.</p>
+                    <ul>
+                        <li><b>Sănătatea oaselor și a dinților:</b> Aproximativ 85% din fosforul din corp se găsește în oase și dinți, unde, alături de calciu, contribuie la formarea și menținerea structurii și rezistenței acestora. Este crucial pentru mineralizarea osoasă și pentru dezvoltarea unui schelet puternic.</li>
+                        <li><b>Producerea energiei (ATP):</b> Fosforul este o componentă cheie a adenozin trifosfatului (ATP), principala moleculă de stocare și transfer de energie din celule. Fără fosfor, celulele nu ar putea produce energia necesară pentru aproape toate funcțiile vitale.</li>
+                        <li><b>Componentă a ADN-ului și ARN-ului:</b> Fosforul este o parte structurală esențială a ADN-ului (acidul dezoxiribonucleic) și ARN-ului (acidul ribonucleic), care sunt purtătorii informației genetice și sunt implicate în sinteza proteinelor.</li>
+                        <li><b>Funcția celulară și membranară (fosfolipide):</b> Este o componentă a fosfolipidelor, care formează structura principală a membranelor celulare. Aceste membrane controlează ce intră și ce iese din celule.</li>
+                        <li><b>Echilibrul acido-bazic (pH):</b> Fosforul acționează ca un sistem tampon, ajutând la menținerea echilibrului delicat al pH-ului în sânge și în alte fluide corporale, esențial pentru funcționarea optimă a enzimelor și proteinelor.</li>
+                        <li><b>Funcția musculară și nervoasă:</b> Contribuie la contracția musculară, la funcția nervoasă și la transmiterea semnalelor în sistemul nervos.</li>
+                        <li><b>Activarea enzimelor:</b> Este implicat în activarea și reglarea multor enzime care catalizează reacțiile chimice esențiale în corp.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Fosforul este destul de răspândit în alimente, atât de origine animală, cât și vegetală, ceea ce face ca deficiențele severe să fie rare la persoanele cu o dietă echilibrată. Forma de fosfor din alimentele de origine animală este de obicei mai bine absorbită.</p>
+                    <ul>
+                        <li><b>Produse lactate:</b>
+                            <ul>
+                                <li>Lapte.</li>
+                                <li>Iaurt.</li>
+                                <li>Brânzeturi (în special cele tari, cum ar fi parmezanul).</li>
+                            </ul>
+                        </li>
+                        <li><b>Carne și pește:</b>
+                            <ul>
+                                <li>Carne de vită, porc, pui, curcan.</li>
+                                <li>Pește (somon, cod, ton).</li>
+                                <li>Fructe de mare (creveți, scoici).</li>
+                            </ul>
+                        </li>
+                        <li><b>Ouă:</b> Gălbenușul de ou este o sursă bună.</li>
+                        <li><b>Nuci și semințe:</b> Semințe de dovleac, semințe de floarea-soarelui, migdale, caju, arahide.</li>
+                        <li><b>Leguminoase:</b> Linte, năut, fasole (neagră, albă, roșie).</li>
+                        <li><b>Cereale integrale:</b> Ovăz, quinoa, orez brun.</li>
+                        <li><b>Băuturi:</b>
+                            <ul>
+                                <li>Laptele (inclusiv cel vegetal fortificat).</li>
+                                <li>Băuturile carbogazoase (în special cele de tip cola) conțin acid fosforic, dar absorbția acestuia din băuturi este un subiect de dezbatere, iar aportul excesiv din aceste surse nu este recomandat.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><b>Important de reținut:</b> Persoanele cu afecțiuni renale cronice trebuie să monitorizeze și să limiteze aportul de fosfor, deoarece rinichii afectați pot avea dificultăți în eliminarea excesului, ceea ce poate duce la complicații.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Fosfor: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, fosforul este profund conectat cu <b>energia vitală, creativitatea, inspirația, claritatea mentală și capacitatea de a procesa și transforma experiențele</b>. Fiind esențial pentru producția de ATP (molecula energetică a celulelor) și o componentă a ADN-ului și ARN-ului, fosforul rezonează cu "scânteia" noastră interioară, cu inteligența celulară și cu fluxul de informații și energie în corp și minte.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de fosfor poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de energie și vitalitate emoțională:</b> Un sentiment de epuizare cronică, nu doar fizică, ci și emoțională și mentală. Lipsa de entuziasm și de chef de viață, dificultatea de a te angaja în activități.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală, slăbiciune musculară.</li>
+                            </ul>
+                        </li>
+                        <li><b>Blocaje creative și lipsă de inspirație:</b> Dificultăți în a-ți accesa creativitatea, un sentiment de "gol" sau de stagnare în idei și proiecte. Incapacitatea de a-ți manifesta potențialul.</li>
+                        <li><b>Dificultăți în a procesa informațiile și emoțiile:</b> O senzație de "ceață mentală", dificultăți de concentrare, de a înțelege concepte noi sau de a integra experiențe traumatice. Poate indica o dificultate de a "digera" evenimentele vieții.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Dificultăți de concentrare, probleme de memorie.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de claritate și direcție:</b> Incapacitatea de a vedea drumul înainte, de a-ți stabili obiective clare sau de a acționa decisiv.</li>
+                        <li><b>Temeri legate de "lumină" sau "strălucire":</b> Fosforul este un element care luminează. O teamă inconștientă de a-ți arăta adevăratul potențial sau de a fi în centrul atenției.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de fosfor (mai frecvent în cazul afecțiunilor renale sau al aportului mare de aditivi alimentari) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Suprastimulare mentală și nervozitate:</b> O minte hiperactivă, gânduri repetitive, dificultăți de a te relaxa mental, insomnie. Poate indica o nevoie excesivă de a analiza și de a controla prin intelect.</li>
+                        <li><b>Agitație interioară și incapacitatea de a te "împământa":</b> O energie prea dispersată, o senzație de neliniște constantă, dificultăți în a te ancora în prezent.</li>
+                        <li><b>Perfecționism rigid și auto-critică excesivă:</b> O nevoie obsesivă de a fi perfect, de a controla fiecare detaliu, ceea ce duce la frustrare și la un dialog intern negativ.</li>
+                        <li><b>Tendința de a "arde" rapid energia:</b> O tendință de a consuma rapid resursele energetice, atât fizice, cât și emoționale, fără a permite o reîncărcare adecvată.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de stimulare a creativității</b> (artă, muzică, scris liber, brainstorming).</li>
+                        <li><b>Meditații pentru vizualizarea energiei</b> și a inspirației.</li>
+                        <li><b>Exerciții de "împământare"</b> pentru a aduce energia în corp (mers în natură, yoga).</li>
+                        <li><b>Terapii</b> care ajută la eliberarea blocajelor emoționale legate de auto-exprimare și potențial.</li>
+                        <li><b>Practici</b> care încurajează asumarea direcției și scopului în viață.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Tehnici de relaxare profundă</b> (respirație diafragmatică, meditații ghidate de calmare).</li>
+                        <li><b>Activități</b> care ajută la "curățarea" minții (plimbări liniștite, timp petrecut în natură, jurnalism).</li>
+                        <li><b>Terapii</b> care ajută la gestionarea perfecționismului și a nevoii de control.</li>
+                        <li><b>Practici de "desprindere"</b> de gândurile obsesive, permițând un flux mai liber al minții.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
