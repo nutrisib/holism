@@ -28,11 +28,17 @@
             padding-bottom: 10px;
             margin-top: 40px;
         }
-        ul {
+        h3 {
+            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        }
+        ul, ol {
             list-style: disc;
             margin-left: 20px;
         }
-        strong {
+        ol {
+            list-style: decimal;
+        }
+        b { /* Stil pentru text aldin */
             color: #34495e;
         }
         .back-link {
@@ -40,6 +46,7 @@
             margin-top: 30px;
             text-align: center;
             font-size: 1.1em;
+            margin-bottom: 20px;
         }
         a {
             color: #007bff;
@@ -47,6 +54,24 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        .internal-toc {
+            background-color: #eaf6ff;
+            border: 1px solid #cceeff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .internal-toc h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .internal-toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .internal-toc li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -56,29 +81,28 @@
 
         <h1>Molibden</h1>
 
-        <h2>Rolul molibdenului în organism</h2>
+        <div class="internal-toc">
+            <h3>Pe această pagină:</h3>
+            <ul>
+                <li><a href="#rolul-fizic">Rolul molibdenului în organism (perspectivă fizică)</a></li>
+                <li><a href="#surse-alimentare">Surse alimentare de molibden</a></li>
+                <li><a href="#perspectiva-holistica">Molibden: Perspectivă holistică (cauze emoționale)</a></li>
+            </ul>
+        </div>
+
+        <h2 id="rolul-fizic">Rolul molibdenului în organism (perspectivă fizică)</h2>
         <p>Molibdenul este un oligoelement esențial care acționează ca un cofactor pentru mai multe enzime cheie.</p>
 
         <h3>1. Funcția enzimatică esențială</h3>
         <ul>
-            <li><strong>Mecanism:</strong> aceste enzime sunt implicate în metabolismul anumitor aminoacizi (cum ar fi sulfitul, care este transformat în sulfat), în descompunerea purinelor (care formează acid uric) și în detoxifierea unor compuși dăunători.</li>
+            <li><b>Mecanism:</b> Aceste enzime sunt implicate în metabolismul anumitor aminoacizi (cum ar fi sulfitul, care este transformat în sulfat), în descompunerea purinelor (care formează acid uric) și în detoxifierea unor compuși dăunători.</li>
         </ul>
 
         <h3>2. Sănătatea nervilor și producția de energie</h3>
         <ul>
-            <li><strong>Mecanism:</strong> este important pentru sănătatea nervilor și pentru producerea de energie la nivel celular.</li>
+            <li><b>Mecanism:</b> Este important pentru sănătatea nervilor și pentru producerea de energie la nivel celular.</li>
         </ul>
 
-        <h2>Surse alimentare de molibden</h2>
+        <h2 id="surse-alimentare">Surse alimentare de molibden</h2>
         <ul>
-            <li><strong>Leguminoase:</strong> fasole, linte, mazăre.</li>
-            <li><strong>Cereale integrale:</strong> ovăz, grâu integral, orez brun.</li>
-            <li><strong>Nuci și semințe:</strong> migdale, semințe de floarea-soarelui.</li>
-            <li><strong>Legume cu frunze verzi:</strong> spanac, varză.</li>
-            <li><strong>Produse lactate:</strong> lapte, brânză.</li>
-            <li><strong>Ficat:</strong> în special ficat de vită.</li>
-        </ul>
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-    </div>
-</body>
-</html>
+            <li><b>Leguminoase:</b> Fasole, linte, mazăre
