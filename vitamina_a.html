@@ -81,6 +81,17 @@
             gap: 25px;
             width: 100%;
         }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
         .subsection {
             flex: 1;
             min-width: 280px;
@@ -176,6 +187,21 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -191,68 +217,73 @@
         <div class="section">
             <h2 class="section-title">Vitamina A - Perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Vitamina A este o vitamină liposolubilă esențială, crucială pentru o multitudine de funcții vitale în organism. Este un termen generic pentru un grup de compuși, incluzând retinoizi (preformați, găsiți în produse animale) și carotenoizi (pro-vitamina A, găsiți în plante).</p>
-                    <ul>
-                        <li><b>Sănătatea vederii:</b> Este fundamentală pentru formarea rodopsinei, un pigment vizual din retină, esențial pentru vederea în condiții de lumină slabă și pentru adaptarea la întuneric. Contribuie la funcționarea normală a corneei și a conjunctivei.</li>
-                        <li><b>Creștere și dezvoltare:</b> Este vitală pentru creșterea celulară, diferențierea celulară și dezvoltarea țesuturilor, inclusiv a oaselor, dinților și țesuturilor moi. Este crucială în timpul sarcinii și copilăriei.</li>
-                        <li><b>Sistemul imunitar:</b> Joacă un rol cheie în menținerea integrității barierelor protectoare (pielea și mucoasele respiratorii, digestive și urinare) și susține funcția celulelor imunitare, cum ar fi limfocitele T și celulele Natural Killer.</li>
-                        <li><b>Integritatea pielii și a mucoaselor:</b> Ajută la menținerea sănătății și funcției pielii și a membranelor mucoase, care acționează ca o barieră protectoare împotriva agenților patogeni.</li>
-                        <li><b>Funcția reproductivă:</b> Este implicată în procesele de reproducere la ambele sexe.</li>
-                        <li><b>Acțiune antioxidantă (carotenoizi):</b> Carotenoizii, cum ar fi beta-carotenul, sunt antioxidanți puternici care neutralizează radicalii liberi și protejează celulele de stresul oxidativ.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina A este o vitamină liposolubilă esențială, crucială pentru o multitudine de funcții vitale în organism. Este un termen generic pentru un grup de compuși, incluzând retinoizi (preformați, găsiți în produse animale) și carotenoizi (pro-vitamina A, găsiți în plante).</p>
+                        <ul>
+                            <li><b>Sănătatea vederii:</b> Este fundamentală pentru formarea rodopsinei, un pigment vizual din retină, esențial pentru vederea în condiții de lumină slabă și pentru adaptarea la întuneric. Contribuie la funcționarea normală a corneei și a conjunctivei.</li>
+                            <li><b>Creștere și dezvoltare:</b> Este vitală pentru creșterea celulară, diferențierea celulară și dezvoltarea țesuturilor, inclusiv a oaselor, dinților și țesuturilor moi. Este crucială în timpul sarcinii și copilăriei.</li>
+                            <li><b>Sistemul imunitar:</b> Joacă un rol cheie în menținerea integrității barierelor protectoare (pielea și mucoasele respiratorii, digestive și urinare) și susține funcția celulelor imunitare, cum ar fi limfocitele T și celulele Natural Killer.</li>
+                            <li><b>Integritatea pielii și a mucoaselor:</b> Ajută la menținerea sănătății și funcției pielii și a membranelor mucoase, care acționează ca o barieră protectoare împotriva agenților patogeni.</li>
+                            <li><b>Funcția reproductivă:</b> Este implicată în procesele de reproducere la ambele sexe.</li>
+                            <li><b>Acțiune antioxidantă (carotenoizi):</b> Carotenoizii, cum ar fi beta-carotenul, sunt antioxidanți puternici care neutralizează radicalii liberi și protejează celulele de stresul oxidativ.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Există două forme principale de vitamina A în alimente:</p>
+                        <p><b>1. Retinoizi preformați (Vitamina A activă):</b> Găsiți în surse animale, direct utilizabili de organism.</p>
+                        <ul>
+                            <li><b>Ficat:</b> De vită, pui, cod (cel mai bogat).</li>
+                            <li><b>Ulei de ficat de cod.</b></li>
+                            <li><b>Ouă:</b> Gălbenușul.</li>
+                            <li><b>Produse lactate integrale:</b> Lapte integral, brânză, unt (cantități mai mici).</li>
+                            <li><b>Pește gras.</b></li>
+                        </ul>
+                        <p><b>2. Carotenoizi (Pro-vitamina A):</b> Găsiți în plante, trebuie convertiți în retinol în organism (conversia nu este 100% eficientă). Beta-carotenul este cel mai eficient precursor.</p>
+                        <ul>
+                            <li><b>Legume cu frunze verzi închise:</b> Spanac, varză kale, broccoli, verdeață de sfeclă.</li>
+                            <li><b>Legume portocalii și galbene:</b> Morcovi (extrem de bogați), cartofi dulci, dovleac, ardei gras roșu.</li>
+                            <li><b>Fructe portocalii și galbene:</b> Mango, caise (în special cele uscate), pepene galben.</li>
+                            <li><b>Cereale fortificate.</b></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză A)</h3>
-                    <p>Deficiența de vitamina A este o problemă de sănătate publică globală, în special în țările în curs de dezvoltare.</p>
-                    <ol>
-                        <li><b>Probleme de vedere:</b>
-                            <ul>
-                                <li><b>Nictalopie (orbirea nocturnă):</b> Primul și cel mai comun simptom, dificultatea de a vedea în condiții de lumină slabă.</li>
-                                <li><b>Xeroftalmie:</b> Uscăciunea severă a ochiului, care poate progresa la leziuni corneene (ulcere, cicatrici) și, în cazuri grave, la orbire permanentă.</li>
-                            </ul>
-                        </li>
-                        <li><b>Imunitate slăbită:</b> Creșterea susceptibilității la infecții respiratorii (răceli, gripă), diaree și alte boli infecțioase.</li>
-                        <li><b>Probleme de creștere și dezvoltare:</b> Retard de creștere la copii.</li>
-                        <li><b>Probleme ale pielii și mucoaselor:</b> Piele uscată, descuamată (hiperkeratoză foliculară), uscăciunea mucoaselor.</li>
-                        <li><b>Probleme de reproducere:</b> Afectarea fertilității.</li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză A)</h3>
-                    <p>Excesul de vitamina A este aproape întotdeauna cauzat de suplimentarea excesivă, nu de aportul alimentar normal. Fiind liposolubilă, se acumulează în organism.</p>
-                    <ol>
-                        <li><b>Acută (doze foarte mari, de obicei unice):</b> Greață, vărsături, vertij, vedere încețoșată, dureri de cap severe, iritabilitate, desprinderea stratului superior al pielii.</li>
-                        <li><b>Cronică (doze mari pe termen lung):</b>
-                            <ul>
-                                <li><b>Toxicitate hepatică:</b> Leziuni hepatice, fibroză, ciroză.</li>
-                                <li><b>Probleme osoase:</b> Dureri osoase, fracturi, osteoporoză (paradoxal, excesul poate afecta sănătatea osoasă).</li>
-                                <li><b>Probleme neurologice:</b> Dureri de cap, vedere încețoșată, hipertensiune intracraniană idiopatică (pseudotumor cerebri).</li>
-                                <li><b>Probleme dermatologice:</b> Piele uscată, descuamată, căderea părului, buze crăpate.</li>
-                                <li><b>Teratogenicitate:</b> Foarte importantă pentru femeile însărcinate – dozele excesive pot provoca malformații congenitale grave la făt.</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Există două forme principale de vitamina A în alimente:</p>
-                    <p><b>1. Retinoizi preformați (Vitamina A activă):</b> Găsiți în surse animale, direct utilizabili de organism.</p>
-                    <ul>
-                        <li><b>Ficat:</b> De vită, pui, cod (cel mai bogat).</li>
-                        <li><b>Ulei de ficat de cod.</b></li>
-                        <li><b>Ouă:</b> Gălbenușul.</li>
-                        <li><b>Produse lactate integrale:</b> Lapte integral, brânză, unt (cantități mai mici).</li>
-                        <li><b>Pește gras.</b></li>
-                    </ul>
-                    <p><b>2. Carotenoizi (Pro-vitamina A):</b> Găsiți în plante, trebuie convertiți în retinol în organism (conversia nu este 100% eficientă). Beta-carotenul este cel mai eficient precursor.</p>
-                    <ul>
-                        <li><b>Legume cu frunze verzi închise:</b> Spanac, varză kale, broccoli, verdeață de sfeclă.</li>
-                        <li><b>Legume portocalii și galbene:</b> Morcovi (extrem de bogați), cartofi dulci, dovleac, ardei gras roșu.</li>
-                        <li><b>Fructe portocalii și galbene:</b> Mango, caise (în special cele uscate), pepene galben.</li>
-                        <li><b>Cereale fortificate.</b></li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză A)</h3>
+                        <p>Deficiența de vitamina A este o problemă de sănătate publică globală, în special în țările în curs de dezvoltare.</p>
+                        <ol>
+                            <li><b>Probleme de vedere:</b>
+                                <ul>
+                                    <li><b>Nictalopie (orbirea nocturnă):</b> Primul și cel mai comun simptom, dificultatea de a vedea în condiții de lumină slabă.</li>
+                                    <li><b>Xeroftalmie:</b> Uscăciunea severă a ochiului, care poate progresa la leziuni corneene (ulcere, cicatrici) și, în cazuri grave, la orbire permanentă.</li>
+                                </ul>
+                            </li>
+                            <li><b>Imunitate slăbită:</b> Creșterea susceptibilității la infecții respiratorii (răceli, gripă), diaree și alte boli infecțioase.</li>
+                            <li><b>Probleme de creștere și dezvoltare:</b> Retard de creștere la copii.</li>
+                            <li><b>Probleme ale pielii și mucoaselor:</b> Piele uscată, descuamată (hiperkeratoză foliculară), uscăciunea mucoaselor.</li>
+                            <li><b>Probleme de reproducere:</b> Afectarea fertilității.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză A)</h3>
+                        <p>Excesul de vitamina A este aproape întotdeauna cauzat de suplimentarea excesivă, nu de aportul alimentar normal. Fiind liposolubilă, se acumulează în organism.</p>
+                        <ol>
+                            <li><b>Acută (doze foarte mari, de obicei unice):</b> Greață, vărsături, vertij, vedere încețoșată, dureri de cap severe, iritabilitate, desprinderea stratului superior al pielii.</li>
+                            <li><b>Cronică (doze mari pe termen lung):</b>
+                                <ul>
+                                    <li><b>Toxicitate hepatică:</b> Leziuni hepatice, fibroză, ciroză.</li>
+                                    <li><b>Probleme osoase:</b> Dureri osoase, fracturi, osteoporoză (paradoxal, excesul poate afecta sănătatea osoasă).</li>
+                                    <li><b>Probleme neurologice:</b> Dureri de cap, vedere încețoșată, hipertensiune intracraniană idiopatică (pseudotumor cerebri).</li>
+                                    <li><b>Probleme dermatologice:</b> Piele uscată, descuamată, căderea părului, buze crăpate.</li>
+                                    <li><b>Teratogenicitate:</b> Foarte importantă pentru femeile însărcinate – dozele excesive pot provoca malformații congenitale grave la făt.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
