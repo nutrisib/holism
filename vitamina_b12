@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B12 (Cobalamina) și Conexiunea Profundă</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B12 (Cobalamina) și Conexiunea Profundă
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B12 (Cobalamina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B12, cunoscută sub denumirea de cobalamină, este o vitamină hidrosolubilă esențială, unică prin faptul că este singura vitamină care conține un ion metalic (cobalt). Este produsă exclusiv de microorganisme și nu se găsește în mod natural în alimente vegetale, ci doar în produse de origine animală. Joacă un rol fundamental în formarea sângelui, funcția neurologică și sinteza ADN-ului.</p>
+                        <ul>
+                            <li><b>Formarea globulelor roșii:</b> Este crucială pentru producerea și maturarea normală a globulelor roșii în măduva osoasă, prevenind anemia megaloblastică (un tip de anemie în care globulele roșii sunt mari, imature și disfuncționale).</li>
+                            <li><b>Sănătatea sistemului nervos:</b> Vitamina B12 este esențială pentru formarea și menținerea mielinei (învelișul protector al fibrelor nervoase), care asigură transmiterea rapidă și eficientă a impulsurilor nervoase. Un deficit poate duce la leziuni neurologice ireversibile.</li>
+                            <li><b>Sinteza ADN-ului și ARN-ului:</b> Este implicată în sinteza și repararea materialului genetic (ADN și ARN), procese esențiale pentru creșterea și diviziunea celulară.</li>
+                            <li><b>Metabolismul homocisteinei:</b> Împreună cu folatul și vitamina B6, vitamina B12 ajută la transformarea homocisteinei într-un alt aminoacid, metionina. Nivelurile ridicate de homocisteină sunt un factor de risc pentru boli cardiovasculare.</li>
+                            <li><b>Metabolismul energetic:</b> Joacă un rol în metabolismul energetic, contribuind la conversia alimentelor în energie.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vitamina B12 se găsește exclusiv în produse de origine animală sau alimente fortificate.</p>
+                        <ul>
+                            <li><b>Ficat:</b> De vită, pui (cea mai bogată sursă).</li>
+                            <li><b>Carne:</b> Vită, porc, pui, curcan.</li>
+                            <li><b>Pește și fructe de mare:</b> Somon, ton, sardine, scoici, stridii.</li>
+                            <li><b>Produse lactate:</b> Lapte, iaurt, brânză.</li>
+                            <li><b>Ouă</b>.</li>
+                            <li><b>Alimente fortificate (pentru vegani/vegetarieni):</b> Cereale pentru micul dejun, băuturi vegetale (lapte de soia, migdale, ovăz), drojdie nutrițională.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de B12)</h3>
+                        <p>Deficiența de vitamina B12 este relativ comună, mai ales la vegetarieni/vegani, vârstnici, persoane cu afecțiuni de malabsorbție (ex: anemie pernicioasă, boala Crohn) sau la utilizarea anumitor medicamente (ex: metformină, inhibitori de pompă de protoni).</p>
+                        <ol>
+                            <li><b>Anemie megaloblastică:</b> Simptome precum oboseală extremă, slăbiciune, paloare, dificultăți de respirație, amețeli.</li>
+                            <li><b>Probleme neurologice:</b>
+                                <ul>
+                                    <li>Amorțeală, furnicături sau senzație de "înțepături" la nivelul mâinilor și picioarelor.</li>
+                                    <li>Dificultăți de echilibru și coordonare.</li>
+                                    <li>Slăbiciune musculară.</li>
+                                    <li>Deteriorare cognitivă: probleme de memorie, confuzie, dificultăți de concentrare ("ceață mentală").</li>
+                                    <li>Modificări de dispoziție: iritabilitate, depresie, anxietate.</li>
+                                    <li>În cazuri severe și netratate, leziuni nervoase permanente.</li>
+                                </ul>
+                            </li>
+                            <li><b>Probleme gastrointestinale:</b> Limbă umflată și dureroasă (glosită), pierderea apetitului, diaree sau constipație.</li>
+                            <li><b>Creșterea nivelului de homocisteină:</b> Crește riscul de boli cardiovasculare.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B12)</h3>
+                        <p>Vitamina B12 este hidrosolubilă, iar excesul este eliminat eficient prin urină. Toxicitatea din suplimentare este extrem de rară și minoră.</p>
+                        <ol>
+                            <li>Nu sunt raportate efecte adverse grave sau toxicitate severă la doze mari din alimente sau suplimente orale.</li>
+                            <li>Doze foarte mari, administrate injectabil, pot provoca acnee, rozacee sau, rar, reacții alergice.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B12 (Cobalamina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B12 (Cobalamina) este adesea asociată cu <b>"rădăcinile" noastre ancestrale, vitalitatea profundă, conexiunea cu scopul vieții, memoria emoțională și capacitatea de a ne simți energizați și ancorați în existență</b>. Fiind singura vitamină care conține cobalt (un metal central pentru viață) și esențială pentru formarea sângelui și sănătatea nervilor, B12 rezonează cu "esența" noastră vitală, cu sistemul nostru de operare emoțional și cu capacitatea de a ne mișca cu claritate și vigoare.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B12 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Deconectare de la "rădăcini" sau de la sine:</b> Un sentiment profund de izolare, de a fi "desprins" de familie, de comunitate sau de propria esență. Poate indica o lipsă de apartenență.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Anemie megaloblastică (sângele care poartă viața este afectat).</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de direcție și "ceață mentală" emoțională:</b> Dificultăți în a-ți aminti scopul, în a te concentra pe prezent sau pe viitor. O senzație de confuzie și de a fi "pierdut" emoțional.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Probleme de memorie, confuzie, dificultăți de concentrare.</li>
+                            </ul>
+                        </li>
+                        <li><b>Oboseală cronică emoțională și lipsă de vitalitate:</b> O epuizare profundă care depășește oboseala fizică, un sentiment de "a nu mai avea vlagă" pentru bucurie sau pasiune.</li>
+                        <li><b>Probleme cu "fluxul" vieții și "rigiditate" neurologică:</b> Afectarea sistemului nervos poate rezonă cu o incapacitate de a te adapta fluid la schimbări, o rigiditate în reacții sau o senzație de a fi "înjghebat" emoțional.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Amorțeală, furnicături, dificultăți de echilibru.</li>
+                            </ul>
+                        </li>
+                        <li><b>Tristețe profundă, melancolie, lipsa de bucurie:</b> Emoții persistente de tristețe care par să "dreneze" energia vitală, ducând la o lipsă de entuziasm.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B12 este extrem de rar toxic. Din perspectivă holistică, un exces (în special din injectabile, care pot provoca acnee) ar putea sugera:</p>
+                    <ol>
+                        <li><b>Supra-activare și agitație:</b> O energie excesivă, o tendință de a fi "prea mult", hiperactiv, fără a permite odihnă sau reflecție.</li>
+                        <li><b>"Erupții" emoționale:</b> Simbolismul acneei poate indica o tendință de a "izbucni" emoțional, de a exprima brusc furie sau frustrare, fără un filtru adecvat.</li>
+                        <li><b>Rigiditate în auto-afirmare:</b> O nevoie de a-ți impune prezența sau voința într-un mod dominant, fără a lăsa spațiu pentru ceilalți.</li>
+                        <li><b>"Ardere" a resurselor interne:</b> O tendință de a consuma rapid resursele energetice prin suprasolicitare, din teama de a nu fi "suficient".</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de "împământare"</b> și de conectare cu rădăcinile (meditații cu vizualizarea rădăcinilor, timp petrecut în natură).</li>
+                        <li><b>Terapii</b> pentru explorarea și eliberarea sentimentelor de izolare sau lipsă de apartenență.</li>
+                        <li><b>Meditații</b> pentru reîncărcare energetică și cultivarea vitalității.</li>
+                        <li><b>Jurnalism terapeutic</b> pentru a explora memoria emoțională și a integra experiențele trecute.</li>
+                        <li><b>Practici de clarificare a scopului</b> și de stabilire a direcției în viață.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și echilibrare a energiei</b> (yoga restaurativă, respirație profundă).</li>
+                        <li><b>Terapii</b> pentru gestionarea impulsivității și a exprimării nefiltrate a emoțiilor.</li>
+                        <li><b>Lucrul cu umilința</b> și acceptarea limitărilor.</li>
+                        <li><b>Meditații</b> pentru a cultiva răbdarea și a permite un ritm mai lent.</li>
+                        <li><b>Exerciții</b> care încurajează fluiditatea și renunțarea la control.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
