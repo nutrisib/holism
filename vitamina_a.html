@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina A și Claritatea Viziunii</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina A și Claritatea Viziunii
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina A - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Vitamina A este o vitamină liposolubilă esențială, crucială pentru o multitudine de funcții vitale în organism. Este un termen generic pentru un grup de compuși, incluzând retinoizi (preformați, găsiți în produse animale) și carotenoizi (pro-vitamina A, găsiți în plante).</p>
+                    <ul>
+                        <li><b>Sănătatea vederii:</b> Este fundamentală pentru formarea rodopsinei, un pigment vizual din retină, esențial pentru vederea în condiții de lumină slabă și pentru adaptarea la întuneric. Contribuie la funcționarea normală a corneei și a conjunctivei.</li>
+                        <li><b>Creștere și dezvoltare:</b> Este vitală pentru creșterea celulară, diferențierea celulară și dezvoltarea țesuturilor, inclusiv a oaselor, dinților și țesuturilor moi. Este crucială în timpul sarcinii și copilăriei.</li>
+                        <li><b>Sistemul imunitar:</b> Joacă un rol cheie în menținerea integrității barierelor protectoare (pielea și mucoasele respiratorii, digestive și urinare) și susține funcția celulelor imunitare, cum ar fi limfocitele T și celulele Natural Killer.</li>
+                        <li><b>Integritatea pielii și a mucoaselor:</b> Ajută la menținerea sănătății și funcției pielii și a membranelor mucoase, care acționează ca o barieră protectoare împotriva agenților patogeni.</li>
+                        <li><b>Funcția reproductivă:</b> Este implicată în procesele de reproducere la ambele sexe.</li>
+                        <li><b>Acțiune antioxidantă (carotenoizi):</b> Carotenoizii, cum ar fi beta-carotenul, sunt antioxidanți puternici care neutralizează radicalii liberi și protejează celulele de stresul oxidativ.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză A)</h3>
+                    <p>Deficiența de vitamina A este o problemă de sănătate publică globală, în special în țările în curs de dezvoltare.</p>
+                    <ol>
+                        <li><b>Probleme de vedere:</b>
+                            <ul>
+                                <li><b>Nictalopie (orbirea nocturnă):</b> Primul și cel mai comun simptom, dificultatea de a vedea în condiții de lumină slabă.</li>
+                                <li><b>Xeroftalmie:</b> Uscăciunea severă a ochiului, care poate progresa la leziuni corneene (ulcere, cicatrici) și, în cazuri grave, la orbire permanentă.</li>
+                            </ul>
+                        </li>
+                        <li><b>Imunitate slăbită:</b> Creșterea susceptibilității la infecții respiratorii (răceli, gripă), diaree și alte boli infecțioase.</li>
+                        <li><b>Probleme de creștere și dezvoltare:</b> Retard de creștere la copii.</li>
+                        <li><b>Probleme ale pielii și mucoaselor:</b> Piele uscată, descuamată (hiperkeratoză foliculară), uscăciunea mucoaselor.</li>
+                        <li><b>Probleme de reproducere:</b> Afectarea fertilității.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză A)</h3>
+                    <p>Excesul de vitamina A este aproape întotdeauna cauzat de suplimentarea excesivă, nu de aportul alimentar normal. Fiind liposolubilă, se acumulează în organism.</p>
+                    <ol>
+                        <li><b>Acută (doze foarte mari, de obicei unice):</b> Greață, vărsături, vertij, vedere încețoșată, dureri de cap severe, iritabilitate, desprinderea stratului superior al pielii.</li>
+                        <li><b>Cronică (doze mari pe termen lung):</b>
+                            <ul>
+                                <li><b>Toxicitate hepatică:</b> Leziuni hepatice, fibroză, ciroză.</li>
+                                <li><b>Probleme osoase:</b> Dureri osoase, fracturi, osteoporoză (paradoxal, excesul poate afecta sănătatea osoasă).</li>
+                                <li><b>Probleme neurologice:</b> Dureri de cap, vedere încețoșată, hipertensiune intracraniană idiopatică (pseudotumor cerebri).</li>
+                                <li><b>Probleme dermatologice:</b> Piele uscată, descuamată, căderea părului, buze crăpate.</li>
+                                <li><b>Teratogenicitate:</b> Foarte importantă pentru femeile însărcinate – dozele excesive pot provoca malformații congenitale grave la făt.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Există două forme principale de vitamina A în alimente:</p>
+                    <p><b>1. Retinoizi preformați (Vitamina A activă):</b> Găsiți în surse animale, direct utilizabili de organism.</p>
+                    <ul>
+                        <li><b>Ficat:</b> De vită, pui, cod (cel mai bogat).</li>
+                        <li><b>Ulei de ficat de cod.</b></li>
+                        <li><b>Ouă:</b> Gălbenușul.</li>
+                        <li><b>Produse lactate integrale:</b> Lapte integral, brânză, unt (cantități mai mici).</li>
+                        <li><b>Pește gras.</b></li>
+                    </ul>
+                    <p><b>2. Carotenoizi (Pro-vitamina A):</b> Găsiți în plante, trebuie convertiți în retinol în organism (conversia nu este 100% eficientă). Beta-carotenul este cel mai eficient precursor.</p>
+                    <ul>
+                        <li><b>Legume cu frunze verzi închise:</b> Spanac, varză kale, broccoli, verdeață de sfeclă.</li>
+                        <li><b>Legume portocalii și galbene:</b> Morcovi (extrem de bogați), cartofi dulci, dovleac, ardei gras roșu.</li>
+                        <li><b>Fructe portocalii și galbene:</b> Mango, caise (în special cele uscate), pepene galben.</li>
+                        <li><b>Cereale fortificate.</b></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina A: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, vitamina A este adesea asociată cu <b>viziunea (fizică și metaforică), claritatea, intuiția, discernământul și capacitatea de a percepe adevărul și de a vedea lumina în întuneric</b>. Fiind esențială pentru vedere, creștere, funcția imunitară și integritatea pielii și a mucoaselor, vitamina A rezonează cu modul în care ne percepem lumea, cu abilitatea de a "vedea" dincolo de aparențe și de a ne proteja de influențe nocive.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de vitamina A poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de viziune și claritate:</b> Dificultăți în a-ți vedea propriul drum, scop sau viitor. Senzația de a fi "în ceață" sau de a nu putea discerne direcția corectă în viață.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Vedere slabă pe timp de noapte, probleme de vedere.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a percepe adevărul:</b> Incapacitatea de a "vedea" situațiile sau persoanele așa cum sunt ele cu adevărat, o tendință de a fi naiv sau de a ignora realitatea.</li>
+                        <li><b>Lipsa de discernământ și intuiție:</b> O deconectare de la vocea interioară, dificultatea de a lua decizii înțelepte bazate pe o înțelegere profundă.</li>
+                        <li><b>Sentiment de vulnerabilitate și lipsă de protecție:</b> Afectarea integrității pielii și a mucoaselor (bariere fizice) poate rezonă cu o lipsă de granițe emoționale, o vulnerabilitate la energiile negative sau la critici.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Piele uscată, infecții recurente.</li>
+                            </ul>
+                        </li>
+                        <li><b>Frica de întuneric sau de necunoscut:</b> O teamă de a înfrunta aspecte mai puțin plăcute ale propriei persoane sau ale vieții, evitarea introspecției.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de vitamina A (rar din dietă, mai des din suplimentare excesivă) poate fi toxic. Din perspectivă holistică, ar putea sugera:</p>
+                    <ol>
+                        <li><b>Viziune rigidă și lipsă de flexibilitate:</b> O tendință de a vedea lucrurile doar într-un singur mod, o incapacitate de a accepta perspective diferite sau de a face compromisuri. Dogmatism.</li>
+                        <li><b>Judecată excesivă și critică:</b> O tendință de a "vedea" doar greșelile sau imperfecțiunile, atât la propria persoană, cât și la ceilalți, ducând la o atitudine critică și intransigentă.</li>
+                        <li><b>Iluzii de control:</b> O nevoie de a controla modul în care sunt percepute lucrurile, o încercare de a impune propria "viziune" asupra lumii.</li>
+                        <li><b>"Orbirile" emoționale:</b> O capacitate de a "vedea" aspecte negative (sau doar cele negative), ignorând partea bună sau soluțiile, într-un mod obsesiv.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de dezvoltare a intuiției</b> și a clarității mentale (meditație, vizualizare, jurnalism).</li>
+                        <li><b>Lucrul cu încrederea</b> în propria viziune și în capacitatea de a discerne adevărul.</li>
+                        <li><b>Terapii</b> pentru eliberarea fricilor legate de necunoscut sau de a vedea realitatea.</li>
+                        <li><b>Practici de întărire a granițelor emoționale</b> și de autoapărare.</li>
+                        <li><b>Afirmații pozitive</b> despre claritate, viziune și lumină.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de flexibilitate</b> mentală și emoțională (yoga, tai chi, meditații de acceptare).</li>
+                        <li><b>Terapii</b> care ajută la eliberarea rigidității, a nevoii de control și a judecății.</li>
+                        <li><b>Lucrul cu umilința</b> și acceptarea că există multiple perspective.</li>
+                        <li><b>Practici</b> care încurajează empatia și compasiunea față de propria persoană și față de ceilalți.</li>
+                        <li><b>Activități</b> care stimulează o "viziune" mai largă și mai tolerantă.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
