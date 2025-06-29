@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografică: Molibdenul și Echilibrul Emoțional</title>
+    <title>Molibdenul și Echilibrul Emoțional</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -73,7 +73,7 @@
             font-weight: 600;
             border-bottom: 2px solid #a3d9ff;
             padding-bottom: 5px;
-            align-self: stretch; /* Face titlul să se întindă pe toată lățimea */
+            align-self: stretch;
         }
         .section-content {
             display: flex;
@@ -83,7 +83,7 @@
         }
         .subsection {
             flex: 1;
-            min-width: 280px; /* Asigură un layout pe coloane pe ecrane mari */
+            min-width: 280px;
             background-color: #f8f9fa;
             border-radius: 10px;
             padding: 20px;
@@ -99,6 +99,8 @@
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
         }
         .subsection p, .subsection ul, .subsection ol {
             font-size: 0.95em;
@@ -121,15 +123,13 @@
             width: 100%;
         }
 
-        /* Specific pentru liste OL cu sub-liste UL */
         .subsection ol ul {
-            list-style: circle; /* Sau alt stil pentru sub-liste */
+            list-style: circle;
             margin-left: 15px;
             margin-top: 5px;
             margin-bottom: 5px;
         }
 
-        /* Stiluri pentru iconițe (simulare prin text/emoji simple) */
         .icon {
             font-size: 1.8em;
             margin-right: 10px;
@@ -137,8 +137,14 @@
             display: inline-block;
             vertical-align: middle;
         }
+        .icon-small {
+            font-size: 1.5em; /* Iconițe mai mici pentru recomandări */
+            margin-right: 8px;
+            color: #79b18b; /* Culoare diferită pentru recomandări */
+            display: inline-block;
+            vertical-align: middle;
+        }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .section-content {
                 flex-direction: column;
@@ -158,14 +164,14 @@
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Infografică: Molibdenul și Echilibrul Emoțional
+            Molibdenul și Echilibrul Emoțional
         </div>
 
         <div class="section">
-            <h2 class="section-title">Molibdenul: Esențial pentru corp (perspectivă fizică)</h2>
+            <h2 class="section-title">Molibden - Perspectiva fizică</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title">Rolul fizic principal</h3>
+                    <h3 class="subsection-title">Rolul principal</h3>
                     <p>Molibdenul este un oligoelement esențial care acționează ca un cofactor pentru mai multe enzime cheie.</p>
                     <ul>
                         <li><b>Mecanism:</b> Aceste enzime sunt implicate în metabolismul anumitor aminoacizi (cum ar fi sulfitul, care este transformat în sulfat), în descompunerea purinelor (care formează acid uric) și în detoxifierea unor compuși dăunători.</li>
@@ -188,12 +194,12 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title">Molibden: Perspectivă holistică (cauze emoționale)</h2>
+            <h2 class="section-title">Molibden: Perspectiva emoțională</h2>
             <p>Din perspectivă holistică, molibdenul este un oligoelement adesea asociat cu <b>procesarea, detoxifierea (la nivel fizic și emoțional), adaptabilitatea și capacitatea de a elibera ceea ce nu mai servește</b>. Prin rolul său de cofactor enzimatic în metabolismul sulfitului și purinelor, molibdenul rezonează cu procesele noastre interne de "curățare" și transformare a energiilor și emoțiilor.</p>
 
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⬇️</span> Cauze emoționale ale deficitului</h3>
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
                     <p>Un deficit de molibden poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
                         <li><b>Dificultăți în procesarea emoțiilor toxice:</b> Incapacitatea de a "digera" și a elibera emoțiile negative, cum ar fi resentimentele, furia reprimată sau vina. Acestea se pot acumula și crea o senzație de "toxicitate" internă.
@@ -212,7 +218,7 @@
                     </ol>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon">⬆️</span> Cauze emoționale ale excesului</h3>
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
                     <p>Un exces de molibden (foarte rar din dietă, mai des din expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
                     <ol>
                         <li><b>Tendința de a "curăța" sau a "perfecționa" excesiv:</b> O obsesie cu puritatea, cu "curățenia" (fizică sau emoțională), care poate duce la judecată excesivă asupra propriei persoane sau a altora.</li>
@@ -224,11 +230,10 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title">Recomandări holistice: Calea spre Echilibru</h2>
-            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
+            <h2 class="section-title">Calea spre echilibru</h2>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title">Pentru deficit (copleșire, blocaje emoționale)</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit (copleșire, blocaje emoționale)</h3>
                     <ul>
                         <li><b>Practici de eliberare emoțională:</b> Jurnalism terapeutic, art-terapie, discuții cu un terapeut pentru a procesa emoțiile nerezolvate.</li>
                         <li><b>Tehnici de relaxare și reducere a stresului:</b> Meditație, mindfulness, respirație profundă, yoga.</li>
@@ -238,7 +243,7 @@
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title">Pentru exces (criticitate, perfecționism)</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces (criticitate, perfecționism)</h3>
                     <ul>
                         <li><b>Practici de auto-compasiune</b> și de acceptare a imperfecțiunii.</li>
                         <li><b>Meditații pentru a cultiva neutralitatea</b> și a reduce judecata.</li>
