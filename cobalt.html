@@ -28,11 +28,17 @@
             padding-bottom: 10px;
             margin-top: 40px;
         }
-        ul {
+        h3 {
+            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        }
+        ul, ol {
             list-style: disc;
             margin-left: 20px;
         }
-        strong {
+        ol {
+            list-style: decimal;
+        }
+        b { /* Stil pentru text aldin */
             color: #34495e;
         }
         .back-link {
@@ -40,6 +46,7 @@
             margin-top: 30px;
             text-align: center;
             font-size: 1.1em;
+            margin-bottom: 20px;
         }
         a {
             color: #007bff;
@@ -47,6 +54,24 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+        .internal-toc {
+            background-color: #eaf6ff;
+            border: 1px solid #cceeff;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+        .internal-toc h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .internal-toc ul {
+            list-style: none;
+            padding: 0;
+        }
+        .internal-toc li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -56,46 +81,19 @@
 
         <h1>Cobalt</h1>
 
-        <h2>Rolul cobaltului în organism</h2>
-        <p>Cobaltul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități foarte mici pentru a funcționa corect. rolul său cel mai important și, de fapt, aproape singurul rol cunoscut pentru sănătatea umană este acela de a fi o componentă cheie a vitaminei B12 (cobalamina).</p>
+        <div class="internal-toc">
+            <h3>Pe această pagină:</h3>
+            <ul>
+                <li><a href="#rolul-fizic">Rolul cobaltului în organism (perspectivă fizică)</a></li>
+                <li><a href="#surse-alimentare">Surse alimentare de cobalt</a></li>
+                <li><a href="#perspectiva-holistica">Cobaltul: Perspectivă holistică (cauze emoționale)</a></li>
+            </ul>
+        </div>
+
+        <h2 id="rolul-fizic">Rolul cobaltului în organism (perspectivă fizică)</h2>
+        <p>Cobaltul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități foarte mici pentru a funcționa corect. Rolul său cel mai important și, de fapt, aproape singurul rol cunoscut pentru sănătatea umană este acela de a fi o componentă cheie a vitaminei B12 (cobalamina).</p>
 
         <h3>1. Componentă a vitaminei B12</h3>
         <ul>
-            <li><strong>Mecanism:</strong> acesta este, de departe, cel mai vital rol al cobaltului. fără cobalt, vitamina b12 nu ar putea fi sintetizată. vitamina b12 este crucială pentru:
+            <li><b>Mecanism:</b> Acesta este, de departe, cel mai vital rol al cobaltului. Fără cobalt, vitamina B12 nu ar putea fi sintetizată. Vitamina B12 este crucială pentru:
                 <ul>
-                    <li><strong>Formarea globulelor roșii:</strong> este esențială pentru producerea celulelor roșii sanguine sănătoase în măduva osoasă. o deficiență de b12 poate duce la anemie megaloblastică.</li>
-                    <li><strong>Funcția neurologică:</strong> b12 este vitală pentru sănătatea sistemului nervos, contribuind la formarea și menținerea mielinei (învelișul protector al fibrelor nervoase) și la transmiterea semnalelor nervoase.</li>
-                    <li><strong>Sinteza ADN-ului:</strong> joacă un rol în sinteza materialului genetic (ADN-ul), esențial pentru diviziunea și creșterea celulară.</li>
-                    <li><strong>Metabolismul energetic:</strong> contribuie la transformarea alimentelor în energie.</li>
-                </ul>
-            </li>
-        </ul>
-
-        <h3>2. Alte roluri (mai puțin clare la om)</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> în afara rolului său în vitamina b12, funcțiile specifice ale cobaltului liber în corpul uman sunt puțin înțelese sau sunt considerate a fi minime. în doze mari, cobaltul poate fi chiar toxic.</li>
-        </ul>
-
-        <h2>Surse alimentare de cobalt</h2>
-        <p>Deoarece cobaltul este necesar în principal pentru sinteza vitaminei b12 de către microorganisme (nu de către plante sau animale direct), alimentele care conțin b12 sunt principalele surse.</p>
-        <ul>
-            <li><strong>Produse de origine animală:</strong>
-                <ul>
-                    <li>carne (vită, pui, porc).</li>
-                    <li>ficat.</li>
-                    <li>pește și fructe de mare.</li>
-                    <li>ouă.</li>
-                    <li>produse lactate.</li>
-                </ul>
-            </li>
-            <li><strong>Alimente fortificate cu b12:</strong>
-                <ul>
-                    <li>cereale pentru micul dejun.</li>
-                    <li>băuturi vegetale.</li>
-                </ul>
-            </li>
-        </ul>
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-    </div>
-</body>
-</html>
