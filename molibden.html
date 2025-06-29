@@ -3,169 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Molibden - Ghid Minerale</title>
+    <title>Molibdenul și Echilibrul Emoțional</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Molibden</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul molibdenului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de molibden</a></li>
-                <li><a href="#perspectiva-holistica">Molibden: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Molibdenul și Echilibrul Emoțional
         </div>
 
-        <h2 id="rolul-fizic">Rolul molibdenului în organism (perspectivă fizică)</h2>
-        [cite_start]<p>Molibdenul este un oligoelement esențial care acționează ca un cofactor pentru mai multe enzime cheie. [cite: 14]</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Funcția enzimatică esențială</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Aceste enzime sunt implicate în metabolismul anumitor aminoacizi (cum ar fi sulfitul, care este transformat în sulfat), în descompunerea purinelor (care formează acid uric) și în detoxifierea unor compuși dăunători. [cite: 15]</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Molibden - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Molibdenul este un oligoelement esențial care acționează ca un cofactor pentru mai multe enzime cheie.</p>
+                    <ul>
+                        <li><b>Mecanism:</b> Aceste enzime sunt implicate în metabolismul anumitor aminoacizi (cum ar fi sulfitul, care este transformat în sulfat), în descompunerea purinelor (care formează acid uric) și în detoxifierea unor compuși dăunători.</li>
+                        <li><b>Sănătatea nervilor și producția de energie:</b> Este important pentru sănătatea nervilor și pentru producerea de energie la nivel celular.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Molibdenul se găsește în diverse alimente:</p>
+                    <ul>
+                        <li><b>Leguminoase:</b> Fasole, linte, mazăre.</li>
+                        <li><b>Cereale integrale:</b> Ovăz, grâu integral, orez brun.</li>
+                        <li><b>Nuci și semințe:</b> Migdale, semințe de floarea-soarelui.</li>
+                        <li><b>Legume cu frunze verzi:</b> Spanac, varză.</li>
+                        <li><b>Produse lactate:</b> Lapte, brânză.</li>
+                        <li><b>Ficat:</b> În special ficat de vită.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3>2. Sănătatea nervilor și producția de energie</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Este important pentru sănătatea nervilor și pentru producerea de energie la nivel celular. [cite: 16]</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Molibden: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, molibdenul este un oligoelement adesea asociat cu <b>procesarea, detoxifierea (la nivel fizic și emoțional), adaptabilitatea și capacitatea de a elibera ceea ce nu mai servește</b>. Prin rolul său de cofactor enzimatic în metabolismul sulfitului și purinelor, molibdenul rezonează cu procesele noastre interne de "curățare" și transformare a energiilor și emoțiilor.</p>
 
-        <h2 id="surse-alimentare">Surse alimentare de molibden</h2>
-        <ul>
-            [cite_start]<li><b>Leguminoase:</b> Fasole, linte, mazăre. [cite: 17]</li>
-            [cite_start]<li><b>Cereale integrale:</b> Ovăz, grâu integral, orez brun. [cite: 17]</li>
-            [cite_start]<li><b>Nuci și semințe:</b> Migdale, semințe de floarea-soarelui. [cite: 17]</li>
-            [cite_start]<li><b>Legume cu frunze verzi:</b> Spanac, varză. [cite: 18]</li>
-            [cite_start]<li><b>Produse lactate:</b> Lapte, brânză. [cite: 17]</li>
-            [cite_start]<li><b>Ficat:</b> În special ficat de vită. [cite: 17]</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de molibden poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Dificultăți în procesarea emoțiilor toxice:</b> Incapacitatea de a "digera" și a elibera emoțiile negative, cum ar fi resentimentele, furia reprimată sau vina. Acestea se pot acumula și crea o senzație de "toxicitate" internă.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Sensibilitate la sulfați (din alimente sau aditivi), reacții la substanțe chimice.</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de copleșire și suprasolicitare:</b> Dacă organismul are dificultăți în detoxifierea la nivel fizic, energetic, acest lucru se poate reflecta într-o senzație de a fi copleșit de situații, responsabilități sau emoții.</li>
+                        <li><b>Rigiditate în adaptare și rezistență la schimbare:</b> O dificultate de a te adapta la noi circumstanțe, o rezistență la procesele naturale de transformare și eliberare.</li>
+                        <li><b>Lipsa de claritate mentală și confuzie:</b> Deoarece molibdenul este important pentru sănătatea nervilor, un deficit poate rezonă cu o "ceață mentală" emoțională, dificultăți de concentrare sau de a vedea soluții clare.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Anxietate, iritabilitate, probleme neurologice.</li>
+                            </ul>
+                        </li>
+                        <li><b>Perfecționism și auto-critică excesivă:</b> O nevoie de a fi perfect, de a nu face greșeli, ceea ce poate duce la o acumulare de presiune internă și la un ciclu vicios de "toxicitate" emoțională.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de molibden (foarte rar din dietă, mai des din expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Tendința de a "curăța" sau a "perfecționa" excesiv:</b> O obsesie cu puritatea, cu "curățenia" (fizică sau emoțională), care poate duce la judecată excesivă asupra propriei persoane sau a altora.</li>
+                        <li><b>Criticitate și rigiditate în judecată:</b> O atitudine excesiv de critică, atât față de sine, cât și față de ceilalți. Dificultatea de a accepta imperfecțiunea.</li>
+                        <li><b>Agitație și nervozitate energetică:</b> O energie internă care este mereu în căutarea "problemei" sau a "toxicității", ducând la o stare de neliniște constantă.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h2 id="perspectiva-holistica">Molibden: Perspectivă holistică (cauze emoționale)</h2>
-        <p>Din perspectivă holistică, molibdenul este un oligoelement adesea asociat cu <b>procesarea, detoxifierea (la nivel fizic și emoțional), adaptabilitatea și capacitatea de a elibera ceea ce nu mai servește</b>. Prin rolul său de cofactor enzimatic în metabolismul sulfitului și purinelor, molibdenul rezonează cu procesele noastre interne de "curățare" și transformare a energiilor și emoțiilor.</p>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de eliberare emoțională:</b> Jurnalism terapeutic, art-terapie, discuții cu un terapeut pentru a procesa emoțiile nerezolvate.</li>
+                        <li><b>Tehnici de relaxare și reducere a stresului:</b> Meditație, mindfulness, respirație profundă, yoga.</li>
+                        <li><b>Practici de "curățare" energetică:</b> Vizualizări, băi purificatoare, timp petrecut în natură.</li>
+                        <li><b>Cultivarea acceptării și a iertării</b> (față de sine și față de alții) pentru a elibera povara emoțională.</li>
+                        <li><b>Stabilirea unor limite sănătoase</b> pentru a evita suprasolicitarea.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de auto-compasiune</b> și de acceptare a imperfecțiunii.</li>
+                        <li><b>Meditații pentru a cultiva neutralitatea</b> și a reduce judecata.</li>
+                        <li><b>Exerciții de "împământare"</b> pentru a reduce agitația mentală.</li>
+                        <li><b>Terapii care ajută la explorarea nevoii de control</b> și a perfecționismului.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>Cauze emoționale ale deficitului de molibden:</h3>
-        <p>Un deficit de molibden poate fi legat de următoarele aspecte emoționale:</p>
-        <ol>
-            <li><b>Dificultăți în procesarea emoțiilor toxice:</b> Incapacitatea de a "digera" și a elibera emoțiile negative, cum ar fi resentimentele, furia reprimată sau vina. Acestea se pot acumula și crea o senzație de "toxicitate" internă.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Sensibilitate la sulfați (din alimente sau aditivi), reacții la substanțe chimice.</li>
-                </ul>
-            </li>
-            <li><b>Sentiment de copleșire și suprasolicitare:</b> Dacă organismul are dificultăți în detoxifierea la nivel fizic, energetic, acest lucru se poate reflecta într-o senzație de a fi copleșit de situații, responsabilități sau emoții.</li>
-            <li><b>Rigiditate în adaptare și rezistență la schimbare:</b> O dificultate de a te adapta la noi circumstanțe, o rezistență la procesele naturale de transformare și eliberare.</li>
-            <li><b>Lipsa de claritate mentală și confuzie:</b> Deoarece molibdenul este important pentru sănătatea nervilor, un deficit poate rezonă cu o "ceață mentală" emoțională, dificultăți de concentrare sau de a vedea soluții clare.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Anxietate, iritabilitate, probleme neurologice.</li>
-                </ul>
-            </li>
-            <li><b>Perfecționism și auto-critică excesivă:</b> O nevoie de a fi perfect, de a nu face greșeli, ceea ce poate duce la o acumulare de presiune internă și la un ciclu vicios de "toxicitate" emoțională.</li>
-        </ol>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>Cauze emoționale ale excesului de molibden:</h3>
-        <p>Un exces de molibden (foarte rar din dietă, mai des din expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
-        <ol>
-            <li><b>Tendința de a "curăța" sau a "perfecționa" excesiv:</b> O obsesie cu puritatea, cu "curățenia" (fizică sau emoțională), care poate duce la judecată excesivă asupra propriei persoane sau a altora.</li>
-            <li><b>Criticitate și rigiditate în judecată:</b> O atitudine excesiv de critică, atât față de sine, cât și față de ceilalți. Dificultatea de a accepta imperfecțiunea.</li>
-            <li><b>Agitație și nervozitate energetică:</b> O energie internă care este mereu în căutarea "problemei" sau a "toxicității", ducând la o stare de neliniște constantă.</li>
-        </ol>
-
-        <h3>Recomandări holistice:</h3>
-        <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
-        <ul>
-            <li><b>Pentru deficit (copleșire, blocaje emoționale):</b>
-                <ul>
-                    <li>Practici de eliberare emoțională: jurnalism terapeutic, art-terapie, discuții cu un terapeut pentru a procesa emoțiile nerezolvate.</li>
-                    <li>Tehnici de relaxare și reducere a stresului: meditație, mindfulness, respirație profundă, yoga.</li>
-                    <li>Practici de "curățare" energetică: vizualizări, băi purificatoare, timp petrecut în natură.</li>
-                    <li>Cultivarea acceptării și a iertării (față de sine și față de alții) pentru a elibera povara emoțională.</li>
-                    <li>Stabilirea unor limite sănătoase pentru a evita suprasolicitarea.</li>
-                </ul>
-            </li>
-            <li><b>Pentru exces (criticitate, perfecționism):</b>
-                <ul>
-                    <li>Practici de auto-compasiune și de acceptare a imperfecțiunii.</li>
-                    <li>Meditații pentru a cultiva neutralitatea și a reduce judecata.</li>
-                    <li>Exerciții de "împământare" pentru a reduce agitația mentală.</li>
-                    <li>Terapii care ajută la explorarea nevoii de control și a perfecționismului.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
