@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B3 (Niacina) și Claritatea Mentală</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B3 (Niacina) și Claritatea Mentală
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B3 (Niacina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B3, cunoscută sub denumirea de niacină (sau acid nicotinic și niacinamidă/nicotinamidă), este o vitamină hidrosolubilă esențială. Joacă un rol fundamental în metabolismul energetic și în sănătatea celulară. Spre deosebire de alte vitamine, organismul o poate sintetiza în cantități mici din aminoacidul triptofan.</p>
+                        <ul>
+                            <li><b>Metabolismul energetic:</b> Niacina este o componentă esențială a coenzimelor NAD (nicotinamid adenin dinucleotid) și NADP (nicotinamid adenin dinucleotid fosfat). Aceste coenzime sunt cruciale pentru peste 400 de reacții enzimatice implicate în transformarea carbohidraților, grăsimilor și proteinelor în energie.</li>
+                            <li><b>Sănătatea sistemului nervos:</b> Este vitală pentru funcționarea normală a creierului și a sistemului nervos, contribuind la sinteza neurotransmițătorilor.</li>
+                            <li><b>Sănătatea pielii:</b> Contribuie la menținerea integrității și sănătății pielii.</li>
+                            <li><b>Sănătatea digestivă:</b> Ajută la menținerea unui tract digestiv sănătos.</li>
+                            <li><b>Rol în reglarea colesterolului (acidul nicotinic):</b> Forma de acid nicotinic poate reduce nivelurile de colesterol LDL ("colesterolul rău") și trigliceride, și crește colesterolul HDL ("colesterolul bun"), fiind utilizată în doze farmacologice pentru gestionarea dislipidemiei.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Niacina se găsește într-o gamă largă de alimente, în special cele bogate în proteine.</p>
+                        <ul>
+                            <li><b>Carne și organe:</b> Ficat (vită, pui), carne de vită, pui, curcan.</li>
+                            <li><b>Pește:</b> Ton (în special ton conservat în apă), somon, anșoa.</li>
+                            <li><b>Cereale integrale și fortificate:</b> Pâine integrală, orez brun, cereale pentru micul dejun fortificate.</li>
+                            <li><b>Leguminoase:</b> Arahide, fasole, linte.</li>
+                            <li><b>Drojdie de bere.</b></li>
+                            <li><b>Ciuperci.</b></li>
+                            <li><b>Unele legume:</b> Cartofi, sparanghel.</li>
+                            <li><b>Cafea:</b> Conține niacină și poate contribui la aportul zilnic.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (pelagra)</h3>
+                        <p>Deficiența severă de niacină duce la pelagra, o boală caracterizată prin "cele 4 D-uri": dermatită, diaree, demență și, în cele din urmă, deces (dacă nu este tratată). Deficiența este rară în țările dezvoltate.</p>
+                        <ol>
+                            <li><b>Dermatită:</b> Erupții cutanate simetrice, de obicei pe zone expuse la soare (gât, mâini, picioare), cu aspect de arsură solară, care devin apoi aspre și hiperpigmentate.</li>
+                            <li><b>Diaree:</b> Probleme gastrointestinale, inclusiv inflamația limbii (glosită), greață, vărsături și diaree severă.</li>
+                            <li><b>Demență:</b> Simptome neurologice și psihiatrice, inclusiv confuzie, iritabilitate, insomnie, anxietate, depresie și, în cazuri severe, demență.</li>
+                            <li><b>Slăbiciune, oboseală, lipsa poftei de mâncare.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B3)</h3>
+                        <p>Excesul de niacină este de obicei legat de suplimentarea cu doze mari de acid nicotinic, nu de aportul alimentar normal. Nicotinamida este, în general, mai bine tolerată la doze mari.</p>
+                        <ol>
+                            <li><b>"Flush" de niacină:</b> Roșeață, senzație de căldură, mâncărime și furnicături pe piele, în special pe față, gât și piept. Este o reacție vasculară inofensivă, dar incomodă, specifică acidului nicotinic.</li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree, disconfort abdominal.</li>
+                            <li><b>Toxicitate hepatică:</b> La doze foarte mari și pe termen lung, poate provoca leziuni hepatice.</li>
+                            <li><b>Creșterea nivelului de zahăr din sânge:</b> Poate afecta controlul glicemic la persoanele cu diabet.</li>
+                            <li><b>Afectarea vederii:</b> Vedere încețoșată, edem macular cistoid (rar).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B3 (Niacina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B3 (Niacina) este adesea asociată cu <b>claritatea mentală, stabilitatea emoțională, capacitatea de adaptare la stres, energia vitală și fluiditatea comunicării și a relațiilor</b>. Prin rolul său central în metabolismul energetic, sănătatea pielii și a sistemului nervos, niacina rezonează cu capacitatea noastră de a "procesa" experiențele, de a ne menține integritatea în fața presiunilor și de a comunica eficient.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B3 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Confuzie mentală și lipsa de claritate:</b> O senzație persistentă de "ceață mentală", dificultăți de concentrare, de a lua decizii clare sau de a procesa informații complexe.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Simptome neurologice și psihiatrice (demență, iritabilitate).</li>
+                            </ul>
+                        </li>
+                        <li><b>Instabilitate emoțională și iritabilitate:</b> Schimbări bruște de dispoziție, o tendință la iritabilitate crescută, anxietate sau depresie.</li>
+                        <li><b>Dificultăți de auto-exprimare și "ardere" interioară:</b> Afectarea pielii (expunerea) și a mucoaselor (comunicarea) poate rezonă cu o incapacitate de a-ți exprima adevărul personal sau de a te simți confortabil în propria piele, ducând la o "ardere" internă.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Dermatită pe zone expuse la soare.</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de izolare și deconectare:</b> Dificultăți în a te conecta cu ceilalți sau cu mediul înconjurător, o senzație de a fi "pe dinafară".</li>
+                        <li><b>Lipsa de energie vitală și de entuziasm:</b> Deoarece este esențială pentru metabolismul energetic, un deficit poate reflecta o epuizare profundă, o lipsă de motivație și de bucurie de viață.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B3 (în special acid nicotinic, din suplimente) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>"Supra-activare" și agitație interioară:</b> O energie mentală și emoțională prea intensă, dificultăți de a te relaxa, o stare constantă de alertă.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> "Flush" de niacină (roșeață, căldură, mâncărime).</li>
+                            </ul>
+                        </li>
+                        <li><b>Rigiditate în convingeri și judecată excesivă:</b> O nevoie de a avea întotdeauna dreptate, o tendință de a fi critic, de a "ardei" (cu propriile judecăți) pe cei care nu se aliniază viziunii proprii.</li>
+                        <li><b>Iluzii de control și de perfecțiune:</b> O presiune autoimpusă de a fi mereu "impecabil" sau de a controla mediul, ceea ce poate duce la epuizare și frustrare.</li>
+                        <li><b>"Arderea" relațiilor:</b> O tendință de a fi prea intens în interacțiuni, de a domina discuțiile sau de a "consuma" energia celor din jur.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de clarificare mentală</b> și emoțională: meditație, jurnalism, mindfulness.</li>
+                        <li><b>Terapii</b> pentru gestionarea anxietății, depresiei și iritabilității, cultivarea stabilității emoționale.</li>
+                        <li><b>Exerciții de auto-exprimare autentică:</b> Cântat, scris liber, art-terapie.</li>
+                        <li><b>Conectarea cu natura</b> și cu ceilalți pentru a reduce sentimentul de izolare.</li>
+                        <li><b>Practici de reîncărcare energetică</b> și de cultivare a bucuriei.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și de "împământare":</b> Respirație profundă, yoga restaurativă, timp petrecut în liniște.</li>
+                        <li><b>Terapii</b> care ajută la eliberarea rigidității în convingeri și a nevoii de control.</li>
+                        <li><b>Lucrul cu umilința</b>, acceptarea imperfecțiunii și a diversității de opinii.</li>
+                        <li><b>Exerciții</b> care încurajează ascultarea activă și empatia în relații.</li>
+                        <li><b>Gestionarea proactivă a stresului</b> pentru a reduce "supra-activarea" internă.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
