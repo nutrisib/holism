@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina E și Scutul Interior Emoțional</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina E și Scutul Interior Emoțional
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina E - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina E este o vitamină liposolubilă esențială, care se găsește sub opt forme chimice, dintre care alfa-tocoferolul este cea mai activă formă la om. Este recunoscută în principal pentru proprietățile sale antioxidante.</p>
+                        <ul>
+                            <li><b>Antioxidant puternic:</b> Acționează ca un antioxidant major în membranele celulare, protejând acizii grași polinesaturați (grăsimile sănătoase) și alte componente celulare de daunele oxidative cauzate de radicalii liberi. Previne peroxidarea lipidică.</li>
+                            <li><b>Sistemul imunitar:</b> Contribuie la funcționarea normală a sistemului imunitar, în special la vârstnici, susținând producția și activitatea celulelor imunitare.</li>
+                            <li><b>Sănătatea pielii și a ochilor:</b> Ajută la menținerea sănătății pielii și poate proteja ochii de stresul oxidativ.</li>
+                            <li><b>Sănătatea cardiovasculară:</b> Poate contribui la prevenirea oxidării colesterolului LDL ("colesterolul rău"), un pas important în dezvoltarea aterosclerozei.</li>
+                            <li><b>Funcția nervoasă:</b> Este implicată în menținerea sănătății sistemului nervos.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vitamina E se găsește în special în uleiuri vegetale, nuci și semințe.</p>
+                        <ul>
+                            <li><b>Uleiuri vegetale:</b> Ulei de germeni de grâu (cea mai bogată sursă), ulei de floarea-soarelui, ulei de șofrănel, ulei de porumb, ulei de soia.</li>
+                            <li><b>Nuci și semințe:</b> Semințe de floarea-soarelui (foarte bogate), migdale, alune de pădure, nuci pecan.</li>
+                            <li><b>Legume cu frunze verzi:</b> Spanac, broccoli, sparanghel.</li>
+                            <li><b>Avocado.</b></li>
+                            <li><b>Cereale integrale:</b> Germeni de grâu.</li>
+                            <li><b>Fructe:</b> Mango, kiwi.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză E)</h3>
+                        <p>Deficiența de vitamina E este rară la persoanele sănătoase, dar poate apărea la cei cu afecțiuni care afectează absorbția grăsimilor (ex: fibroză chistică, boala Crohn, afecțiuni hepatice) sau la nou-născuții prematuri.</p>
+                        <ol>
+                            <li><b>Probleme neurologice:</b>
+                                <ul>
+                                    <li>Neuropatie periferică (amorțeală, furnicături, slăbiciune la nivelul brațelor și picioarelor).</li>
+                                    <li>Ataxie (dificultăți de coordonare și echilibru).</li>
+                                    <li>Miopatie (slăbiciune musculară).</li>
+                                    <li>Retinopatie (deteriorarea retinei).</li>
+                                </ul>
+                            </li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
+                            <li><b>Anemie hemolitică:</b> La nou-născuții prematuri, deoarece vitamina E protejează globulele roșii.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză E)</h3>
+                        <p>Toxicitatea vitaminei E este rară din alimente, dar dozele foarte mari din suplimente pot avea efecte adverse.</p>
+                        <ol>
+                            <li><b>Creșterea riscului de sângerare:</b> Dozele mari pot interfera cu coagularea sângelui, crescând riscul de hemoragie, în special la persoanele care iau anticoagulante (ex: warfarină).</li>
+                            <li><b>Simptome gastrointestinale:</b> Greață, diaree, crampe.</li>
+                            <li><b>Oboseală, slăbiciune.</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina E: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, vitamina E este adesea asociată cu <b>protecția, integritatea emoțională, rezistența la stres (oxidativ emoțional), capacitatea de a iubi și de a te proteja (pe tine și pe alții), precum și cu vitalitatea subtilă</b>. Fiind un antioxidant puternic care protejează celulele de daune, vitamina E rezonează cu "scutul" nostru energetic împotriva "radicalilor liberi" emoționali și cu abilitatea de a menține integritatea interioară.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de vitamina E poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Vulnerabilitate emoțională și lipsă de protecție:</b> Sentimentul de a fi expus, de a nu putea face față atacurilor verbale sau energetice, o lipsă de granițe sănătoase.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Neuropatie (sensibilitate la stimuli), imunitate slăbită.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a gestiona stresul emoțional:</b> Incapacitatea de a "neutraliza" impactul negativ al experiențelor stresante, ducând la acumularea de tensiune și "daune" emoționale.</li>
+                        <li><b>Lipsa de "fluiditate" și adaptabilitate:</b> Deși fizic protejează membranele (fluide), emoțional poate indica o rigiditate în gândire sau o dificultate de a te mișca prin emoții complexe.</li>
+                        <li><b>Sentiment de pierdere a vitalității interioare:</b> O senzație că "strălucirea" interioară este diminuată, lipsă de bucurie și entuziasm.</li>
+                        <li><b>Probleme în relații (a da și a primi dragoste):</b> Fiind legată de conceptul de "protecție" și "bunăstare", un deficit poate sugera blocaje în a oferi sau a accepta afecțiune și sprijin.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de vitamina E (mai ales din suplimente, cu risc de sângerare) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Supra-protecție și izolare:</b> O tendință de a te proteja excesiv, de a construi ziduri emoționale prea groase, ceea ce poate duce la izolare și dificultăți de conexiune autentică.</li>
+                        <li><b>Rigiditate în convingeri și teamă de vulnerabilitate:</b> O nevoie de a fi mereu "puternic", de a nu-ți arăta slăbiciunea, ceea ce poate crea o tensiune interioară constantă.</li>
+                        <li><b>Tendința de a "opri" fluxul natural:</b> Metaforic, interferența cu coagularea sângelui poate rezonă cu o dificultate de a lăsa lucrurile să curgă natural, o nevoie de a controla sau de a opri anumite procese.</li>
+                        <li><b>"Arderea" relațiilor prin control:</b> O încercare de a domina sau de a controla relațiile pentru a le proteja, ducând la conflicte sau la un mediu "sufocant".</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de întărire a granițelor personale</b> și a autoapărării energetice (vizualizări, afirmații).</li>
+                        <li><b>Tehnici de gestionare a stresului</b> și de eliberare a tensiunii emoționale (mindfulness, respirație profundă).</li>
+                        <li><b>Lucrul cu vulnerabilitatea</b> și acceptarea sprijinului.</li>
+                        <li><b>Meditații</b> pentru a cultiva compasiunea de sine și dragostea.</li>
+                        <li><b>Conectarea cu natura</b> pentru a absorbi energie protectoare și a te simți revitalizat.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de "deschidere"</b> și de eliberare a zidurilor emoționale (art-terapie, dans).</li>
+                        <li><b>Terapii</b> pentru gestionarea nevoii de control și a fricii de vulnerabilitate.</li>
+                        <li><b>Cultivarea flexibilității</b> și a spontaneității în relații.</li>
+                        <li><b>Lucrul cu încrederea</b> în fluxul natural al vieții, renunțarea la rigiditate.</li>
+                        <li><b>Meditații</b> pentru a cultiva echilibrul între a oferi și a primi.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
