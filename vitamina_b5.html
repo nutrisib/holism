@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B5 (Acidul Pantotenic) și Adaptabilitatea</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B5 (Acidul Pantotenic) și Adaptabilitatea
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B5 (Acidul Pantotenic) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B5, cunoscută sub denumirea de acid pantotenic, este o vitamină hidrosolubilă esențială. Joacă un rol vital în metabolismul energetic și în sinteza unor substanțe importante. Numele "pantotenic" provine din grecescul "pantos", însemnând "pretutindeni", reflectând prezența sa largă în alimente.</p>
+                        <ul>
+                            <li><b>Metabolismul energetic:</b> Acidul pantotenic este o componentă cheie a Coenzimei A (CoA), o moleculă centrală în metabolismul carbohidraților, grăsimilor și proteinelor. CoA este esențială pentru producția de energie (ATP) în ciclul Krebs.</li>
+                            <li><b>Sinteza de acizi grași și colesterol:</b> Este necesară pentru sinteza acizilor grași (componente ale grăsimilor), a colesterolului și a hormonilor steroizi (cortizol, hormoni sexuali).</li>
+                            <li><b>Sinteza neurotransmițătorilor:</b> Contribuie la sinteza acetilcolinei, un neurotransmițător important pentru funcția nervoasă și memorie.</li>
+                            <li><b>Detoxifiere:</b> Joacă un rol în detoxifierea unor substanțe în ficat.</li>
+                            <li><b>Sănătatea pielii și a părului:</b> Este utilizată în produse cosmetice pentru a îmbunătăți hidratarea pielii și elasticitatea părului, datorită rolului său în menținerea sănătății celulelor.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Acidul pantotenic se găsește în aproape toate alimentele.</p>
+                        <ul>
+                            <li><b>Carne și organe:</b> Ficat, rinichi, carne de vită, pui, porc.</li>
+                            <li><b>Pește:</b> Somon, ton.</li>
+                            <li><b>Cereale integrale:</b> Orez brun, ovăz, pâine integrală.</li>
+                            <li><b>Leguminoase:</b> Linte, fasole, mazăre.</li>
+                            <li><b>Ouă:</b> Gălbenușul.</li>
+                            <li><b>Produse lactate:</b> Lapte, iaurt.</li>
+                            <li><b>Avocado</b>.</li>
+                            <li><b>Legume:</b> Broccoli, ciuperci.</li>
+                            <li><b>Drojdie de bere.</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B5)</h3>
+                        <p>Deficiența severă de acid pantotenic este extrem de rară la om, deoarece vitamina este larg răspândită în alimente. Simptomele, dacă apar, sunt adesea nespecifice și se suprapun cu deficiențele altor vitamine B.</p>
+                        <ol>
+                            <li><b>Oboseală cronică și slăbiciune:</b> Din cauza afectării producției de energie.</li>
+                            <li><b>Probleme neurologice:</b> Amorțeală, furnicături (parestezii), senzație de "picioare fierbinți" (sindromul picioarelor arzătoare).</li>
+                            <li><b>Dureri de cap, iritabilitate, insomnie.</b></li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, crampe abdominale.</li>
+                            <li><b>Crampe musculare.</b></li>
+                            <li><b>Slăbirea sistemului imunitar.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B5)</h3>
+                        <p>Acidul pantotenic este o vitamină hidrosolubilă, iar excesul este rapid eliminat prin urină. Toxicitatea din suplimentare este extrem de rară și minoră.</p>
+                        <ol>
+                            <li><b>Probleme gastrointestinale ușoare:</b> Diaree, disconfort abdominal (la doze foarte mari).</li>
+                            <li>Nu sunt raportate efecte adverse grave sau toxicitate severă la doze mari din alimente sau suplimente orale.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B5 (Acidul Pantotenic): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B5 (Acidul Pantotenic) este adesea asociată cu <b>adaptabilitatea, flexibilitatea, reziliența în fața schimbării și capacitatea de a transforma provocările în oportunități</b>. Numele său, "pretutindeni", reflectă omniprezența sa și sugerează o legătură cu capacitatea noastră de a "naviga" prin diverse situații de viață și de a integra experiențele. De asemenea, rolul său în sinteza hormonilor de stres (cortizol) indică o legătură cu gestionarea emoțiilor în situații de presiune.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B5, deși rar fizic, poate fi legat din perspectivă holistică de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de adaptabilitate și rigiditate:</b> Dificultatea de a te adapta la noi circumstanțe, la schimbări neașteptate sau de a ieși din zona de confort. Un sentiment de a fi "blocat" sau "încorsetat" emoțional.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală cronică, slăbiciune.</li>
+                            </ul>
+                        </li>
+                        <li><b>Epuizare emoțională și "ardere":</b> Deși este implicat în sinteza energiei, o lipsă poate rezonă cu o senzație de epuizare emoțională profundă, de a fi "ars" de stres sau de a nu-ți mai putea găsi resursele interioare.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală cronică, slăbiciune.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a procesa și integra experiențele:</b> Incapacitatea de a "digera" evenimente trecute sau emoții complexe, lăsându-le să persiste și să creeze disconfort.</li>
+                        <li><b>"Picioare fierbinți" emoționale:</b> Simbolismul arsurilor la picioare poate indica o senzație de neliniște, de a fi "pe jar" emoțional, sau o dificultate de a te "împământa" și a te simți stabil.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Senzație de "picioare fierbinți", amorțeală.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de creativitate și spontaneitate:</b> Dificultăți în a accesa noi idei, în a fi spontan sau în a te exprima liber, reflectând un blocaj al fluxului energetic creativ.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B5 este extrem de rar și inofensiv. Din perspectivă holistică, un exces foarte rar ar putea sugera:</p>
+                    <ol>
+                        <li><b>Suprasolicitare și adaptabilitate "forțată":</b> O tendință de a te adapta excesiv la toate cerințele, ducând la epuizare și la pierderea autenticității. O adaptabilitate "fără limite" care te poate lăsa fără energie.</li>
+                        <li><b>Agitație internă și dispersie:</b> O energie care este constant în mișcare, dar fără o direcție clară, ducând la neliniște și dificultăți de concentrare.</li>
+                        <li><b>Nevoia de a controla stresul:</b> O încercare de a controla perfect modul în care reacționezi la stres, ceea ce poate duce la rigiditate și la reprimarea emoțiilor autentice.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de adaptabilitate:</b> Mindfulness, meditații pentru a cultiva flexibilitatea mentală și emoțională.</li>
+                        <li><b>Tehnici de gestionare a stresului</b> și de prevenire a "arderii" emoționale (respirație profundă, pauze regulate).</li>
+                        <li><b>Terapii</b> pentru eliberarea blocajelor legate de incapacitatea de a te adapta sau de a procesa experiențe.</li>
+                        <li><b>Exerciții fizice</b> care încurajează fluiditatea și mișcarea conștientă (dans, yoga).</li>
+                        <li><b>Cultivarea spontaneității</b> și a creativității.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de "împământare"</b> pentru a centra energia și a reduce agitația.</li>
+                        <li><b>Terapii</b> care ajută la stabilirea limitelor sănătoase și la reducerea supra-adaptării.</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a faptului că nu poți controla totul.</li>
+                        <li><b>Meditații</b> pentru a cultiva calmul și a găsi un ritm mai lent și mai sustenabil.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
