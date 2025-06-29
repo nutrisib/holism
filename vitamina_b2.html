@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B2 (Riboflavina) și Claritatea Energetică</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B2 (Riboflavina) și Claritatea Energetică
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B2 (Riboflavina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B2, cunoscută sub denumirea de riboflavină, este o vitamină hidrosolubilă esențială, care joacă un rol central în metabolismul energetic și în funcționarea altor vitamine B. Organismul o stochează în cantități limitate și necesită un aport regulat.</p>
+                        <ul>
+                            <li><b>Producția de energie:</b> Riboflavina este o componentă cheie a coenzimelor FAD (flavin adenin dinucleotid) și FMN (flavin mononucleotid), care sunt esențiale în lanțul de transport al electronilor din mitocondrii, unde se generează ATP (energie). Este vitală pentru metabolismul carbohidraților, proteinelor și grăsimilor.</li>
+                            <li><b>Acțiune antioxidantă:</b> FAD și FMN sunt implicate în activitatea enzimelor antioxidante, cum ar fi glutation reductaza, care ajută la protejarea celulelor de stresul oxidativ.</li>
+                            <li><b>Metabolismul altor vitamine:</b> Este necesară pentru activarea vitaminei B6 (piridoxină) și pentru conversia triptofanului (un aminoacid) în niacină (vitamina B3). De asemenea, ajută la mobilizarea fierului.</li>
+                            <li><b>Sănătatea pielii, a ochilor și a sistemului nervos:</b> Contribuie la menținerea sănătății pielii, a membranelor mucoase, a ochilor și a sistemului nervos.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Riboflavina se găsește în special în produse lactate, carne și legume verzi.</p>
+                        <ul>
+                            <li><b>Produse lactate:</b> Lapte, iaurt, brânză.</li>
+                            <li><b>Carne și organe:</b> Ficat (vită, pui), carne de vită, porc, pui.</li>
+                            <li><b>Ouă</b>.</li>
+                            <li><b>Cereale fortificate:</b> Pâine, cereale pentru micul dejun.</li>
+                            <li><b>Legume cu frunze verzi:</b> Spanac, broccoli, sparanghel.</li>
+                            <li><b>Ciuperci.</b></li>
+                            <li><b>Drojdie de bere.</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (ariboflavinoză)</h3>
+                        <p>Deficiența de riboflavină (ariboflavinoză) este relativ rară în țările dezvoltate, dar poate apărea în cazul malnutriției, alcoolismului sau al unor afecțiuni digestive.</p>
+                        <ol>
+                            <li><b>Probleme ale pielii și mucoaselor:</b>
+                                <ul>
+                                    <li><b>Cheiloză:</b> Crăpături la colțurile gurii.</li>
+                                    <li><b>Glosită:</b> Inflamația limbii, cu aspect purpuriu-roșu.</li>
+                                    <li><b>Stomatită angulară:</b> Inflamația și fisurile la colțurile gurii.</li>
+                                    <li><b>Dermatită seboreică:</b> Erupții cutanate, în special în jurul nasului și gurii.</li>
+                                </ul>
+                            </li>
+                            <li><b>Probleme oculare:</b>
+                                <ul>
+                                    <li>Ochi injectați cu sânge (hiperemie conjunctivală).</li>
+                                    <li>Sensibilitate la lumină (fotofobie).</li>
+                                    <li>Vedere încețoșată.</li>
+                                </ul>
+                            </li>
+                            <li><b>Durere în gât și dificultăți la înghițire.</b></li>
+                            <li><b>Anemie:</b> Prin afectarea metabolismului fierului.</li>
+                            <li><b>Oboseală și slăbiciune.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B2)</h3>
+                        <p>Vitamina B2 este hidrosolubilă, iar excesul este eliminat eficient prin urină. Toxicitatea din suplimentare este extrem de rară și minoră.</p>
+                        <ul>
+                            <li>Nu sunt raportate efecte adverse grave sau toxicitate severă la doze mari din alimente sau suplimente orale.</li>
+                            <li>Urina poate deveni de culoare galben-portocaliu intens, un efect inofensiv al excreției riboflavinei.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B2 (Riboflavina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B2 (Riboflavina) este adesea asociată cu <b>claritatea perceptivă (vizuală și interioară), fluiditatea energiei, adaptabilitatea și capacitatea de a transforma și de a menține vitalitatea radiantă</b>. Prin rolul său în producția de energie, acțiunea antioxidantă și metabolismul altor vitamine, riboflavina rezonează cu "strălucirea" noastră interioară, cu abilitatea de a "vedea clar" și de a menține un flux energetic armonios.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B2 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de claritate perceptivă și "orbire" emoțională:</b> Dificultăți în a "vedea" adevărul unei situații sau a unei persoane, o lipsă de discernământ sau o tendință de a ignora semnele de avertizare.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Sensibilitate la lumină, vedere încețoșată, ochi injectați cu sânge.</li>
+                            </ul>
+                        </li>
+                        <li><b>Rigiditate și lipsă de fluiditate emoțională:</b> Dificultatea de a te adapta la schimbare, o tendință de a te agăța de tipare vechi sau de a fi inflexibil în gândire și reacții.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Crăpături la colțurile gurii (simbol al dificultății de a "vorbi" sau de a "deschide"), inflamația limbii (exprimare blocată).</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de vitalitate sau de "strălucire" interioară:</b> Un sentiment de a fi "palid" emoțional, lipsă de bucurie, entuziasm sau capacitatea de a-ți manifesta energia radiantă.</li>
+                        <li><b>Dificultăți în a integra experiențe:</b> Fiind esențială pentru metabolismul altor vitamine B (integratoare), un deficit poate reflecta o dificultate în a procesa și a învăța din experiențe, lăsând persoana blocată în vechi tipare.</li>
+                        <li><b>Vulnerabilitate la "toxicitatea" emoțională:</b> Slăbirea funcției antioxidante poate indica o susceptibilitate la stresul emoțional și la acumularea de "radicali liberi" energetici.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B2 este extrem de rar și considerat inofensiv. Din perspectivă holistică, un exces foarte rar ar putea sugera:</p>
+                    <ol>
+                        <li><b>Suprasolicitare și agitație interioară:</b> O energie mentală prea intensă, o tendință de a fi mereu "activ" sau "încordat", fără a permite odihnă și reflecție.</li>
+                        <li><b>"Vedere" excesivă a imperfecțiunilor:</b> O tendință de a fi excesiv de critic, de a "vedea" doar greșelile sau aspectele negative la propria persoană sau la ceilalți.</li>
+                        <li><b>Rigiditate în "iluminare":</b> O nevoie de a avea întotdeauna dreptate sau de a impune propria "claritate", fără a accepta alte perspective.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de dezvoltare a clarității mentale</b> și a discernământului (meditație, mindfulness, exerciții de focus).</li>
+                        <li><b>Terapii</b> pentru eliberarea rigidității emoționale și cultivarea adaptabilității.</li>
+                        <li><b>Exerciții de exprimare creativă</b> pentru a-ți manifesta "strălucirea" interioară (artă, dans, muzică).</li>
+                        <li><b>Practici de "curățare" energetică</b> pentru a elibera emoțiile acumulate.</li>
+                        <li><b>Conectarea cu natura</b> și cu lumina naturală (cu moderație) pentru a spori vitalitatea.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și de "încetinire" a minții</b> (meditație statică, respirație profundă).</li>
+                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la cultivarea umilinței.</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> (proprii și a altora).</li>
+                        <li><b>Meditații</b> pentru a cultiva neutralitatea și a reduce judecata.</li>
+                        <li><b>Activități</b> care încurajează fluiditatea și spontaneitatea.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
