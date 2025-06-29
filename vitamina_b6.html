@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B6 (Piridoxina) și Echilibrul Emoțional</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B6 (Piridoxina) și Echilibrul Emoțional
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B6 (Piridoxina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B6 este o vitamină hidrosolubilă esențială, parte a complexului de vitamine B. Este un termen generic pentru șase compuși (piridoxină, piridoxal, piridoxamină și formele lor fosforilate), dintre care piridoxal 5'-fosfat (PLP) este forma activă principală. Joacă un rol extrem de versatil, fiind implicată în peste 100 de reacții enzimatice.</p>
+                        <ul>
+                            <li><b>Metabolismul proteinelor și aminoacizilor:</b> PLP este o coenzimă esențială pentru majoritatea reacțiilor care implică aminoacizi, inclusiv sinteza și descompunerea proteinelor. Este crucială pentru transformarea triptofanului în niacină și a metioninei în cisteină.</li>
+                            <li><b>Sinteza neurotransmițătorilor:</b> Este vitală pentru producerea mai multor neurotransmițători importanți (mesageri chimici ai creierului), inclusiv serotonina, dopamina, noradrenalina, GABA și histamina. Aceștia sunt esențiali pentru reglarea dispoziției, somnului și funcției cognitive.</li>
+                            <li><b>Formarea globulelor roșii și funcția hemoglobinei:</b> Este necesară pentru sinteza hemului (parte a hemoglobinei) și pentru a permite hemoglobinei să lege oxigenul. O deficiență poate duce la anemie sideroblastică.</li>
+                            <li><b>Sistemul imunitar:</b> Contribuie la dezvoltarea și funcția celulelor imunitare, cum ar fi limfocitele.</li>
+                            <li><b>Metabolismul glucozei:</b> Joacă un rol în reglarea glicemiei prin eliberarea glucozei din glicogenul muscular și hepatic.</li>
+                            <li><b>Sănătatea sistemului nervos:</b> Pe lângă sinteza neurotransmițătorilor, vitamina B6 ajută la menținerea integrității tecii de mielină.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vitamina B6 se găsește într-o varietate largă de alimente, atât animale, cât și vegetale.</p>
+                        <ul>
+                            <li><b>Carne de pasăre:</b> Pui, curcan.</li>
+                            <li><b>Pește:</b> Somon, ton.</li>
+                            <li><b>Cartofi și cartofi dulci</b>.</li>
+                            <li><b>Banane</b>.</li>
+                            <li><b>Cereale fortificate:</b> Pâine, cereale pentru micul dejun.</li>
+                            <li><b>Leguminoase:</b> Năut (foarte bogat), linte, fasole.</li>
+                            <li><b>Ficat:</b> De vită, pui.</li>
+                            <li><b>Nuci și semințe:</b> Semințe de floarea-soarelui.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B6)</h3>
+                        <p>Deficiența de vitamina B6 este relativ rară în țările dezvoltate, dar poate apărea la alcoolici, vârstnici, persoane cu afecțiuni renale sau autoimune, sau la utilizarea unor medicamente (ex: izoniazidă).</p>
+                        <ol>
+                            <li><b>Probleme neurologice și psihiatrice:</b>
+                                <ul>
+                                    <li>Convulsii (în special la sugari cu deficit sever).</li>
+                                    <li>Neuropatie periferică (amorțeală, furnicături la mâini și picioare).</li>
+                                    <li>Encefalopatie.</li>
+                                    <li>Iritabilitate, depresie, anxietate, confuzie, insomnie.</li>
+                                </ul>
+                            </li>
+                            <li><b>Probleme dermatologice:</b> Dermatită seboreică (erupții scuamoase) în jurul ochilor, nasului și gurii.</li>
+                            <li><b>Glosită (inflamația limbii) și cheiloză (crăpături la colțurile gurii)</b>.</li>
+                            <li><b>Anemie sideroblastică:</b> Un tip de anemie în care globulele roșii nu pot încorpora fierul eficient.</li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B6)</h3>
+                        <p>Toxicitatea vitaminei B6 apare aproape exclusiv din suplimentarea excesivă cu doze foarte mari (peste 1-2 grame/zi) pe termen lung, nu din aportul alimentar.</p>
+                        <ol>
+                            <li><b>Neuropatie senzorială severă:</b> Amorțeală severă și progresivă, furnicături și dureri la nivelul extremităților, ataxie (dificultăți de coordonare), afectarea sensului vibrațiilor și al poziției. În cazuri severe, poate duce la dificultăți de mers și la leziuni nervoase permanente.</li>
+                            <li><b>Leziuni ale pielii:</b> Leziuni cutanate, fotosensibilitate (rar).</li>
+                            <li><b>Greață și arsuri la stomac.</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B6 (Piridoxina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B6 (Piridoxina) este adesea asociată cu <b>echilibrul emoțional, gestionarea stresului, fluiditatea gândurilor și a emoțiilor, capacitatea de a procesa și integra experiențele și armonizarea minte-corp</b>. Prin rolul său central în sinteza neurotransmițătorilor și în metabolismul proteinelor, Vitamina B6 rezonează cu "chimia" noastră emoțională, cu abilitatea de a ne simți centrați și de a ne adapta la fluxurile interne și externe.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B6 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Dezechilibre emoționale și instabilitate:</b> Schimbări bruște de dispoziție, iritabilitate, anxietate sau depresie. O senzație de a fi "pe val" emoțional, fără un control clar.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Iritabilitate, depresie, anxietate, insomnie, convulsii.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a procesa experiențele și emoțiile:</b> Incapacitatea de a "digera" evenimente trecute, resentimente sau frustrări, lăsându-le să se acumuleze și să afecteze echilibrul.</li>
+                        <li><b>Lipsa de fluiditate mentală și "rigiditate":</b> Deși fizic poate afecta nervii (care transmit fluid), emoțional poate indica o lipsă de flexibilitate în gândire, o tendință de a fi "fixat" pe anumite idei sau tipare.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Neuropatie periferică, dificultăți de coordonare.</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de deconectare minte-corp:</b> O lipsă de armonie între ceea ce gândești și ceea ce simți sau faci, ducând la frustrare și la o lipsă de coerență internă.</li>
+                        <li><b>Vulnerabilitate la stres:</b> Capacitatea redusă de a face față presiunilor, ducând la o "supraîncărcare" emoțională rapidă.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B6 (aproape exclusiv din suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Control excesiv al emoțiilor:</b> O tendință de a suprima sau de a "manipula" emoțiile, de a le ține sub control strict, ceea ce poate duce la o rigiditate sau o lipsă de autenticitate emoțională.</li>
+                        <li><b>Rigiditate în gândire și "analiză excesivă":</b> O nevoie de a analiza și de a înțelege totul la nivel intelectual, fără a permite fluiditatea emoțională sau intuiția.</li>
+                        <li><b>"Supra-stimulare" nervoasă emoțională:</b> O energie mentală și emoțională prea intensă, care duce la agitație, neliniște sau insomnie.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Neuropatie senzorială (amorțeală, furnicături severe).</li>
+                            </ul>
+                        </li>
+                        <li><b>Perfecționism și judecată:</b> O nevoie de a fi "perfect" în procesarea emoțiilor sau în comportament, ducând la auto-critică sau la judecarea celorlalți.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de echilibrare emoțională:</b> Meditație, mindfulness, respirație conștientă pentru a armoniza mintea și corpul.</li>
+                        <li><b>Terapii</b> pentru eliberarea emoțiilor reprimate și a traumelor, cultivarea fluidității emoționale.</li>
+                        <li><b>Exerciții de coordonare minte-corp</b> (yoga, dans, tai chi) pentru a îmbunătăți integrarea.</li>
+                        <li><b>Jurnalism terapeutic</b> pentru a procesa experiențele și a clarifica gândurile.</li>
+                        <li><b>Practici de gestionare a stresului</b> și de construire a rezilienței.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de relaxare profundă</b> și de "împământare" pentru a calma sistemul nervos.</li>
+                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la cultivarea flexibilității.</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a incertitudinii.</li>
+                        <li><b>Meditații</b> pentru a cultiva flexibilitatea mentală și a reduce supra-analiza.</li>
+                        <li><b>Exerciții</b> care încurajează renunțarea la rigiditate și permit un flux mai natural al vieții.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
