@@ -3,112 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cupru - Ghid Minerale</title>
+    <title>Cuprul și Fluiditatea Emoțională</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Cupru</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul cuprului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de cupru</a></li>
-                <li><a href="#perspectiva-holistica">Cuprul: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Cuprul și Fluiditatea Emoțională
         </div>
 
-        <h2 id="rolul-fizic">Rolul cuprului în organism (perspectivă fizică)</h2>
-        <p>Cuprul este un oligoelement esențial, adică organismul tău are nevoie de el în cantități mici, dar care joacă roluri cruciale în menținerea sănătății și funcționării optime a multiple sisteme. Cuprul este implicat într-o serie complexă de procese enzimatice și funcții celulare. Acționează ca un cofactor crucial pentru diverse metaloenzime.</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Formarea globulelor roșii și metabolismul fierului</h3>
-        <ul>
-            <li><b>Mecanism:</b> Cuprul este esențial pentru absorbția și utilizarea fierului în organism. Contribuie la sinteza hemoglobinei și la formarea globulelor roșii, ajutând la prevenirea anemiei.</li>
-            <li><b>Implicații:</b> Deficiența de cupru poate duce la anemie, chiar și în prezența unui aport adecvat de fier, deoarece fierul nu poate fi utilizat eficient.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Cupru - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Cuprul este un oligoelement esențial, adică organismul tău are nevoie de el în cantități mici, dar care joacă roluri cruciale în menținerea sănătății și funcționării optime a multiple sisteme. Cuprul este implicat într-o serie complexă de procese enzimatice și funcții celulare. Acționează ca un cofactor crucial pentru diverse metaloenzime.</p>
+                    <ul>
+                        <li><b>Formarea globulelor roșii și metabolismul fierului:</b> Cuprul este esențial pentru absorbția și utilizarea fierului în organism. Contribuie la sinteza hemoglobinei și la formarea globulelor roșii, ajutând la prevenirea anemiei. Implicațiile sunt că deficiența de cupru poate duce la anemie, chiar și în prezența unui aport adecvat de fier, deoarece fierul nu poate fi utilizat eficient.</li>
+                        <li><b>Sănătatea oaselor și a țesuturilor conjunctive:</b> Joacă un rol vital în formarea colagenului și a elastinei, proteine care oferă structură, rezistență și elasticitate oaselor, cartilajelor, tendoanelor, ligamentelor și vaselor de sânge. Implicațiile sunt că deficiența poate contribui la fragilitatea osoasă și la probleme ale țesuturilor conjunctive.</li>
+                        <li><b>Funcția nervoasă și cerebrală:</b> Este implicat în menținerea sănătății celulelor nervoase și în producția de neurotransmițători, substanțe chimice care transmit semnalele în creier. Este esențial pentru dezvoltarea și funcționarea normală a creierului și a sistemului nervos. Implicațiile sunt că deficiențele severe pot duce la neurodegenerare și tulburări neurologice.</li>
+                        <li><b>Sistemul imunitar:</b> Susține activitatea celulelor imunitare, contribuind la apărarea organismului împotriva infecțiilor. Implicațiile sunt că un nivel adecvat de cupru este necesar pentru un răspuns imun eficient.</li>
+                        <li><b>Antioxidant puternic:</b> Cuprul este o componentă a enzimei superoxid dismutaza (SOD), care este un antioxidant puternic. Aceasta protejează celulele de stresul oxidativ cauzat de radicalii liberi, reducând daunele celulare și contribuind la prevenirea bolilor cronice. Implicațiile sunt că reduce daunele celulare și contribuie la prevenirea bolilor cronice.</li>
+                        <li><b>Pigmentare (melanină):</b> Contribuie la producția de melanină, pigmentul responsabil pentru culoarea pielii, părului și ochilor. Implicațiile sunt că deficiența poate fi asociată cu depigmentarea pielii și părului.</li>
+                        <li><b>Producția de energie:</b> Este implicat în procesele care transformă alimentele în energie.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Cuprul se găsește în diverse alimente:</p>
+                    <ul>
+                        <li><b>Ficat</b>.</li>
+                        <li><b>Fructe de mare:</b> Stridii, crab.</li>
+                        <li><b>Nuci</b>.</li>
+                        <li><b>Semințe</b>.</li>
+                        <li><b>Leguminoase:</b> Linte, năut.</li>
+                        <li><b>Ciocolată neagră</b>.</li>
+                        <li><b>Ciuperci</b>.</li>
+                        <li><b>Cartofi</b>.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3>2. Sănătatea oaselor și a țesuturilor conjunctive</h3>
-        <ul>
-            <li><b>Mecanism:</b> Joacă un rol vital în formarea colagenului și a elastinei, proteine care oferă structură, rezistență și elasticitate oaselor, cartilajelor, tendoanelor, ligamentelor și vaselor de sânge.</li>
-            <li><b>Implicații:</b> Deficiența poate contribui la fragilitatea osoasă și la probleme ale țesuturilor conjunctive.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Cupru: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, cuprul este un oligoelement adesea asociat cu <b>fluiditatea, adaptabilitatea, flexibilitatea, expresia creativă și echilibrul emoțional</b>. Prin rolul său în sinteza colagenului și elastinei, cuprul rezonează cu elasticitatea noastră, atât fizică, cât și mentală și emoțională. De asemenea, legătura sa cu pigmentarea și producția de energie subliniază capacitatea de a ne "străluci" și de a ne manifesta vitalitatea.</p>
 
-        <h3>3. Funcția nervoasă și cerebrală</h3>
-        <ul>
-            <li><b>Mecanism:</b> Este implicat în menținerea sănătății celulelor nervoase și în producția de neurotransmițători, substanțe chimice care transmit semnalele în creier. Este esențial pentru dezvoltarea și funcționarea normală a creierului și a sistemului nervos.</li>
-            <li><b>Implicații:</b> Deficiențele severe pot duce la neurodegenerare și tulburări neurologice.</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de cupru poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de fluiditate și rigiditate emoțională:</b> Dificultatea de a te adapta la schimbări, o tendință de a fi rigid în gândire sau în reacțiile emoționale. Senzația de a fi "înjghebat" sau de a nu putea "curge" cu viața.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Probleme ale țesuturilor conjunctive, piele lipsită de elasticitate.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în exprimarea creativă:</b> O blocare a expresiei artistice sau a creativității în general, un sentiment că "nu ai voie să strălucești" sau că trebuie să te adaptezi normelor.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Depigmentarea părului sau a pielii.</li>
+                            </ul>
+                        </li>
+                        <li><b>Anxietate și iritabilitate:</b> Fiind implicat în funcția nervoasă, un deficit poate rezonă cu stări de neliniște, iritabilitate crescută sau dificultăți în a te calma.</li>
+                        <li><b>Lipsa de bucurie și "culoare" în viață:</b> Simbolismul culorii (melanina) și al energiei poate indica o lipsă de entuziasm, o viață percepută ca fiind "ternă" sau lipsită de pasiune.</li>
+                        <li><b>Dificultăți în a integra experiențele (fierul și cuprul):</b> Deoarece cuprul este esențial pentru utilizarea fierului, o lipsă poate sugera o dificultate în a integra forța și vitalitatea (fierul) cu fluiditatea și adaptabilitatea (cuprul), ducând la un dezechilibru general al energiei.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de cupru, deși rar din dietă (mai des din expuneri sau condiții genetice), ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Iritabilitate și agresivitate:</b> O energie prea "fierbinte", o tendință de a fi reactiv, impulsiv sau chiar agresiv, lipsă de răbdare.</li>
+                        <li><b>Hiperexcitabilitate și anxietate:</b> O minte și un corp supra-stimulate, dificultăți de a te relaxa, insomnie. Poate reflecta o supraîncărcare senzorială sau emoțională.</li>
+                        <li><b>Rigiditate ascunsă sau "încordare":</b> Deși cuprul este asociat cu flexibilitatea, un exces ar putea indica o încercare forțată de a fi flexibil sau o rigiditate profundă care se manifestă prin tensiune constantă.</li>
+                        <li><b>Tendința de a "prelua prea mult":</b> O tendință de a asimila prea multe emoții sau responsabilități de la ceilalți, ducând la o "supraîncărcare" energetică.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>4
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici care încurajează fluiditatea și mișcarea</b> (dans, tai chi, yoga fluidă).</li>
+                        <li><b>Exerciții de exprimare creativă</b> (pictură, muzică, scris liber) pentru a-ți manifesta esența.</li>
+                        <li><b>Meditații</b> pentru a cultiva acceptarea schimbării și a elibera rigiditatea mentală.</li>
+                        <li><b>Terapii</b> care ajută la explorarea și eliberarea blocajelor emoționale legate de expresie.</li>
+                        <li><b>Timp petrecut în natură</b> pentru a te reconecta cu ritmurile naturale.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și "răcorire" energetică</b> (meditație statică, respirație profundă, băi reci/reci-călduțe).</li>
+                        <li><b>Terapii</b> de gestionare a furiei și de eliberare a tensiunii acumulate.</li>
+                        <li><b>Exerciții de "împământare"</b> pentru a stabiliza energia.</li>
+                        <li><b>Reducerea stimulilor externi</b> (zgomot, ecran, cofeină).</li>
+                        <li><b>Lucrul cu renunțarea la control</b> și acceptarea fluxului.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
