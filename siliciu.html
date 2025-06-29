@@ -3,98 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siliciu - Ghid Minerale</title>
+    <title>Siliciul și Structura Interioară</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        ul {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        strong {
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
+            width: 100%;
         }
-        a {
-            color: #007bff;
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
         }
-        a:hover {
-            text-decoration: underline;
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Siliciul și Structura Interioară
+        </div>
 
-        <h1>Siliciu</h1>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h2>Rolul siliciului în organism</h2>
-        <p>Siliciul este al doilea cel mai abundent element din scoarța terestră și este considerat "mineralul frumuseții" datorită importanței sale pentru țesuturile conjunctive.</p>
+        <div class="section">
+            <h2 class="section-title">Siliciu - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Siliciul este al doilea cel mai abundent element din scoarța terestră și este considerat "mineralul frumuseții" datorită importanței sale pentru țesuturile conjunctive.</p>
+                    <ul>
+                        <li><b>Sinteza colagenului și elastinei:</b> Siliciul este esențial pentru formarea colagenului și a elastinei, două proteine fundamentale care oferă structură, elasticitate și rezistență țesuturilor conjunctive. Implicațiile sunt că contribuie la menținerea elasticității și fermității pielii, previne apariția ridurilor, întărește părul și unghiile, reducând fragilitatea acestora.</li>
+                        <li><b>Sănătatea oaselor și articulațiilor:</b> Este crucial pentru sănătatea oaselor, cartilajelor, tendoanelor și ligamentelor. Ajută la depunerea calciului în matricea osoasă și contribuie la flexibilitatea articulațiilor. Implicațiile sunt că un deficit de siliciu poate fi asociat cu probleme articulare precum osteoartrita și osteoporoza.</li>
+                        <li><b>Sănătatea cardiovasculară:</b> Contribuie la elasticitatea vaselor de sânge (arterelor), fiind important pentru sănătatea sistemului cardiovascular.</li>
+                        <li><b>Sistemul imunitar:</b> Fiind un element vital al pielii și al țesutului digestiv (primele linii de apărare ale corpului), siliciul poate sprijini activitatea sistemului imunitar.</li>
+                        <li><b>Detoxifiere:</b> Se sugerează că siliciul poate ajuta la eliminarea unor toxine din organism, inclusiv a aluminiului.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Siliciul se găsește în diverse alimente:</p>
+                    <ul>
+                        <li><b>Cereale integrale:</b> Ovăz, orz, orez brun.</li>
+                        <li><b>Legume:</b> Fasole verde, castraveți, ardei.</li>
+                        <li><b>Fructe:</b> Mere, cireșe.</li>
+                        <li><b>Plante precum coada-calului și bambusul</b>.</li>
+                        <li><b>Apă potabilă:</b> Conținutul de siliciu variază în funcție de sursa de apă.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3>1. Sinteza colagenului și elastinei</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> siliciul este esențial pentru formarea colagenului și a elastinei, două proteine fundamentale care oferă structură, elasticitate și rezistență țesuturilor conjunctive.</li>
-            <li><strong>Implicații:</strong> contribuie la menținerea elasticității și fermității pielii, previne apariția ridurilor, întărește părul și unghiile, reducând fragilitatea acestora.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Siliciu: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, siliciul este adesea denumit "mineralul frumuseții", fiind fundamental conectat cu <b>structura, integritatea, flexibilitatea, adaptabilitatea și capacitatea de a rezista presiunilor externe</b>. Prin rolul său esențial în sinteza colagenului și elastinei pentru piele, păr, unghii, oase și țesuturi conjunctive, siliciul rezonează cu "scheletul" nostru emoțional, cu rezistența la adversitate și cu abilitatea de a menține frumusețea și integritatea interioară în fața provocărilor vieții.</p>
 
-        <h3>2. Sănătatea oaselor și articulațiilor</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> este crucial pentru sănătatea oaselor, cartilajelor, tendoanelor și ligamentelor. ajută la depunerea calciului în matricea osoasă și contribuie la flexibilitatea articulațiilor.</li>
-            <li><strong>Implicații:</strong> un deficit de siliciu poate fi asociat cu probleme articulare precum osteoartrita și osteoporoza.</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de siliciu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de structură interioară și fragilitate emoțională:</b> Un sentiment de a fi vulnerabil, lipsit de sprijin intern sau de "schelet" emoțional, ceea ce duce la o fragilitate în fața stresului sau a criticilor.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Unghii fragile, păr casant, piele lipsită de elasticitate.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a-ți susține propriile idei sau integritatea:</b> Incapacitatea de a-ți menține poziția, de a te lăsa influențat ușor de opiniile altora sau de a-ți compromite valorile personale.</li>
+                        <li><b>Lipsa de rezistență la presiuni externe:</b> O tendință de a ceda ușor în fața cerințelor sau așteptărilor celorlalți, ducând la epuizare emoțională.</li>
+                        <li><b>Rigiditate ascunsă sau teama de descompunere:</b> Deși fizic duce la fragilitate, emoțional poate exista o rigiditate în încercarea de a "ține totul sub control" pentru a preveni "descompunerea" (metaforic).
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Probleme articulare, osteoartrită.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de frumusețe interioară percepută:</b> Un sentiment de a nu fi suficient de bun, de a nu "străluci" sau de a nu fi atrăgător la nivel emoțional/energetic.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de siliciu (rar din dietă, mai des din expunere profesională sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Rigiditate mentală și inflexibilitate:</b> O nevoie excesivă de a controla structura gândurilor și a credințelor, dificultăți în a accepta noi perspective sau de a te adapta la schimbare.</li>
+                        <li><b>Perfecționism obsesiv:</b> O dorință extremă de perfecțiune, atât la nivel personal, cât și în mediul înconjurător, ceea ce poate duce la frustrare constantă.</li>
+                        <li><b>Teama de imperfecțiune sau de "slăbiciune":</b> O aversiune față de orice formă de vulnerabilitate sau imperfecțiune, ceea ce poate duce la o supra-compensare prin rigiditate.</li>
+                        <li><b>Izolare prin "ziduri" de protecție:</b> O tendință de a construi bariere emoționale prea puternice, pentru a te proteja de "impurități" sau influențe externe, ducând la izolare.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>3. Sănătatea cardiovasculară</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> contribuie la elasticitatea vaselor de sânge (arterelor), fiind important pentru sănătatea sistemului cardiovascular.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de întărire a stimei de sine</b> și a valorii personale.</li>
+                        <li><b>Terapii</b> care ajută la construirea unei structuri emoționale solide și la stabilirea limitelor sănătoase.</li>
+                        <li><b>Exerciții de adaptabilitate și flexibilitate mentală</b> (mindfulness, yoga fluidă).</li>
+                        <li><b>Conectarea cu natura</b> pentru a absorbi energia "împământată" și a te simți mai rezistent.</li>
+                        <li><b>Exprimarea creativă</b> pentru a-ți manifesta frumusețea interioară.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de eliberare a controlului</b> și de cultivare a flexibilității mentale (meditații de acceptare, exerciții de vizualizare a fluidității).</li>
+                        <li><b>Terapii</b> care ajută la gestionarea perfecționismului și a nevoii de a fi "perfect".</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a vulnerabilității.</li>
+                        <li><b>Practici de "deschidere"</b> și de eliberare a "zidurilor" emoționale, cultivând conexiunea autentică.</li>
+                        <li><b>Jurnalism emoțional</b> pentru a explora și elibera rigiditatea.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>4. Sistemul imunitar</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> fiind un element vital al pielii și al țesutului digestiv (primele linii de apărare ale corpului), siliciul poate sprijini activitatea sistemului imunitar.</li>
-        </ul>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>5. Detoxifiere</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> se sugerează că siliciul poate ajuta la eliminarea unor toxine din organism, inclusiv a aluminiului.</li>
-        </ul>
-
-        <h2>Surse alimentare de siliciu</h2>
-        <ul>
-            <li><strong>Cereale integrale:</strong> ovăz, orz, orez brun.</li>
-            <li><strong>Legume:</strong> fasole verde, castraveți, ardei.</li>
-            <li><strong>Fructe:</strong> mere, cireșe.</li>
-            <li><strong>Plante precum coada-calului și bambusul.</strong></li>
-            <li><strong>Apă potabilă:</strong> conținutul de siliciu variază în funcție de sursa de apă.</li>
-        </ul>
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
