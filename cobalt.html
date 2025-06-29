@@ -3,97 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobalt - Ghid Minerale</title>
+    <title>Cobaltul și Energia Vitală</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Cobalt</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul cobaltului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de cobalt</a></li>
-                <li><a href="#perspectiva-holistica">Cobaltul: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Cobaltul și Energia Vitală
         </div>
 
-        <h2 id="rolul-fizic">Rolul cobaltului în organism (perspectivă fizică)</h2>
-        <p>Cobaltul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități foarte mici pentru a funcționa corect. Rolul său cel mai important și, de fapt, aproape singurul rol cunoscut pentru sănătatea umană este acela de a fi o componentă cheie a vitaminei B12 (cobalamina).</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Componentă a vitaminei B12</h3>
-        <ul>
-            <li><b>Mecanism:</b> Acesta este, de departe, cel mai vital rol al cobaltului. Fără cobalt, vitamina B12 nu ar putea fi sintetizată. Vitamina B12 este crucială pentru:
-                <ul>
+        <div class="section">
+            <h2 class="section-title">Cobalt - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Cobaltul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități foarte mici pentru a funcționa corect. Rolul său cel mai important și, de fapt, aproape singurul rol cunoscut pentru sănătatea umană este acela de a fi o componentă cheie a vitaminei B12 (cobalamina).</p>
+                    <ul>
+                        <li><b>Componentă a Vitaminei B12:</b> Acesta este, de departe, cel mai vital rol al cobaltului. Fără cobalt, vitamina B12 nu ar putea fi sintetizată. Vitamina B12 este crucială pentru:
+                            <ul>
+                                <li>Formarea globulelor roșii: Este esențială pentru producerea celulelor roșii sanguine sănătoase în măduva osoasă. O deficiență de B12 poate duce la anemie megaloblastică.</li>
+                                <li>Funcția neurologică: B12 este vitală pentru sănătatea sistemului nervos, contribuind la formarea și menținerea mielinei (învelișul protector al fibrelor nervoase) și la transmiterea semnalelor nervoase.</li>
+                                <li>Sinteza ADN-ului: Joacă un rol în sinteza materialului genetic (ADN-ul), esențial pentru diviziunea și creșterea celulară.</li>
+                                <li>Metabolismul energetic: Contribuie la transformarea alimentelor în energie.</li>
+                            </ul>
+                        </li>
+                        <li><b>Alte roluri (mai puțin clare la om):</b> În afara rolului său în vitamina B12, funcțiile specifice ale cobaltului liber în corpul uman sunt puțin înțelese sau sunt considerate a fi minime. În doze mari, cobaltul poate fi chiar toxic.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Deoarece cobaltul este necesar în principal pentru sinteza vitaminei B12 de către microorganisme (nu de către plante sau animale direct), alimentele care conțin B12 sunt principalele surse.</p>
+                    <ul>
+                        <li><b>Produse de origine animală:</b>
+                            <ul>
+                                <li>Carne (vită, pui, porc).</li>
+                                <li>Ficat.</li>
+                                <li>Pește și fructe de mare.</li>
+                                <li>Ouă.</li>
+                                <li>Produse lactate.</li>
+                            </ul>
+                        </li>
+                        <li><b>Alimente fortificate cu B12:</b>
+                            <ul>
+                                <li>Cereale pentru micul dejun.</li>
+                                <li>Băuturi vegetale.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Cobalt: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, cobaltul, fiind componenta centrală a vitaminei B12, este adesea asociat cu <b>vitalitatea, direcția, scopul, creativitatea și conexiunea cu "scânteia" vieții</b>. Prin rolul său în formarea sângelui și funcția neurologică, cobaltul rezonează cu energia noastră vitală, capacitatea de a ne simți energizați și de a ne urma drumul în viață.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de cobalt (sau, mai frecvent, de vitamina B12, în care cobaltul este esențial) poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de entuziasm și de scop:</b> Un sentiment de apatie profundă, lipsa de motivație sau de direcție în viață. Senzația că "nu ai energie" pentru a-ți urma visurile sau pentru a te implica.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală, lipsă de energie, anemie megaloblastică.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a-ți găsi și a-ți urma chemarea:</b> O blocare a creativității sau a capacității de a te exprima autentic în lume. Senzația de a fi "pierdut" sau de a nu-ți găsi locul.</li>
+                        <li><b>Anxietate și probleme neurologice emoționale:</b> Fiind esențial pentru sănătatea sistemului nervos, un deficit poate rezonă cu stări de nervozitate, iritabilitate inexplicabilă, "ceață mentală" emoțională sau dificultăți de concentrare pe propriile obiective.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Amnezie, probleme neurologice.</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de deconectare:</b> O lipsă de conexiune cu propria esență, cu bucuria de a trăi sau cu ceilalți. Sentimentul de izolare sau de a nu fi "legat" de lume.</li>
+                        <li><b>Dificultăți în a procesa experiențele de viață:</b> Rolul său în metabolismul energetic și în sinteza ADN-ului poate sugera, simbolic, o dificultate în a "digera" și a integra evenimentele vieții, rămânând blocat în trecut.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de cobalt (foarte rar din dietă, mai des din expuneri industriale sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Impulsivitate și supra-activitate:</b> O tendință de a fi prea "pasionat" sau impulsiv, de a acționa fără a gândi, o energie debordantă, dar necanalizată.</li>
+                        <li><b>Furia reprimată sau agresivitate:</b> Cobaltul poate fi asociat cu "focul" interior. Un exces ar putea indica o acumulare de furie sau agresivitate care este fie reprimată, fie se manifestă în moduri necontrolate.</li>
+                        <li><b>Rigiditate în obiective:</b> O obsesie cu atingerea unor obiective, fără a permite flexibilitate sau adaptare la circumstanțe noi, o "încăpățânare" energetică.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Exerciții de vizualizare</b> a scopului și a direcției în viață.</li>
+                        <li><b>Practici creative</b> (artă, muzică, scris) pentru a reconecta cu bucuria și inspirația.</li>
+                        <li><b>Meditații</b> pentru a spori vitalitatea și a elibera blocajele emoționale.</li>
+                        <li><b>Explorarea și integrarea experiențelor trecute</b> pentru a elibera energie.</li>
+                        <li><b>Activități</b> care conectează cu natura și cu simțul apartenenței.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și echilibrare</b> a energiei (yoga, tai chi, respirație profundă).</li>
+                        <li><b>Terapii</b> pentru gestionarea furiei și exprimarea sănătoasă a emoțiilor.</li>
+                        <li><b>Exerciții de "împământare"</b> pentru a reduce supra-activitatea mentală și fizică.</li>
+                        <li><b>Reevaluarea obiectivelor</b> și cultivarea flexibilității.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
