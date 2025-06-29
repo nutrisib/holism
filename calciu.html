@@ -3,232 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calciu - Ghid Minerale</title>
+    <title>Calciul și Echilibrul Structural</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Calciu</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul calciului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de calciu</a></li>
-                <li><a href="#perspectiva-holistica">Calciul: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Calciul și Echilibrul Structural
         </div>
 
-        <h2 id="rolul-fizic">Rolul calciului în organism (perspectivă fizică)</h2>
-        <p>Calciul este cel mai abundent mineral din corpul uman și joacă un rol fundamental în menținerea sănătății și funcționării optime a organismului. Peste 99% din calciu se găsește în oase și dinți, conferindu-le structură și rezistență, dar acel procent mic rămas este la fel de crucial pentru alte procese vitale.</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Sănătatea oaselor și a dinților</h3>
-        <ul>
-            <li><b>Mecanism:</b> Acesta este cel mai cunoscut rol al calciului. Este componenta principală a oaselor și a dinților, esențial pentru dezvoltarea, creșterea și menținerea lor. Pe parcursul vieții, calciul este constant extras și redepozitat în oase, iar un aport adecvat ajută la menținerea densității osoase și previne afecțiuni precum osteoporoza.</li>
-            <li><b>Implicații:</b> Un aport adecvat este esențial pentru menținerea densității osoase și prevenirea osteoporozei.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calciu - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Calciul este cel mai abundent mineral din corpul uman și joacă un rol fundamental în menținerea sănătății și funcționării optime a organismului. Peste 99% din calciu se găsește în oase și dinți, conferindu-le structură și rezistență, dar acel procent mic rămas este la fel de crucial pentru alte procese vitale.</p>
+                    <ul>
+                        <li><b>Sănătatea oaselor și a dinților:</b> Este componenta principală a oaselor și a dinților, esențial pentru dezvoltarea, creșterea și menținerea lor. Pe parcursul vieții, calciul este constant extras și redepozitat în oase, iar un aport adecvat ajută la menținerea densității osoase și previne afecțiuni precum osteoporoza. Crucial pentru funcția musculară, inclusiv cea cardiacă.</li>
+                        <li><b>Funcția musculară:</b> Calciul este indispensabil pentru contracția musculară. Acesta ajută proteinele din mușchi să efectueze mișcarea. Inclusiv mușchiul inimii (miocardul) are nevoie de calciu pentru a se contracta și a pompa sângele eficient.</li>
+                        <li><b>Transmiterea impulsurilor nervoase:</b> Calciul ionic este vital pentru funcționarea neuronilor. El joacă un rol cheie în eliberarea neurotransmițătorilor, substanțe chimice care transmit semnale între celulele nervoase, asigurând o comunicare sănătoasă între creier și restul corpului.</li>
+                        <li><b>Coagularea sângelui:</b> Calciul este un factor esențial în cascada coagulării sângelui, ajutând la formarea cheagurilor care opresc sângerarea după o rană.</li>
+                        <li><b>Reglarea tensiunii arteriale:</b> Contribuie la menținerea unei tensiuni arteriale sănătoase și la funcționarea optimă a sistemului cardiovascular.</li>
+                        <li><b>Activarea enzimelor și reglarea hormonală:</b> Calciul este un cofactor pentru numeroase enzime, ajutându-le să își îndeplinească funcțiile metabolice. De asemenea, influențează nivelul și acțiunea anumitor hormoni, cum ar fi cei tiroidieni.</li>
+                        <li><b>Funcția celulară:</b> Joacă un rol în comunicarea intercelulară și în diverse procese metabolice la nivel celular.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Deoarece corpul uman nu produce calciu, trebuie să îl obținem zilnic din alimentație. Vitamina D este, de asemenea, crucială, deoarece ajută organismul să absoarbă calciul din alimente.</p>
+                    <ul>
+                        <li><b>Produse lactate:</b> Considerate cele mai bogate și mai ușor absorbabile surse de calciu.
+                            <ul>
+                                <li>Lapte (de vacă, de capră, de oaie).</li>
+                                <li>Iaurt (simplu, grecesc, kefir).</li>
+                                <li>Brânzeturi (parmezan, cheddar, mozzarella, brânză de vaci - rețineți că brânzeturile tari și vechi sunt adesea mai bogate în calciu și mai sărace în lactoză).</li>
+                            </ul>
+                        </li>
+                        <li><b>Pește cu oase comestibile:</b>
+                            <ul>
+                                <li>Sardine (la conservă, cu oase).</li>
+                                <li>Somon (la conservă, cu oase).</li>
+                                <li>Hering, macrou.</li>
+                            </ul>
+                        </li>
+                        <li><b>Legume cu frunze verzi:</b> Deși conțin calciu, unele (cum ar fi spanacul) au și oxalați care pot inhiba absorbția.
+                            <ul>
+                                <li>Kale (varză creață).</li>
+                                <li>Broccoli.</li>
+                                <li>Varză chinezească (Bok Choy).</li>
+                                <li>Rucola.</li>
+                            </ul>
+                        </li>
+                        <li><b>Leguminoase:</b>
+                            <ul>
+                                <li>Năut.</li>
+                                <li>Linte.</li>
+                                <li>Fasole (albă, roșie, neagră).</li>
+                            </ul>
+                        </li>
+                        <li><b>Nuci și semințe:</b> Semințe de susan (în special tahini), semințe de chia, migdale, semințe de mac.</li>
+                        <li><b>Produse fortificate:</b>
+                            <ul>
+                                <li>Băuturi vegetale fortificate (lapte de soia, migdale, ovăz).</li>
+                                <li>Cereale pentru micul dejun fortificate.</li>
+                                <li>Sucuri de fructe fortificate.</li>
+                            </ul>
+                        </li>
+                        <li><b>Altele:</b> Tofu (preparat cu săruri de calciu), smochine uscate.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <h3>2. Funcția musculară</h3>
-        <ul>
-            <li><b>Mecanism:</b> Calciul este indispensabil pentru contracția musculară. Acesta ajută proteinele din mușchi să efectueze mișcarea. Inclusiv mușchiul inimii (miocardul) are nevoie de calciu pentru a se contracta și a pompa sângele eficient.</li>
-            <li><b>Implicații:</b> Crucial pentru funcția musculară, inclusiv cea cardiacă.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calciu: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, calciul este esențial pentru <b>structură, stabilitate, suport și sentimentul de siguranță</b>. Fiind principalul mineral al oaselor și dinților, calciul rezonează cu "scheletul" nostru emoțional și cu capacitatea de a ne simți susținuți și siguri pe noi înșine. El reflectă, de asemenea, legăturile noastre cu rădăcinile și cu sentimentul de apartenență.</p>
 
-        <h3>3. Transmiterea impulsurilor nervoase</h3>
-        <ul>
-            <li><b>Mecanism:</b> Calciul ionic este vital pentru funcționarea neuronilor. El joacă un rol cheie în eliberarea neurotransmițătorilor, substanțe chimice care transmit semnale între celulele nervoase, asigurând o comunicare sănătoasă între creier și restul corpului.</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de calciu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de suport emoțional:</b> Un sentiment profund de a nu fi susținut sau iubit, de a te simți singur în fața dificultăților vieții, poate afecta "structura" internă. Aceasta se poate manifesta ca o dificultate de a te baza pe ceilalți sau de a cere ajutor.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Fragilitate osoasă, osteoporoză.</li>
+                            </ul>
+                        </li>
+                        <li><b>Nesiguranță și instabilitate:</b> Emoțiile de nesiguranță, teama de viitor, sentimentul de a nu avea o bază solidă în viață pot rezonă cu o lipsă de stabilitate fizică (oase fragile).
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Crampe musculare, spasme (deoarece calciul este esențial pentru contracția musculară).</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultatea de a-ți stabili limite:</b> O lipsă de structură emoțională poate duce la dificultăți în a-ți stabili și menține limite personale, permițând altora să te copleșească.</li>
+                        <li><b>Resentimente familiale sau lipsa de apartenență:</b> Calciul este legat de rădăcini și de familie. Problemele nerezolvate cu familia de origine sau un sentiment de a nu aparține undeva pot afecta echilibrul acestui mineral.</li>
+                        <li><b>Teama de a "cădea" sau de a pierde controlul:</b> O anxietate legată de pierderea controlului sau de "prăbușire" (emoțională sau financiară) poate reflecta o lipsă de încredere în propria structură internă.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de calciu (hipercalcemie), deși adesea cauzat de afecțiuni medicale subiacente, ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Rigiditate emoțională și încăpățânare:</b> Calciul aduce duritate și structură. Un exces ar putea simboliza o rigiditate excesivă în gândire, o dificultate de a te adapta, o încăpățânare sau o nevoie puternică de control.</li>
+                        <li><b>Dificultate în a te "elibera" sau a te "înmuiere":</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" emoțional.</li>
+                        <li><b>Nevoia de a fi puternic/perfect:</b> O presiune autoimpusă de a fi mereu cel puternic, cel care susține pe toată lumea, fără a-și permite vulnerabilitatea. Aceasta poate duce la suprasolicitare și la o "încărcare" emoțională.</li>
+                        <li><b>Lipsa de flexibilitate:</b> Refuzul de a vedea alte perspective sau de a face compromisuri.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>4. Coagularea sângelui</h3>
-        <ul>
-            <li><b>Mecanism:</b> Calciul este un factor esențial în cascada coagulării sângelui, ajutând la formarea cheagurilor care opresc sângerarea după o rană.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Lucrul cu stima de sine</b> și consolidarea valorii personale.</li>
+                        <li><b>Terapii</b> care explorează relațiile familiale și sentimentul de apartenență.</li>
+                        <li><b>Practici de "împământare"</b> (mers desculț, meditație de vizualizare a rădăcinilor).</li>
+                        <li><b>Dezvoltarea unei rețele de suport</b> (prieteni, comunitate) și învățarea de a cere ajutor.</li>
+                        <li><b>Afirmații pozitive</b> despre siguranță, stabilitate și suport.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de flexibilitate</b> fizică și mentală (yoga, stretching, tai chi).</li>
+                        <li><b>Terapii</b> care ajută la eliberarea controlului și la acceptarea imperfecțiunii.</li>
+                        <li><b>Jurnalism emoțional</b> pentru a explora și elibera rigiditatea.</li>
+                        <li><b>Meditații</b> pentru a cultiva acceptarea și a renunța la ceea ce nu poate fi controlat.</li>
+                        <li><b>Practici de "înmuiere" a inimii</b> și de empatie.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>5. Reglarea tensiunii arteriale</h3>
-        <ul>
-            <li><b>Mecanism:</b> Contribuie la menținerea unei tensiuni arteriale sănătoase și la funcționarea optimă a sistemului cardiovascular.</li>
-        </ul>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>6. Activarea enzimelor și reglarea hormonală</h3>
-        <ul>
-            <li><b>Mecanism:</b> Calciul este un cofactor pentru numeroase enzime, ajutându-le să își îndeplinească funcțiile metabolice. De asemenea, influențează nivelul și acțiunea anumitor hormoni, cum ar fi cei tiroidieni.</li>
-        </ul>
-
-        <h3>7. Funcția celulară</h3>
-        <ul>
-            <li><b>Mecanism:</b> Joacă un rol în comunicarea intercelulară și în diverse procese metabolice la nivel celular.</li>
-        </ul>
-
-        <h2 id="surse-alimentare">Surse alimentare de calciu</h2>
-        <p>Deoarece corpul uman nu produce calciu, trebuie să îl obținem zilnic din alimentație. Vitamina D este, de asemenea, crucială, deoarece ajută organismul să absoarbă calciul din alimente.</p>
-
-        <ul>
-            <li><b>Produse lactate:</b> Considerate cele mai bogate și mai ușor absorbabile surse de calciu.
-                <ul>
-                    <li>Lapte (de vacă, de capră, de oaie).</li>
-                    <li>Iaurt (simplu, grecesc, kefir).</li>
-                    <li>Brânzeturi (parmezan, cheddar, mozzarella, brânză de vaci - rețineți că brânzeturile tari și vechi sunt adesea mai bogate în calciu și mai sărace în lactoză).</li>
-                </ul>
-            </li>
-            <li><b>Pește cu oase comestibile:</b>
-                <ul>
-                    <li>Sardine (la conservă, cu oase).</li>
-                    <li>Somon (la conservă, cu oase).</li>
-                    <li>Hering, macrou.</li>
-                </ul>
-            </li>
-            <li><b>Legume cu frunze verzi:</b> Deși conțin calciu, unele (cum ar fi spanacul) au și oxalați care pot inhiba absorbția.
-                <ul>
-                    <li>Kale (varză creață).</li>
-                    <li>Broccoli.</li>
-                    <li>Varză chinezească (Bok Choy).</li>
-                    <li>Rucola.</li>
-                </ul>
-            </li>
-            <li><b>Leguminoase:</b>
-                <ul>
-                    <li>Năut.</li>
-                    <li>Linte.</li>
-                    <li>Fasole (albă, roșie, neagră).</li>
-                </ul>
-            </li>
-            <li><b>Nuci și semințe:</b> Semințe de susan (în special tahini), semințe de chia, migdale, semințe de mac.</li>
-            <li><b>Produse fortificate:</b>
-                <ul>
-                    <li>Băuturi vegetale fortificate (lapte de soia, migdale, ovăz).</li>
-                    <li>Cereale pentru micul dejun fortificate.</li>
-                    <li>Sucuri de fructe fortificate.</li>
-                </ul>
-            </li>
-            <li><b>Altele:</b> Tofu (preparat cu săruri de calciu), smochine uscate.</li>
-        </ul>
-
-        <h2 id="perspectiva-holistica">Calciul: Perspectivă holistică (cauze emoționale)</h2>
-        <p>Din perspectivă holistică, calciul este esențial pentru <b>structură, stabilitate, suport și sentimentul de siguranță</b>. Fiind principalul mineral al oaselor și dinților, calciul rezonează cu "scheletul" nostru emoțional și cu capacitatea de a ne simți susținuți și siguri pe noi înșine. El reflectă, de asemenea, legăturile noastre cu rădăcinile și cu sentimentul de apartenență.</p>
-
-        <h3>Cauze emoționale ale deficitului de calciu:</h3>
-        <p>Un deficit de calciu poate fi legat de următoarele aspecte emoționale:</p>
-        <ol>
-            <li><b>Lipsa de suport emoțional:</b> Un sentiment profund de a nu fi susținut sau iubit, de a te simți singur în fața dificultăților vieții, poate afecta "structura" internă. Aceasta se poate manifesta ca o dificultate de a te baza pe ceilalți sau de a cere ajutor.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Fragilitate osoasă, osteoporoză.</li>
-                </ul>
-            </li>
-            <li><b>Nesiguranță și instabilitate:</b> Emoțiile de nesiguranță, teama de viitor, sentimentul de a nu avea o bază solidă în viață pot rezonă cu o lipsă de stabilitate fizică (oase fragile).
-                <ul>
-                    <li><i>Manifestare fizică:</i> Crampe musculare, spasme (deoarece calciul este esențial pentru contracția musculară).</li>
-                </ul>
-            </li>
-            <li><b>Dificultatea de a-ți stabili limite:</b> O lipsă de structură emoțională poate duce la dificultăți în a-ți stabili și menține limite personale, permițând altora să te copleșească.</li>
-            <li><b>Resentimente familiale sau lipsa de apartenență:</b> Calciul este legat de rădăcini și de familie. Problemele nerezolvate cu familia de origine sau un sentiment de a nu aparține undeva pot afecta echilibrul acestui mineral.</li>
-            <li><b>Teama de a "cădea" sau de a pierde controlul:</b> O anxietate legată de pierderea controlului sau de "prăbușire" (emoțională sau financiară) poate reflecta o lipsă de încredere în propria structură internă.</li>
-        </ol>
-
-        <h3>Cauze emoționale ale excesului de calciu:</h3>
-        <p>Un exces de calciu (hipercalcemie), deși adesea cauzat de afecțiuni medicale subiacente, ar putea sugera din perspectivă holistică:</p>
-        <ol>
-            <li><b>Rigiditate emoțională și încăpățânare:</b> Calciul aduce duritate și structură. Un exces ar putea simboliza o rigiditate excesivă în gândire, o dificultate de a te adapta, o încăpățânare sau o nevoie puternică de control.</li>
-            <li><b>Dificultate în a te "elibera" sau a te "înmuiere":</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" emoțional.</li>
-            <li><b>Nevoia de a fi puternic/perfect:</b> O presiune autoimpusă de a fi mereu cel puternic, cel care susține pe toată lumea, fără a-și permite vulnerabilitatea. Aceasta poate duce la suprasolicitare și la o "încărcare" emoțională.</li>
-            <li><b>Lipsa de flexibilitate:</b> Refuzul de a vedea alte perspective sau de a face compromisuri.</li>
-        </ol>
-
-        <h3>Recomandări holistice:</h3>
-        <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
-        <ul>
-            <li><b>Pentru deficit (lipsă de suport, nesiguranță):</b>
-                <ul>
-                    <li>Lucrul cu stima de sine și consolidarea valorii personale.</li>
-                    <li>Terapii care explorează relațiile familiale și sentimentul de apartenență.</li>
-                    <li>Practici de "împământare" (mers desculț, meditație de vizualizare a rădăcinilor).</li>
-                    <li>Dezvoltarea unei rețele de suport (prieteni, comunitate) și învățarea de a cere ajutor.</li>
-                    <li>Afirmații pozitive despre siguranță, stabilitate și suport.</li>
-                </ul>
-            </li>
-            <li><b>Pentru exces (rigiditate, control):</b>
-                <ul>
-                    <li>Practici de flexibilitate fizică și mentală (yoga, stretching, tai chi).</li>
-                    <li>Terapii care ajută la eliberarea controlului și la acceptarea imperfecțiunii.</li>
-                    <li>Jurnalism emoțional pentru a explora și elibera rigiditatea.</li>
-                    <li>Meditații pentru a cultiva acceptarea și a renunța la ceea ce nu poate fi controlat.</li>
-                    <li>Practici de "înmuiere" a inimii și de empatie.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
