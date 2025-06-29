@@ -3,106 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potasiu - Ghid Minerale</title>
+    <title>Potasiul și Echilibrul Emoțional</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        ul {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        strong {
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
+            width: 100%;
         }
-        a {
-            color: #007bff;
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
             text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
         }
-        a:hover {
-            text-decoration: underline;
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Potasiul și Echilibrul Emoțional
+        </div>
 
-        <h1>Potasiu</h1>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h2>Rolul potasiului în organism</h2>
-        <p>Potasiul este un mineral și un electrolit esențial care joacă un rol crucial în menținerea echilibrului fluidelor și a funcției electrice a celulelor din corpul nostru. este vital pentru sănătatea inimii, a sistemului nervos și a mușchilor.</p>
+        <div class="section">
+            <h2 class="section-title">Potasiu - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Potasiul este un mineral și un electrolit esențial care joacă un rol crucial în menținerea echilibrului fluidelor și a funcției electrice a celulelor din corpul nostru. Este vital pentru sănătatea inimii, a sistemului nervos și a mușchilor.</p>
+                    <ul>
+                        <li><b>Echilibrul fluidelor și al electroliților:</b> Potasiul lucrează îndeaproape cu sodiul pentru a menține echilibrul adecvat al fluidelor în interiorul și în afara celulelor. Acest echilibru este fundamental pentru volumul sanguin, tensiunea arterială și funcționarea celulară generală.</li>
+                        <li><b>Funcția nervoasă:</b> Este esențial pentru transmiterea impulsurilor nervoase. Nervii utilizează mișcarea potasiului (și a sodiului) prin membranele celulare pentru a genera impulsuri electrice care permit comunicarea între creier și restul corpului.</li>
+                        <li><b>Contracția musculară:</b> La fel ca și în cazul nervilor, potasiul este necesar pentru ca mușchii să se contracte și să se relaxeze corect. Acest lucru este valabil pentru toți mușchii, inclusiv pentru mușchiul inimii.</li>
+                        <li><b>Sănătatea inimii și reglarea tensiunii arteriale:</b> Un aport adecvat de potasiu ajută la contrabalansarea efectelor sodiului, contribuind la scăderea tensiunii arteriale și la reducerea riscului de boli cardiovasculare, inclusiv accident vascular cerebral. Ajută la menținerea unui ritm cardiac normal.</li>
+                        <li><b>Sănătatea oaselor:</b> Studiile sugerează că un aport suficient de potasiu poate ajuta la menținerea densității minerale osoase, contribuind la sănătatea oaselor.</li>
+                        <li><b>Metabolismul carbohidraților:</b> Potasiul este implicat în procesul de descompunere a carbohidraților pentru energie și în stocarea glicogenului (forma de stocare a glucozei) în ficat și mușchi.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Majoritatea oamenilor își pot asigura necesarul de potasiu printr-o dietă echilibrată.</p>
+                    <ul>
+                        <li><b>Fructe:</b> Banane: sunt o sursă clasică și excelentă, portocale, kiwi, pepene galben, pepene verde, avocado, fructe uscate: caise uscate, prune uscate, stafide (sunt foarte concentrate în potasiu).</li>
+                        <li><b>Legume:</b> Cartofi (în special cei copți cu coajă), cartofi dulci, spanac, kale, broccoli, sfeclă elvețiană, roșii (inclusiv sos de roșii și pastă de roșii), dovleac, ciuperci.</li>
+                        <li><b>Leguminoase:</b> Fasole (neagră, albă, roșie, lima). Linte. Năut.</li>
+                        <li><b>Nuci și semințe:</b> Migdale, fistic, semințe de floarea-soarelui.</li>
+                        <li><b>Produse lactate și alternative:</b> Lapte, iaurt, lapte de cocos.</li>
+                        <li><b>Carne și pește:</b> Somon, cod, ton, carne de pui și curcan.</li>
+                    </ul>
+                    <p><b>Important de reținut:</b> Persoanele cu afecțiuni renale trebuie să monitorizeze cu atenție aportul de potasiu, deoarece rinichii afectați pot avea dificultăți în eliminarea excesului, ceea ce poate duce la niveluri periculos de mari de potasiu în sânge (hiperkaliemie). De asemenea, anumite medicamente (diuretice, inhibitori ACE) pot influența nivelurile de potasiu.</p>
+                </div>
+            </div>
+        </div>
 
-        <h3>1. Echilibrul fluidelor și al electroliților</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> potasiul lucrează îndeaproape cu sodiul pentru a menține echilibrul adecvat al fluidelor în interiorul și în afara celulelor. acest echilibru este fundamental pentru volumul sanguin, tensiunea arterială și funcționarea celulară generală.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Potasiu: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, potasiul este un electrolit fundamental, adesea asociat cu <b>echilibrul emoțional, fluiditatea, adaptabilitatea, gestionarea fluxurilor de energie și capacitatea de a menține armonia internă și externă</b>. Prin rolul său esențial în echilibrul fluidelor și funcția nervoasă și musculară (în special cea cardiacă), potasiul rezonează cu ritmurile noastre interne și cu abilitatea de a ne mișca și de a ne simți bine în fluxul vieții.</p>
 
-        <h3>2. Funcția nervoasă</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> este esențial pentru transmiterea impulsurilor nervoase. nervii utilizează mișcarea potasiului (și a sodiului) prin membranele celulare pentru a genera impulsuri electrice care permit comunicarea între creier și restul corpului.</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de potasiu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Dezechilibru emoțional și instabilitate:</b> O senzație de "decalaj" emoțional, dificultăți în a-ți menține calmul în situații stresante sau o tendință la schimbări bruște de dispoziție. Poate indica o lipsă de stabilitate internă.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Iregularități ale ritmului cardiac, oboseală, slăbiciune musculară.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de adaptabilitate și rigiditate:</b> O dificultate de a te adapta la noi circumstanțe sau de a accepta schimbările inevitabile ale vieții. Sentimentul de a fi "blocat" sau de a nu putea "curge" cu evenimentele.</li>
+                        <li><b>Senzație de "golire" sau "drenare" emoțională:</b> Simbolismul echilibrului fluidelor poate indica o senzație de a fi "drenat" emoțional de relații, situații sau responsabilități, lăsându-te epuizat.</li>
+                        <li><b>Dificultăți în a-ți exprima emoțiile fluid:</b> O blocare a fluxului emoțional, o tendință de a reprima sentimentele, ceea ce poate duce la tensiuni interne.</li>
+                        <li><b>Dependența de stimuli externi pentru energie:</b> O căutare constantă a unor surse externe de energie sau validare, deoarece energia internă este dezechilibrată.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de potasiu (hiperkaliemie), deși adesea cauzat de afecțiuni renale sau medicamente, ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Control excesiv asupra emoțiilor:</b> O tendință de a suprima sau de a controla prea puternic propriile emoții, ducând la o rigiditate sau o lipsă de spontaneitate.</li>
+                        <li><b>Rigiditate emoțională și lipsă de flexibilitate:</b> O incapacitate de a te "îndoi" emoțional, o nevoie de a menține un control strict asupra situațiilor și a sentimentelor.</li>
+                        <li><b>Agitație internă și tensiune reprimată:</b> O energie internă care este "prea multă" și nu este eliberată adecvat, ducând la o stare de neliniște sau iritabilitate ascunsă.</li>
+                        <li><b>Preocupare excesivă pentru detalii sau ordine:</b> O tendință de a fi obsedat de menținerea unui "echilibru" perfect, ceea ce poate duce la stres și rigiditate.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>3. Contracția musculară</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> la fel ca și în cazul nervilor, potasiul este necesar pentru ca mușchii să se contracte și să se relaxeze corect. acest lucru este valabil pentru toți mușchii, inclusiv pentru mușchiul inimii.</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici care încurajează fluxul și mișcarea</b> (dans, tai chi, yoga fluidă) pentru a elibera blocajele energetice.</li>
+                        <li><b>Terapii</b> pentru explorarea și eliberarea emoțiilor reprimate, cultivarea exprimării autentice.</li>
+                        <li><b>Meditații</b> pentru echilibrare emoțională și acceptarea schimbării.</li>
+                        <li><b>Stabilirea unor limite sănătoase</b> în relații pentru a evita "drenajul" energetic.</li>
+                        <li><b>Practici de "împământare"</b> pentru a reconecta cu stabilitatea interioară.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Tehnici de relaxare profundă</b> și de eliberare a tensiunii (respirație diafragmatică, saună, băi calde).</li>
+                        <li><b>Terapii</b> care ajută la explorarea și eliberarea nevoii de control și a rigidității.</li>
+                        <li><b>Cultivarea spontaneității</b> și a acceptării imperfecțiunii.</li>
+                        <li><b>Practici de "desprindere"</b> de gândurile obsesive și de la a fi "prea mult în cap".</li>
+                        <li><b>Exerciții fizice moderate</b> care ajută la eliberarea energiei acumulate.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>4. Sănătatea inimii și reglarea tensiunii arteriale</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> un aport adecvat de potasiu ajută la contrabalansarea efectelor sodiului, contribuind la scăderea tensiunii arteriale și la reducerea riscului de boli cardiovasculare, inclusiv accident vascular cerebral. ajută la menținerea unui ritm cardiac normal.</li>
-        </ul>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>5. Sănătatea oaselor</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> studiile sugerează că un aport suficient de potasiu poate ajuta la menținerea densității minerale osoase, contribuind la sănătatea oaselor.</li>
-        </ul>
-
-        <h3>6. Metabolismul carbohidraților</h3>
-        <ul>
-            <li><strong>Mecanism:</strong> potasiul este implicat în procesul de descompunere a carbohidraților pentru energie și în stocarea glicogenului (forma de stocare a glucozei) în ficat și mușchi.</li>
-        </ul>
-
-        <h2>Surse alimentare de potasiu</h2>
-        <p>Majoritatea oamenilor își pot asigura necesarul de potasiu printr-o dietă echilibrată.</p>
-
-        <ul>
-            <li><strong>Fructe:</strong> banane (sunt o sursă clasică și excelentă), portocale, kiwi, pepene galben, pepene verde, avocado, fructe uscate: caise uscate, prune uscate, stafide (sunt foarte concentrate în potasiu).</li>
-            <li><strong>Legume:</strong> cartofi (în special cei copți cu coajă), cartofi dulci, spanac, kale, broccoli, sfeclă elvețiană, roșii (inclusiv sos de roșii și pastă de roșii), dovleac, ciuperci.</li>
-            <li><strong>Leguminoase:</strong> fasole (neagră, albă, roșie, lima). linte. năut.</li>
-            <li><strong>Nuci și semințe:</strong> migdale, fistic, semințe de floarea-soarelui.</li>
-            <li><strong>Produse lactate și alternative:</strong> lapte, iaurt, lapte de cocos.</li>
-            <li><strong>Carne și pește:</strong> somon, cod, ton, carne de pui și curcan.</li>
-        </ul>
-
-        <p><strong>Important de reținut:</strong> persoanele cu afecțiuni renale trebuie să monitorizeze cu atenție aportul de potasiu, deoarece rinichii afectați pot avea dificultăți în eliminarea excesului, ceea ce poate duce la niveluri periculos de mari de potasiu în sânge (hiperkaliemie). de asemenea, anumite medicamente (diuretice, inhibitori ACE) pot influența nivelurile de potasiu.</p>
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
