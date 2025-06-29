@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B9 (Acidul Folic) și Regenerarea Emoțională</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B9 (Acidul Folic) și Regenerarea Emoțională
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B9 (Acidul Folic) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B9, cunoscută sub denumirea de acid folic (forma sintetică) sau folat (forma naturală), este o vitamină hidrosolubilă esențială. Joacă un rol crucial în sinteza ADN-ului și ARN-ului, în diviziunea celulară și în metabolismul aminoacizilor.</p>
+                        <ul>
+                            <li><b>Sinteza ADN-ului și diviziunea celulară:</b> Folatul este vital pentru sinteza și repararea ADN-ului și ARN-ului, fiind esențial pentru creșterea și diviziunea rapidă a celulelor. Acest lucru este deosebit de important în perioadele de creștere rapidă, cum ar fi sarcina, copilăria și vindecarea rănilor.</li>
+                            <li><b>Formarea globulelor roșii:</b> Este necesar pentru producerea și maturarea globulelor roșii în măduva osoasă, prevenind un tip de anemie numită anemie megaloblastică.</li>
+                            <li><b>Metabolismul homocisteinei:</b> Împreună cu vitaminele B6 și B12, folatul ajută la conversia homocisteinei (un aminoacid) în metionină. Nivelurile ridicate de homocisteină sunt asociate cu un risc crescut de boli cardiovasculare.</li>
+                            <li><b>Dezvoltarea sistemului nervos la făt:</b> Aportul adecvat de acid folic înainte și în timpul sarcinii timpurii este crucial pentru prevenirea defectelor de tub neural (ex: spina bifida) la făt.</li>
+                            <li><b>Funcția cerebrală și sănătatea mintală:</b> Contribuie la sinteza neurotransmițătorilor și este implicat în funcția cognitivă și reglarea dispoziției.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Folatul este abundent în legume cu frunze verzi, leguminoase și citrice. Este sensibil la căldură și gătit, deci consumul de alimente crude este benefic.</p>
+                        <ul>
+                            <li><b>Legume cu frunze verzi închise:</b> Spanac, varză kale, rucola, verdeață de sfeclă.</li>
+                            <li><b>Leguminoase:</b> Linte (foarte bogată), fasole (neagră, pinto, garbanzo), mazăre.</li>
+                            <li><b>Ficat:</b> De vită, pui.</li>
+                            <li><b>Fructe:</b> Portocale, grepfrut, căpșuni, avocado.</li>
+                            <li><b>Cereale fortificate:</b> Pâine, cereale pentru micul dejun, orez.</li>
+                            <li><b>Nuci și semințe.</b></li>
+                            <li><b>Ouă.</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de folat)</h3>
+                        <p>Deficiența de folat este relativ comună, mai ales din cauza aportului alimentar insuficient, a malabsorbției sau a necesarului crescut (ex: sarcină, alcoolism, anumite medicamente).</p>
+                        <ol>
+                            <li><b>Anemie megaloblastică:</b> Globulele roșii sunt mari, imature și disfuncționale, ducând la oboseală, slăbiciune, paloare, dificultăți de respirație și amețeli.</li>
+                            <li><b>Defecte de tub neural (la nou-născuți):</b> Cel mai grav rezultat al deficienței de acid folic în timpul sarcinii.</li>
+                            <li><b>Probleme gastrointestinale:</b> Diaree, pierdere în greutate, lipsa poftei de mâncare, dureri abdominale.</li>
+                            <li><b>Glosită:</b> Limbă umflată și dureroasă.</li>
+                            <li><b>Oboseală cronică, iritabilitate, probleme de memorie, depresie</b>.</li>
+                            <li><b>Creșterea nivelului de homocisteină:</b> Crește riscul de boli cardiovasculare.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (toxicitate folat)</h3>
+                        <p>Excesul de folat din alimente este extrem de rar și nu este considerat toxic. Toxicitatea apare aproape exclusiv din suplimentarea excesivă cu acid folic sintetic, dar chiar și atunci, efectele adverse sunt rare și adesea subtile.</p>
+                        <ol>
+                            <li><b>Mascare deficit de B12:</b> Cel mai important risc este că dozele mari de acid folic pot masca deficiența de vitamina B12 (prin ameliorarea anemiei megaloblastice), permițând ca leziunile neurologice cauzate de lipsa B12 să progreseze netratate.</li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, pierderea apetitului, balonare.</li>
+                            <li><b>Probleme neurologice:</b> Iritabilitate, insomnie, confuzie.</li>
+                            <li><b>Reacții alergice (rar).</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B9 (Acidul Folic): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B9 (Acidul Folic/Folat) este adesea asociată cu <b>creșterea și dezvoltarea emoțională, purificarea, capacitatea de a elibera trecutul, de a te regenera și de a integra experiențele vieții</b>. Prin rolul său în sinteza ADN-ului și formarea celulelor, acidul folic rezonează cu "planul" nostru energetic, cu abilitatea de a "rescrie" tipare și de a ne reconstrui la nivel profund. Legătura cu defectele de tub neural subliniază importanța "fundației" emoționale și a protecției.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B9 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Blocaj în creșterea și dezvoltarea emoțională:</b> Dificultăți în a depăși etape vechi, în a te maturiza emoțional sau în a-ți atinge potențialul maxim. Senzația de a fi "stagnant" sau "nedezvoltat" la nivel personal.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Retard de creștere, anemie megaloblastică.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a "elibera" trecutul și a te "purifica":</b> Incapacitatea de a renunța la resentimente, traume sau tipare vechi, ducând la o acumulare de "toxicitate" emoțională.</li>
+                        <li><b>Lipsa de "fundație" și vulnerabilitate la nivel profund:</b> Defectele de tub neural (care afectează sistemul nervos central) pot simboliza o vulnerabilitate a "fundației" emoționale, o lipsă de protecție la nivelul nucleului ființei.</li>
+                        <li><b>"Ceață mentală" și lipsă de claritate:</b> Afectarea funcției cerebrale poate rezonă cu confuzie, probleme de memorie emoțională sau dificultăți în a discerne calea corectă.</li>
+                        <li><b>Tristețe profundă și lipsă de vitalitate:</b> Deoarece este esențială pentru formarea sângelui și energie, un deficit poate reflecta o apatie, melancolie și lipsă de entuziasm.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B9 (acid folic sintetic) este rar toxic, dar poate masca deficiența de B12, ducând la leziuni neurologice netratate. Din perspectivă holistică, ar putea sugera:</p>
+                    <ol>
+                        <li><b>"Supra-compensare" și "mascare" emoțională:</b> O tendință de a suprima sau de a "masca" problemele emoționale profunde (similar cu mascare deficitului de B12), concentrându-te pe aspecte superficiale sau pe soluții rapide, fără a aborda rădăcina problemei.</li>
+                        <li><b>Control obsesiv asupra "planului" vieții:</b> O nevoie de a controla fiecare aspect al creșterii și dezvoltării personale, fără a permite spontaneitate sau devieri de la "planul" stabilit.</li>
+                        <li><b>Rigiditate în convingeri:</b> O aderență prea strictă la anumite idei despre cum "ar trebui" să fie viața sau creșterea personală, fără a accepta flexibilitatea.</li>
+                        <li><b>Supra-analiză și "supra-regenerare":</b> O tendință de a analiza excesiv fiecare experiență sau de a încerca să "repare" totul constant, fără a permite o perioadă de repaus sau de acceptare.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Terapii</b> pentru explorarea și eliberarea traumelor din trecut și a emoțiilor nerezolvate.</li>
+                        <li><b>Meditații de purificare</b> și de regenerare, vizualizări ale creșterii și înfloririi personale.</li>
+                        <li><b>Lucrul cu acceptarea</b> și iubirea de sine pentru a consolida fundația emoțională.</li>
+                        <li><b>Practici de auto-reflecție</b> și jurnalism pentru a-ți clarifica direcția și scopul în viață.</li>
+                        <li><b>Cultivarea rezilienței</b> și a capacității de a te "reconstrui" după dificultăți.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de "împământare"</b> pentru a centra energia și a reduce tendința de "supra-analiză".</li>
+                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la acceptarea imperfecțiunii.</li>
+                        <li><b>Lucrul cu onestitatea emoțională:</b> Renunțarea la "mascare" și confruntarea cu adevărul interior.</li>
+                        <li><b>Meditații</b> pentru a cultiva flexibilitatea mentală și a permite o creștere mai organică, mai puțin forțată.</li>
+                        <li><b>Explorarea și acceptarea aspectelor "neperfecționate"</b> ale propriei persoane.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
