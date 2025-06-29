@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coenzima Q10 și Energia Interioară</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Coenzima Q10 și Energia Interioară
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Coenzima Q10 - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Coenzima Q10 (CoQ10), cunoscută și sub denumirea de ubichinonă, este o substanță asemănătoare vitaminelor, liposolubilă, produsă în mod natural de organism și prezentă în aproape toate celulele. Este crucială pentru producția de energie și are proprietăți antioxidante puternice.</p>
+                        <ul>
+                            <li><b>Producția de energie celulară (ATP):</b> Rolul său principal este în lanțul de transport al electronilor din mitocondrii ("uzinele energetice" ale celulelor), unde este esențială pentru sinteza adenozin trifosfatului (ATP), principala moleculă de energie a organismului. Acest lucru este vital pentru funcționarea optimă a organelor cu nevoi energetice mari, cum ar fi inima, ficatul și rinichii.</li>
+                            <li><b>Antioxidant puternic:</b> CoQ10 este un antioxidant endogen eficient, protejând membranele celulare și lipoproteinele (LDL) de stresul oxidativ și de daunele radicalilor liberi. Ajută la regenerarea altor antioxidanți, cum ar fi vitamina E.</li>
+                            <li><b>Sănătatea cardiovasculară:</b> Joacă un rol important în sănătatea inimii, susținând funcția miocardică și tensiunea arterială sănătoasă. Este adesea studiată și suplimentată în cazul afecțiunilor cardiace și pentru a contracara efectele secundare ale statinelor (medicamente care scad colesterolul, dar pot reduce producția naturală de CoQ10).</li>
+                            <li><b>Sistemul nervos:</b> Protejează celulele nervoase de daunele oxidative și este investigată pentru rolul său în afecțiunile neurodegenerative.</li>
+                            <li><b>Energie și performanță:</b> Contribuie la nivelurile generale de energie, putând îmbunătăți performanța fizică și reduce oboseala.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Cantitățile din alimente sunt, în general, mult mai mici decât cele folosite în suplimente.</p>
+                        <ul>
+                            <li><b>Carne și organe:</b> Inimă de vită, ficat de vită, carne de vită, porc, pui.</li>
+                            <li><b>Pește gras:</b> Somon, ton, macrou, sardine.</li>
+                            <li><b>Uleiuri vegetale:</b> Ulei de soia, ulei de rapiță (canola), ulei de măsline.</li>
+                            <li><b>Nuci și semințe:</b> Fistic, semințe de susan.</li>
+                            <li><b>Legume:</b> Spanac, broccoli, conopidă.</li>
+                            <li><b>Fructe:</b> Portocale, căpșuni (cantități mici).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de CoQ10)</h3>
+                        <p>Deficiența primară de CoQ10 este rară și de obicei genetică. Deficiențele secundare pot apărea din cauza anumitor afecțiuni medicale (boli cardiace, neurologice), utilizării unor medicamente (statinelor) sau vârstei înaintate (producția naturală scade cu vârsta).</p>
+                        <ol>
+                            <li><b>Oboseală și lipsă de energie:</b> Deoarece CoQ10 este esențială pentru producția de ATP, o deficiență duce la o stare de oboseală cronică și lipsă de vitalitate.</li>
+                            <li><b>Slăbiciune musculară și dureri musculare:</b> Poate contribui la miopatie (slăbiciune musculară) și crampe, în special în cazul utilizării statinelor.</li>
+                            <li><b>Probleme cardiace:</b> Poate contribui la disfuncții cardiace sau agrava afecțiuni cardiace existente.</li>
+                            <li><b>Disfuncții cognitive:</b> "Ceață mentală", probleme de memorie și concentrare.</li>
+                            <li><b>Slăbirea sistemului imunitar.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (toxicitate CoQ10)</h3>
+                        <p>CoQ10 este considerată în general sigură, iar toxicitatea din suplimentare este extrem de rară și minoră, chiar și la doze mari. Excesul este de obicei bine tolerat.</p>
+                        <ol>
+                            <li><b>Probleme gastrointestinale ușoare:</b> Greață, diaree, disconfort abdominal (rare și de obicei la doze foarte mari).</li>
+                            <li><b>Insomnie (la administrarea seara, datorită efectului energizant).</b></li>
+                            <li><b>Erupții cutanate (rar).</b></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Coenzima Q10: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Coenzima Q10 este profund asociată cu <b>energia vitală, reziliența, capacitatea de auto-regenerare, forța inimii (atât fizică, cât și emoțională) și fluiditatea vieții</b>. Fiind "scânteia" energetică a celulelor și un antioxidant puternic, CoQ10 rezonează cu "focul" nostru interior, cu rezistența la uzura emoțională și cu abilitatea de a menține ritmul și vitalitatea în fața provocărilor.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Coenzima Q10 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de energie și vitalitate emoțională:</b> Un sentiment de epuizare profundă, apatie, lipsa de entuziasm și de "chef de viață". Senzația că "bateriile" emoționale sunt descărcate.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală cronică, slăbiciune musculară.</li>
+                            </ul>
+                        </li>
+                        <li><b>"Inima grea" și blocaje emoționale:</b> Simbolismul inimii (organul cu cea mai mare concentrație de CoQ10) poate indica o tristețe profundă, doliu neprocesat, resentimente vechi sau o incapacitate de a te deschide emoțional, afectând "ritmul" inimii.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Posibile disfuncții cardiace.</li>
+                            </ul>
+                        </li>
+                        <li><b>Lipsa de reziliență și incapacitatea de auto-regenerare:</b> Dificultăți în a te recupera după stres emoțional, senzația de a fi "uzat" de viață, lipsa capacității de a-ți "încărca bateriile" la nivel profund.</li>
+                        <li><b>"Ceață mentală" emoțională și lipsa de claritate:</b> Dificultăți de concentrare pe propriile nevoi sau dorințe, o senzație de confuzie internă sau de a nu putea vedea soluțiile.</li>
+                        <li><b>Teama de a te implica pe deplin:</b> O lipsă de curaj de a te dedica pasiunilor sau relațiilor, din teama de a nu te epuiza sau de a nu face față.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de CoQ10 (de obicei din suplimentare, cu toxicitate redusă) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Supra-activitate și agitație interioară:</b> O energie excesivă, o minte și un corp supra-stimulate, dificultăți de a te relaxa sau de a "încetini".</li>
+                        <li><b>"Arderea" energiei:</b> O tendință de a consuma rapid resursele energetice, de a fi mereu în "priză", fără a permite odihnă și recuperare adecvată.</li>
+                        <li><b>Nevoie de control și perfecționism:</b> O presiune de a fi mereu "performant" sau de a menține un ritm accelerat, bazat pe o nevoie de a controla rezultatele sau de a evita vulnerabilitatea.</li>
+                        <li><b>"Forțarea" bucuriei sau a entuziasmului:</b> O încercare de a menține o stare de bine artificială, fără a permite recunoașterea și procesarea emoțiilor mai puțin plăcute.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de reîncărcare energetică:</b> Meditații de vitalizare, timp petrecut în natură (în special la lumina soarelui), somn odihnitor.</li>
+                        <li><b>Terapii</b> pentru eliberarea blocajelor emoționale legate de inimă (doliu, resentimente, lipsa de iertare).</li>
+                        <li><b>Cultivarea bucuriei de viață</b> și a entuziasmului prin hobby-uri, artă, muzică.</li>
+                        <li><b>Exerciții fizice moderate</b> care susțin vitalitatea fără a epuiza.</li>
+                        <li><b>Lucrul cu încrederea</b> în propria capacitate de auto-regenerare.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și de "împământare":</b> Meditație statică, respirație profundă, yoga restaurativă.</li>
+                        <li><b>Terapii</b> pentru gestionarea nevoii de control și a perfecționismului.</li>
+                        <li><b>Învățarea de a "încetini"</b> și de a permite odihna și recuperarea.</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a limitelor personale.</li>
+                        <li><b>Practici de "eliberare"</b> a presiunii și a așteptărilor nerealiste.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
