@@ -81,6 +81,17 @@
             gap: 25px;
             width: 100%;
         }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
         .subsection {
             flex: 1;
             min-width: 280px;
@@ -176,6 +187,21 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -191,71 +217,76 @@
         <div class="section">
             <h2 class="section-title">Vitamina C - Perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Vitamina C, cunoscută și sub denumirea de acid ascorbic, este o vitamină hidrosolubilă esențială, ceea ce înseamnă că organismul nu o poate produce și trebuie obținută prin dietă. Joacă roluri cruciale în numeroase procese biologice.</p>
-                    <ul>
-                        <li><b>Antioxidant puternic:</b> Este un antioxidant major, protejând celulele de stresul oxidativ cauzat de radicalii liberi. Ajută la regenerarea altor antioxidanți, cum ar fi vitamina E.</li>
-                        <li><b>Sinteza colagenului:</b> Este absolut esențială pentru sinteza colagenului, o proteină structurală fundamentală care se găsește în piele, oase, cartilaje, tendoane, ligamente, vase de sânge și dinți. Fără vitamina C, colagenul nu se poate forma corect.</li>
-                        <li><b>Sistemul imunitar:</b> Susține funcția imunitară prin stimularea producției și activității celulelor albe din sânge (limfocite, fagocite) și a anticorpilor. Contribuie la integritatea barierelor epiteliale.</li>
-                        <li><b>Absorbția fierului:</b> Crește semnificativ absorbția fierului non-hemic (fierul din surse vegetale) în intestin, prin reducerea formei ferice (Fe3+) la forma feroasă (Fe2+), mai ușor absorbabilă.</li>
-                        <li><b>Vindecarea rănilor:</b> Prin rolul său în sinteza colagenului, vitamina C este crucială pentru repararea țesuturilor și vindecarea eficientă a rănilor.</li>
-                        <li><b>Sănătatea vaselor de sânge:</b> Contribuie la elasticitatea și integritatea capilarelor și a altor vase de sânge.</li>
-                        <li><b>Sinteza neurotransmițătorilor și a hormonilor:</b> Este necesară pentru sinteza norepinefrinei și a carnitinei, precum și pentru metabolismul colesterolului.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina C, cunoscută și sub denumirea de acid ascorbic, este o vitamină hidrosolubilă esențială, ceea ce înseamnă că organismul nu o poate produce și trebuie obținută prin dietă. Joacă roluri cruciale în numeroase procese biologice.</p>
+                        <ul>
+                            <li><b>Antioxidant puternic:</b> Este un antioxidant major, protejând celulele de stresul oxidativ cauzat de radicalii liberi. Ajută la regenerarea altor antioxidanți, cum ar fi vitamina E.</li>
+                            <li><b>Sinteza colagenului:</b> Este absolut esențială pentru sinteza colagenului, o proteină structurală fundamentală care se găsește în piele, oase, cartilaje, tendoane, ligamente, vase de sânge și dinți. Fără vitamina C, colagenul nu se poate forma corect.</li>
+                            <li><b>Sistemul imunitar:</b> Susține funcția imunitară prin stimularea producției și activității celulelor albe din sânge (limfocite, fagocite) și a anticorpilor. Contribuie la integritatea barierelor epiteliale.</li>
+                            <li><b>Absorbția fierului:</b> Crește semnificativ absorbția fierului non-hemic (fierul din surse vegetale) în intestin, prin reducerea formei ferice (Fe3+) la forma feroasă (Fe2+), mai ușor absorbabilă.</li>
+                            <li><b>Vindecarea rănilor:</b> Prin rolul său în sinteza colagenului, vitamina C este crucială pentru repararea țesuturilor și vindecarea eficientă a rănilor.</li>
+                            <li><b>Sănătatea vaselor de sânge:</b> Contribuie la elasticitatea și integritatea capilarelor și a altor vase de sânge.</li>
+                            <li><b>Sinteza neurotransmițătorilor și a hormonilor:</b> Este necesară pentru sinteza norepinefrinei și a carnitinei, precum și pentru metabolismul colesterolului.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vitamina C este larg răspândită în fructe și legume. Este sensibilă la căldură, lumină și oxigen, deci gătirea prelungită poate reduce conținutul.</p>
+                        <ol>
+                            <li><b>Fructe:</b>
+                                <ul>
+                                    <li><b>Citrice:</b> Portocale, lămâi, grepfrut, mandarine.</li>
+                                    <li><b>Fructe de pădure:</b> Căpșuni, zmeură, afine, coacăze.</li>
+                                    <li><b>Kiwi.</b></li>
+                                    <li><b>Mango.</b></li>
+                                    <li><b>Pepene galben.</b></li>
+                                </ul>
+                            </li>
+                            <li><b>Legume:</b>
+                                <ul>
+                                    <li><b>Ardei gras (roșu, verde, galben):</b> O sursă excepțional de bogată.</li>
+                                    <li><b>Broccoli.</b></li>
+                                    <li><b>Varză de Bruxelles.</b></li>
+                                    <li><b>Conopidă.</b></li>
+                                    <li><b>Roșii și suc de roșii.</b></li>
+                                    <li><b>Spanac și alte legume cu frunze verzi.</b></li>
+                                    <li><b>Cartofi (în cantități modeste, dar un aliment de bază).</b></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză C)</h3>
-                    <p>Deficiența severă de vitamina C duce la scorbut, o boală gravă.</p>
-                    <ol>
-                        <li><b>Scorbut:</b>
-                            <ul>
-                                <li><b>Oboseală extremă și slăbiciune.</b></li>
-                                <li><b>Vânătaie ușoară și sângerări:</b> Gingii umflate și sângerânde, sângerări sub piele (peteșii, echimoze), sângerări nazale.</li>
-                                <li><b>Probleme ale pielii și părului:</b> Piele uscată, aspră, foliculită keratotică (noduli roșii în jurul foliculilor de păr), păr creț ("păr de tirbușon").</li>
-                                <li><b>Vindecarea lentă a rănilor:</b> Rănile existente se vindecă greu, iar rănile vechi se pot redeschide.</li>
-                                <li><b>Dureri articulare și musculare:</b> Articulații umflate și dureroase, dureri musculare.</li>
-                                <li><b>Anemie:</b> Prin afectarea metabolismului fierului.</li>
-                                <li><b>Depresie și iritabilitate.</b></li>
-                            </ul>
-                        </li>
-                        <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză C)</h3>
-                    <p>Fiind hidrosolubilă, excesul de vitamina C este de obicei excretat prin urină, deci toxicitatea este rară. Cu toate acestea, dozele foarte mari pot provoca unele probleme:</p>
-                    <ol>
-                        <li><b>Probleme digestive:</b> Greață, crampe abdominale, diaree.</li>
-                        <li><b>Calculi renali (pietre la rinichi):</b> La persoanele predispuse, dozele foarte mari de vitamina C pot crește riscul de formare a calculilor de oxalat de calciu.</li>
-                        <li><b>Supraîncărcarea cu fier:</b> La persoanele cu hemocromatoză sau alte tulburări de depozitare a fierului, dozele mari de vitamina C pot crește absorbția fierului și agrava supraîncărcarea.</li>
-                    </ol>
-                </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Vitamina C este larg răspândită în fructe și legume. Este sensibilă la căldură, lumină și oxigen, deci gătirea prelungită poate reduce conținutul.</p>
-                    <ol>
-                        <li><b>Fructe:</b>
-                            <ul>
-                                <li><b>Citrice:</b> Portocale, lămâi, grepfrut, mandarine.</li>
-                                <li><b>Fructe de pădure:</b> Căpșuni, zmeură, afine, coacăze.</li>
-                                <li><b>Kiwi.</b></li>
-                                <li><b>Mango.</b></li>
-                                <li><b>Pepene galben.</b></li>
-                            </ul>
-                        </li>
-                        <li><b>Legume:</b>
-                            <ul>
-                                <li><b>Ardei gras (roșu, verde, galben):</b> O sursă excepțional de bogată.</li>
-                                <li><b>Broccoli.</b></li>
-                                <li><b>Varză de Bruxelles.</b></li>
-                                <li><b>Conopidă.</b></li>
-                                <li><b>Roșii și suc de roșii.</b></li>
-                                <li><b>Spanac și alte legume cu frunze verzi.</b></li>
-                                <li><b>Cartofi (în cantități modeste, dar un aliment de bază).</b></li>
-                            </ul>
-                        </li>
-                    </ol>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză C)</h3>
+                        <p>Deficiența severă de vitamina C duce la scorbut, o boală gravă.</p>
+                        <ol>
+                            <li><b>Scorbut:</b>
+                                <ul>
+                                    <li><b>Oboseală extremă și slăbiciune.</b></li>
+                                    <li><b>Vânătaie ușoară și sângerări:</b> Gingii umflate și sângerânde, sângerări sub piele (peteșii, echimoze), sângerări nazale.</li>
+                                    <li><b>Probleme ale pielii și părului:</b> Piele uscată, aspră, foliculită keratotică (noduli roșii în jurul foliculilor de păr), păr creț ("păr de tirbușon").</li>
+                                    <li><b>Vindecarea lentă a rănilor:</b> Rănile existente se vindecă greu, iar rănile vechi se pot redeschide.</li>
+                                    <li><b>Dureri articulare și musculare:</b> Articulații umflate și dureroase, dureri musculare.</li>
+                                    <li><b>Anemie:</b> Prin afectarea metabolismului fierului.</li>
+                                    <li><b>Depresie și iritabilitate.</b></li>
+                                </ul>
+                            </li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză C)</h3>
+                        <p>Fiind hidrosolubilă, excesul de vitamina C este de obicei excretat prin urină, deci toxicitatea este rară. Cu toate acestea, dozele foarte mari pot provoca unele probleme:</p>
+                        <ol>
+                            <li><b>Probleme digestive:</b> Greață, crampe abdominale, diaree.</li>
+                            <li><b>Calculi renali (pietre la rinichi):</b> La persoanele predispuse, dozele foarte mari de vitamina C pot crește riscul de formare a calculilor de oxalat de calciu.</li>
+                            <li><b>Supraîncărcarea cu fier:</b> La persoanele cu hemocromatoză sau alte tulburări de depozitare a fierului, dozele mari de vitamina C pot crește absorbția fierului și agrava supraîncărcarea.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
