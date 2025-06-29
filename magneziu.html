@@ -3,208 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magneziu - Ghid Minerale</title>
+    <title>Magneziul și Relaxarea Interioară</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
         }
-        .container {
+        .infographic-container {
             max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
         }
-        h1, h2, h3 {
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
             color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
         }
-        h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
         }
-        h3 {
-            margin-bottom: 5px; /* Spațiere redusă după h3 */
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
         }
-        ul, ol {
-            list-style: disc;
-            margin-left: 20px;
+        .subsection:hover {
+            transform: translateY(-5px);
         }
-        ol {
-            list-style: decimal;
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
         }
-        b { /* Stil pentru text aldin */
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
             color: #34495e;
         }
-        .back-link {
-            display: block;
-            margin-top: 30px;
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
             text-align: center;
-            font-size: 1.1em;
-            margin-bottom: 20px;
+            width: 100%;
         }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .internal-toc {
-            background-color: #eaf6ff;
-            border: 1px solid #cceeff;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 30px;
-        }
-        .internal-toc h3 {
-            margin-top: 0;
-            color: #2c3e50;
-        }
-        .internal-toc ul {
-            list-style: none;
-            padding: 0;
-        }
-        .internal-toc li {
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
             margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
-
-        <h1>Magneziu</h1>
-
-        <div class="internal-toc">
-            <h3>Pe această pagină:</h3>
-            <ul>
-                <li><a href="#rolul-fizic">Rolul magneziului în organism (perspectivă fizică)</a></li>
-                <li><a href="#surse-alimentare">Surse alimentare de magneziu</a></li>
-                <li><a href="#perspectiva-holistica">Magneziu: Perspectivă holistică (cauze emoționale)</a></li>
-            </ul>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Magneziul și Relaxarea Interioară
         </div>
 
-        <h2 id="rolul-fizic">Rolul magneziului în organism (perspectivă fizică)</h2>
-        [cite_start]<p>Magneziul este un mineral esențial și un electrolit vital, considerat "mineralul relaxării", deoarece este implicat în peste 300 de reacții biochimice din corp[cite: 9]. [cite_start]Rolul său este fundamental pentru aproape toate funcțiile celulare și sistemice[cite: 9].</p>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>1. Funcția musculară și nervoasă</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Magneziul este crucial pentru transmiterea impulsurilor nervoase și pentru contracția și relaxarea musculară[cite: 9]. [cite_start]Ajută la prevenirea crampelor musculare, spasmelor și a sindromului picioarelor neliniștite[cite: 9]. [cite_start]Este deosebit de important pentru mușchiul inimii, contribuind la menținerea unui ritm cardiac sănătos[cite: 9].</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Magneziu - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Magneziul este un mineral esențial și un electrolit vital, considerat "mineralul relaxării", deoarece este implicat în peste 300 de reacții biochimice din corp. Rolul său este fundamental pentru aproape toate funcțiile celulare și sistemice.</p>
+                    <ul>
+                        <li><b>Funcția musculară și nervoasă:</b> Magneziul este crucial pentru transmiterea impulsurilor nervoase și pentru contracția și relaxarea musculară. Ajută la prevenirea crampelor musculare, spasmelor și a sindromului picioarelor neliniștite. Este deosebit de important pentru mușchiul inimii, contribuind la menținerea unui ritm cardiac sănătos.</li>
+                        <li><b>Producția de energie (ATP):</b> Este necesar pentru producerea adenozin trifosfatului (ATP), principala moleculă de energie a organismului. Fără magneziu, corpul nu ar putea produce sau utiliza eficient energia din alimente.</li>
+                        <li><b>Sănătatea oaselor:</b> Aproximativ 60% din magneziul din corp se găsește în oase. Lucrează împreună cu calciul și vitamina D pentru a menține densitatea osoasă și a preveni osteoporoza. De fapt, magneziul este esențial pentru activarea vitaminei D, care la rândul ei ajută la absorbția calciului.</li>
+                        <li><b>Controlul glicemiei:</b> Magneziul joacă un rol important în metabolismul carbohidraților și al insulinei, contribuind la menținerea unor niveluri sănătoase ale zahărului din sânge. Implicațiile sunt că un deficit poate crește riscul de rezistență la insulină și diabet de tip 2.</li>
+                        <li><b>Sinteza proteinelor, ADN-ului și ARN-ului:</b> Este esențial pentru procesele de construcție celulară, inclusiv pentru sinteza proteinelor, precum și a materialului genetic.</li>
+                        <li><b>Reglarea tensiunii arteriale:</b> Contribuie la relaxarea vaselor de sânge, ajutând la menținerea unei tensiuni arteriale normale.</li>
+                        <li><b>Reducerea stresului și anxietății:</b> Magneziul acționează ca un calmant natural al sistemului nervos, ajutând la reglarea neurotransmițătorilor care influențează starea de spirit. Implicațiile sunt că un nivel adecvat de magneziu poate contribui la reducerea anxietății, depresiei și la îmbunătățirea calității somnului.</li>
+                        <li><b>Funcția digestivă:</b> Sprijină funcția normală a intestinului, contribuind la un tranzit intestinal regulat.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Deși este un mineral esențial, mulți oameni nu obțin suficient magneziu din dieta lor. Solurile moderne sunt adesea sărace în magneziu, iar procesarea alimentelor reduce și ea conținutul. Iată câteva dintre cele mai bune surse alimentare:</p>
+                    <ul>
+                        <li><b>Legume cu frunze verzi închise:</b> Spanac, kale (varză creață), sfeclă elvețiană (mangold).</li>
+                        <li><b>Nuci și semințe:</b> Semințe de dovleac (extrem de bogate), migdale, caju, semințe de chia, semințe de susan.</li>
+                        <li><b>Leguminoase:</b> Fasole neagră, linte, năut.</li>
+                        <li><b>Cereale integrale și pseudocereale:</b> Quinoa, hrișcă, orez brun, ovăz integral.</li>
+                        <li><b>Fructe:</b> Avocado, banane, smochine.</li>
+                        <li><b>Ciocolată neagră:</b> Cu un conținut ridicat de cacao (70% sau mai mult) este o sursă excelentă de magneziu.</li>
+                        <li><b>Pește gras:</b> Somon, macrou.</li>
+                        <li><b>Tofu</b>.</li>
+                    </ul>
+                    <p><b>Important de reținut:</b> Factori precum stresul cronic, consumul excesiv de alcool, anumite medicamente (diuretice, antibiotice, inhibitori de pompă de protoni) și afecțiuni digestive (boala Crohn, colita ulceroasă) pot duce la o deficiență de magneziu.</p>
+                </div>
+            </div>
+        </div>
 
-        <h3>2. Producția de energie (ATP)</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Este necesar pentru producerea adenozin trifosfatului (ATP), principala moleculă de energie a organismului[cite: 9]. [cite_start]Fără magneziu, corpul nu ar putea produce sau utiliza eficient energia din alimente[cite: 9].</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Magneziu: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, magneziul este adesea denumit "mineralul relaxării", fiind profund conectat cu <b>calmul, echilibrul, eliberarea tensiunii, adaptabilitatea și capacitatea de a face față stresului</b>. El rezonează cu fluiditatea energetică a corpului și minții, permițând o curgere armonioasă a energiei și o gestionare sănătoasă a emoțiilor. Magneziul este vital pentru peste 300 de reacții biochimice și este esențial pentru funcțiile musculare și nervoase.</p>
 
-        <h3>3. Sănătatea oaselor</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Aproximativ 60% din magneziul din corp se găsește în oase[cite: 9]. [cite_start]Lucrează împreună cu calciul și vitamina D pentru a menține densitatea osoasă și a preveni osteoporoza[cite: 9]. [cite_start]De fapt, magneziul este esențial pentru activarea vitaminei D, care la rândul ei ajută la absorbția calciului[cite: 9].</li>
-        </ul>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de magneziu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Stres cronic și incapacitatea de a te relaxa:</b> O tensiune emoțională constantă, o tendință de a te îngrijora excesiv sau de a nu-ți permite momente de relaxare profundă pot epuiza rezervele de magneziu. Corpul rămâne într-o stare de "luptă sau fugi" cronică.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Crampe musculare, spasme, insomnie, anxietate.</li>
+                            </ul>
+                        </li>
+                        <li><b>Frică și anxietate:</b> Emoțiile de frică persistentă, atacurile de panică sau o stare generală de nervozitate pot reflecta o lipsă de stabilitate emoțională, la fel cum magneziul stabilizează sistemul nervos.</li>
+                        <li><b>Dificultatea de a "elibera" controlul:</b> O nevoie puternică de a controla totul în jur, teama de a renunța sau de a delega, pot crea tensiuni interioare care consumă magneziu.</li>
+                        <li><b>Resentimente și furie reprimată:</b> Furia neexprimată sau resentimentele accumulate pot crea rigiditate și tensiune în corp, consumând magneziu în încercarea de a menține un echilibru.</li>
+                        <li><b>Lipsa de "împământare" energetică:</b> Magneziul este un mineral al pământului. O deconectare de la natură sau de la propria stabilitate interioară poate duce la o senzație de "plutire" sau de neliniște.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Sindromul picioarelor neliniștite.</li>
+                            </ul>
+                        </li>
+                        <li><b>Perfecționism și suprasolicitare:</b> Tendința de a-ți impune standarde prea înalte și de a te suprasolicita constant, ignorând nevoile de odihnă și recuperare.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de magneziu (rar din dietă, mai des din suplimente în doze foarte mari) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Apatie și letargie emoțională:</b> O stare de indiferență, lipsă de motivație sau o tendință de a evita confruntările și responsabilitățile.</li>
+                        <li><b>Evitarea conflictelor și pasivitate:</b> O tendință de a fi prea "relaxat" sau pasiv, evitând acțiunea chiar și atunci când este necesară, sau refuzul de a-ți asuma propria putere.</li>
+                        <li><b>Sedare emoțională:</b> O nevoie de a "amortiza" emoțiile, de a le ignora, ducând la o lipsă de reacție sau de implicare.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
 
-        <h3>4. Controlul glicemiei</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Magneziul joacă un rol important în metabolismul carbohidraților și al insulinei, contribuind la menținerea unor niveluri sănătoase ale zahărului din sânge[cite: 9].</li>
-            [cite_start]<li><b>Implicații:</b> Un deficit poate crește riscul de rezistență la insulină și diabet de tip 2[cite: 9].</li>
-        </ul>
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de relaxare profundă:</b> Meditație ghidată, yoga, respirație conștientă.</li>
+                        <li><b>Gestionarea proactivă a stresului:</b> Identificarea și reducerea factorilor de stres, tehnici de mindfulness.</li>
+                        <li><b>Eliberarea tensiunilor emoționale</b> prin jurnalism, art-terapie sau discuții cu un terapeut.</li>
+                        <li><b>Conectarea cu natura</b> (timp petrecut în aer liber, "împământare").</li>
+                        <li><b>Stabilirea unor limite sănătoase</b> în relații și la locul de muncă.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Activități</b> care stimulează energia și creativitatea.</li>
+                        <li><b>Exerciții fizice moderate</b> pentru a "trezi" corpul și mintea.</li>
+                        <li><b>Explorarea cauzelor apatiei</b> și dezvoltarea unor strategii de asumare a responsabilităților.</li>
+                        <li><b>Meditații active sau dinamice</b> care încurajează mișcarea energiei.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
 
-        <h3>5. Sinteza proteinelor, ADN-ului și ARN-ului</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Este esențial pentru procesele de construcție celulară, inclusiv pentru sinteza proteinelor, precum și a materialului genetic[cite: 9].</li>
-        </ul>
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+        </div>
 
-        <h3>6. Reglarea tensiunii arteriale</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Contribuie la relaxarea vaselor de sânge, ajutând la menținerea unei tensiuni arteriale normale[cite: 9].</li>
-        </ul>
-
-        <h3>7. Reducerea stresului și anxietății</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Magneziul acționează ca un calmant natural al sistemului nervos, ajutând la reglarea neurotransmițătorilor care influențează starea de spirit[cite: 9].</li>
-            [cite_start]<li><b>Implicații:</b> Un nivel adecvat de magneziu poate contribui la reducerea anxietății, depresiei și la îmbunătățirea calității somnului[cite: 9].</li>
-        </ul>
-
-        <h3>8. Funcția digestivă</h3>
-        <ul>
-            [cite_start]<li><b>Mecanism:</b> Sprijină funcția normală a intestinului, contribuind la un tranzit intestinal regulat[cite: 9].</li>
-        </ul>
-
-        <h2 id="surse-alimentare">Surse alimentare de magneziu</h2>
-        <p>Deși este un mineral esențial, mulți oameni nu obțin suficient magneziu din dieta lor. Solurile moderne sunt adesea sărace în magneziu, iar procesarea alimentelor reduce și ea conținutul. [cite_start]Iată câteva dintre cele mai bune surse alimentare: [cite: 9]</p>
-
-        <ul>
-            [cite_start]<li><b>Legume cu frunze verzi închise:</b> Spanac, kale (varză creață), sfeclă elvețiană (mangold)[cite: 9].</li>
-            [cite_start]<li><b>Nuci și semințe:</b> Semințe de dovleac (extrem de bogate), migdale, caju, semințe de chia, semințe de susan[cite: 9].</li>
-            [cite_start]<li><b>Leguminoase:</b> Fasole neagră, linte, năut[cite: 9].</li>
-            [cite_start]<li><b>Cereale integrale și pseudocereale:</b> Quinoa, hrișcă, orez brun, ovăz integral[cite: 9].</li>
-            [cite_start]<li><b>Fructe:</b> Avocado, banane, smochine[cite: 9].</li>
-            [cite_start]<li><b>Ciocolată neagră:</b> Cu un conținut ridicat de cacao (70% sau mai mult) este o sursă excelentă de magneziu[cite: 9].</li>
-            [cite_start]<li><b>Pește gras:</b> Somon, macrou[cite: 9].</li>
-            [cite_start]<li><b>Tofu.</b> [cite: 9]</li>
-        </ul>
-
-        [cite_start]<p><b>Important de reținut:</b> Factori precum stresul cronic, consumul excesiv de alcool, anumite medicamente (diuretice, antibiotice, inhibitori de pompă de protoni) și afecțiuni digestive (boala Crohn, colita ulceroasă) pot duce la o deficiență de magneziu. [cite: 9]</p>
-
-        <h2 id="perspectiva-holistica">Magneziu: Perspectivă holistică (cauze emoționale)</h2>
-        <p>Din perspectivă holistică, magneziul este adesea denumit "mineralul relaxării", fiind profund conectat cu <b>calmul, echilibrul, eliberarea tensiunii, adaptabilitatea și capacitatea de a face față stresului</b>. El rezonează cu fluiditatea energetică a corpului și minții, permițând o curgere armonioasă a energiei și o gestionare sănătoasă a emoțiilor. Magneziul este vital pentru peste 300 de reacții biochimice și este esențial pentru funcțiile musculare și nervoase.</p>
-
-        <h3>Cauze emoționale ale deficitului de magneziu:</h3>
-        <p>Un deficit de magneziu poate fi legat de următoarele aspecte emoționale:</p>
-        <ol>
-            <li><b>Stres cronic și incapacitatea de a te relaxa:</b> O tensiune emoțională constantă, o tendință de a te îngrijora excesiv sau de a nu-ți permite momente de relaxare profundă pot epuiza rezervele de magneziu. Corpul rămâne într-o stare de "luptă sau fugi" cronică.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Crampe musculare, spasme, insomnie, anxietate.</li>
-                </ul>
-            </li>
-            <li><b>Frică și anxietate:</b> Emoțiile de frică persistentă, atacurile de panică sau o stare generală de nervozitate pot reflecta o lipsă de stabilitate emoțională, la fel cum magneziul stabilizează sistemul nervos.</li>
-            <li><b>Dificultatea de a "elibera" controlul:</b> O nevoie puternică de a controla totul în jur, teama de a renunța sau de a delega, pot crea tensiuni interioare care consumă magneziu.</li>
-            <li><b>Resentimente și furie reprimată:</b> Furia neexprimată sau resentimentele acumulate pot crea rigiditate și tensiune în corp, consumând magneziu în încercarea de a menține un echilibru.</li>
-            <li><b>Lipsa de "împământare" energetică:</b> Magneziul este un mineral al pământului. O deconectare de la natură sau de la propria stabilitate interioară poate duce la o senzație de "plutire" sau de neliniște.
-                <ul>
-                    <li><i>Manifestare fizică:</i> Sindromul picioarelor neliniștite.</li>
-                </ul>
-            </li>
-            <li><b>Perfecționism și suprasolicitare:</b> Tendința de a-ți impune standarde prea înalte și de a te suprasolicita constant, ignorând nevoile de odihnă și recuperare.</li>
-        </ol>
-
-        <h3>Cauze emoționale ale excesului de magneziu:</h3>
-        <p>Un exces de magneziu (rar din dietă, mai des din suplimente în doze foarte mari) ar putea sugera din perspectivă holistică:</p>
-        <ol>
-            <li><b>Apatie și letargie emoțională:</b> O stare de indiferență, lipsă de motivație sau o tendință de a evita confruntările și responsabilitățile.</li>
-            <li><b>Evitarea conflictelor și pasivitate:</b> O tendință de a fi prea "relaxat" sau pasiv, evitând acțiunea chiar și atunci când este necesară, sau refuzul de a-ți asuma propria putere.</li>
-            <li><b>Sedare emoțională:</b> O nevoie de a "amortiza" emoțiile, de a le ignora, ducând la o lipsă de reacție sau de implicare.</li>
-        </ol>
-
-        <h3>Recomandări holistice:</h3>
-        <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se pot recomanda:</p>
-        <ul>
-            <li><b>Pentru deficit (stres, anxietate, tensiune):</b>
-                <ul>
-                    <li>Practici de relaxare profundă: meditație ghidată, yoga, respirație conștientă.</li>
-                    <li>Gestionarea proactivă a stresului: identificarea și reducerea factorilor de stres, tehnici de mindfulness.</li>
-                    <li>Eliberarea tensiunilor emoționale prin jurnalism, art-terapie sau discuții cu un terapeut.</li>
-                    <li>Conectarea cu natura (timp petrecut în aer liber, "împământare").</li>
-                    <li>Stabilirea unor limite sănătoase în relații și la locul de muncă.</li>
-                </ul>
-            </li>
-            <li><b>Pentru exces (apatie, pasivitate):</b>
-                <ul>
-                    <li>Activități care stimulează energia și creativitatea.</li>
-                    <li>Exerciții fizice moderate pentru a "trezi" corpul și mintea.</li>
-                    <li>Explorarea cauzelor apatiei și dezvoltarea unor strategii de asumare a responsabilităților.</li>
-                    <li>Meditații active sau dinamice care încurajează mișcarea energiei.</li>
-                </ul>
-            </li>
-        </ul>
-        <p>Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        
-        <a href="index.html" class="back-link">&larr; înapoi la cuprins</a>
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
     </div>
 </body>
 </html>
