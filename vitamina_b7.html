@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B7 (Biotina) și Auto-Acceptarea</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B7 (Biotina) și Auto-Acceptarea
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B7 (Biotina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B7, cunoscută sub denumirea de biotină, este o vitamină hidrosolubilă esențială, parte a complexului de vitamine B. Joacă un rol crucial în metabolismul macronutrienților și în menținerea sănătății pielii, părului și unghiilor. Biotină este adesea sintetizată și de bacteriile intestinale.</p>
+                        <ul>
+                            <li><b>Metabolismul macronutrienților:</b> Biotină este o coenzimă esențială pentru patru enzime carboxilaze, care sunt implicate în metabolismul carbohidraților, grăsimilor și proteinelor. Aceasta ajută la conversia alimentelor în energie.
+                                <ul>
+                                    <li><b>Gluconeogeneză:</b> Este vitală pentru sinteza glucozei din surse non-carbohidrate.</li>
+                                    <li><b>Sinteza acizilor grași:</b> Contribuie la producția de acizi grași.</li>
+                                    <li><b>Metabolismul aminoacizilor:</b> Este implicată în descompunerea anumitor aminoacizi.</li>
+                                </ul>
+                            </li>
+                            <li><b>Sănătatea pielii, părului și unghiilor:</b> Deși mecanismul exact nu este pe deplin înțeles, biotină este adesea promovată pentru rolul său în menținerea sănătății acestor țesuturi. Deficiența de biotină se manifestă adesea prin probleme dermatologice și capilare.</li>
+                            <li><b>Funcția nervoasă:</b> Contribuie la sănătatea sistemului nervos.</li>
+                            <li><b>Reglarea expresiei genelor:</b> Biotină joacă un rol în reglarea expresiei genelor și în funcția celulară.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Biotina se găsește într-o varietate largă de alimente.</p>
+                        <ul>
+                            <li><b>Carne și organe:</b> Ficat, rinichi.</li>
+                            <li><b>Ouă:</b> Gălbenușul este o sursă excelentă (albușul crud conține avidină, care inhibă absorbția).</li>
+                            <li><b>Pește:</b> Somon, ton.</li>
+                            <li><b>Nuci și semințe:</b> Migdale, arahide, semințe de floarea-soarelui.</li>
+                            <li><b>Leguminoase:</b> Soia, linte, fasole verde.</li>
+                            <li><b>Cereale integrale:</b> Ovăz, orz.</li>
+                            <li><b>Avocado</b>.</li>
+                            <li><b>Legume:</b> Cartofi dulci, spanac, broccoli.</li>
+                            <li><b>Produse lactate:</b> Brânză.</li>
+                            <li><b>Drojdie de bere.</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B7)</h3>
+                        <p>Deficiența severă de biotină este extrem de rară la om, deoarece se găsește larg în alimente și este produsă de bacteriile intestinale. Poate apărea în cazuri de consum excesiv de albuș de ou crud (care conține avidină, o proteină ce leagă biotină și împiedică absorbția ei), în cazul unor afecțiuni genetice rare, sau la utilizarea prelungită a unor medicamente (ex: anticonvulsivante).</p>
+                        <ol>
+                            <li><b>Probleme dermatologice:</b> Dermatită scuamoasă, roșie, în jurul ochilor, nasului și gurii.</li>
+                            <li><b>Probleme capilare:</b> Căderea părului (alopecie), subțierea părului.</li>
+                            <li><b>Probleme neurologice:</b> Depresie, letargie, halucinații, amorțeală și furnicături la extremități.</li>
+                            <li><b>Dureri musculare.</b></li>
+                            <li><b>Pierderea apetitului, greață.</b></li>
+                            <li><b>Slăbirea sistemului imunitar.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B7)</h3>
+                        <p>Biotina este o vitamină hidrosolubilă, iar excesul este rapid eliminat prin urină. Nu există dovezi de toxicitate la doze mari de biotină, chiar și la cele folosite în suplimente.</p>
+                        <ol>
+                            <li>Nu sunt raportate efecte adverse grave sau toxicitate severă la doze mari din alimente sau suplimente orale.</li>
+                            <li>Doze foarte mari (peste 10 mg/zi) pot interfera cu rezultatele unor teste de laborator (ex: teste tiroidiene, troponină), ducând la rezultate fals pozitive sau fals negative. Acest lucru nu este un efect toxic asupra organismului, ci o problemă de interpretare a analizelor.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B7 (Biotina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B7 (Biotina) este adesea asociată cu <b>integritatea personală, auto-acceptarea, capacitatea de a te "înrădăcina" în propria ființă și de a-ți manifesta frumusețea interioară și exterioară</b>. Prin rolul său în sănătatea pielii, părului și unghiilor, biotină rezonează cu modul în care ne prezentăm lumii și cu sentimentul nostru de valoare personală. De asemenea, implicarea sa în metabolismul energetic sugerează o legătură cu fluxul vital și cu capacitatea de a te simți "întreg".</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B7, deși rar fizic, poate fi legat din perspectivă holistică de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Probleme de imagine de sine și auto-acceptare:</b> Dificultăți în a te simți confortabil în propria piele, o lipsă de încredere în aspectul fizic sau o tendință de a te critica excesiv.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Probleme ale pielii, căderea părului, unghii fragile.</li>
+                            </ul>
+                        </li>
+                        <li><b>Fragmentare și lipsa de "înrădăcinare":</b> Un sentiment de a fi "rupt" sau deconectat de propria esență, de a nu te simți stabil sau "acasă" în corpul tău.</li>
+                        <li><b>Dificultăți în a procesa și a integra experiențele:</b> Afectarea metabolismului poate rezonă cu o incapacitate de a "digera" emoțiile sau evenimentele de viață, lăsându-le să se acumuleze și să creeze dezechilibre.</li>
+                        <li><b>Lipsa de vitalitate și de "strălucire":</b> Un sentiment de a fi "palid" sau lipsit de energie, de a nu-ți putea manifesta pe deplin potențialul.</li>
+                        <li><b>Dependența de validare externă:</b> Consumul excesiv de albuș de ou crud (care "leagă" biotină) poate simboliza o tendință de a căuta validare sau "hrană" emoțională din exterior, în detrimentul nutriției interioare.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Vitamina B7 este extrem de rar și inofensiv. Din perspectivă holistică, un exces foarte rar ar putea sugera:</p>
+                    <ol>
+                        <li><b>Preocupare excesivă pentru aparențe:</b> O obsesie pentru aspectul fizic, o nevoie de a fi mereu "perfect" sau de a te prezenta într-un anumit fel pentru a primi aprobare.</li>
+                        <li><b>Rigiditate în identitate:</b> O aderență prea strictă la o anumită imagine de sine, fără a permite flexibilitate sau evoluție.</li>
+                        <li><b>"Supra-procesare" și agitație:</b> O tendință de a analiza excesiv totul, de a "rumega" emoții și evenimente, ducând la neliniște internă.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de auto-acceptare</b> și iubire de sine: afirmații pozitive, meditații ghidate pentru imaginea de sine.</li>
+                        <li><b>Terapii</b> pentru a lucra cu traumele legate de imaginea corporală sau de valoarea personală.</li>
+                        <li><b>Exerciții de "împământare"</b> și de conectare cu corpul (yoga, tai chi, plimbări în natură).</li>
+                        <li><b>Practici de exprimare autentică</b> a frumuseții interioare (artă, dans, jurnalism).</li>
+                        <li><b>Lucrul cu independența emoțională</b> și reducerea nevoii de validare externă.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de "desprindere"</b> de aparențe și de cultivare a frumuseții interioare.</li>
+                        <li><b>Terapii</b> pentru a elibera rigiditatea identității și a permite creșterea personală.</li>
+                        <li><b>Meditații</b> pentru a calma mintea și a reduce "supra-procesarea".</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a vulnerabilității.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
