@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina D și Lumina Interioară</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina D și Lumina Interioară
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina D - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Vitamina D este o vitamină liposolubilă unică, deoarece organismul o poate produce la expunerea pielii la lumina ultravioletă B (UVB) de la soare. Există două forme principale: vitamina D2 (ergocalciferol, din plante și alimente fortificate) și vitamina D3 (colecalciferol, din expunerea la soare și produse animale). Vitamina D3 este considerată mai eficientă în creșterea nivelurilor sanguine. Rolurile sale sunt extinse și cruciale.</p>
+                    <ul>
+                        <li><b>Sănătatea oaselor și metabolismul calciului și fosforului:</b> Rolul său cel mai cunoscut. Vitamina D este esențială pentru absorbția calciului și fosforului din intestin și pentru depunerea lor în oase, contribuind la mineralizarea osoasă și menținerea densității osoase. Ajută la reglarea nivelurilor sanguine de calciu și fosfor.</li>
+                        <li><b>Sistemul imunitar:</b> Receptorii pentru vitamina D sunt prezenți pe multe celule imunitare, iar vitamina D modulează răspunsul imun, contribuind la apărarea organismului împotriva infecțiilor (virale și bacteriene) și la reglarea inflamației.</li>
+                        <li><b>Funcția musculară:</b> Este implicată în forța musculară și în funcția neuromusculară, reducând riscul de căzături, în special la vârstnici.</li>
+                        <li><b>Funcția celulară:</b> Joacă un rol în creșterea și diferențierea celulară, procese importante pentru prevenirea unor tipuri de cancer.</li>
+                        <li><b>Sănătatea cardiovasculară:</b> Cercetările sugerează un rol în reglarea tensiunii arteriale și a sănătății cardiovasculare.</li>
+                        <li><b>Funcția cerebrală și sănătatea mintală:</b> Receptori pentru vitamina D sunt găsiți și în creier, iar nivelurile adecvate au fost asociate cu o bună funcție cognitivă și un risc redus de depresie.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză D)</h3>
+                    <p>Deficiența de vitamina D este extrem de răspândită la nivel global, afectând o mare parte a populației.</p>
+                    <ol>
+                        <li><b>Probleme osoase:</b>
+                            <ul>
+                                <li><b>Rahitism (la copii):</b> Înmuierea și slăbirea oaselor, ducând la deformări scheletice (picioare în paranteză, cutie toracică deformată) și creștere întârziată.</li>
+                                <li><b>Osteomalacie (la adulți):</b> Înmuierea oaselor, ducând la dureri osoase, slăbiciune musculară și fracturi.</li>
+                                <li><b>Osteoporoză:</b> Contribuie la pierderea densității osoase și la creșterea riscului de fracturi la vârstnici.</li>
+                            </ul>
+                        </li>
+                        <li><b>Slăbiciune musculară și dureri:</b> Dureri musculare cronice și slăbiciune, în special la nivelul coapselor și brațelor.</li>
+                        <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții, răceli și gripă.</li>
+                        <li><b>Oboseală cronică.</b></li>
+                        <li><b>Afecțiuni autoimune:</b> A fost asociată cu un risc crescut de boli autoimune (ex: scleroza multiplă, diabet de tip 1).</li>
+                        <li><b>Tulburări de dispoziție:</b> Posibilă legătură cu depresia și tulburările afective sezoniere.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză D)</h3>
+                    <p>Toxicitatea vitaminei D este rară și apare aproape exclusiv din suplimentarea excesivă (doze foarte mari și prelungite), nu din expunerea la soare sau din alimente.</p>
+                    <ol>
+                        <li><b>Hipercalcemie:</b> Niveluri periculos de ridicate de calciu în sânge, cauzate de absorbția excesivă a calciului.
+                            <ul>
+                                <li><b>Simptome:</b> Greață, vărsături, constipație, sete excesivă, urinare frecventă, oboseală, slăbiciune musculară.</li>
+                                <li><b>Complicații grave:</b> Depuneri de calciu în țesuturile moi (rinichi, inimă, vase de sânge), ducând la leziuni renale ireversibile și probleme cardiovasculare.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dureri osoase și decalcifiere (în cazuri extreme).</b></li>
+                        <li><b>Probleme renale.</b></li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Sunt puține alimente care conțin în mod natural cantități semnificative de vitamina D. Principala sursă rămâne expunerea la soare.</p>
+                    <p><b>1. Surse alimentare naturale (Vitamina D3):</b></p>
+                    <ul>
+                        <li><b>Pește gras:</b> Somon (în special somon sălbatic), macrou, sardine, hering, ton (în cantități mai mici).</li>
+                        <li><b>Ulei de ficat de cod</b>.</li>
+                        <li><b>Gălbenuș de ou</b>.</li>
+                        <li><b>Ficat de vită</b> (cantități mici).</li>
+                    </ul>
+                    <p><b>2. Alimente fortificate:</b></p>
+                    <ul>
+                        <li><b>Lapte și băuturi vegetale</b> (lapte de soia, migdale, ovăz).</li>
+                        <li><b>Cereale pentru micul dejun</b>.</li>
+                        <li><b>Iaurt și brânză</b> (mai rar fortificate).</li>
+                        <li><b>Suc de portocale fortificat.</b></li>
+                    </ul>
+                    <p><b>3. Ciuperci (Vitamina D2):</b> Anumite ciuperci expuse la lumina UV (mai puțin obișnuit).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina D: Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, vitamina D este adesea denumită "vitamina soarelui", fiind fundamental conectată cu <b>lumina, bucuria, optimismul, vitalitatea, sprijinul divin/universal și capacitatea de a absorbi "bunătatea" vieții</b>. Prin rolul său esențial în sănătatea oaselor (structura) și a sistemului imunitar (protecția), vitamina D rezonează cu fundația noastră emoțională, cu reziliența și cu abilitatea de a ne simți energizați și susținuți chiar și în perioadele "întunecate".</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de vitamina D poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de bucurie, tristețe și depresie:</b> Un sentiment profund de lipsă de lumină interioară, melancolie, apatie sau o tendință spre depresie. Senzația că nu mai poți "vedea soarele" sau că ești într-o perioadă "întunecată" a vieții.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Tulburări de dispoziție, oboseală cronică.</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de lipsă de sprijin sau de abandon:</b> Afectarea structurii osoase (calciul, suportul) poate rezonă cu un sentiment de a nu fi susținut de viață, de univers sau de ceilalți. Incapacitatea de a absorbi sprijinul disponibil.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Rahitism, osteomalacie, osteoporoză.</li>
+                            </ul>
+                        </li>
+                        <li><b>Vulnerabilitate și imunitate emoțională scăzută:</b> Similar cu un sistem imunitar fizic slăbit, o lipsă de vitamina D poate indica o vulnerabilitate la energiile negative, la critici sau la influențe externe dăunătoare.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Imunitate slăbită, susceptibilitate la infecții.</li>
+                            </ul>
+                        </li>
+                        <li><b>Dificultăți în a te adapta la provocări (lipsă de "flexibilitate" osoasă):</b> O tendință de a fi rigid în fața dificultăților, de a nu găsi resurse interioare pentru a te adapta, simțindu-te "frânt" în loc să te îndoi.</li>
+                        <li><b>Lipsa de viziune pozitivă asupra viitorului:</b> Incapacitatea de a vedea soluții, oportunități sau de a menține un optimism, chiar și în fața incertitudinilor.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de vitamina D (aproape întotdeauna din suplimentare excesivă) poate fi toxic. Din perspectivă holistică, ar putea sugera:</p>
+                    <ol>
+                        <li><b>Iluzii de putere sau de "omniscientă":</b> O tendință de a crede că deții toate răspunsurile, o nevoie de a fi "luminat" sau de a avea dreptate în permanență, fără a accepta limitările umane.</li>
+                        <li><b>Rigiditate în convingeri și dogmatism:</b> O "lumină" atât de puternică încât exclude orice altă perspectivă, ducând la intoleranță, judecată și o viziune îngustă.</li>
+                        <li><b>Presiune excesivă asupra propriei persoane:</b> O nevoie de a fi mereu "la înălțime", de a performa, de a "străluci" într-un mod epuizant, fără a permite vulnerabilitatea sau odihna.</li>
+                        <li><b>Dificultăți în a elibera controlul:</b> O tendință de a controla mediul și oamenii din jur pentru a menține o imagine perfectă sau o stare de "bunăstare" forțată.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Hipercalcemie, calcifieri în țesuturi.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici care aduc "lumină" și bucurie:</b> Expunere la natură (în special soare, cu moderație), plimbări, artă, muzică, râs.</li>
+                        <li><b>Meditații</b> pentru cultivarea optimismului, a recunoștinței și a conexiunii cu o sursă superioară de sprijin.</li>
+                        <li><b>Terapii</b> pentru eliberarea tristeții, a sentimentului de abandon și a fricii de întuneric.</li>
+                        <li><b>Dezvoltarea unei rețele de suport</b> și învățarea de a primi ajutor și iubire.</li>
+                        <li><b>Practici de întărire a stimei de sine</b> și a rezilienței.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de "împământare"</b> pentru a centra energia și a reduce tendințele de "zbor" mental sau spiritual.</li>
+                        <li><b>Terapii</b> care ajută la eliberarea rigidității în convingeri și a nevoii de control.</li>
+                        <li><b>Cultivarea umilinței, a empatiei</b> și a acceptării imperfecțiunii (proprii și a altora).</li>
+                        <li><b>Echilibrarea "luminii" cu "umbră":</b> Acceptarea și integrarea tuturor aspectelor propriei persoane.</li>
+                        <li><b>Stabilirea unor limite sănătoase</b> pentru a evita suprasolicitarea și "arderea".</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
