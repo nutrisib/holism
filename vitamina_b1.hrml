@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B1 (Tiamina) și Claritatea Mentală</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row {
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B1 (Tiamina) și Claritatea Mentală
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B1 (Tiamina) - Perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B1, cunoscută sub denumirea de tiamină, este o vitamină hidrosolubilă esențială, fundamentală pentru metabolismul energetic și funcționarea sistemului nervos. Organismul nu o poate produce și nu o stochează în cantități mari, necesitând un aport zilnic constant.</p>
+                        <ul>
+                            <li><b>Metabolismul energetic:</b> Tiamina, sub forma sa activă (tiamin pirofosfat - TPP), este un cofactor esențial pentru enzimele implicate în transformarea carbohidraților (glucozei) în energie. Este vitală pentru producția de ATP, "moneda energetică" a celulelor.</li>
+                            <li><b>Funcția sistemului nervos:</b> Este crucială pentru sănătatea neuronilor și pentru transmiterea impulsurilor nervoase. Contribuie la sinteza neurotransmițătorilor și la menținerea integrității membranei celulelor nervoase.</li>
+                            <li><b>Funcția musculară:</b> Deoarece este implicată în producția de energie, susține și funcția musculară normală, inclusiv cea a mușchiului cardiac.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Tiamina se găsește într-o varietate de alimente.</p>
+                        <ul>
+                            <li><b>Cereale integrale și cereale fortificate:</b>
+                                <ul>
+                                    <li>Ovăz, orz, pâine integrală, orez brun.</li>
+                                    <li>Cereale pentru micul dejun fortificate.</li>
+                                </ul>
+                            </li>
+                            <li><b>Carne de porc:</b> O sursă excelentă de tiamină.</li>
+                            <li><b>Pește:</b> Somon, ton.</li>
+                            <li><b>Leguminoase:</b> Fasole (neagră, albă), linte, mazăre.</li>
+                            <li><b>Nuci și semințe:</b> Semințe de floarea-soarelui, nuci pecan, nuci de macadamia.</li>
+                            <li><b>Drojdie de bere.</b></li>
+                            <li><b>Unele legume:</b> Sparanghel, varză de Bruxelles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B1)</h3>
+                        <p>Deficiența severă de tiamină duce la boala beriberi, care poate afecta sistemul nervos, cardiovascular și digestiv. Deficiența este mai frecventă la persoanele cu alcoolism cronic, malnutriție severă sau anumite afecțiuni medicale.</p>
+                        <ol>
+                            <li><b>Beriberi uscat (afectează nervii și mușchii):</b>
+                                <ul>
+                                    <li>Neuropatie periferică (amorțeală, furnicături, durere, slăbiciune la nivelul brațelor și picioarelor).</li>
+                                    <li>Dificultăți de mers, coordonare slabă.</li>
+                                    <li>Pierdere musculară.</li>
+                                </ul>
+                            </li>
+                            <li><b>Beriberi umed (afectează inima și circulația):</b>
+                                <ul>
+                                    <li>Insuficiență cardiacă, inimă mărită.</li>
+                                    <li>Edeme (umflături) în picioare.</li>
+                                    <li>Dificultăți de respirație.</li>
+                                </ul>
+                            </li>
+                            <li><b>Sindromul Wernicke-Korsakoff (la alcoolici):</b> O formă severă de deficiență de tiamină care afectează creierul, ducând la confuzie, probleme de memorie, nistagmus (mișcări involuntare ale ochilor) și ataxie.</li>
+                            <li><b>Oboseală, iritabilitate, lipsa poftei de mâncare.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B1)</h3>
+                        <p>Tiamina este o vitamină hidrosolubilă, iar excesul este rapid eliminat prin urină. Toxicitatea din suplimentare este extrem de rară și minoră.</p>
+                        <ul>
+                            <li>Nu sunt raportate efecte adverse semnificative sau toxicitate severă la doze mari din alimente sau suplimente orale.</li>
+                            <li>Doze foarte mari, administrate intravenos, pot provoca reacții alergice (foarte rar).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B1 (Tiamina): Perspectiva emoțională</h2>
+            <p>Din perspectivă holistică, Vitamina B1 (tiamina) este adesea asociată cu <b>energia mentală, claritatea, direcția, coordonarea gând-acțiune și capacitatea de a "înainta" în viață</b>. Prin rolul său central în metabolismul energetic al creierului și funcția nervoasă, tiamina rezonează cu "scânteia" noastră intelectuală, cu agilitatea mentală și cu abilitatea de a ne simți energizați și orientați.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de tiamină poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de direcție și claritate mentală:</b> O senzație de confuzie, "ceață mentală" sau incapacitatea de a-ți stabili un drum clar în viață. Dificultăți în a te decide sau a acționa.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Oboseală, probleme de memorie, dificultăți de concentrare.</li>
+                            </ul>
+                        </li>
+                        <li><b>Apatie și lipsă de motivație:</b> Un sentiment de lipsă de entuziasm sau de energie pentru a-ți urmări scopurile, o lipsă de "vlagă" emoțională.</li>
+                        <li><b>Dificultăți de coordonare emoțională/mentală:</b> O incapacitate de a-ți alinia gândurile cu sentimentele și cu acțiunile, ducând la frustrare sau la acțiuni haotice.
+                            <ul>
+                                <li><i>Manifestare fizică:</i> Ataxie (dificultăți de coordonare).</li>
+                            </ul>
+                        </li>
+                        <li><b>Sentiment de a fi "înjghebat" sau blocat:</b> Deoarece afectează sistemul nervos și muscular, holistic poate indica o senzație de a nu putea înainta, de a fi paralizat de frică sau indecizie.</li>
+                        <li><b>Anxietate și iritabilitate:</b> Agitație interioară, nervozitate sau iritabilitate inexplicabilă, cauzată de un dezechilibru energetic la nivel neurologic.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de tiamină este extrem de rar și nu este asociat cu toxicitate semnificativă. Din perspectivă holistică, un exces foarte rar ar putea sugera:</p>
+                    <ol>
+                        <li><b>Impulsivitate și supra-activitate mentală:</b> O minte prea "rapidă" sau prea activă, tendința de a acționa impulsiv fără a procesa suficient informațiile.</li>
+                        <li><b>Nevoia de control și rigiditate în planuri:</b> O obsesie cu planificarea și controlul fiecărui pas, o teamă de a devia de la drumul stabilit.</li>
+                        <li><b>"Arderea" energiei:</b> O tendință de a consuma rapid resursele energetice, de a fi mereu în "priză", fără a permite odihnă sau reflecție.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <ul>
+                        <li><b>Practici de clarificare a scopului:</b> Jurnalism, vizualizare, stabilirea de obiective clare și realiste.</li>
+                        <li><b>Meditații</b> pentru centrare și pentru a aduce claritate mentală.</li>
+                        <li><b>Exerciții de coordonare fizică</b> (dans, yoga, arte marțiale) pentru a îmbunătăți coordonarea corp-minte.</li>
+                        <li><b>Terapii</b> care ajută la eliberarea blocajelor legate de indecizie sau de lipsa de acțiune.</li>
+                        <li><b>Practici de "împământare"</b> pentru a aduce energie în corp și a reduce senzația de "ceață".</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <ul>
+                        <li><b>Practici de calmare și de "încetinire" a minții</b> (meditație statică, respirație profundă).</li>
+                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la cultivarea flexibilității.</li>
+                        <li><b>Lucrul cu acceptarea imperfecțiunii</b> și a incertitudinii.</li>
+                        <li><b>Exerciții</b> care încurajează spontaneitatea și încrederea în fluxul vieții.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright &copy; 2025 NUTRISIB
+        </div>
+    </div>
+</body>
+</html>
