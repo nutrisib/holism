@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuprul și Fluiditatea Emoțională</title>
+    <title>Cupru - Fluiditatea și Expresia Creativă</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,83 +187,116 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Cuprul și Fluiditatea Emoțională
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Cupru - Fluiditatea și Expresia Creativă
         </div>
 
         <div class="section">
-            <h2 class="section-title">Cupru - Perspectiva fizică</h2>
+            <h2 class="section-title">Cupru - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Cuprul este un oligoelement esențial, adică organismul tău are nevoie de el în cantități mici, dar care joacă roluri cruciale în menținerea sănătății și funcționării optime a multiple sisteme. Cuprul este implicat într-o serie complexă de procese enzimatice și funcții celulare. Acționează ca un cofactor crucial pentru diverse metaloenzime.</p>
-                    <ul>
-                        <li><b>Formarea globulelor roșii și metabolismul fierului:</b> Cuprul este esențial pentru absorbția și utilizarea fierului în organism. Contribuie la sinteza hemoglobinei și la formarea globulelor roșii, ajutând la prevenirea anemiei. Implicațiile sunt că deficiența de cupru poate duce la anemie, chiar și în prezența unui aport adecvat de fier, deoarece fierul nu poate fi utilizat eficient.</li>
-                        <li><b>Sănătatea oaselor și a țesuturilor conjunctive:</b> Joacă un rol vital în formarea colagenului și a elastinei, proteine care oferă structură, rezistență și elasticitate oaselor, cartilajelor, tendoanelor, ligamentelor și vaselor de sânge. Implicațiile sunt că deficiența poate contribui la fragilitatea osoasă și la probleme ale țesuturilor conjunctive.</li>
-                        <li><b>Funcția nervoasă și cerebrală:</b> Este implicat în menținerea sănătății celulelor nervoase și în producția de neurotransmițători, substanțe chimice care transmit semnalele în creier. Este esențial pentru dezvoltarea și funcționarea normală a creierului și a sistemului nervos. Implicațiile sunt că deficiențele severe pot duce la neurodegenerare și tulburări neurologice.</li>
-                        <li><b>Sistemul imunitar:</b> Susține activitatea celulelor imunitare, contribuind la apărarea organismului împotriva infecțiilor. Implicațiile sunt că un nivel adecvat de cupru este necesar pentru un răspuns imun eficient.</li>
-                        <li><b>Antioxidant puternic:</b> Cuprul este o componentă a enzimei superoxid dismutaza (SOD), care este un antioxidant puternic. Aceasta protejează celulele de stresul oxidativ cauzat de radicalii liberi, reducând daunele celulare și contribuind la prevenirea bolilor cronice. Implicațiile sunt că reduce daunele celulare și contribuie la prevenirea bolilor cronice.</li>
-                        <li><b>Pigmentare (melanină):</b> Contribuie la producția de melanină, pigmentul responsabil pentru culoarea pielii, părului și ochilor. Implicațiile sunt că deficiența poate fi asociată cu depigmentarea pielii și părului.</li>
-                        <li><b>Producția de energie:</b> Este implicat în procesele care transformă alimentele în energie.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Cuprul este un oligoelement esențial, larg distribuit în țesuturile biologice, unde se găsește în principal sub formă de complexe organice, multe dintre ele fiind metaloproteine cu funcție enzimatică. Organismul uman conține aproximativ 80 mg de cupru.</p>
+                        <ul>
+                            <li><b>Componentă enzimatică:</b> Este o componentă a numeroaselor metaloenzime (de exemplu: citocrom oxidaza, lizil oxidaza, ceruloplasmina, superoxid dismutaza), esențiale pentru utilizarea oxigenului în respirația celulară și producția de energie.</li>
+                            <li><b>Sinteza țesuturilor conjunctive:</b> Implicat în sinteza proteinelor complexe ale țesuturilor conjunctive (colagen, elastină) din schelet și vasele de sânge, contribuind la formarea oaselor și a țesuturilor conjunctive.</li>
+                            <li><b>Metabolismul fierului și formarea globulelor roșii:</b> Este necesar pentru mobilizarea fierului din depozite și încorporarea sa în hemoglobină, prevenind anemia.</li>
+                            <li><b>Sistemul nervos:</b> Contribuie la funcția normală a sistemului nervos prin sinteza neurotransmițătorilor (de exemplu: norepinefrina, dopamina).</li>
+                            <li><b>Sistemul imunitar:</b> Susține funcția imunitară.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Cuprul este larg răspândit în plante și animale. Conținutul său în alimente poate varia în funcție de contaminarea solului sau a apei.</p>
+                        <ul>
+                            <li><b>Fructe de mare</b> (crustacee și moluște): stridii, crab, scoici.</li>
+                            <li><b>Organe:</b> ficat, rinichi.</li>
+                            <li><b>Nuci și semințe.</b></li>
+                            <li><b>Leguminoase.</b></li>
+                            <li><b>Cereale integrale.</b></li>
+                            <li><b>Ciocolată și cacao.</b></li>
+                            <li><b>Carne și pește</b> (în cantități mai mici).</li>
+                            <li><b>Apă potabilă</b> (în special din conducte de cupru, în zone cu apă acidă).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Cuprul se găsește în diverse alimente:</p>
-                    <ul>
-                        <li><b>Ficat</b>.</li>
-                        <li><b>Fructe de mare:</b> Stridii, crab.</li>
-                        <li><b>Nuci</b>.</li>
-                        <li><b>Semințe</b>.</li>
-                        <li><b>Leguminoase:</b> Linte, năut.</li>
-                        <li><b>Ciocolată neagră</b>.</li>
-                        <li><b>Ciuperci</b>.</li>
-                        <li><b>Cartofi</b>.</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipocupremie)</h3>
+                        <p>Deficiența de cupru este rară la adulții sănătoși, dar poate apărea în anumite situații (de exemplu: malnutriție, malabsorbție, utilizarea excesivă de zinc).</p>
+                        <ol>
+                            <li><b>Anemie hipocromă:</b> Similară cu anemia feriprivă, dar nu răspunde la fier.</li>
+                            <li><b>Neutropenie:</b> Număr scăzut de neutrofile (un tip de celule albe din sânge).</li>
+                            <li><b>Hipopigmentare a părului și pielii:</b> Afectarea sintezei melaninei.</li>
+                            <li><b>Anomalii osoase:</b> Osteoporoză, fragilitate scheletică, formare anormală a oaselor.</li>
+                            <li><b>Anomalii vasculare:</b> Anevrisme, elasticitate redusă a vaselor de sânge.</li>
+                            <li><b>Păr creț sau "oțelos"</b> (uncrimped or steely hair).</li>
+                            <li><b>Disfuncții neurologice:</b> Ataxie (dificultăți de coordonare), demielinizare cerebrală.</li>
+                            <li><b>Imunitate compromisă.</b></li>
+                            <li><b>Oboseală, slăbiciune.</b></li>
+                            <li><b>Cazuri specifice:</b> Anemie la sugarii hrăniți cu lapte de vacă nefortificat, deficiență în programe de reabilitare nutrițională.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipercupremie / toxicitate de cupru)</h3>
+                        <p>Toxicitatea cuprului din alimente este rară. Excesul este, de obicei, asociat cu expunerea industrială, contaminarea alimentelor/băuturilor sau tulburări genetice (de exemplu: boala Wilson).</p>
+                        <ol>
+                            <li><b>Acută:</b> Salivație, dureri epigastrice, greață, vărsături, diaree (efect iritant asupra mucoasei gastrointestinale). În cazuri severe: hemoliză intravasculară, icter, necroză hepatică, insuficiență renală acută, convulsii, hipotensiune, comă și deces.</li>
+                            <li><b>Cronică:</b> Hepatită, ciroză hepatică, icter (când capacitatea de sechestrare hepatică este depășită).</li>
+                            <li><b>Boala Wilson:</b> O tulburare genetică în care cuprul se acumulează în exces în ficat, creier și alte organe, ducând la leziuni severe.</li>
+                            <li><b>Interferență cu metabolismul altor oligoelemente:</b> De exemplu: zinc, fier, molibden.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Cupru: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, cuprul este un oligoelement adesea asociat cu <b>fluiditatea, adaptabilitatea, flexibilitatea, expresia creativă și echilibrul emoțional</b>. Prin rolul său în sinteza colagenului și elastinei, cuprul rezonează cu elasticitatea noastră, atât fizică, cât și mentală și emoțională. De asemenea, legătura sa cu pigmentarea și producția de energie subliniază capacitatea de a ne "străluci" și de a ne manifesta vitalitatea.</p>
+            <h2 class="section-title">Cupru - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Cuprul este adesea asociat cu fluiditatea, adaptabilitatea, flexibilitatea emoțională, capacitatea de a "curge" cu viața și de a te exprima creativ. Fiind esențial pentru formarea țesuturilor conjunctive (flexibile) și pentru metabolismul energetic, Cuprul rezonează cu "elasticitatea" noastră interioară, cu abilitatea de a ne mișca liber prin emoții și de a menține conexiuni armonioase. Este legat de creativitate, expresie artistică și echilibru în relații.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de cupru poate fi legat de următoarele aspecte emoționale:</p>
+                    <p>Un deficit de Cupru poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de fluiditate și rigiditate emoțională:</b> Dificultatea de a te adapta la schimbări, o tendință de a fi rigid în gândire sau în reacțiile emoționale. Senzația de a fi "înjghebat" sau de a nu putea "curge" cu viața.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Probleme ale țesuturilor conjunctive, piele lipsită de elasticitate.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dificultăți în exprimarea creativă:</b> O blocare a expresiei artistice sau a creativității în general, un sentiment că "nu ai voie să strălucești" sau că trebuie să te adaptezi normelor.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Depigmentarea părului sau a pielii.</li>
-                            </ul>
-                        </li>
-                        <li><b>Anxietate și iritabilitate:</b> Fiind implicat în funcția nervoasă, un deficit poate rezonă cu stări de neliniște, iritabilitate crescută sau dificultăți în a te calma.</li>
-                        <li><b>Lipsa de bucurie și "culoare" în viață:</b> Simbolismul culorii (melanina) și al energiei poate indica o lipsă de entuziasm, o viață percepută ca fiind "ternă" sau lipsită de pasiune.</li>
-                        <li><b>Dificultăți în a integra experiențele (fierul și cuprul):</b> Deoarece cuprul este esențial pentru utilizarea fierului, o lipsă poate sugera o dificultate în a integra forța și vitalitatea (fierul) cu fluiditatea și adaptabilitatea (cuprul), ducând la un dezechilibru general al energiei.</li>
+                        <li><b>Rigiditate emoțională și lipsă de fluiditate:</b> Dificultăți în a te adapta la schimbări, o tendință de a fi inflexibil în gândire sau în reacții emoționale. Sentimentul de a fi "înjghebat" sau blocat.</li>
+                        <li><b>Lipsa de expresie creativă:</b> Incapacitatea de a-ți manifesta creativitatea, de a te exprima artistic sau de a-ți urma pasiunile.</li>
+                        <li><b>Vulnerabilitate și lipsă de "elasticitate" emoțională:</b> Un sentiment de a fi ușor "rupt" sau "deteriorat" de stres sau traume, lipsa capacității de a te reface.</li>
+                        <li><b>Probleme în a "curge" cu viața:</b> O rezistență la fluxul natural al evenimentelor, o nevoie de a controla sau de a te agăța de vechi tipare.</li>
+                        <li><b>Anemie emoțională:</b> Lipsa de vitalitate, de "culoare" în viață, sentiment de paloare emoțională.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de cupru, deși rar din dietă (mai des din expuneri sau condiții genetice), ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de Cupru (mai ales din expunere industrială sau tulburări genetice) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Iritabilitate și agresivitate:</b> O energie prea "fierbinte", o tendință de a fi reactiv, impulsiv sau chiar agresiv, lipsă de răbdare.</li>
-                        <li><b>Hiperexcitabilitate și anxietate:</b> O minte și un corp supra-stimulate, dificultăți de a te relaxa, insomnie. Poate reflecta o supraîncărcare senzorială sau emoțională.</li>
-                        <li><b>Rigiditate ascunsă sau "încordare":</b> Deși cuprul este asociat cu flexibilitatea, un exces ar putea indica o încercare forțată de a fi flexibil sau o rigiditate profundă care se manifestă prin tensiune constantă.</li>
-                        <li><b>Tendința de a "prelua prea mult":</b> O tendință de a asimila prea multe emoții sau responsabilități de la ceilalți, ducând la o "supraîncărcare" energetică.</li>
+                        <li><b>Supra-sensibilitate și iritabilitate:</b> O reactivitate exagerată la stimuli, o tendință de a "izbucni" emoțional sau de a fi hipersensibil.</li>
+                        <li><b>Agitație internă și "fierbere" emoțională:</b> O energie excesivă, o minte și un corp supra-stimulate, dificultăți de a te relaxa sau de a "încetini".</li>
+                        <li><b>Control excesiv și rigiditate ascunsă:</b> O nevoie de a controla mediul sau relațiile, ducând la o tensiune interioară constantă, chiar dacă la exterior pare fluid.</li>
+                        <li><b>"Otrăvire" emoțională:</b> Acumularea de resentimente, furie sau amărăciune, care "intoxică" sistemul energetic.</li>
+                        <li><b>Dificultăți în a "elibera" și a "drena":</b> Incapacitatea de a renunța la ceea ce nu mai servește, acumulând "toxine" emoționale.</li>
                     </ol>
                 </div>
             </div>
@@ -260,37 +304,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici care încurajează fluiditatea și mișcarea</b> (dans, tai chi, yoga fluidă).</li>
-                        <li><b>Exerciții de exprimare creativă</b> (pictură, muzică, scris liber) pentru a-ți manifesta esența.</li>
-                        <li><b>Meditații</b> pentru a cultiva acceptarea schimbării și a elibera rigiditatea mentală.</li>
-                        <li><b>Terapii</b> care ajută la explorarea și eliberarea blocajelor emoționale legate de expresie.</li>
-                        <li><b>Timp petrecut în natură</b> pentru a te reconecta cu ritmurile naturale.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de Cupru (fructe de mare, nuci, semințe, leguminoase, organe). Se va acorda atenție interacțiunilor cu alte minerale (de exemplu: fierul și zincul în exces pot reduce absorbția cuprului).</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de cultivare a fluidității și adaptabilității:</strong> Yoga, tai chi, dans, meditații ghidate pentru a permite energiei să curgă liber.</li>
+                                <li><strong>Terapii pentru eliberarea rigidității emoționale:</strong> Coaching pentru dezvoltarea flexibilității cognitive și emoționale. Lucrul cu acceptarea schimbării și a imperfecțiunii.</li>
+                                <li><strong>Dezvoltarea expresiei creative:</strong> Implicarea în artă, muzică, scris, sau orice activitate care permite manifestarea liberă a sinelui.</li>
+                                <li><strong>Restabilirea vitalității și a bucuriei:</strong> Timp petrecut în natură, hobby-uri, activități care aduc plăcere și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin fluiditatea, adaptabilitatea și expresia (de exemplu: "Sunt fluid/ă și mă adaptez cu ușurință. Îmi exprim creativitatea liber. Mă simt plin/ă de vitalitate.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de calmare și "răcorire" energetică</b> (meditație statică, respirație profundă, băi reci/reci-călduțe).</li>
-                        <li><b>Terapii</b> de gestionare a furiei și de eliberare a tensiunii acumulate.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a stabiliza energia.</li>
-                        <li><b>Reducerea stimulilor externi</b> (zgomot, ecran, cofeină).</li>
-                        <li><b>Lucrul cu renunțarea la control</b> și acceptarea fluxului.</li>
+                        <li><strong>Nutrițional:</strong> Ajustarea aportului de cupru sub îndrumare profesională, evitând suplimentarea excesivă. Se va acorda atenție echilibrului cu zincul și fierul.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de calmare și centrare:</strong> Meditație statică, respirație profundă, tehnici de împământare pentru a tempera supra-sensibilitatea și agitația.</li>
+                                <li><strong>Terapii pentru eliberarea controlului și a rigidității:</strong> Lucrul cu nevoia de a impune propria viziune, cultivarea umilinței și a răbdării.</li>
+                                <li><strong>Gestionarea "toxinelor" emoționale:</strong> Terapii pentru procesarea și eliberarea furiei, resentimentelor și amărăciunii acumulate.</li>
+                                <li><strong>Stabilirea unor limite sănătoase:</strong> Învățarea de a-și gestiona energia și de a nu se supra-implica, permițând celorlalți să-și urmeze propriul drum.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
