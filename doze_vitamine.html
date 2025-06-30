@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doze Zilnice Recomandate și Surse de Vitamine</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden; /* Ensures rounded corners apply to inner elements */
+        }
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 12px 15px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f0f8ff;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+        td {
+            background-color: #ffffff;
+            font-size: 0.95em;
+        }
+        tr:nth-child(even) td {
+            background-color: #f8f9fa;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 4px;
+        }
+        li:last-child {
+            margin-bottom: 0;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            table, th, td {
+                display: block;
+            }
+            th {
+                text-align: right;
+                padding-right: 20px;
+                position: relative;
+            }
+            td {
+                text-align: left;
+                padding-left: 20px;
+            }
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: #ffffff;
+            }
+            tr:nth-child(even) {
+                background-color: #f8f9fa;
+            }
+            tr td:before {
+                content: attr(data-label);
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-right: 10px;
+                color: #5f8694;
+                display: inline-block;
+                width: 120px; /* Adjust as needed */
+            }
+            th:before {
+                content: ""; /* Hide content for mobile th */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Doze Zilnice Recomandate și Surse de Vitamine
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Tabel comparativ al vitaminelor</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Vitamina</th>
+                        <th>Doza zilnică recomandată (adulți)</th>
+                        <th>Surse alimentare principale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina A</td>
+                        <td data-label="Doza zilnică recomandată">5.000 UI (1.000 RE) bărbați; 4.000 UI (800 RE) femei</td>
+                        <td data-label="Surse alimentare">Ficat, ulei de ficat de cod, gălbenuș de ou, produse lactate integrale, pește gras, legume cu frunze verzi închise (spanac, kale), legume portocalii/galbene (morcovi, cartofi dulci), fructe portocalii/galbene (mango, caise), cereale fortificate.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina C</td>
+                        <td data-label="Doza zilnică recomandată">60 mg</td>
+                        <td data-label="Surse alimentare">Citrice (portocale, lămâi), fructe de pădure (căpșuni, zmeură), kiwi, mango, pepene galben, ardei gras (roșu, verde), broccoli, varză de Bruxelles, conopidă, roșii, spanac, cartofi.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina D</td>
+                        <td data-label="Doza zilnică recomandată">200-400 UI (5-10 mcg)</td>
+                        <td data-label="Surse alimentare">Expunere la soare, pește gras (somon, macrou), ulei de ficat de cod, gălbenuș de ou, ficat de vită, alimente fortificate (lapte, cereale), ciuperci expuse la UV.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina E</td>
+                        <td data-label="Doza zilnică recomandată">8-10 UI</td>
+                        <td data-label="Surse alimentare">Uleiuri vegetale (germeni de grâu, floarea-soarelui), nuci și semințe (floarea-soarelui, migdale), legume cu frunze verzi (spanac, broccoli), avocado, cereale integrale, fructe (mango, kiwi).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina K</td>
+                        <td data-label="Doza zilnică recomandată">65-80 mcg</td>
+                        <td data-label="Surse alimentare">Legume cu frunze verzi închise (kale, spanac), pătrunjel, uleiuri vegetale (soia, rapiță), natto, produse lactate fermentate (brânzeturi maturate), ficat, gălbenuș de ou, carne.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B1 (Tiamină)</td>
+                        <td data-label="Doza zilnică recomandată">1.0-1.5 mg</td>
+                        <td data-label="Surse alimentare">Drojdie de bere, orez nedecorticat, cereale integrale, carne de porc, organe, alune, majoritatea legumelor, lapte.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B2 (Riboflavină)</td>
+                        <td data-label="Doza zilnică recomandată">1.2-1.7 mg</td>
+                        <td data-label="Surse alimentare">Lapte, ficat, rinichi, drojdie de bere, brânză, legume verzi, ouă, pește.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B3 (Nicotinamidă)</td>
+                        <td data-label="Doza zilnică recomandată">13-19 mg</td>
+                        <td data-label="Surse alimentare">Ficat, carne slabă (vită, porc, pui), ton, somon, cereale integrale, alune prăjite, semințe de floarea-soarelui, drojdie de bere, ouă, avocado, curmale, smochine, prune.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B3 (Niacină)</td>
+                        <td data-label="Doza zilnică recomandată">13-19 mg</td>
+                        <td data-label="Surse alimentare">Ficat, carne slabă (vită, porc, pui), ton, somon, cereale integrale, alune prăjite, semințe de floarea-soarelui, drojdie de bere, ouă, avocado, curmale, smochine, prune.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B4 (Adenină)</td>
+                        <td data-label="Doza zilnică recomandată">Nu este stabilită (produsă endogen)</td>
+                        <td data-label="Surse alimentare">Alimente bogate în purine (carne, organe, pește, leguminoase uscate), nutrienți care susțin sinteza ADN/ARN și metabolismul energetic (Vitaminele B, magneziu, fosfor, proteine de înaltă calitate).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B5 (Acid Pantotenic)</td>
+                        <td data-label="Doza zilnică recomandată">10 mg</td>
+                        <td data-label="Surse alimentare">Carne și organe (ficat, rinichi), cereale integrale (grâu, tărâțe), nuci, legume (broccoli, ciuperci), drojdie de bere, ouă, lapte, pește.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B6 (Piridoxină)</td>
+                        <td data-label="Doza zilnică recomandată">1.6-2.0 mg</td>
+                        <td data-label="Surse alimentare">Carne și organe (ficat, porc), pește (somon), cereale integrale (grâu, ovăz), leguminoase (soia), drojdie de bere, ouă, fructe (banane), legume (varză, cartofi).</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B7 (Biotină)</td>
+                        <td data-label="Doza zilnică recomandată">100-300 mcg</td>
+                        <td data-label="Surse alimentare">Ficat, gălbenuș de ou, drojdie de bere, nuci, leguminoase (soia), cereale integrale, lapte, carne, pește.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B9 (Acid Folic)</td>
+                        <td data-label="Doza zilnică recomandată">180-200 mcg</td>
+                        <td data-label="Surse alimentare">Legume cu frunze verzi închise (spanac, kale), leguminoase (fasole, linte), organe (ficat), cereale integrale, drojdie de bere, fructe (avocado, portocale), ouă.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Vitamina">Vitamina B12 (Cobalamină)</td>
+                        <td data-label="Doza zilnică recomandată">2 mcg</td>
+                        <td data-label="Surse alimentare">Ficat, carne, pește și fructe de mare, ouă, produse lactate, alimente fortificate (cereale, lapte vegetal).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="note">Notă: Dozele zilnice recomandate pot varia ușor în funcție de vârstă, sex, starea fiziologică (sarcină, alăptare) și condițiile medicale. Consultați întotdeauna un specialist pentru recomandări personalizate.</p>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </div>
+    </div>
+</body>
+</html>
