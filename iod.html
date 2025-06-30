@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iodul și Adevărul Personal</title>
+    <title>Iod - Vitalitatea Tiroidiană și Claritatea Scopului</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,102 +187,140 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Iodul și Adevărul Personal
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Iod - Vitalitatea Tiroidiană și Claritatea Scopului
         </div>
 
         <div class="section">
-            <h2 class="section-title">Iod - Perspectiva fizică</h2>
+            <h2 class="section-title">Iod - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Iodul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități mici pentru a funcționa corect. Rolul său principal și cel mai vital este legat de funcția glandei tiroide.</p>
-                    <ul>
-                        <li><b>Sinteza hormonilor tiroidieni:</b> Acesta este rolul fundamental al iodului. Glanda tiroidă utilizează iodul pentru a produce doi hormoni esențiali: Tiroxina (T4) și Triiodotironina (T3). Acești hormoni tiroidieni sunt vitali pentru o multitudine de procese din corp.</li>
-                        <li><b>Reglarea metabolismului:</b> Hormonii tiroidieni controlează rata metabolică a organismului, influențând modul în care celulele utilizează energia. Aceasta afectează greutatea corporală, nivelul de energie și temperatura corpului.</li>
-                        <li><b>Dezvoltarea și creșterea:</b> Iodul este crucial pentru creșterea și dezvoltarea normală, în special la copii și adolescenți. Este absolut vital în timpul sarcinii și al alăptării pentru dezvoltarea neurologică și cognitivă a fătului și a bebelușului. Implicațiile sunt că deficiența de iod în aceste perioade poate duce la cretinism, o formă severă de retard mintal și fizic.</li>
-                        <li><b>Funcția cognitivă:</b> Hormonii tiroidieni influențează direct funcția cerebrală, memoria, concentrația și capacitatea de învățare la toate vârstele.</li>
-                        <li><b>Sănătatea pielii și a părului:</b> Contribuie la menținerea sănătății pielii, a părului și a unghiilor.</li>
-                        <li><b>Funcția cardiacă:</b> Hormonii tiroidieni influențează ritmul cardiac și funcția generală a inimii.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Iodul (I) este un oligoelement esențial, indispensabil pentru viață, recunoscut în principal pentru rolul său vital în sinteza hormonilor tiroidieni. Corpul uman conține aproximativ 20-50 mg de iod, din care cea mai mare parte se găsește în glanda tiroidă. Doza zilnică recomandată pentru adulți este de 150 µg/zi.</p>
+                        <ul>
+                            <li><b>Sinteza hormonilor tiroidieni:</b> Este o componentă esențială a hormonilor tiroidieni tiroxina (T4) și triiodotironina (T3). Acești hormoni sunt cruciali pentru reglarea ratei metabolice, creștere, dezvoltare (în special a creierului și a sistemului nervos), funcția cardiacă și menținerea temperaturii corporale.</li>
+                            <li><b>Dezvoltarea neurologică:</b> Aportul adecvat de iod este vital pentru dezvoltarea normală a creierului și a sistemului nervos central la făt și la copilul mic.</li>
+                            <li><b>Metabolismul energetic:</b> Hormonii tiroidieni influențează metabolismul carbohidraților, grăsimilor și proteinelor, afectând producția generală de energie a corpului.</li>
+                            <li><b>Funcția reproductivă:</b> Este esențial pentru o funcție reproductivă normală.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Conținutul de iod în alimente variază semnificativ în funcție de conținutul de iod din sol și apă.</p>
+                        <ul>
+                            <li><b>Fructe de mare:</b> Pește de mare (cod, ton, eglefin), crustacee, scoici, stridii.</li>
+                            <li><b>Alge marine:</b> Kelp, nori, wakame (extrem de bogate, cu variații mari de conținut).</li>
+                            <li><b>Sare iodată:</b> Cea mai comună și eficientă metodă de prevenire a deficienței de iod la nivel global.</li>
+                            <li><b>Produse lactate:</b> Lapte, iaurt, brânză (conținutul variază în funcție de iodul din furajele animalelor și de practicile de igienizare a echipamentelor).</li>
+                            <li><b>Ouă.</b></li>
+                            <li><b>Carne</b> (în cantități mai mici).</li>
+                            <li><b>Cereale și legume:</b> Conținutul depinde foarte mult de solul în care au crescut.</li>
+                            <li><b>Apă potabilă:</b> Conținutul variază.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Cea mai mare parte a iodului din dietă provine din alimente, deși conținutul poate varia în funcție de cantitatea de iod din sol sau apă.</p>
-                    <ul>
-                        <li><b>Sare iodată:</b> În multe țări, sarea de masă este iodată pentru a preveni deficiența de iod la nivel populațional. Aceasta este o sursă importantă pentru mulți oameni.</li>
-                        <li><b>Alge marine:</b> Nori, kombu, wakame – sunt printre cele mai bogate surse de iod. Cantitatea poate varia enorm, așa că este bine să fie consumate cu moderație pentru a evita un exces.</li>
-                        <li><b>Pește și fructe de mare:</b> Peștele de apă sărată și fructele de mare sunt surse excelente de iod.
-                            <ul>
-                                <li>Cod.</li>
-                                <li>Ton.</li>
-                                <li>Haddock.</li>
-                                <li>Creveți.</li>
-                                <li>Homar.</li>
-                            </ul>
-                        </li>
-                        <li><b>Produse lactate:</b> Cantitatea de iod din lapte și produse lactate depinde de hrana animalelor și de soluțiile de curățare utilizate în procesarea laptelui.
-                            <ul>
-                                <li>Lapte.</li>
-                                <li>Iaurt.</li>
-                                <li>Brânză.</li>
-                            </ul>
-                        </li>
-                        <li><b>Ouă:</b> Conțin o cantitate moderată de iod.</li>
-                        <li><b>Pâine:</b> Unele produse de panificație pot fi făcute cu aluat care conține iodat de potasiu, dar acest lucru variază în funcție de producător și țară.</li>
-                    </ul>
-                    <p><b>Important:</b> Atât deficiența, cât și excesul de iod pot fi dăunătoare pentru glanda tiroidă. De aceea, este important să se mențină un echilibru. Persoanele cu afecțiuni tiroidiene preexistente trebuie să fie deosebit de atente la aportul de iod și să discute cu medicul lor înainte de a lua suplimente.</p>
-                    <h2>Ce se întâmplă în caz de deficit de iod?</h2>
-                    <p>Deficiența de iod este o problemă globală de sănătate publică și poate duce la:</p>
-                    <ul>
-                        <li><b>Gușă (glanda tiroidă mărită):</b> Glanda tiroidă se mărește în încercarea de a capta mai mult iod din sânge și de a produce suficienți hormoni.</li>
-                        <li><b>Hipotiroidism:</b> Producție insuficientă de hormoni tiroidieni, ducând la simptome precum oboseală, creștere în greutate, sensibilitate la frig, piele uscată, constipație și probleme de memorie.</li>
-                        <li><b>Probleme de dezvoltare:</b> Așa cum am menționat, deficiența severă la copii poate duce la retard mintal și fizic.</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de iod)</h3>
+                        <p>Deficiența de iod este o problemă de sănătate publică globală majoră, afectând milioane de oameni, în special în regiunile montane și în zonele cu sol sărac în iod.</p>
+                        <ol>
+                            <li><b>Gușă (Glanda tiroidă mărită):</b> Este cel mai vizibil semn al deficienței, reprezentând o încercare a glandei tiroide de a compensa lipsa de iod prin creșterea în dimensiune.</li>
+                            <li><b>Hipotiroidism:</b> Scăderea producției de hormoni tiroidieni, ducând la:
+                                <ul>
+                                    <li>Oboseală cronică, letargie, lipsă de energie.</li>
+                                    <li>Creștere în greutate, dificultăți de slăbire.</li>
+                                    <li>Intoleranță la frig.</li>
+                                    <li>Piele uscată, păr uscat și fragil, căderea părului (inclusiv sprâncenele laterale).</li>
+                                    <li>Constipație.</li>
+                                    <li>Probleme de memorie și concentrare, "ceață mentală", depresie, iritabilitate.</li>
+                                    <li>Bradicardie (ritm cardiac lent).</li>
+                                    <li>Tulburări menstruale, infertilitate.</li>
+                                </ul>
+                            </li>
+                            <li><b>Tulburări de deficiență de iod (TDI):</b> Un spectru larg de afecțiuni cauzate de deficitul de iod, incluzând:
+                                <ul>
+                                    <li><b>Cretinism (la copii):</b> Retard fizic și mental sever, surdo-mutism, spasticitate, strabism, dacă deficiența apare prenatal sau în copilăria timpurie.</li>
+                                    <li><b>Afectarea dezvoltării cognitive:</b> Chiar și deficiențele ușoare sau moderate de iod pot afecta IQ-ul și performanța școlară la copii.</li>
+                                    <li><b>Creștere întârziată</b> la copii și adolescenți.</li>
+                                    <li><b>Mortalitate perinatală și infantilă crescută.</b></li>
+                                    <li><b>Avorturi spontane și anomalii congenitale.</b></li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (toxicitate de iod)</h3>
+                        <p>Toxicitatea iodului este rară din aportul alimentar normal, dar poate apărea din suplimentare excesivă sau din consumul unor cantități foarte mari de alimente extrem de bogate în iod (de exemplu: anumite alge marine).</p>
+                        <ol>
+                            <li><b>Gușă și hipotiroidism indus de iod:</b> Paradoxal, un exces cronic de iod poate inhiba funcția tiroidiană și poate duce la gușă și hipotiroidism, în special la persoanele cu o tiroidă sensibilă sau cu deficiență anterioară de iod.</li>
+                            <li><b>Hipertiroidism indus de iod (fenomenul Jod-Basedow):</b> La persoanele cu gușă nodulară preexistentă sau cu deficiență cronică de iod, un aport brusc crescut de iod poate declanșa hipertiroidism.</li>
+                            <li><b>Tiroidită autoimună:</b> Poate agrava sau declanșa afecțiuni tiroidiene autoimune (de exemplu: tiroidita Hashimoto, boala Graves).</li>
+                            <li><b>Simptome generale:</b> Greață, vărsături, diaree, dureri abdominale, erupții cutanate (iodism).</li>
+                            <li><b>Hipertiroidism:</b>
+                                <ul>
+                                    <li>Scădere în greutate inexplicabilă.</li>
+                                    <li>Nervozitate, iritabilitate, anxietate.</li>
+                                    <li>Tahicardie (ritm cardiac rapid), palpitații.</li>
+                                    <li>Intoleranță la căldură, transpirație excesivă.</li>
+                                    <li>Exoftalmie (ochi bulbucați).</li>
+                                    <li>Tremor al mâinilor.</li>
+                                    <li>Dificultăți de somn.</li>
+                                    <li>Diaree, scaune frecvente.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Iod: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, iodul este fundamental conectat cu <b>comunicarea, auto-exprimarea, adevărul personal și puterea de manifestare</b>. Fiind esențial pentru funcția glandei tiroide, care este adesea asociată cu chakra gâtului (centrul energiei comunicării și adevărului) în tradițiile holistice, iodul rezonează cu capacitatea noastră de a ne exprima autentic și de a trăi în acord cu esența noastră.</p>
+            <h2 class="section-title">Iod - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Iodul este profund asociat cu claritatea exprimării, adevărul personal, puterea de a-ți comunica esența, adaptabilitatea la schimbare și fluiditatea energetică. Fiind esențial pentru glanda tiroidă (centrul gâtului, legat de comunicare și auto-exprimare) și pentru reglarea metabolismului (ritmul vieții), Iodul rezonează cu "vocea" noastră interioară, cu abilitatea de a ne manifesta autentic și de a menține un flux armonios de energie și informație.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de iod poate fi legat de următoarele aspecte emoționale:</p>
+                    <p>Un deficit de Iod poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Blocaj în comunicare și auto-exprimare:</b> Dificultatea de a-ți exprima gândurile, sentimentele sau nevoile. Senzația de a avea "un nod în gât", de a fi tăcut sau de a nu-ți găsi cuvintele. Aceasta poate duce la frustrare și izolare.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Gușă (glanda tiroidă mărită), disfonie.</li>
-                            </ul>
-                        </li>
-                        <li><b>Teama de a-ți spune adevărul personal:</b> Frica de judecată, de respingere sau de conflict, care te împiedică să fii autentic și să îți exprimi opiniile sau convingerile. Această reprimare poate afecta energia din zona gâtului.</li>
-                        <li><b>Lipsa de claritate a scopului în viață:</b> Deoarece hormonii tiroidieni reglează metabolismul și energia vitală, un deficit poate reflecta o lipsă de direcție, o confuzie privind drumul personal sau un sentiment de a nu avea un scop clar.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală, lipsă de energie, metabolism lent.</li>
-                            </ul>
-                        </li>
-                        <li><b>Sentimentul de a fi "invizibil" sau neauzit:</b> O lipsă de recunoaștere sau de validare a vocii interioare, ceea ce poate duce la un sentiment de insignifianță.</li>
-                        <li><b>Dependența de aprobarea externă:</b> O nevoie excesivă de a fi pe placul celorlalți, sacrificându-ți propriile dorințe sau adevăruri pentru a te integra.</li>
+                        <li><b>Dificultăți de auto-exprimare și comunicare:</b> Incapacitatea de a-ți exprima adevărul, de a-ți comunica nevoile sau emoțiile, senzația de a fi "fără voce" sau de a te simți "strangulat" emoțional.</li>
+                        <li><b>Stagnare și lipsă de fluiditate:</b> O senzație de a fi blocat, lipsă de inițiativă, dificultăți în a te adapta la schimbări sau în a-ți găsi ritmul în viață.</li>
+                        <li><b>Lipsa de scop și confuzie mentală:</b> Dificultăți în a-ți găsi direcția, de a te concentra pe obiective, senzația de "ceață mentală" sau de a fi "pierdut" în propriile gânduri.</li>
+                        <li><b>Tristețe, melancolie și apatie:</b> Lipsa de entuziasm, o energie scăzută, sentimentul de a fi "încetinit" emoțional.</li>
+                        <li><b>Vulnerabilitate la influențe externe:</b> O lipsă de granițe energetice, permițând energiilor negative să pătrundă și să afecteze starea de bine.</li>
+                        <li><b>Frica de a te manifesta pe deplin:</b> Teama de a fi judecat sau de a nu fi acceptat, ducând la reținere și la o sub-exprimare a potențialului.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de iod (rar din dietă, mai des din suplimentare excesivă sau expuneri specifice) ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de Iod (adesea din suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Agresivitate verbală sau dominare prin cuvinte:</b> O tendință de a vorbi excesiv, de a fi prea asertiv sau de a domina conversațiile, fără a asculta sau a permite și altor voci să se exprime.</li>
-                        <li><b>Rigiditate în convingeri și dogmatism:</b> O nevoie puternică de a-ți impune propriile adevăruri, fără a accepta perspective diferite. Un "adevăr absolut" care nu permite flexibilitate sau nuanțe.</li>
-                        <li><b>Suprasolicitare și energie "arzătoare":</b> Deși excesul de iod poate suprima tiroida, inițial sau la nivel subtil, poate indica o tendință de a "forța" manifestarea, de a fi prea zelos sau de a consuma rapid energia.</li>
-                        <li><b>Control excesiv al mediului prin comunicare:</b> O încercare de a manipula sau de a controla situațiile și persoanele prin intermediul cuvintelor sau al convingerilor.</li>
+                        <li><b>Supra-exprimare și agitație verbală:</b> O tendință de a vorbi excesiv, de a fi agitat verbal, de a impune propriile idei sau de a "striga" adevărul fără a asculta.</li>
+                        <li><b>Rigiditate în convingeri și dogmatism:</b> O "claritate" atât de puternică încât exclude alte perspective, ducând la intoleranță, judecată și o viziune îngustă.</li>
+                        <li><b>Nevoia de control și perfecționism:</b> O presiune de a fi mereu "în control" al situațiilor, de a impune un ritm accelerat, din teama de a pierde controlul.</li>
+                        <li><b>"Ardere" energetică:</b> Un consum rapid și necontrolat al resurselor mentale și emoționale, ducând la epuizare pe termen lung.</li>
+                        <li><b>Dificultăți în a "încetini" și a permite odihna:</b> O nevoie constantă de a fi în acțiune, de a procesa informații, fără a permite perioade de calm și introspecție.</li>
                     </ol>
                 </div>
             </div>
@@ -279,37 +328,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de eliberare a vocii:</b> Cântat, rostit tare, vocalize.</li>
-                        <li><b>Jurnalism terapeutic</b> pentru a-ți clarifica gândurile și sentimentele.</li>
-                        <li><b>Practici de deschidere a chakrei gâtului:</b> Meditație cu vizualizare albastru deschis în zona gâtului, purtarea de pietre albastre (sodalit, lapis lazuli).</li>
-                        <li><b>Terapii</b> care încurajează asertivitatea și stabilirea limitelor sănătoase.</li>
-                        <li><b>Recunoașterea și celebrarea propriei unicități</b> și a valorii personale.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în surse naturale de Iod (fructe de mare, alge marine, sare iodată, produse lactate). Pentru persoanele din zone cu deficit de iod în sol, suplimentarea cu iod sau consumul de alimente fortificate este esențială și se va face sub îndrumare medicală.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de auto-exprimare și comunicare autentică:</strong> Exerciții de voce, cântat, scris, art-terapie pentru a-ți elibera vocea interioară.</li>
+                                <li><strong>Meditații pentru chakra gâtului (Vishuddha):</strong> Vizualizări ale luminii albastre la nivelul gâtului, afirmații despre adevăr și exprimare (de exemplu: "Îmi exprim adevărul cu ușurință și claritate. Vocea mea interioară este puternică. Sunt un canal clar de comunicare.").</li>
+                                <li><strong>Terapii pentru eliberarea blocajelor de exprimare:</strong> Coaching pentru a depăși frica de judecată, terapie pentru a procesa traume legate de comunicare.</li>
+                                <li><strong>Dezvoltarea clarității scopului și a direcției:</strong> Practici de mindfulness pentru a îmbunătăți concentrarea și a reduce confuzia.</li>
+                                <li><strong>Restabilirea vitalității și a entuziasmului:</strong> Timp petrecut în natură, hobby-uri, activități creative care aduc plăcere și reconectează cu "scânteia" interioară.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de ascultare activă</b> și de cultivare a empatiei.</li>
-                        <li><b>Exerciții de respirație profundă</b> pentru a calma sistemul nervos.</li>
-                        <li><b>Terapii</b> pentru gestionarea furiei și a tendințelor de dominare.</li>
-                        <li><b>Meditații</b> pentru a cultiva flexibilitatea mentală și acceptarea diversității de opinii.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a centra energia și a reduce suprastimularea.</li>
+                        <li><strong>Nutrițional:</strong> Ajustarea aportului de iod sub îndrumare medicală, evitând suplimentarea excesivă și consumul necontrolat de alge marine foarte bogate în iod.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de împământare și centrare:</strong> Meditație statică, respirație profundă, yoga restaurativă pentru a tempera supra-stimularea și agitația mentală.</li>
+                                <li><strong>Terapii pentru eliberarea rigidității în convingeri și a dogmatismului:</strong> Lucrul cu acceptarea diversității de perspective, cultivarea umilinței și a empatiei.</li>
+                                <li><strong>Învățarea de a "încetini" și a permite odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică prin supra-solicitare.</li>
+                                <li><strong>Practici de ascultare activă:</strong> Dezvoltarea abilității de a asculta cu adevărat, fără a judeca sau a impune propria viziune.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
