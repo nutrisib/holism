@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manganul și Echilibrul Energetic</title>
+    <title>Mangan - Puterea Interioară și Echilibrul Structurii</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,104 +187,122 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Manganul și Echilibrul Energetic
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Mangan - Puterea Interioară și Echilibrul Structurii
         </div>
 
         <div class="section">
-            <h2 class="section-title">Mangan - Perspectiva fizică</h2>
+            <h2 class="section-title">Mangan - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Manganul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități mici, dar este absolut crucial pentru o gamă largă de funcții biologice. Deși nu este la fel de cunoscut ca alte minerale precum fierul sau calciul, rolul său este la fel de important.</p>
-                    <ul>
-                        <li><b>Antioxidant puternic:</b> Manganul este o componentă esențială a enzimei superoxid dismutaza (Mn-SOD), care este unul dintre cei mai importanți antioxidanți din corpul uman. Mn-SOD protejează celulele de daunele cauzate de radicalii liberi (stresul oxidativ), reducând inflamația și riscul de boli cronice.</li>
-                        <li><b>Sănătatea oaselor:</b> Este necesar pentru formarea și menținerea densității osoase. Manganul este implicat în formarea cartilajelor și a colagenului, componente esențiale ale oaselor și articulațiilor. Implicațiile sunt că un deficit poate contribui la osteoporoză.</li>
-                        <li><b>Metabolismul macronutrienților:</b> Joacă un rol cheie în metabolismul carbohidraților, proteinelor și grăsimilor, ajutând la transformarea acestora în energie. Este implicat în gluconeogeneză (producția de glucoză din non-carbohidrați).</li>
-                        <li><b>Funcția cerebrală și neurologică:</b> Contribuie la sănătatea creierului și a sistemului nervos, fiind implicat în producția de neurotransmițători. Este esențial pentru o funcție neurologică normală.</li>
-                        <li><b>Coagularea sângelui:</b> Este un cofactor pentru enzimele implicate în procesul de coagulare a sângelui, contribuind la vindecarea rănilor.</li>
-                        <li><b>Sinteza țesuturilor conjunctive:</b> Alături de siliciu și cupru, manganul este vital pentru formarea colagenului și a altor componente ale țesuturilor conjunctive sănătoase (piele, tendoane, ligamente).</li>
-                        <li><b>Funcția enzimatică:</b> Manganul este un cofactor pentru numeroase enzime, catalizând reacții chimice esențiale pentru diverse funcții metabolice.</li>
-                        <li><b>Sistemul imunitar:</b> Sprijină funcția imunitară generală.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Manganul (Mn) este un oligoelement esențial, prezent în corpul uman în cantități foarte mici, dar crucial pentru numeroase procese biologice. Doza zilnică recomandată pentru adulți variază între 1.8-2.3 mg/zi (femei/bărbați). Este atât un activator, cât și o componentă a mai multor enzime.</p>
+                        <ul>
+                            <li><b>Componentă enzimatică:</b> Este o componentă a metaloenzimelor precum arginaza, piruvat carboxilaza, glutamin sintetaza și mangan superoxid dismutaza. De asemenea, activează numeroase alte enzime, inclusiv hidrolaze, kinaze, decarboxilaze și transferaze, multe dintre ele fiind implicate în metabolismul carbohidraților, lipidelor și proteinelor.</li>
+                            <li><b>Acțiune antioxidantă:</b> Mangan superoxid dismutaza este o enzimă antioxidantă crucială, protejând celulele de stresul oxidativ, în special în mitocondrii.</li>
+                            <li><b>Sănătatea oaselor și a țesuturilor conjunctive:</b> Este esențial pentru dezvoltarea normală a scheletului și pentru formarea cartilajelor și a țesuturilor conjunctive.</li>
+                            <li><b>Metabolismul energetic:</b> Contribuie la metabolismul carbohidraților, lipidelor și proteinelor, facilitând producția de energie.</li>
+                            <li><b>Funcția neurologică:</b> Joacă un rol în funcția cerebrală și nervoasă.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Manganul este larg răspândit în alimente, în special în cele vegetale neprocesate.</p>
+                        <ul>
+                            <li><b>Cereale integrale:</b> Grâu integral, orez brun, ovăz.</li>
+                            <li><b>Nuci și semințe.</b></li>
+                            <li><b>Legume cu frunze verzi:</b> Spanac, kale, broccoli.</li>
+                            <li><b>Leguminoase:</b> Fasole, linte.</li>
+                            <li><b>Fructe:</b> Ananas, afine.</li>
+                            <li><b>Ceai</b> (în special ceaiul negru).</li>
+                            <li><b>Condimente:</b> Ghimbir, scorțișoară.</li>
+                            <li><b>Apă potabilă</b> (conținutul variază).</li>
+                            <li><b>Carne și produse lactate</b> (conțin, în general, cantități mai mici).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Manganul este destul de răspândit în alimente, în special în cele de origine vegetală. De aceea, deficiențele sunt rare la persoanele cu o dietă echilibrată.</p>
-                    <ul>
-                        <li><b>Cereale integrale:</b> Acestea sunt unele dintre cele mai bogate surse.
-                            <ul>
-                                <li>Ovăz, hrișcă, quinoa, orez brun.</li>
-                                <li>Pâine integrală.</li>
-                            </ul>
-                        </li>
-                        <li><b>Nuci și semințe:</b>
-                            <ul>
-                                <li>Alune de pădure, migdale, pistachio, semințe de dovleac.</li>
-                            </ul>
-                        </li>
-                        <li><b>Leguminoase:</b>
-                            <ul>
-                                <li>Linte, năut, fasole (neagră, albă).</li>
-                            </ul>
-                        </li>
-                        <li><b>Legume cu frunze verzi:</b>
-                            <ul>
-                                <li>Spanac, kale (varză creață), sfeclă elvețiană.</li>
-                            </ul>
-                        </li>
-                        <li><b>Fructe:</b>
-                            <ul>
-                                <li>Ananas.</li>
-                                <li>Fructe de pădure (afine, zmeură, mure).</li>
-                                <li>Banane.</li>
-                            </ul>
-                        </li>
-                        <li><b>Ceai:</b> Atât ceaiul negru, cât și cel verde, sunt surse semnificative de mangan.</li>
-                        <li><b>Condimente și ierburi:</b> Scorțișoară, turmeric, cuișoare.</li>
-                        <li><b>Ciocolată neagră:</b> O sursă surprinzătoare, dar bună.</li>
-                    </ul>
-                    <p><b>Important:</b> Deși esențial, un exces de mangan (în special din surse non-alimentare, cum ar fi expunerea industrială sau suplimentarea excesivă) poate fi neurotoxic. De aceea, este întotdeauna cel mai bine să obții manganul dintr-o dietă variată și echilibrată. Deficiențele alimentare sunt rare, dar pot apărea în cazuri de malnutriție severă sau anumite afecțiuni digestive.</p>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipomanganemie)</h3>
+                        <p>Deficiența de mangan este rară la om și nu a fost încă pe deplin caracterizată clinic, dar studiile pe animale și observațiile umane sugerează:</p>
+                        <ol>
+                            <li><b>Creștere întârziată:</b> Observată în special la copii.</li>
+                            <li><b>Anomalii scheletice:</b> Probleme în dezvoltarea oaselor și a cartilajelor.</li>
+                            <li><b>Disfuncții neurologice:</b> Ataxie (dificultăți de coordonare), în special la nou-născuți.</li>
+                            <li><b>Dezechilibre metabolice:</b> Afectarea metabolismului lipidelor și carbohidraților.</li>
+                            <li><b>Dermatite:</b> Leziuni cutanate.</li>
+                            <li><b>Hipocolesterolemie.</b></li>
+                            <li><b>Probleme de reproducere:</b> Tulburări de fertilitate (observate la animale).</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipermanganemie / toxicitate de mangan)</h3>
+                        <p>Toxicitatea manganului din aportul alimentar este rară. Excesul este, de obicei, asociat cu expunerea industrială (inhalarea manganului în mine sau fabrici de oțel) sau cu consumul de apă potabilă cu concentrații foarte mari.</p>
+                        <ol>
+                            <li><b>Neurotoxicitate (manganism):</b> Aceasta este cea mai gravă manifestare, similară cu boala Parkinson. Simptomele includ:
+                                <ul>
+                                    <li><b>Tulburări psihiatrice:</b> Iritabilitate, acte violente, halucinații ("nebunia manganică").</li>
+                                    <li><b>Tulburări neurologice progresive:</b> Tremor, rigiditate musculară, dificultăți de echilibru și coordonare, probleme de vorbire.</li>
+                                </ul>
+                            </li>
+                            <li><b>Probleme respiratorii:</b> În cazul inhalării cronice.</li>
+                            <li><b>Creștere și apetit reduse.</b></li>
+                            <li><b>Afectarea metabolismului fierului.</b></li>
+                            <li><b>Probleme hepatice</b> (observate la animale).</li>
+                            <li><b>Posibile tulburări de cartilaj</b> la copii.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Mangan: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, manganul, deși un oligoelement mai puțin cunoscut, este adesea asociat cu <b>echilibrul energetic, transformarea, integrarea, creativitatea și fluiditatea mișcării (fizice și emoționale)</b>. Prin rolul său de antioxidant și în metabolismul macronutrienților, manganul rezonează cu capacitatea noastră de a procesa și utiliza energia, de a ne adapta și de a ne manifesta potențialul.</p>
+            <h2 class="section-title">Mangan - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, manganul este profund asociat cu structura interioară, coeziunea, puterea de a organiza și de a menține ordinea, precum și cu echilibrul dintre rigiditate și flexibilitate. Fiind esențial pentru sănătatea oaselor (structura) și a enzimelor (organizare metabolică), manganul rezonează cu "scheletul" nostru emoțional și spiritual, cu abilitatea de a-ți construi o viață ordonată, de a-ți gestiona resursele și de a te simți stabil și coerent.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
                     <p>Un deficit de mangan poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de coordonare (mentală/emoțională) și dispersie:</b> Dificultăți în a-ți organiza gândurile sau emoțiile, senzația de a fi "împrăștiat" sau de a nu putea integra diverse aspecte ale vieții. Poate indica o lipsă de focus sau de direcție.</li>
-                        <li><b>Blocaje creative și dificultăți de transformare:</b> Incapacitatea de a depăși obstacole, de a se reinventa sau de a accesa noi soluții creative. Sentimentul de a fi blocat în vechi tipare.</li>
-                        <li><b>Rigiditate în adaptare la schimbare:</b> Având în vedere rolul său în sinteza țesuturilor conjunctive, un deficit poate rezonă cu o lipsă de flexibilitate emoțională, o rezistență la schimbare sau o dificultate de a te adapta la noi circumstanțe.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Probleme articulare, osteoporoză.</li>
-                            </ul>
-                        </li>
-                        <li><b>Lipsa de "ancorare" energetică:</b> O senzație de dezechilibru interior, de a nu fi pe deplin prezent, sau o energie care fluctuează intens.</li>
-                        <li><b>Perfecționism și auto-critică excesivă:</b> Deși poate părea paradoxal, uneori lipsa de echilibru poate duce la o auto-critică acerbă, încercând să compensezi lipsa de fluiditate.</li>
+                        <li><b>Lipsa de structură și coeziune interioară:</b> Un sentiment de a fi "destrămat", de a nu te simți întreg, o lipsă de ordine în gânduri sau emoții.</li>
+                        <li><b>Dificultăți de organizare și planificare:</b> Incapacitatea de a-ți structura viața, de a-ți atinge obiectivele, senzația de a fi "dezordonat" sau "haotic" emoțional.</li>
+                        <li><b>Lipsa de "ancorare" și instabilitate:</b> O senzație de a fi "plutitor", deconectat de realitate, lipsa unui centru interior stabil.</li>
+                        <li><b>Rigiditate și lipsă de adaptabilitate:</b> Paradoxal, deși fizic afectează oasele, emoțional poate indica o rigiditate în gândire, o dificultate de a te adapta la schimbare, din teama de a pierde controlul.</li>
+                        <li><b>Epuizare energetică și lipsă de vitalitate:</b> Un sentiment de oboseală profundă, lipsă de entuziasm, ca și cum "motorul" interior ar funcționa ineficient.</li>
+                        <li><b>Probleme de coordonare emoțională:</b> Dificultăți în a-ți gestiona reacțiile emoționale, ducând la instabilitate sau la răspunsuri disproporționate.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de mangan (foarte rar din dietă, mai des din expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de mangan (adesea legat de expunerea industrială) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Iritabilitate, nervozitate și suprastimulare:</b> O energie mentală și emoțională prea intensă, dificultăți de a te calma, agitație interioară constantă.</li>
-                        <li><b>Impulsivitate și lipsa de răbdare:</b> O tendință de a acționa fără a gândi, de a fi nerăbdător cu ceilalți sau cu procesele naturale ale vieții.</li>
-                        <li><b>Rigiditate ascunsă sau "încordare":</b> O nevoie de a controla mediul, de a forța rezultatele, ceea ce poate duce la tensiune cronică.</li>
-                        <li><b>Agresivitate pasivă sau furie neexprimată:</b> O energie internă "fierbinte" care nu este canalizată constructiv, putând duce la conflicte interioare sau la manifestări subtile de agresivitate.</li>
+                        <li><b>Rigiditate excesivă și control obsesiv:</b> O nevoie compulsivă de a controla totul, de a impune ordine și structură într-un mod inflexibil, ducând la o "împietrire" emoțională.</li>
+                        <li><b>Perfecționism și judecată excesivă:</b> O preocupare exagerată pentru a fi "impecabil" sau "perfect", ducând la judecată acerbă față de propria persoană și față de ceilalți.</li>
+                        <li><b>Agitație mentală și hiper-organizare:</b> O minte hiperactivă, o nevoie constantă de a analiza și a structura, fără a permite spontaneitatea sau fluiditatea.</li>
+                        <li><b>"Încordare" emoțională și lipsă de relaxare:</b> O tensiune constantă, o incapacitate de a se deconecta și de a se odihni profund, din cauza nevoii de a menține controlul.</li>
+                        <li><b>Dificultăți în a "curge" cu viața:</b> O rezistență la schimbare, o tendință de a se agăța de vechi tipare, chiar și atunci când sunt dăunătoare.</li>
                     </ol>
                 </div>
             </div>
@@ -281,36 +310,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de toxicitate), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici care încurajează integrarea și echilibrul</b> (ex: yoga, tai chi, dans liber).</li>
-                        <li><b>Exerciții creative</b> pentru a debloca fluxul de energie (pictură, scris, muzică).</li>
-                        <li><b>Meditații</b> pentru a cultiva adaptabilitatea și a elibera rigiditatea mentală.</li>
-                        <li><b>Terapii</b> care ajută la explorarea și depășirea blocajelor legate de transformare și asumarea riscurilor.</li>
-                        <li><b>Conectarea cu natura</b> pentru a sprijini "împământarea" și echilibrul energetic.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de mangan (cereale integrale, nuci, legume cu frunze verzi, leguminoase, ceai).</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de întărire a structurii interioare și a coeziunii:</strong> Meditație centrată pe stabilitate și ordine interioară, vizualizări ale unui "eu" bine structurat și organizat.</li>
+                                <li><strong>Terapii pentru dezvoltarea abilităților de organizare și planificare:</strong> Coaching pentru a-ți structura viața și a-ți atinge obiectivele.</li>
+                                <li><strong>Dezvoltarea flexibilității și a adaptabilității:</strong> Lucrul cu acceptarea imperfecțiunii și a schimbării, cultivarea spontaneității.</li>
+                                <li><strong>Restabilirea vitalității și a entuziasmului:</strong> Timp petrecut în natură, hobby-uri, activități creative care aduc bucurie și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin structura, coeziunea și echilibrul (de exemplu: "Sunt bine structurat/ă și organizat/ă. Mă adaptez cu ușurință la schimbare. Mă simt stabil/ă și coerent/ă.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de calmare și centrare</b> (meditație statică, respirație profundă).</li>
-                        <li><b>Terapii</b> pentru gestionarea furiei și eliberarea tensiunii acumulate.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a stabiliza energia și a reduce supra-activitatea mentală și fizică.</li>
-                        <li><b>Cultivarea răbdării și a acceptării</b>, renunțarea la nevoia de control.</li>
+                        <li><strong>Nutrițional:</strong> Monitorizarea aportului de mangan din dietă și suplimente pentru a evita dozele excesive, în special în cazul expunerii profesionale.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control. Yoga sau tai chi pentru a cultiva fluiditatea și a reduce tensiunea.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică prin supra-solicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
