@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clor - Echilibrul Fluidelor și Purificarea</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Clor - Echilibrul Fluidelor și Purificarea
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Clor - perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Clorul (Cl) este un macromineral esențial, prezent în corpul uman în cantități semnificative (aproximativ 70 g). Este principalul anion (ion încărcat negativ) al fluidului extracelular, lucrând îndeaproape cu sodiul pentru a menține echilibrul fluidelor și electroliților în organism. Doza zilnică recomandată pentru adulți este de 2300-2500 mg/zi.</p>
+                        <ul>
+                            <li><b>Echilibrul fluidelor și electroliților:</b> Este principalul anion al fluidului extracelular, lucrând îndeaproape cu sodiul pentru a menține echilibrul hidric și electrolitic, esențial pentru funcția celulară.</li>
+                            <li><b>Componentă a acidului clorhidric (HCl):</b> Esențial pentru digestia proteinelor în stomac și activarea pepsinei, contribuind la o digestie sănătoasă.</li>
+                            <li><b>Echilibrul acido-bazic (pH):</b> Contribuie la menținerea pH-ului normal al sângelui și al fluidelor corporale.</li>
+                            <li><b>Transmiterea impulsurilor nervoase și funcția musculară:</b> Implicat în transmiterea semnalelor nervoase și în contracția musculară, alături de sodiu și potasiu.</li>
+                            <li><b>Rol în procesele biologice:</b> Contribuie la diverse reacții enzimatice și la menținerea funcțiilor celulare.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Clorul este strâns legat de sodiu și se găsește abundent în alimentele care conțin sare.</p>
+                        <ul>
+                            <li><b>Sare de masă (clorură de sodiu).</b></li>
+                            <li><b>Alimente procesate:</b> Conserve, mezeluri, produse de panificație, alimente preparate, fast-food (reprezintă aproximativ 75% din aportul de sodiu și, implicit, de clor).</li>
+                            <li><b>Măsline.</b></li>
+                            <li><b>Alge marine.</b></li>
+                            <li><b>Legume:</b> Țelină, salată verde, roșii (în cantități mai mici).</li>
+                            <li><b>Substituenți de sare</b> (pot conține clor, dar adesea cu potasiu în loc de sodiu).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipocloremie)</h3>
+                        <p>Deficiența de clor este rară în condiții normale, fiind adesea asociată cu deficiența de sodiu sau cu pierderi excesive de fluide (de exemplu: vărsături severe, diaree prelungită, transpirație excesivă, utilizarea diureticelor).</p>
+                        <ol>
+                            <li><b>Dezechilibre fluide și electrolitice:</b> Poate duce la deshidratare, dezechilibre acido-bazice (alcaloză metabolică).</li>
+                            <li><b>Probleme digestive:</b> Afectarea producției de acid clorhidric poate duce la indigestie și malabsorbție.</li>
+                            <li><b>Simptome neuromusculare:</b> Crampe musculare, slăbiciune, apatie mentală.</li>
+                            <li><b>Creștere întârziată</b> la copii.</li>
+                            <li><b>Pierderea poftei de mâncare.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipercloremie)</h3>
+                        <p>Excesul de clor este, de obicei, legat de aportul excesiv de sare (clorură de sodiu) sau de afecțiuni renale care afectează excreția.</p>
+                        <ol>
+                            <li><b>Dezechilibre acido-bazice:</b> Poate duce la acidoză metabolică (dezechilibru al pH-ului sanguin).</li>
+                            <li><b>Probleme digestive:</b> Greață, vărsături.</li>
+                            <li><b>Deshidratare.</b></li>
+                            <li><b>Hipertensiune</b> (prin asocierea cu sodiul).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Clor - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, clorul este profund asociat cu purificarea, echilibrul, fluiditatea emoțională, capacitatea de a "curăța" și de a "elibera" ceea ce nu mai servește, precum și cu menținerea integrității granițelor personale. Fiind esențial pentru acidul clorhidric din stomac (digestie și descompunere) și pentru echilibrul fluidelor, clorul rezonează cu procesele noastre interne de asimilare a experiențelor și de eliminare a "toxinelor" emoționale.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de clor poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Dificultăți în a "digera" sau a procesa experiențe:</b> Incapacitatea de a descompune și de a înțelege evenimente dificile, ducând la stagnare emoțională.</li>
+                        <li><b>Lipsa de "claritate" în comunicare:</b> Afectarea producției de acid clorhidric poate simboliza o dificultate în a "descompune" și a comunica gândurile sau emoțiile într-un mod clar și eficient.</li>
+                        <li><b>Sentiment de "drenaj" energetic:</b> Pierderi constante de energie emoțională, senzația de a fi "secat" sau de a nu-ți putea menține vitalitatea.</li>
+                        <li><b>Vulnerabilitate la influențe externe:</b> O lipsă de granițe emoționale, permițând energiilor negative să pătrundă și să perturbe echilibrul interior.</li>
+                        <li><b>Apatie mentală și lipsă de motivație:</b> Un sentiment de lipsă de inițiativă, de a fi "blocat" sau de a nu putea "curge" cu viața.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de clor (adesea legat de aportul excesiv de sare) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Rigiditate și control excesiv:</b> O tendință de a fi prea rigid în gândire, de a încerca să controlezi mediul sau relațiile, ducând la o "încordare" emoțională.</li>
+                        <li><b>"Sărarea" rănilor emoționale:</b> O tendință de a te agăța de dureri vechi, de a le "săra" și de a le menține active, în loc să le eliberezi.</li>
+                        <li><b>Judecată excesivă și critică:</b> O tendință de a "purifica" sau de a "curăța" excesiv, ducând la o atitudine critică și intolerantă față de propria persoană și față de ceilalți.</li>
+                        <li><b>Dificultăți în a "elibera" controlul:</b> O nevoie de a menține un control strict asupra emoțiilor și situațiilor, din teama de a nu pierde echilibrul.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar, se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă echilibrată, cu un aport adecvat de sare (clorură de sodiu) din surse naturale, evitând alimentele ultra-procesate. Asigurarea unei hidratări optime.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare emoțională:</strong> Jurnalism terapeutic, art-terapie, sau consiliere pentru a procesa și elibera emoțiile "nedigerate" sau traumele.</li>
+                                <li><strong>Dezvoltarea fluidității emoționale:</strong> Meditații ghidate pentru a permite emoțiilor să curgă liber, fără a le reține. Yoga sau dans pentru a stimula fluiditatea fizică și energetică.</li>
+                                <li><strong>Întărirea granițelor personale:</strong> Lucrul cu stabilirea și menținerea unor granițe sănătoase pentru a te proteja de influențele negative externe.</li>
+                                <li><strong>Cultivarea clarității în comunicare:</strong> Exerciții de exprimare verbală și non-verbală, pentru a-ți comunica nevoile și emoțiile într-un mod autentic.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin echilibrul, purificarea și fluiditatea (de exemplu: "Sunt în echilibru. Îmi eliberez emoțiile cu ușurință. Mă simt purificat/ă și limpede.").</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Reducerea drastică a aportului de sare din alimente procesate și fast-food. Concentrarea pe alimente integrale, neprocesate. Monitorizarea aportului de clorură de sodiu sub îndrumare.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare pentru a evita "arderea" energetică prin supra-solicitare.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </div>
+    </div>
+</body>
+</html>
