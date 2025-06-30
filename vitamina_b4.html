@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B4 (adenina) - Codul Fundamental al Vitalității</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B4 - Codul Fundamental al Vitalității
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B4 - perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title">Rolul principal</h3>
+                    <p>Vitamina B4, cunoscută sub denumirea de adenină, este o nucleobază purinică, o componentă esențială a acizilor nucleici (ADN și ARN), purtători ai informației genetice și ai codului fundamental al vieții. Rolul său principal se extinde însă și la nivel energetic și metabolic:</p>
+                    <ul>
+                        <li><b>Producția de energie celulară (ATP):</b> Este o componentă cheie a adenozin trifosfatului (ATP), principala moleculă de stocare și transfer de energie în celule ("moneda energetică" a organismului). Acest rol este vital pentru toate procesele metabolice, de la contracția musculară și transmiterea impulsurilor nervoase, la sinteza proteinelor și menținerea funcțiilor organelor.</li>
+                        <li><b>Sinteza acizilor nucleici (ADN și ARN):</b> Fiind o bază azotată, adenina este indispensabilă pentru formarea structurilor ADN și ARN, procese fundamentale pentru diviziunea celulară, creștere, repararea țesuturilor și transmiterea ereditară a caracteristicilor.</li>
+                        <li><b>Componentă a coenzimelor:</b> Intră în structura unor coenzime importante precum NAD (nicotinamidă adenin dinucleotidă) și FAD (flavin adenin dinucleotid), esențiale în reacțiile redox și în lanțul de transport al electronilor pentru producția de energie.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Surse alimentare</h3>
+                    <p>Deoarece adenina este sintetizată intern, nu există alimente care să fie considerate surse dietetice esențiale de Vitamina B4 în același mod ca alte vitamine. Cu toate acestea, nutrienții care susțin sinteza și funcția sa includ:</p>
+                    <ul>
+                        <li><b>Alimente bogate în purine:</b> Carne (în special organe), pește, leguminoase uscate.</li>
+                        <li><b>Nutrienți care susțin sinteza ADN/ARN și metabolismul energetic:</b> Vitaminele B (în special acidul folic și Vitamina B12), magneziul, fosforul și proteinele de înaltă calitate.</li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de Vitamina B4)</h3>
+                    <p>Dat fiind că adenina este sintetizată endogen de organism, nu există o deficiență dietetică specifică recunoscută clinic pentru Vitamina B4 și, prin urmare, nu sunt asociate boli specifice cauzate de lipsa aportului exogen. Disfuncțiile metabolice care ar afecta sinteza sa internă ar avea implicații mult mai largi și ar fi legate de tulburări genetice sau patologii complexe ale metabolismului bazal.</p>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B4)</h3>
+                    <p>Deoarece adenina este o moleculă biologică fundamentală, reglată fin de mecanismele interne ale corpului, toxicitatea prin exces de Vitamina B4 nu este raportată în context clinic. Organismul gestionează eficient nivelurile endogene, iar aportul exogen nu este de obicei o preocupare.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B4 - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Vitamina B4 (Adenina) este profund asociată cu codul fundamental al existenței, vitalitatea la nivel celular profund, structura interioară, coerența și scopul vieții. Fiind o bază a ADN-ului și o componentă centrală a ATP-ului (energia universală), adenina rezonează cu "blueprint-ul" ființei, cu "programarea" noastră fundamentală și cu capacitatea de a susține viața la cele mai intime niveluri. Orice dezechilibru la acest nivel ar putea semnala o disarmonie profundă.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Deși nu există o deficiență fizică directă, un "deficit" energetic sau metaforic de Vitamina B4 ar putea fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Deconectare de la scopul fundamental:</b> Un sentiment profund de lipsă de sens sau de direcție în viață, senzația de a fi "pierdut" în ceea ce privește menirea personală.</li>
+                        <li><b>Lipsa de coerență interioară:</b> O disarmonie între gânduri, emoții și acțiuni, un sentiment de a nu fi "întreg" sau de a nu-ți găsi propriul "cod".</li>
+                        <li><b>Epuizare la nivel profund:</b> O oboseală care transcende nivelul fizic și emoțional, atingând "esența" ființei, o lipsă de "scânteie" vitală.</li>
+                        <li><b>Dificultăți în "reprogramare":</b> O rezistență la schimbarea tiparelor fundamentale de gândire sau de comportament, chiar și atunci când acestea sunt dăunătoare.</li>
+                        <li><b>Sentiment de fragilitate existențială:</b> O teamă profundă legată de propria structură, de "a se destrăma" la nivel esențial, sau de a-și pierde identitatea fundamentală.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Dat fiind că nu sunt raportate cazuri de exces fizic, un "exces" simbolic ar putea sugera:</p>
+                    <ol>
+                        <li><b>Rigiditate în "codul" personal:</b> O aderență prea strictă la propriile "legi" sau convingeri, o inflexibilitate fundamentală care împiedică adaptarea și evoluția.</li>
+                        <li><b>Perfecționism obsesiv legat de "structura" vieții:</b> O nevoie exagerată de a controla fiecare aspect al existenței pentru a se conforma unui "plan" perfect, fără a permite spontaneitatea sau erorile.</li>
+                        <li><b>"Supra-programare" sau supra-analiză:</b> O tendință de a analiza excesiv fiecare detaliu al vieții, încercând să "decodezi" totul, ceea ce poate duce la agitație mentală.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, se recomandă o abordare personalizată, care vizează echilibrarea tuturor aspectelor ființei, având în vedere rolul metaforic al adeninei în codul fundamental al vitalității:</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Accentul cade pe o dietă echilibrată, bogată în proteine de înaltă calitate și Vitamine din complexul B, care susțin procesele metabolice generale și sinteza acizilor nucleici.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de reconectare cu scopul vieții:</strong> Meditație centrată pe intuiție și pe ascultarea vocii interioare, vizualizări ale unui "eu" autentic și aliniat cu menirea.</li>
+                                <li><strong>Lucrul cu flexibilitatea fundamentală:</strong> Terapii care ajută la eliberarea tiparelor rigide, la acceptarea imperfecțiunii și la cultivarea spontaneității și a fluxului în viață.</li>
+                                <li><strong>Eliberarea blocajelor emoționale profunde:</strong> Terapii specializate pentru traume sau convingeri limitative care afectează "codul" personal.</li>
+                                <li><strong>Restabilirea vitalității la nivel esențial:</strong> Timp petrecut în natură, practici de împământare, activități care aduc bucurie autentică și reconectează cu esența ființei.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin alinierea, coerența, vitalitatea și scopul personal (de exemplu: "Sunt aliniat/ă cu scopul meu divin. Codul meu fundamental este perfect. Mă simt vital/ă și împlinit/ă.").</li>
+                                <li><strong>Exerciții de "reprogramare" conștientă:</strong> Utilizarea vizualizării creative pentru a "rescrie" tipare negative la nivel subconștient, promovând sănătatea și armonia la nivel celular.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Se va evita suplimentarea, dat fiind că organismul o produce endogen. Accent pe o dietă echilibrată, fără restricții inutile.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de auto-compasiune și acceptare:</strong> Lucrul cu acceptarea imperfecțiunii și a limitelor (proprii și ale altora), cultivarea umilinței.</li>
+                                <li><strong>Terapii pentru eliberarea nevoii de control:</strong> Lucrul cu nevoia de a impune "coduri" sau planuri rigide, permițând fluiditatea.</li>
+                                <li><strong>Cultivarea spontaneității și a jocului:</strong> Activități care încurajează creativitatea și o abordare mai relaxată a vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică prin supra-analiză.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </div>
+    </div>
+</body>
+</html>
