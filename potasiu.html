@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potasiul și Echilibrul Emoțional</title>
+    <title>Potasiu - Fluiditatea și Echilibrul Vital</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,77 +187,118 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Potasiul și Echilibrul Emoțional
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Potasiu - Fluiditatea și Echilibrul Vital
         </div>
 
         <div class="section">
-            <h2 class="section-title">Potasiu - Perspectiva fizică</h2>
+            <h2 class="section-title">Potasiu - perspectiva fizică</h2>
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Potasiul este un mineral și un electrolit esențial care joacă un rol crucial în menținerea echilibrului fluidelor și a funcției electrice a celulelor din corpul nostru. Este vital pentru sănătatea inimii, a sistemului nervos și a mușchilor.</p>
+                    <p>Potasiul (K) este un macromineral esențial, al treilea cel mai abundent mineral din corpul uman, cu aproximativ 250 g (0.3% din greutatea corporală a unui adult). Este principalul ion pozitiv (cation) din interiorul celulelor, jucând un rol crucial în menținerea echilibrului fluidelor și a potențialului electric al membranelor celulare. Doza zilnică recomandată pentru adulți este de 4700 mg/zi.</p>
                     <ul>
-                        <li><b>Echilibrul fluidelor și al electroliților:</b> Potasiul lucrează îndeaproape cu sodiul pentru a menține echilibrul adecvat al fluidelor în interiorul și în afara celulelor. Acest echilibru este fundamental pentru volumul sanguin, tensiunea arterială și funcționarea celulară generală.</li>
-                        <li><b>Funcția nervoasă:</b> Este esențial pentru transmiterea impulsurilor nervoase. Nervii utilizează mișcarea potasiului (și a sodiului) prin membranele celulare pentru a genera impulsuri electrice care permit comunicarea între creier și restul corpului.</li>
-                        <li><b>Contracția musculară:</b> La fel ca și în cazul nervilor, potasiul este necesar pentru ca mușchii să se contracte și să se relaxeze corect. Acest lucru este valabil pentru toți mușchii, inclusiv pentru mușchiul inimii.</li>
-                        <li><b>Sănătatea inimii și reglarea tensiunii arteriale:</b> Un aport adecvat de potasiu ajută la contrabalansarea efectelor sodiului, contribuind la scăderea tensiunii arteriale și la reducerea riscului de boli cardiovasculare, inclusiv accident vascular cerebral. Ajută la menținerea unui ritm cardiac normal.</li>
-                        <li><b>Sănătatea oaselor:</b> Studiile sugerează că un aport suficient de potasiu poate ajuta la menținerea densității minerale osoase, contribuind la sănătatea oaselor.</li>
-                        <li><b>Metabolismul carbohidraților:</b> Potasiul este implicat în procesul de descompunere a carbohidraților pentru energie și în stocarea glicogenului (forma de stocare a glucozei) în ficat și mușchi.</li>
+                        <li><b>Echilibrul fluidelor și electroliților:</b> Este principalul ion pozitiv intracelular, esențial pentru menținerea echilibrului hidric și osmotic între compartimentele celulare și extracelulare. Lucrează în sinergie cu sodiul pentru a regla volumul fluidelor corporale.</li>
+                        <li><b>Funcția musculară și nervoasă:</b> Crucial pentru generarea și transmiterea impulsurilor nervoase și pentru contracția musculară normală, inclusiv a mușchiului cardiac. Pompa sodiu-potasiu (Na+/K+-ATPaza) este fundamentală pentru menținerea potențialului de repaus al membranei celulare și pentru conducerea nervoasă.</li>
+                        <li><b>Reglarea tensiunii arteriale:</b> Contribuie la menținerea unei tensiuni arteriale sănătoase, ajutând la contracararea efectelor negative ale excesului de sodiu și la promovarea vasodilatației. Suplimentele de potasiu pot contribui la scăderea tensiunii arteriale.</li>
+                        <li><b>Metabolismul energetic:</b> Facilitează reacțiile enzimatice legate de metabolismul carbohidraților și proteinelor, contribuind la producția de energie.</li>
+                        <li><b>Sinteza proteinelor:</b> Este necesar pentru sinteza proteinelor.</li>
+                        <li><b>Sănătatea inimii:</b> Este critic pentru menținerea unui ritm cardiac regulat și sănătos.</li>
                     </ul>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Majoritatea oamenilor își pot asigura necesarul de potasiu printr-o dietă echilibrată.</p>
+                    <p>Potasiul este larg răspândit în alimente, în special în fructe, legume și produse lactate. Alimentele procesate conțin, în general, mai puțin potasiu.</p>
                     <ul>
-                        <li><b>Fructe:</b> Banane: sunt o sursă clasică și excelentă, portocale, kiwi, pepene galben, pepene verde, avocado, fructe uscate: caise uscate, prune uscate, stafide (sunt foarte concentrate în potasiu).</li>
-                        <li><b>Legume:</b> Cartofi (în special cei copți cu coajă), cartofi dulci, spanac, kale, broccoli, sfeclă elvețiană, roșii (inclusiv sos de roșii și pastă de roșii), dovleac, ciuperci.</li>
-                        <li><b>Leguminoase:</b> Fasole (neagră, albă, roșie, lima). Linte. Năut.</li>
-                        <li><b>Nuci și semințe:</b> Migdale, fistic, semințe de floarea-soarelui.</li>
-                        <li><b>Produse lactate și alternative:</b> Lapte, iaurt, lapte de cocos.</li>
-                        <li><b>Carne și pește:</b> Somon, cod, ton, carne de pui și curcan.</li>
+                        <li><b>Fructe:</b> Banane, caise (în special uscate), kiwi, pepene galben, grepfrut, portocale, prune.</li>
+                        <li><b>Legume:</b> Cartofi (în special cu coajă), spanac, sfeclă, broccoli, roșii și produse din roșii, legume cu frunze verzi.</li>
+                        <li><b>Produse lactate:</b> Lapte, iaurt.</li>
+                        <li><b>Carne și pește:</b> Carne roșie, carne de pasăre, somon, ton, sardine, scoici.</li>
+                        <li><b>Leguminoase:</b> Fasole, linte, năut.</li>
+                        <li><b>Nuci și semințe.</b></li>
+                        <li><b>Cereale integrale:</b> Cereale pentru micul dejun, pâine integrală.</li>
+                        <li><b>Cafea.</b></li>
+                        <li><b>Substituenți de sare</b> (mulți conțin clorură de potasiu).</li>
+                        <li><b>Raportul ideal sodiu:potasiu în dietă este de 1:1 (în mmol).</b></li>
                     </ul>
-                    <p><b>Important de reținut:</b> Persoanele cu afecțiuni renale trebuie să monitorizeze cu atenție aportul de potasiu, deoarece rinichii afectați pot avea dificultăți în eliminarea excesului, ceea ce poate duce la niveluri periculos de mari de potasiu în sânge (hiperkaliemie). De asemenea, anumite medicamente (diuretice, inhibitori ACE) pot influența nivelurile de potasiu.</p>
+                </div>
+            </div>
+
+            <div class="physical-row">
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipokaliemie)</h3>
+                    <p>Deficiența de potasiu este relativ comună, adesea cauzată de pierderi excesive (de exemplu: vărsături, diaree severă, utilizarea diureticelor), aport insuficient sau anumite afecțiuni medicale.</p>
+                    <ol>
+                        <li><b>Slăbiciune musculară și paralizie:</b> Poate duce la slăbiciune musculară generalizată, crampe ("cârcel" sau "Charlie horse"), și, în cazuri severe, la paralizie.</li>
+                        <li><b>Probleme cardiace:</b> Aritmii (bătăi neregulate ale inimii), care pot fi periculoase și pot duce la stop cardiac.</li>
+                        <li><b>Oboseală și letargie.</b></li>
+                        <li><b>Constipație:</b> Prin afectarea motilității musculare netede a intestinului.</li>
+                        <li><b>Confuzie și tulburări de dispoziție.</b></li>
+                        <li><b>Dezechilibre fluide și electrolitice:</b> Poate însoți deshidratarea.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces (hiperkaliemie)</h3>
+                    <p>Excesul de potasiu este rar din aportul alimentar normal, fiind mai des asociat cu disfuncții renale (incapacitatea rinichilor de a excreta potasiul), utilizarea anumitor medicamente sau suplimentarea excesivă.</p>
+                    <ol>
+                        <li><b>Probleme cardiace:</b> Aritmii severe, care pot duce la stop cardiac.</li>
+                        <li><b>Slăbiciune musculară și paralizie.</b></li>
+                        <li><b>Greață și vărsături.</b></li>
+                        <li><b>Confuzie și amorțeală.</b></li>
+                        <li><b>Tulburări metabolice.</b></li>
+                    </ol>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Potasiu: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, potasiul este un electrolit fundamental, adesea asociat cu <b>echilibrul emoțional, fluiditatea, adaptabilitatea, gestionarea fluxurilor de energie și capacitatea de a menține armonia internă și externă</b>. Prin rolul său esențial în echilibrul fluidelor și funcția nervoasă și musculară (în special cea cardiacă), potasiul rezonează cu ritmurile noastre interne și cu abilitatea de a ne mișca și de a ne simți bine în fluxul vieții.</p>
+            <h2 class="section-title">Potasiu - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Potasiul este profund asociat cu fluiditatea emoțională, adaptabilitatea, echilibrul intern, capacitatea de a "curge" cu viața și de a menține un ritm armonios. Fiind principalul ion intracelular și esențial pentru funcția nervoasă și musculară (inclusiv a inimii), Potasiul rezonează cu "fluxul" nostru interior, cu abilitatea de a ne gestiona emoțiile, de a menține conexiuni sănătoase și de a ne simți energizați și echilibrați. Simbolizează, de asemenea, ritmul vieții și capacitatea de a te adapta la schimbare.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de potasiu poate fi legat de următoarele aspecte emoționale:</p>
+                    <p>Un deficit de Potasiu poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Dezechilibru emoțional și instabilitate:</b> O senzație de "decalaj" emoțional, dificultăți în a-ți menține calmul în situații stresante sau o tendință la schimbări bruște de dispoziție. Poate indica o lipsă de stabilitate internă.
+                        <li><b>Stagnare emoțională și lipsă de fluiditate:</b> Incapacitatea de a lăsa emoțiile să curgă liber, un sentiment de a fi "blocat" sau "încordat" emoțional.
                             <ul>
-                                <li><i>Manifestare fizică:</i> Iregularități ale ritmului cardiac, oboseală, slăbiciune musculară.</li>
+                                <li><i>Manifestare fizică:</i> Slăbiciune musculară, crampe, constipație.</li>
                             </ul>
                         </li>
-                        <li><b>Lipsa de adaptabilitate și rigiditate:</b> O dificultate de a te adapta la noi circumstanțe sau de a accepta schimbările inevitabile ale vieții. Sentimentul de a fi "blocat" sau de a nu putea "curge" cu evenimentele.</li>
-                        <li><b>Senzație de "golire" sau "drenare" emoțională:</b> Simbolismul echilibrului fluidelor poate indica o senzație de a fi "drenat" emoțional de relații, situații sau responsabilități, lăsându-te epuizat.</li>
-                        <li><b>Dificultăți în a-ți exprima emoțiile fluid:</b> O blocare a fluxului emoțional, o tendință de a reprima sentimentele, ceea ce poate duce la tensiuni interne.</li>
-                        <li><b>Dependența de stimuli externi pentru energie:</b> O căutare constantă a unor surse externe de energie sau validare, deoarece energia internă este dezechilibrată.</li>
+                        <li><b>Dezechilibre emoționale și instabilitate:</b> Schimbări bruște de dispoziție, iritabilitate, nervozitate, dificultăți în a menține calmul și echilibrul interior.</li>
+                        <li><b>Lipsa de "ancorare" și de centrare:</b> O senzație de a fi "plutitor", deconectat de realitate, lipsa unui centru interior stabil.</li>
+                        <li><b>Dificultăți în a te adapta la schimbare:</b> O rigiditate mentală și emoțională, o rezistență la fluxul natural al evenimentelor.</li>
+                        <li><b>Oboseală sufletească și lipsă de vitalitate:</b> Un sentiment profund de epuizare, lipsă de "poftă de viață" sau de entuziasm.</li>
+                        <li><b>Probleme de "ritm" interior:</b> Dificultăți în a-ți găsi propriul ritm în viață, senzația de a fi fie prea lent, fie prea agitat.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de potasiu (hiperkaliemie), deși adesea cauzat de afecțiuni renale sau medicamente, ar putea sugera din perspectivă holistică:</p>
+                    <p>Deși excesul fizic este rar din dietă, un "exces" simbolic ar putea sugera:</p>
                     <ol>
-                        <li><b>Control excesiv asupra emoțiilor:</b> O tendință de a suprima sau de a controla prea puternic propriile emoții, ducând la o rigiditate sau o lipsă de spontaneitate.</li>
-                        <li><b>Rigiditate emoțională și lipsă de flexibilitate:</b> O incapacitate de a te "îndoi" emoțional, o nevoie de a menține un control strict asupra situațiilor și a sentimentelor.</li>
-                        <li><b>Agitație internă și tensiune reprimată:</b> O energie internă care este "prea multă" și nu este eliberată adecvat, ducând la o stare de neliniște sau iritabilitate ascunsă.</li>
-                        <li><b>Preocupare excesivă pentru detalii sau ordine:</b> O tendință de a fi obsedat de menținerea unui "echilibru" perfect, ceea ce poate duce la stres și rigiditate.</li>
+                        <li><b>Control excesiv și rigiditate:</b> O nevoie obsesivă de a controla mediul, oamenii sau situațiile, de a impune un ritm, fără a permite fluiditatea sau spontaneitatea.</li>
+                        <li><b>"Încordare" emoțională și presiune internă:</b> O tendință de a menține o tensiune constantă, de a fi mereu "în priză", ducând la "arderea" resurselor.</li>
+                        <li><b>Dificultate în a "elibera" controlul:</b> O rezistență la renunțare, la a lăsa lucrurile să curgă natural.</li>
+                        <li><b>"Forțarea" ritmului:</b> O încercare de a impune un ritm accelerat vieții, fără a permite odihnă sau recuperare.</li>
                     </ol>
                 </div>
             </div>
@@ -254,37 +306,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici care încurajează fluxul și mișcarea</b> (dans, tai chi, yoga fluidă) pentru a elibera blocajele energetice.</li>
-                        <li><b>Terapii</b> pentru explorarea și eliberarea emoțiilor reprimate, cultivarea exprimării autentice.</li>
-                        <li><b>Meditații</b> pentru echilibrare emoțională și acceptarea schimbării.</li>
-                        <li><b>Stabilirea unor limite sănătoase</b> în relații pentru a evita "drenajul" energetic.</li>
-                        <li><b>Practici de "împământare"</b> pentru a reconecta cu stabilitatea interioară.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de potasiu (fructe, legume, produse lactate, carne, pește, leguminoase). Educație nutrițională privind importanța unui aport adecvat de potasiu și a echilibrului cu sodiul.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de relaxare și fluiditate emoțională:</strong> Meditație ghidată pentru a permite emoțiilor să curgă liber, yoga sau tai chi pentru a cultiva flexibilitatea fizică și energetică.</li>
+                                <li><strong>Tehnici de gestionare a stresului și anxietății:</strong> Jurnalism terapeutic, art-terapie, sau consiliere pentru a procesa sentimentele de copleșire și iritabilitate.</li>
+                                <li><strong>Dezvoltarea adaptabilității:</strong> Lucrul cu acceptarea schimbării, renunțarea la rigiditate în gândire și acțiune.</li>
+                                <li><strong>Restabilirea vitalității și a bucuriei:</strong> Timp petrecut în natură, hobby-uri, activități creative care aduc plăcere și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin echilibrul, fluiditatea și vitalitatea (de exemplu: "Sunt în echilibru și fluid/ă. Mă adaptez cu ușurință la fluxul vieții. Inima mea este calmă și puternică.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Tehnici de relaxare profundă</b> și de eliberare a tensiunii (respirație diafragmatică, saună, băi calde).</li>
-                        <li><b>Terapii</b> care ajută la explorarea și eliberarea nevoii de control și a rigidității.</li>
-                        <li><b>Cultivarea spontaneității</b> și a acceptării imperfecțiunii.</li>
-                        <li><b>Practici de "desprindere"</b> de gândurile obsesive și de la a fi "prea mult în cap".</li>
-                        <li><b>Exerciții fizice moderate</b> care ajută la eliberarea energiei acumulate.</li>
+                        <li><strong>Nutrițional:</strong> Ajustarea aportului de potasiu sub îndrumare medicală, mai ales în caz de afecțiuni renale. Se va acorda atenție echilibrului cu sodiul.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de împământare și centrare:</strong> Meditație statică, respirație profundă, plimbări lungi în natură pentru a canaliza excesul de energie și a reduce agitația.</li>
+                                <li><strong>Terapii pentru eliberarea controlului și a rigidității:</strong> Lucrul cu nevoia de a impune propriul ritm, cultivarea umilinței și a răbdării.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică prin suprasolicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
