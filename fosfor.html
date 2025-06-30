@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fosforul și Energia Creativă</title>
+    <title>Fosfor - Scânteia Vieții și Fundația Echilibrului</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,100 +187,116 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Fosforul și Energia Creativă
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Fosfor - Scânteia Vieții și Fundația Echilibrului
         </div>
 
         <div class="section">
-            <h2 class="section-title">Fosfor - Perspectiva fizică</h2>
+            <h2 class="section-title">Fosfor - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Fosforul este al doilea cel mai abundent mineral din corpul uman, după calciu, și este la fel de esențial pentru menținerea sănătății și a funcționării normale a organismului. Joacă un rol vital în formarea oaselor și a dinților, dar și în numeroase procese metabolice la nivel celular.</p>
-                    <ul>
-                        <li><b>Sănătatea oaselor și a dinților:</b> Aproximativ 85% din fosforul din corp se găsește în oase și dinți, unde, alături de calciu, contribuie la formarea și menținerea structurii și rezistenței acestora. Este crucial pentru mineralizarea osoasă și pentru dezvoltarea unui schelet puternic.</li>
-                        <li><b>Producerea energiei (ATP):</b> Fosforul este o componentă cheie a adenozin trifosfatului (ATP), principala moleculă de stocare și transfer de energie din celule. Fără fosfor, celulele nu ar putea produce energia necesară pentru aproape toate funcțiile vitale.</li>
-                        <li><b>Componentă a ADN-ului și ARN-ului:</b> Fosforul este o parte structurală esențială a ADN-ului (acidul dezoxiribonucleic) și ARN-ului (acidul ribonucleic), care sunt purtătorii informației genetice și sunt implicate în sinteza proteinelor.</li>
-                        <li><b>Funcția celulară și membranară (fosfolipide):</b> Este o componentă a fosfolipidelor, care formează structura principală a membranelor celulare. Aceste membrane controlează ce intră și ce iese din celule.</li>
-                        <li><b>Echilibrul acido-bazic (pH):</b> Fosforul acționează ca un sistem tampon, ajutând la menținerea echilibrului delicat al pH-ului în sânge și în alte fluide corporale, esențial pentru funcționarea optimă a enzimelor și proteinelor.</li>
-                        <li><b>Funcția musculară și nervoasă:</b> Contribuie la contracția musculară, la funcția nervoasă și la transmiterea semnalelor în sistemul nervos.</li>
-                        <li><b>Activarea enzimelor:</b> Este implicat în activarea și reglarea multor enzime care catalizează reacțiile chimice esențiale în corp.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Fosforul (P) este al doilea cel mai abundent mineral din corpul uman, constituind aproximativ 0.65-1.1% din greutatea corporală a unui adult (aproximativ 600 g). Aproximativ 85% din fosfor se găsește în oase și dinți, unde este combinat cu calciul sub formă de fosfat de calciu. Restul de 15% se găsește în țesuturile moi și fluidele corporale. Doza zilnică recomandată pentru adulți este de 700-1250 mg/zi.</p>
+                        <ul>
+                            <li><b>Sănătatea oaselor și a dinților:</b> Este o componentă structurală esențială a oaselor și dinților (sub formă de hidroxiapatită), conferindu-le rezistență și duritate.</li>
+                            <li><b>Producția și stocarea energiei (ATP):</b> Este o componentă cheie a adenozin trifosfatului (ATP), principala moleculă de stocare și transfer de energie în celule. Este indispensabil pentru toate procesele metabolice care necesită energie.</li>
+                            <li><b>Componentă a acizilor nucleici și nucleoproteinelor:</b> Intră în structura ADN-ului și ARN-ului, fiind fundamental pentru sinteza proteinelor, creșterea celulară, repararea țesuturilor și transmiterea informației genetice.</li>
+                            <li><b>Componentă a fosfolipidelor:</b> Fosfolipidele sunt elemente integrale ale membranelor celulare, jucând un rol crucial în transportul grăsimilor și în semnalizarea celulară.</li>
+                            <li><b>Echilibrul acido-bazic (pH):</b> Acționează ca un sistem tampon, ajutând la menținerea pH-ului normal al sângelui și al fluidelor corporale.</li>
+                            <li><b>Activarea enzimelor și reglarea hormonală:</b> Prin fosforilare, fosforul activează numeroase enzime și proteine reglatoare, esențiale pentru diverse căi metabolice.</li>
+                            <li><b>Funcția renală:</b> Contribuie la funcționarea normală a rinichilor.</li>
+                            <li><b>Contracția musculară și conducerea nervoasă:</b> Este implicat în aceste procese vitale.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Fosforul este larg răspândit în alimente, în special în cele bogate în proteine.</p>
+                        <ul>
+                            <li><b>Produse lactate:</b> Lapte, brânză, iaurt.</li>
+                            <li><b>Carne:</b> Vită, porc, pui, curcan.</li>
+                            <li><b>Pește și fructe de mare:</b> Somon, ton, sardine, creveți.</li>
+                            <li><b>Ouă.</b></li>
+                            <li><b>Leguminoase:</b> Fasole, linte, năut.</li>
+                            <li><b>Nuci și semințe:</b> Migdale, nuci, semințe de dovleac, semințe de floarea-soarelui.</li>
+                            <li><b>Cereale integrale:</b> Pâine integrală, orez brun, ovăz.</li>
+                            <li><b>Legume:</b> Broccoli, cartofi, spanac.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Fosforul este destul de răspândit în alimente, atât de origine animală, cât și vegetală, ceea ce face ca deficiențele severe să fie rare la persoanele cu o dietă echilibrată. Forma de fosfor din alimentele de origine animală este de obicei mai bine absorbită.</p>
-                    <ul>
-                        <li><b>Produse lactate:</b>
-                            <ul>
-                                <li>Lapte.</li>
-                                <li>Iaurt.</li>
-                                <li>Brânzeturi (în special cele tari, cum ar fi parmezanul).</li>
-                            </ul>
-                        </li>
-                        <li><b>Carne și pește:</b>
-                            <ul>
-                                <li>Carne de vită, porc, pui, curcan.</li>
-                                <li>Pește (somon, cod, ton).</li>
-                                <li>Fructe de mare (creveți, scoici).</li>
-                            </ul>
-                        </li>
-                        <li><b>Ouă:</b> Gălbenușul de ou este o sursă bună.</li>
-                        <li><b>Nuci și semințe:</b> Semințe de dovleac, semințe de floarea-soarelui, migdale, caju, arahide.</li>
-                        <li><b>Leguminoase:</b> Linte, năut, fasole (neagră, albă, roșie).</li>
-                        <li><b>Cereale integrale:</b> Ovăz, quinoa, orez brun.</li>
-                        <li><b>Băuturi:</b>
-                            <ul>
-                                <li>Laptele (inclusiv cel vegetal fortificat).</li>
-                                <li>Băuturile carbogazoase (în special cele de tip cola) conțin acid fosforic, dar absorbția acestuia din băuturi este un subiect de dezbatere, iar aportul excesiv din aceste surse nu este recomandat.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p><b>Important de reținut:</b> Persoanele cu afecțiuni renale cronice trebuie să monitorizeze și să limiteze aportul de fosfor, deoarece rinichii afectați pot avea dificultăți în eliminarea excesului, ceea ce poate duce la complicații.</p>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipofosfatemie)</h3>
+                        <p>Deficiența de fosfor este rară din cauze dietetice, deoarece este larg răspândit în alimente. Apare, de obicei, în cazuri de malnutriție severă, alcoolism, utilizarea anumitor medicamente (de exemplu: antiacide care leagă fosforul) sau afecțiuni de malabsorbție.</p>
+                        <ol>
+                            <li><b>Probleme osoase:</b> Demineralizarea oaselor, dureri osoase, rahitism (la copii) și osteomalacie (la adulți).</li>
+                            <li><b>Slăbiciune musculară:</b> Inclusiv slăbiciune a mușchilor respiratori, ducând la probleme respiratorii.</li>
+                            <li><b>Anemie.</b></li>
+                            <li><b>Probleme neurologice:</b> Iritabilitate, confuzie, convulsii, amorțeală, anxietate.</li>
+                            <li><b>Oboseală severă și lipsă de energie:</b> Din cauza afectării producției de ATP.</li>
+                            <li><b>Pierderea poftei de mâncare.</b></li>
+                            <li><b>Disfuncții renale.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hiperfosfatemie)</h3>
+                        <p>Excesul de fosfor este, de obicei, legat de aportul excesiv de suplimente, consumul excesiv de alimente procesate (bogate în fosfați adăugați) sau de afecțiuni renale care împiedică excreția.</p>
+                        <ol>
+                            <li><b>Dezechilibre minerale:</b> Poate interfera cu absorbția și utilizarea calciului, fierului, magneziului și zincului, ducând la deficiențe secundare ale acestor minerale.</li>
+                            <li><b>Calcificări ectopice (metastatice):</b> Depuneri de calciu-fosfat în țesuturile moi (de exemplu: rinichi, vase de sânge), ducând la leziuni organice.</li>
+                            <li><b>Probleme renale:</b> Agravarea bolilor renale preexistente.</li>
+                            <li><b>Probleme osoase:</b> Poate contribui la pierderea densității osoase pe termen lung, prin perturbarea echilibrului calciu-fosfor.</li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, diaree.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Fosfor: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, fosforul este profund conectat cu <b>energia vitală, creativitatea, inspirația, claritatea mentală și capacitatea de a procesa și transforma experiențele</b>. Fiind esențial pentru producția de ATP (molecula energetică a celulelor) și o componentă a ADN-ului și ARN-ului, fosforul rezonează cu "scânteia" noastră interioară, cu inteligența celulară și cu fluxul de informații și energie în corp și minte.</p>
+            <h2 class="section-title">Fosfor - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, fosforul este profund asociat cu scânteia vieții, energia fundamentală, structura echilibrată, capacitatea de a "aprinde" idei și de a le transforma în realitate, precum și cu menținerea unui flux energetic coerent. Fiind esențial pentru ATP (energia celulară) și pentru structura ADN-ului și a oaselor, fosforul rezonează cu "focul" nostru interior, cu vitalitatea, cu abilitatea de a ne manifesta potențialul și de a menține un echilibru între aspectele materiale și cele energetice ale existenței.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
                     <p>Un deficit de fosfor poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de energie și vitalitate emoțională:</b> Un sentiment de epuizare cronică, nu doar fizică, ci și emoțională și mentală. Lipsa de entuziasm și de chef de viață, dificultatea de a te angaja în activități.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală, slăbiciune musculară.</li>
-                            </ul>
-                        </li>
-                        <li><b>Blocaje creative și lipsă de inspirație:</b> Dificultăți în a-ți accesa creativitatea, un sentiment de "gol" sau de stagnare în idei și proiecte. Incapacitatea de a-ți manifesta potențialul.</li>
-                        <li><b>Dificultăți în a procesa informațiile și emoțiile:</b> O senzație de "ceață mentală", dificultăți de concentrare, de a înțelege concepte noi sau de a integra experiențe traumatice. Poate indica o dificultate de a "digera" evenimentele vieții.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Dificultăți de concentrare, probleme de memorie.</li>
-                            </ul>
-                        </li>
-                        <li><b>Lipsa de claritate și direcție:</b> Incapacitatea de a vedea drumul înainte, de a-ți stabili obiective clare sau de a acționa decisiv.</li>
-                        <li><b>Temeri legate de "lumină" sau "strălucire":</b> Fosforul este un element care luminează. O teamă inconștientă de a-ți arăta adevăratul potențial sau de a fi în centrul atenției.</li>
+                        <li><b>Lipsa de energie vitală și oboseală sufletească:</b> Un sentiment profund de epuizare, lipsă de "scânteie" interioară, apatie, senzația că ești "golit/ă de energie" sau că nu te poți regenera.</li>
+                        <li><b>Dificultăți în a "aprinde" idei sau proiecte:</b> Incapacitatea de a iniția acțiuni, de a-ți transforma ideile în realitate, o lipsă de motivație sau de entuziasm.</li>
+                        <li><b>Lipsa de claritate mentală și "ceață" emoțională:</b> Dificultăți de concentrare, de a lua decizii clare, o senzație de confuzie persistentă, ca și cum mintea ar fi "încărcată" și nu ar putea procesa eficient.</li>
+                        <li><b>Sentiment de fragilitate a "fundației" interioare:</b> O senzație de a nu avea o structură internă solidă, o lipsă de coerență între gânduri, sentimente și acțiuni.</li>
+                        <li><b>Dificultăți în a "asimila" sau a "utiliza" resursele:</b> Incapacitatea de a integra sprijinul sau "nutriția" emoțională din partea celorlalți.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de fosfor (mai frecvent în cazul afecțiunilor renale sau al aportului mare de aditivi alimentari) ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de fosfor (adesea legat de aportul excesiv de alimente procesate sau suplimente) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Suprastimulare mentală și nervozitate:</b> O minte hiperactivă, gânduri repetitive, dificultăți de a te relaxa mental, insomnie. Poate indica o nevoie excesivă de a analiza și de a controla prin intelect.</li>
-                        <li><b>Agitație interioară și incapacitatea de a te "împământa":</b> O energie prea dispersată, o senzație de neliniște constantă, dificultăți în a te ancora în prezent.</li>
-                        <li><b>Perfecționism rigid și auto-critică excesivă:</b> O nevoie obsesivă de a fi perfect, de a controla fiecare detaliu, ceea ce duce la frustrare și la un dialog intern negativ.</li>
-                        <li><b>Tendința de a "arde" rapid energia:</b> O tendință de a consuma rapid resursele energetice, atât fizice, cât și emoționale, fără a permite o reîncărcare adecvată.</li>
+                        <li><b>Supra-activare mentală și "ardere" energetică:</b> O minte hiperactivă, o nevoie constantă de a fi ocupat sau de a gândi, ducând la epuizare pe termen lung. O "ardere" rapidă a resurselor interioare.</li>
+                        <li><b>Rigiditate în gândire și "calcificarea" ideilor:</b> O tendință de a fi inflexibil în convingeri, de a te agăța de idei fixe, fără a permite fluiditatea sau noi perspective. O "împietrire" emoțională.</li>
+                        <li><b>Nevoie de control excesiv:</b> O presiune de a controla fiecare aspect al vieții, de a impune structuri rigide, din teama de a pierde controlul sau de a fi vulnerabil.</li>
+                        <li><b>Dezechilibru între "a da" și "a primi":</b> O tendință de a consuma rapid resursele, fără a permite o reîncărcare adecvată, ducând la dezechilibre în relații.</li>
                     </ol>
                 </div>
             </div>
@@ -277,36 +304,44 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de stimulare a creativității</b> (artă, muzică, scris liber, brainstorming).</li>
-                        <li><b>Meditații pentru vizualizarea energiei</b> și a inspirației.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a aduce energia în corp (mers în natură, yoga).</li>
-                        <li><b>Terapii</b> care ajută la eliberarea blocajelor emoționale legate de auto-exprimare și potențial.</li>
-                        <li><b>Practici</b> care încurajează asumarea direcției și scopului în viață.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă echilibrată, bogată în alimente integrale, surse naturale de fosfor (produse lactate, carne, pește, leguminoase, nuci, cereale integrale). Se va asigura un aport adecvat de calciu și Vitamina D pentru a menține un raport optim calciu-fosfor.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de reîncărcare energetică și vitalizare:</strong> Meditații ghidate pentru a "aprinde" scânteia interioară, vizualizări ale energiei care curge liber prin corp.</li>
+                                <li><strong>Terapii pentru eliberarea apatiei și a lipsei de motivație:</strong> Coaching pentru a-ți identifica scopurile și pasiunile, terapie pentru a procesa sentimentele de epuizare emoțională.</li>
+                                <li><strong>Dezvoltarea clarității mentale și a inițiativei:</strong> Practici de mindfulness pentru a îmbunătăți concentrarea și a transforma ideile în acțiuni concrete.</li>
+                                <li><strong>Cultivarea echilibrului între structură și fluiditate:</strong> Lucrul cu acceptarea imperfecțiunii și cu abilitatea de a te adapta la schimbare.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin energia, claritatea și echilibrul (de exemplu: "Sunt plin/ă de energie vitală. Mintea mea este limpede și clară. Îmi manifest scopul cu vigoare și echilibru.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Tehnici de relaxare profundă</b> (respirație diafragmatică, meditații ghidate de calmare).</li>
-                        <li><b>Activități</b> care ajută la "curățarea" minții (plimbări liniștite, timp petrecut în natură, jurnalism).</li>
-                        <li><b>Terapii</b> care ajută la gestionarea perfecționismului și a nevoii de control.</li>
-                        <li><b>Practici de "desprindere"</b> de gândurile obsesive, permițând un flux mai liber al minții.</li>
+                        <li><strong>Nutrițional:</strong> Ajustarea aportului de fosfor sub îndrumare medicală, evitând suplimentarea excesivă și reducând consumul de alimente procesate bogate în fosfați adăugați. Se va acorda atenție menținerii unui raport echilibrat calciu-fosfor.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de calmare și centrare:</strong> Meditație statică, respirație profundă, yoga restaurativă pentru a tempera supra-activitatea mentală și agitația.</li>
+                                <li><strong>Terapii pentru eliberarea rigidității și a nevoii de control:</strong> Lucrul cu perfecționismul, cu acceptarea imperfecțiunii și a limitelor.</li>
+                                <li><strong>Cultivarea fluidității și a spontaneității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Dezvoltarea umilinței și a compasiunii:</strong> Lucrul cu acceptarea diversității de perspective și cu eliberarea judecății.</li>
+                                <li><strong>Practici de "eliberare" a emoțiilor stagnante:</strong> Jurnalism terapeutic, art-terapie, pentru a procesa și elibera resentimente sau blocaje emoționale.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
