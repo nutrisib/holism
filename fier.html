@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fierul și Forța Interioară</title>
+    <title>Fier - Vitalitatea Sângelui și Forța Interioară</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -178,7 +189,7 @@
         }
 
         @media (max-width: 768px) {
-            .section-content {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
                 flex-direction: column;
             }
             .subsection {
@@ -196,141 +207,120 @@
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Fierul și Forța Interioară
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Fier - Vitalitatea Sângelui și Forța Interioară
         </div>
 
         <div class="section">
-            <h2 class="section-title">Fier - Perspectiva fizică</h2>
+            <h2 class="section-title">Fier - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Fierul este un mineral esențial pentru viață, crucial pentru buna funcționare a organismului. Rolul său cel mai important este legat de transportul oxigenului, dar contribuie și la numeroase alte procese vitale.</p>
-                    <ul>
-                        <li><b>Transportul oxigenului (hemoglobină și mioglobină):</b> Fierul este o componentă cheie a hemoglobinei, proteina din globulele roșii care leagă oxigenul din plămâni și îl transportă către toate celulele și țesuturile din corp. Fără fier suficient, organismul nu poate produce suficientă hemoglobină. De asemenea, fierul este o componentă a mioglobinei, o proteină similară cu hemoglobina, găsită în mușchi, care stochează și eliberează oxigenul necesar pentru contracția musculară. Implicațiile sunt că, fără fier suficient, organismul nu poate produce suficientă hemoglobină, ceea ce duce la anemie feriprivă, o condiție caracterizată prin oboseală extremă, slăbiciune, paloare, dificultăți de respirație și amețeli.</li>
-                        <li><b>Producția de energie:</b> Fierul este implicat în enzimele care transformă carbohidrații, grăsimile și proteinele în energie utilizabilă de către celule.</li>
-                        <li><b>Sistemul imunitar:</b> Este esențial pentru dezvoltarea și funcționarea celulelor imunitare, ajutând organismul să lupte împotriva infecțiilor și bolilor. Implicațiile sunt că un deficit de fier poate slăbi răspunsul imun.</li>
-                        <li><b>Funcția cognitivă și dezvoltarea neurologică:</b> Fierul este crucial pentru dezvoltarea normală a creierului și a sistemului nervos, influențând memoria, concentrația și capacitatea de învățare.</li>
-                        <li><b>Sinteza ADN-ului:</b> Joacă un rol în procesul de sinteză a ADN-ului, materialul genetic al celulelor.</li>
-                        <li><b>Sănătatea pielii, părului și unghiilor:</b> Contribuie la oxigenarea și nutriția corespunzătoare a celulelor din piele, păr și unghii. Implicațiile sunt căderea părului, unghiile fragile și pielea palidă pot fi semne ale deficitului de fier.</li>
-                        <li><b>Sinteza hormonală:</b> Fierul este implicat în producția anumitor hormoni, inclusiv cei tiroidieni.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Fierul (Fe) este un oligoelement esențial, indispensabil pentru viață, jucând un rol central în transportul oxigenului și în numeroase procese metabolice. Corpul uman conține între 3 și 4 grame de fier, din care aproximativ 60-70% se găsește în hemoglobină (proteina din celulele roșii care transportă oxigenul), iar restul este stocat în ficat, splină, rinichi și măduva osoasă sub formă de feritină și hemosiderină. Doza zilnică recomandată pentru adulți variază: aproximativ 8 mg/zi pentru bărbați și 18 mg/zi pentru femeile aflate la vârsta fertilă.</p>
+                        <ul>
+                            <li><b>Transportul oxigenului:</b> Fierul este o componentă cheie a hemoglobinei din globulele roșii, care leagă reversibil oxigenul în plămâni și îl transportă către țesuturi. De asemenea, este prezent în mioglobină, care stochează oxigenul în mușchi pentru utilizarea în timpul activității.</li>
+                            <li><b>Producția de energie celulară:</b> Este o componentă esențială a enzimelor citocromilor și a altor enzime implicate în lanțul de transport al electronilor din mitocondrii, cruciale pentru sinteza adenozin trifosfatului (ATP), principala moleculă de energie a organismului.</li>
+                            <li><b>Sistemul imunitar:</b> Joacă un rol important în funcția imunitară, susținând activitatea celulelor imunitare și contribuind la răspunsul organismului împotriva infecțiilor.</li>
+                            <li><b>Funcția cerebrală și dezvoltarea cognitivă:</b> Este esențial pentru dezvoltarea și funcționarea normală a creierului, în special în copilărie, influențând procesele cognitive și de învățare.</li>
+                            <li><b>Sinteza ADN-ului:</b> Fierul este implicat în sinteza ADN-ului și în diviziunea celulară.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Fierul se găsește sub două forme principale: fier hemic (mai bine absorbit) și fier non-hemic. Absorbția fierului este complexă și influențată de numeroși factori dietetici.</p>
+                        <p><b>Fier hemic (mai biodisponibil):</b> Găsit în produse animale.</p>
+                        <ul>
+                            <li><b>Carne roșie:</b> Vită, miel, porc (cele mai bogate surse).</li>
+                            <li><b>Organe:</b> Ficat, rinichi, inimă.</li>
+                            <li><b>Carne de pasăre:</b> Pui, curcan.</li>
+                            <li><b>Pește și fructe de mare:</b> Somon, ton, sardine, macrou, stridii, scoici, creveți.</li>
+                        </ul>
+                        <p><b>Fier non-hemic (biodisponibilitate variabilă):</b> Găsit în plante și alimente fortificate.</p>
+                        <ul>
+                            <li><b>Leguminoase:</b> Fasole (albă, neagră, roșie), linte, năut.</li>
+                            <li><b>Legume cu frunze verzi închise:</b> Spanac, kale, broccoli, verdeață de sfeclă, sparanghel.</li>
+                            <li><b>Fructe uscate:</b> Stafide, caise uscate.</li>
+                            <li><b>Nuci și semințe:</b> Semințe de dovleac, semințe de susan, migdale.</li>
+                            <li><b>Cereale integrale și fortificate:</b> Produse din grâu integral, orez brun, cereale pentru micul dejun fortificate.</li>
+                            <li><b>Ouă</b> (gălbenuș).</li>
+                        </ul>
+                        <p><b>Factori care cresc absorbția fierului non-hemic:</b> Vitamina C, factorul MFP (din carne, pește, pasăre), acizii citric și lactic.</p>
+                        <p><b>Factori care inhibă absorbția fierului non-hemic:</b> Fitați (din cereale integrale, leguminoase), oxalați (din spanac, rubarbă), taninuri (din ceai, cafea, vin roșu), calciu (din lapte), proteine vegetale (din soia).</p>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Există două tipuri de fier în alimente:</p>
-                    <p><b>1. Fier hemic (de origine animală):</b> Se găsește în produsele de origine animală și este foarte bine absorbit de organism (aproximativ 15-35%).</p>
-                    <ul>
-                        <li><b>Ficat:</b> Ficatul de vită, porc sau pui este una dintre cele mai concentrate surse de fier.</li>
-                        <li><b>Carne roșie:</b> Vită, miel, porc (în special carnea slabă).</li>
-                        <li><b>Fructe de mare:</b> Stridii (extrem de bogate în fier), midii, scoici, creveți, crab.</li>
-                        <li><b>Pește:</b> Ton, sardine, somon, macrou (în special cele cu oase comestibile, dacă sunt din conservă).</li>
-                        <li><b>Carne de pasăre:</b> Pui, curcan.</li>
-                        <li><b>Gălbenuș de ou</b>.</li>
-                    </ul>
-                    <p><b>2. Fier non-hemic (de origine vegetală):</b> Se găsește în produsele de origine vegetală și este mai puțin absorbit (aproximativ 2-20%). Absorbția fierului non-hemic poate fi însă semnificativ îmbunătățită prin consumul concomitent de vitamina C.</p>
-                    <ul>
-                        <li><b>Leguminoase:</b>
-                            <ul>
-                                <li>Linte: Una dintre cele mai bogate surse vegetale.</li>
-                                <li>Năut.</li>
-                                <li>Fasole (neagră, roșie, albă).</li>
-                            </ul>
-                        </li>
-                        <li><b>Nuci și semințe:</b>
-                            <ul>
-                                <li>Semințe de dovleac: O sursă excelentă.</li>
-                                <li>Semințe de susan (tahini).</li>
-                                <li>Semințe de chia.</li>
-                                <li>Caju.</li>
-                                <li>Migdale.</li>
-                            </ul>
-                        </li>
-                        <li><b>Cereale integrale:</b>
-                            <ul>
-                                <li>Quinoa.</li>
-                                <li>Ovăz.</li>
-                                <li>Orez brun.</li>
-                                <li>Cereale fortificate (verificați etichetele).</li>
-                            </ul>
-                        </li>
-                        <li><b>Legume cu frunze verzi închise:</b>
-                            <ul>
-                                <li>Spanac: Deși conține fier, oxalații din spanac pot inhiba parțial absorbția, dar vitamina C prezentă ajută la contracarare.</li>
-                                <li>Kale (varză creață).</li>
-                                <li>Broccoli.</li>
-                            </ul>
-                        </li>
-                        <li><b>Fructe uscate:</b>
-                            <ul>
-                                <li>Caise uscate.</li>
-                                <li>Smochine uscate.</li>
-                                <li>Prune uscate.</li>
-                                <li>Stafide.</li>
-                            </ul>
-                        </li>
-                        <li><b>Altele:</b>
-                            <ul>
-                                <li>Tofu (mai ales cel preparat cu săruri de calciu).</li>
-                                <li>Cartofi (în special cei copți cu coajă).</li>
-                                <li>Ciocolată neagră (cu un conținut ridicat de cacao).</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>Factori care influențează absorbția fierului:</h3>
-                    <ul>
-                        <li><b>Vitamina C:</b> Consumul de alimente bogate în vitamina C (citrice, ardei gras, broccoli, roșii) alături de surse de fier non-hemic crește semnificativ absorbția acestuia.</li>
-                        <li><b>Taninuri:</b> Prezente în cafea și ceai, pot inhiba absorbția fierului. Este recomandat să nu consumi aceste băuturi la masă sau imediat după.</li>
-                        <li><b>Fitați:</b> Găsiți în cereale integrale și leguminoase, pot reduce absorbția fierului. Procese precum înmuierea și fierberea pot reduce conținutul de fitați.</li>
-                        <li><b>Calciu:</b> Suplimentele de calciu și alimentele bogate în calciu (lactatele) pot reduce absorbția fierului. Este indicat să le consumi la ore diferite.</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (anemie feriprivă)</h3>
+                        <p>Deficiența de fier este cea mai comună deficiență nutrițională la nivel global, afectând în special femeile la vârsta fertilă, copiii mici și adolescenții.</p>
+                        <ol>
+                            <li><b>Anemie feriprivă:</b> Caracterizată prin scăderea nivelului de hemoglobină și a numărului de globule roșii mici și palide (anemie microcitară hipocromă), ducând la:
+                                <ul>
+                                    <li><b>Oboseală extremă și slăbiciune:</b> Din cauza aportului insuficient de oxigen către țesuturi.</li>
+                                    <li><b>Paloare:</b> A pielii, mucoaselor, unghiilor și a conjunctivei.</li>
+                                    <li><b>Dificultăți de respirație și palpitații:</b> În special la efort.</li>
+                                    <li><b>Dureri de cap și amețeli.</b></li>
+                                    <li><b>Unghii fragile, plate sau în formă de lingură (koilonychia).</b></li>
+                                    <li><b>Căderea părului.</b></li>
+                                    <li><b>Glosită:</b> Inflamația limbii.</li>
+                                    <li><b>Pierderea poftei de mâncare și senzație de arsură la stomac.</b></li>
+                                </ul>
+                            </li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
+                            <li><b>Afectarea performanței cognitive și a dezvoltării:</b> În special la copii, poate duce la întârzieri în dezvoltarea motorie și cognitivă, și la performanțe școlare scăzute.</li>
+                            <li><b>Sindromul picioarelor neliniștite.</b></li>
+                            <li><b>Pica:</b> Tendința de a consuma substanțe non-alimentare (de exemplu: gheață, pământ, amidon).</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hemocromatoză, sideroză)</h3>
+                        <p>Excesul de fier este, de obicei, cauzat de tulburări genetice (hemocromatoză ereditară), transfuzii sanguine repetate sau suplimentare excesivă.</p>
+                        <ol>
+                            <li><b>Hemocromatoză:</b> Acumularea excesivă de fier în organe (ficat, inimă, pancreas, piele, articulații), ducând la:
+                                <ul>
+                                    <li><b>Toxicitate hepatică:</b> Leziuni hepatice, fibroză, ciroză și risc crescut de cancer hepatic.</li>
+                                    <li><b>Diabet zaharat:</b> Prin afectarea pancreasului.</li>
+                                    <li><b>Probleme cardiace:</b> Cardiomiopatie, aritmii.</li>
+                                    <li><b>Artrită.</b></li>
+                                    <li><b>Modificări ale pielii:</b> Pigmentare cenușie sau bronzată ("diabet bronzat").</li>
+                                    <li><b>Disfuncții endocrine:</b> Hipogonadism.</li>
+                                </ul>
+                            </li>
+                            <li><b>Sideroză:</b> Depunerea fierului în țesuturi, fără a provoca neapărat leziuni funcționale grave, dar indicând o supraîncărcare.</li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree, constipație (în special la suplimentarea orală).</li>
+                            <li><b>Creșterea stresului oxidativ:</b> Fierul în exces poate acționa ca un pro-oxidant, generând radicali liberi și daune celulare.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Fier: Perspectiva emoțională</h2>
-            <p>Din punct de vedere holistic, fierul este adesea asociat cu <b>vitalitatea, forța, puterea personală, voința și capacitatea de a acționa și de a te manifesta în lume.</b> Sângele, prin care fierul transportă oxigenul, este văzut simbolic ca forța vieții și entuziasmul.</p>
+            <h2 class="section-title">Fier - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, fierul este profund asociat cu forța vitală, energia de a acționa, curajul, reziliența, capacitatea de a te "ancora" în realitate și de a-ți susține propria existență. Fiind esențial pentru sânge (care poartă viața) și pentru producția de energie, fierul rezonează cu "focul" nostru interior, cu vitalitatea, cu abilitatea de a-ți asuma rolul în lume și de a te simți puternic și capabil. Este legat de sentimentul de a fi "înrădăcinat" și de a avea un scop clar.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
                     <p>Un deficit de fier poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de entuziasm și de bucurie de viață:</b> Fierul ne dă "scânteia" vitală. O lipsă emoțională de bucurie, o apatie profundă sau un sentiment că "viața este prea grea" pot rezonă cu o lipsă de energie la nivel fizic, reflectată în deficitul de fier.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală cronică, lipsă de vlagă.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dificultatea de a te "ancora" sau de a te "împământa":</b> Fierul este un mineral al pământului, al structurii. Emoțional, o persoană cu deficit de fier s-ar putea simți "neîmpământată", lipsită de stabilitate, cu dificultăți în a-și asuma responsabilități sau a se angaja pe deplin în viața cotidiană.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Amețeli, senzație de "ceață mentală".</li>
-                            </ul>
-                        </li>
-                        <li><b>Lipsa de voință sau de curaj:</b> Fierul este legat de forța interioară și de capacitatea de a-ți urmări scopurile. O deficiență ar putea indica o lipsă de voință, teamă de confruntare, dificultatea de a-ți stabili limite sau de a-ți afirma propria putere.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Slăbiciune fizică, scăderea performanței sportive și intelectuale.</li>
-                            </ul>
-                        </li>
-                        <li><b>Tristețe profundă, melancolie, pierderea speranței:</b> Emoțiile de tristețe cronică, doliu neprocesat sau un sentiment de resemnare pot "stinge" focul interior, manifestându-se ca o lipsă de fier.</li>
-                        <li><b>Simbolismul sângelui:</b> Sângele este purtătorul vieții, al identității și al legăturilor familiale. Din perspectivă holistică, s-ar putea explora și "pierderi emoționale" sau sentimente de "golire", de "a fi drenat" energetic de situații sau persoane.</li>
+                        <li><b>Lipsa de vitalitate și oboseală sufletească:</b> Un sentiment profund de epuizare, lipsă de "poftă de viață", apatie, senzația că ești "golit/ă de energie" sau că nu te poți regenera.</li>
+                        <li><b>Lipsa de curaj și inițiativă:</b> Dificultăți în a-ți asuma riscuri, în a începe noi proiecte sau în a-ți urma pasiunile. Un sentiment de a fi "slab" sau de a nu avea "forța" de a acționa.</li>
+                        <li><b>Deconectare de la realitate sau de la "rădăcini":</b> O senzație de a fi "plutitor", neancorat, de a nu te simți pe deplin prezent sau conectat cu viața. Poate indica o lipsă de apartenență sau o dificultate în a-ți onora moștenirea.</li>
+                        <li><b>Tristețe profundă și melancolie:</b> Emoții persistente de tristețe care par să "dreneze" energia vitală, ducând la o lipsă de entuziasm și bucurie.</li>
+                        <li><b>Vulnerabilitate și lipsă de protecție:</b> Un sentiment de a fi expus, de a nu putea face față atacurilor verbale sau energetice, o lipsă de granițe sănătoase.</li>
+                        <li><b>Probleme de "împământare":</b> Dificultăți în a te conecta cu corpul fizic și cu realitatea materială, o tendință de a fi "în cap" sau de a te disocia.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de fier este mai rar și adesea legat de condiții genetice (hemocromatoza ereditară) sau de transfuzii repetate. Totuși, din perspectiva holistică, unde fiecare dezechilibru are o semnificație, am putea explora:</p>
+                    <p>Un exces de fier (adesea legat de tulburări genetice sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Rigiditate și încăpățânare:</b> Fierul este un metal dur, asociat cu structura. Un exces ar putea simboliza o rigiditate emoțională, o inflexibilitate, o dificultate de a te adapta sau de a lăsa lucrurile să curgă.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Fierul în exces se depozitează în țesuturi, inclusiv în ficat și inimă, ducând la probleme structurale.</li>
-                            </ul>
-                        </li>
-                        <li><b>Furia reprimată sau resentimente acumulate:</b> "Sângele fierbinte" sau "fierberea sângelui" sunt expresii care descriu furia. Un exces de fier ar putea sugera o acumulare de furie, resentimente sau frustrări care nu au fost exprimate sau procesate sănătos, ducând la o "supraîncărcare" interioară.</li>
-                        <li><b>Tendința de a "ține prea mult" sau de a nu "elibera":</b> Organismul reglează absorbția fierului, dar nu are un mecanism eficient de eliminare a excesului. Emoțional, acest lucru s-ar putea traduce printr-o dificultate de a renunța la trecut, la resentimente, la control, sau o tendință de a acumula (nu doar fier, ci și emoții sau posesiuni).</li>
-                        <li><b>Nevoi excesive de control:</b> O nevoie puternică de a controla mediul sau pe ceilalți, reflectând o lipsă de încredere în fluxul vieții.</li>
+                        <li><b>Rigiditate și "împietrire" emoțională:</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" sau blocat emoțional, similar cu depunerile fizice.</li>
+                        <li><b>Control obsesiv și nevoie de putere:</b> O nevoie excesivă de a controla mediul, oamenii sau situațiile, o tendință de a domina sau de a-și impune voința, din teama de a pierde controlul.</li>
+                        <li><b>"Ardere" energetică și epuizare:</b> Un consum rapid și necontrolat al resurselor energetice, o nevoie constantă de a fi în "priză", ducând la epuizare pe termen lung.</li>
+                        <li><b>Furie reprimată sau resentimente acumulate:</b> Fierul este asociat cu focul și forța. Excesul poate indica o acumulare de furie, resentimente sau amărăciune, care "intoxică" sistemul energetic.</li>
+                        <li><b>Lipsa de flexibilitate și adaptabilitate:</b> O rezistență la schimbare, o tendință de a fi inflexibil în gândire sau în abordarea situațiilor.</li>
                     </ol>
                 </div>
             </div>
@@ -338,37 +328,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces, cum ar fi hemocromatoza), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici care încurajează bucuria și entuziasmul</b> (hobby-uri, artă, muzică).</li>
-                        <li><b>Exerciții fizice ușoare, mers în natură</b> pentru "împământare".</li>
-                        <li><b>Meditație și vizualizare</b> pentru a reconecta cu sursa de energie interioară.</li>
-                        <li><b>Terapii</b> care ajută la eliberarea tristeții sau a traumelor emoționale.</li>
-                        <li><b>Afirmații pozitive</b> despre forță, energie și curaj.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în surse naturale de fier, în special fier hemic (carne roșie, organe, pește) pentru o absorbție optimă. Pentru vegetarieni, se va acorda atenție maximizării absorbției fierului non-hemic prin combinarea cu Vitamina C și evitarea inhibitorilor (de exemplu: ceai, cafea în timpul meselor). Suplimentarea cu fier, sub îndrumare medicală, este adesea necesară.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de împământare și ancorare:</strong> Meditație centrată pe rădăcini, vizualizări ale unei baze solide și sigure. Timp petrecut în natură, contact cu pământul pentru a te simți mai stabil și conectat.</li>
+                                <li><strong>Terapii pentru restabilirea vitalității și a curajului:</strong> Coaching pentru a-ți asuma inițiativa, terapie pentru a procesa sentimentele de lipsă de putere sau de apatie.</li>
+                                <li><strong>Eliberarea tristeții și a melancoliei:</strong> Jurnalism terapeutic, art-terapie, sau consiliere pentru a procesa și elibera emoțiile "drenante".</li>
+                                <li><strong>Cultivarea sentimentului de apartenență:</strong> Implicarea în comunitate, consolidarea relațiilor familiale și de prietenie.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin forța, vitalitatea și curajul (de exemplu: "Sunt plin/ă de vitalitate și forță. Am curajul să îmi urmez drumul. Sunt ancorat/ă și puternic/ă.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de eliberare emoțională</b> (jurnal, terapie, exprimare artistică a furiei).</li>
-                        <li><b>Exerciții de flexibilitate</b> (yoga, stretching) care ajută și la nivel mental.</li>
-                        <li><b>Meditație</b> pentru a cultiva acceptarea și a renunța la control.</li>
-                        <li><b>Lucrul cu iertarea</b> și eliberarea resentimentelor.</li>
-                        <li><b>Activități</b> care încurajează "curățarea" și "detoxifierea" pe toate planurile.</li>
+                        <li><strong>Nutrițional:</strong> Gestionarea aportului de fier sub îndrumare medicală. În caz de hemocromatoză, flebotomia (eliminarea sângelui) este tratamentul principal. Se va evita suplimentarea cu fier și alimentele fortificate.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control. Yoga sau tai chi pentru a cultiva fluiditatea.</li>
+                                <li><strong>Gestionarea furiei și a resentimentelor:</strong> Lucrul cu eliberarea emoțiilor toxice acumulate, cultivarea iertării (de sine și de alții).</li>
+                                <li><strong>Dezvoltarea flexibilității și a adaptabilității:</strong> Renunțarea la planuri rigide, permițând spontaneitatea și adaptarea la fluxul vieții.</li>
+                                <li><strong>Cultivarea umilinței și a compasiunii:</strong> Recunoașterea limitărilor umane și dezvoltarea empatiei față de propria persoană și față de ceilalți.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
