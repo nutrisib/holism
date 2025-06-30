@@ -1,1 +1,346 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitamina B1 - Energia și Echilibrul Nervos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
 
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Vitamina B1 - Energia și Echilibrul Nervos
+        </div>
+
+        <div class="index-button-container">
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B1 - perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vitamina B1, cunoscută și sub denumirea de tiamină, este o vitamină hidrosolubilă esențială. Aceasta înseamnă că organismul nu o poate produce și trebuie obținută zilnic prin dietă, deoarece cantitățile în exces sunt eliminate și nu sunt stocate în corp. Tiamina este cunoscută și ca "vitamina stării morale" datorită efectelor sale benefice asupra sistemului nervos și a stării psihice.</p>
+                        <ul>
+                            <li><b>Producția de energie:</b> Tiamina joacă un rol crucial în metabolismul carbohidraților, fiind esențială pentru transformarea acestora în energie (ATP). Este o componentă a coenzimei tiamin pirofosfat (TPP), care este implicată în reacțiile cheie ale ciclului Krebs și în calea pentozofosfaților, furnizând energie celulelor, în special celor cu cerințe energetice ridicate, cum ar fi celulele nervoase și cardiace.</li>
+                            <li><b>Funcția sistemului nervos:</b> Este vitală pentru menținerea sănătății și funcției normale a sistemului nervos central și periferic. Contribuie la sinteza neurotransmițătorilor (precum acetilcolina) și la transmiterea impulsurilor nervoase.</li>
+                            <li><b>Sănătatea inimii și a mușchilor:</b> Susține funcția normală a mușchilor, inclusiv a miocardului (mușchiul inimii), fiind esențială pentru un ritm cardiac regulat.</li>
+                            <li><b>Digestie:</b> Ajută digestia, în special a carbohidraților.</li>
+                            <li><b>Creștere și dezvoltare:</b> Contribuie la stimularea creșterii normale.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vitamina B1 este larg răspândită în alimente, în special în cele integrale și în carne de porc.</p>
+                        <ul>
+                            <li><b>Drojdie de bere.</b></li>
+                            <li><b>Cereale integrale:</b> Orez nedecorticat, grâu integral, făină de ovăz, tărâțe.</li>
+                            <li><b>Carne:</b> Carne de porc (fără grăsime), ficat și alte organe.</li>
+                            <li><b>Leguminoase:</b> Alune (arahide), fasole.</li>
+                            <li><b>Nuci.</b></li>
+                            <li><b>Majoritatea legumelor.</b></li>
+                            <li><b>Lapte.</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovitaminoză B1)</h3>
+                        <p>Deficiența severă de Vitamina B1 duce la beriberi, o boală care afectează predominant sistemele cardiovascular și nervos.</p>
+                        <ol>
+                            <li><b>Beriberi:</b>
+                                <ul>
+                                    <li><b>Beriberi uscat (neurologic):</b> Se manifestă prin neuropatie periferică (amorțeală, furnicături, slăbiciune la nivelul membrelor), ataxie (dificultăți de coordonare și echilibru), confuzie, probleme de memorie, iritabilitate și, în cazuri severe, paralizie.</li>
+                                    <li><b>Beriberi umed (cardiac):</b> Afectează inima, ducând la cardiomiopatie, edeme, palpitații și, în cazuri grave, insuficiență cardiacă.</li>
+                                    <li><b>Sindromul Wernicke-Korsakoff:</b> O formă severă de deficiență de tiamină, adesea întâlnită la alcoolici, caracterizată prin tulburări neurologice grave (nistagmus, ataxie, oftalmoplegie) și amnezie.</li>
+                                </ul>
+                            </li>
+                            <li><b>Oboseală și lipsă de energie:</b> Din cauza rolului său în producția de ATP.</li>
+                            <li><b>Slăbiciune musculară și dureri.</b></li>
+                            <li><b>Pierderea poftei de mâncare.</b></li>
+                            <li><b>Iritabilitate și tulburări de dispoziție.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervitaminoză B1)</h3>
+                        <p>Vitamina B1 este considerată, în general, non-toxică, deoarece excesul este rapid excretat prin urină. Toxicitatea din suplimentare este extrem de rară și minoră, chiar și la doze foarte mari (peste 5-10 grame zilnic).</p>
+                        <ol>
+                            <li><b>Simptome rare de exces:</b> Palpitații, nervozitate, erupții cutanate, edeme și reacții alergice în cazuri excepționale.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Vitamina B1 - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Vitamina B1 este profund asociată cu energia fundamentală a vieții, stabilitatea nervoasă, claritatea mentală și capacitatea de a menține un ritm armonios în fața provocărilor. Rezonează cu "scânteia" vitală care ne propulsează, cu abilitatea de a procesa experiențe fără a ne simți copleșiți și de a menține echilibrul psihic.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Vitamina B1 poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Lipsa de energie vitală și oboseală cronică:</b> Un sentiment profund de epuizare, apatie, lipsă de "chef de viață" și incapacitatea de a demara acțiuni. Senzația că "bateriile" interioare sunt constant descărcate.</li>
+                        <li><b>Nervozitate, iritabilitate și instabilitate emoțională:</b> Dificultăți în a gestiona stresul, tendința de a reacționa exagerat la stimuli, o senzație de fragilitate emoțională și lipsă de control.</li>
+                        <li><b>"Ceață mentală" și lipsă de claritate:</b> Dificultăți de concentrare, de a lua decizii clare, o senzație de confuzie mentală sau de "gândire lentă".</li>
+                        <li><b>Lipsa de "curgere" și adaptabilitate:</b> O dificultate de a te adapta la schimbări, o rigiditate în abordarea situațiilor, lipsa fluidității în reacțiile emoționale și mentale.</li>
+                        <li><b>Sentiment de vulnerabilitate a "fundației":</b> Deoarece afectează sistemul nervos și inima, deficitul poate rezonă cu o senzație de instabilitate fundamentală, o lipsă de siguranță interioară.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Deși toxicitatea fizică este rară, un exces (chiar și simbolic, la nivel energetic) ar putea sugera:</p>
+                    <ol>
+                        <li><b>Supra-stimulare și agitație:</b> O energie mentală și fizică excesivă, dificultăți de a se relaxa, o nevoie constantă de a fi în mișcare sau de a acționa, fără a permite pauze.</li>
+                        <li><b>Rigiditate în gândire sau acțiune:</b> O tendință de a fi prea fixat pe un anumit ritm sau metodă, refuzând flexibilitatea.</li>
+                        <li><b>"Arderea" resurselor:</b> O utilizare necontrolată a energiei, ducând la epuizare pe termen lung, chiar dacă pe moment se simte o vitalitate crescută.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de exces sau afecțiuni grave), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de Vitamina B1, pentru a asigura aportul constant necesar.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de reîncărcare energetică și calmare nervoasă:</strong> Meditație centrată pe respirație profundă și liniștea interioară. Yoga restaurativă sau exerciții blânde pentru a reduce tensiunea musculară și nervoasă.</li>
+                                <li><strong>Terapii pentru eliberarea stresului și anxietății:</strong> Tehnici de management al stresului, jurnalism terapeutic sau consiliere pentru a procesa sentimentele de copleșire sau iritabilitate.</li>
+                                <li><strong>Dezvoltarea clarității mentale:</strong> Practici de mindfulness pentru a îmbunătăți concentrarea și a reduce "ceața mentală". Stabilirea de obiective clare pentru a recâștiga direcția.</li>
+                                <li><strong>Restabilirea bucuriei și a entuziasmului:</strong> Timp petrecut în natură, hobby-uri, activități creative care aduc plăcere și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin energia, stabilitatea nervoasă și claritatea mentală (de exemplu: "Sunt plin/ă de energie vitală. Mintea mea este limpede și calmă. Îmi găsesc echilibrul interior.").</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Ajustarea dietei pentru a reduce alimentele stimulante (cafea, zahăr rafinat) și a echilibra aportul de nutrienți. Se va evita suplimentarea excesivă cu Vitamina B1, mai ales fără o indicație clară.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de împământare și centrare:</strong> Meditație statică, plimbări lungi în natură, exerciții fizice moderate care ajută la eliberarea tensiunii acumulate.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a nevoii de control:</strong> Lucrul cu acceptarea imperfecțiunii și a limitelor, cultivarea umilinței și a răbdării.</li>
+                                <li><strong>Cultivarea flexibilității și a spontaneității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </div>
+    </div>
+</body>
+</html>
