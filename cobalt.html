@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cobaltul și Energia Vitală</title>
+    <title>Cobalt - Esența Vitală și Conexiunea Profundă</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,91 +187,113 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Cobaltul și Energia Vitală
+            Cobalt - Esența Vitală și Conexiunea Profundă
         </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
-        </div>
-
         <div class="section">
-            <h2 class="section-title">Cobalt - Perspectiva fizică</h2>
+            <h2 class="section-title">Cobalt - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Cobaltul este un oligoelement esențial, ceea ce înseamnă că organismul are nevoie de el în cantități foarte mici pentru a funcționa corect. Rolul său cel mai important și, de fapt, aproape singurul rol cunoscut pentru sănătatea umană este acela de a fi o componentă cheie a vitaminei B12 (cobalamina).</p>
-                    <ul>
-                        <li><b>Componentă a Vitaminei B12:</b> Acesta este, de departe, cel mai vital rol al cobaltului. Fără cobalt, vitamina B12 nu ar putea fi sintetizată. Vitamina B12 este crucială pentru:
-                            <ul>
-                                <li>Formarea globulelor roșii: Este esențială pentru producerea celulelor roșii sanguine sănătoase în măduva osoasă. O deficiență de B12 poate duce la anemie megaloblastică.</li>
-                                <li>Funcția neurologică: B12 este vitală pentru sănătatea sistemului nervos, contribuind la formarea și menținerea mielinei (învelișul protector al fibrelor nervoase) și la transmiterea semnalelor nervoase.</li>
-                                <li>Sinteza ADN-ului: Joacă un rol în sinteza materialului genetic (ADN-ul), esențial pentru diviziunea și creșterea celulară.</li>
-                                <li>Metabolismul energetic: Contribuie la transformarea alimentelor în energie.</li>
-                            </ul>
-                        </li>
-                        <li><b>Alte roluri (mai puțin clare la om):</b> În afara rolului său în vitamina B12, funcțiile specifice ale cobaltului liber în corpul uman sunt puțin înțelese sau sunt considerate a fi minime. În doze mari, cobaltul poate fi chiar toxic.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Cobaltul este un oligoelement (mineral) esențial, recunoscut în principal pentru rolul său unic ca și component central al Vitaminei B12 (cobalamina). Deși este necesar în cantități foarte mici, prezența sa este indispensabilă pentru funcțiile vitale ale organismului. Prin urmare, toate rolurile fiziologice ale Vitaminei B12 sunt, implicit, roluri ale cobaltului.</p>
+                        <ul>
+                            <li><b>Formarea și maturarea celulelor roșii din sânge:</b> Este crucial pentru sinteza ADN și pentru producerea și maturarea normală a globulelor roșii în măduva osoasă, prevenind anemia megaloblastică.</li>
+                            <li><b>Sănătatea sistemului nervos:</b> Joacă un rol vital în menținerea integrității tecii de mielină care înconjoară nervii, asigurând transmiterea rapidă și eficientă a impulsurilor nervoase. Este esențial pentru funcționarea normală a creierului și a nervilor.</li>
+                            <li><b>Metabolismul macronutrienților:</b> Contribuie la utilizarea eficientă a carbohidraților, grăsimilor și proteinelor pentru producția de energie.</li>
+                            <li><b>Sinteza ADN-ului și diviziunea celulară:</b> Este indispensabilă pentru sinteza acizilor nucleici și pentru diviziunea celulară normală, procese cruciale pentru creștere și repararea țesuturilor.</li>
+                            <li><b>Reducerea homocisteinei:</b> Împreună cu acidul folic și Vitamina B6, ajută la metabolizarea homocisteinei, un aminoacid ale cărui niveluri ridicate sunt asociate cu un risc crescut de boli cardiovasculare.</li>
+                            <li><b>Promovarea creșterii și a poftei de mâncare:</b> Stimulează creșterea la copii și poate mări pofta de mâncare.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Deoarece cobaltul este esențial în principal ca parte a Vitaminei B12, sursele alimentare bogate în cobalt sunt aceleași cu cele bogate în Vitamina B12.</p>
+                        <ul>
+                            <li><b>Ficat</b> (de vită, pui) și alte organe (rinichi, inimă).</li>
+                            <li><b>Carne</b> (vită, porc, pui).</li>
+                            <li><b>Pește și fructe de mare</b> (somon, ton, sardine, macrou, stridii, scoici).</li>
+                            <li><b>Ouă</b> (gălbenuș).</li>
+                            <li><b>Produse lactate</b> (lapte, brânză, iaurt).</li>
+                            <li><b>Alimente fortificate:</b> Anumite cereale pentru micul dejun, lapte vegetal (soia, migdale, ovăz) fortificat.</li>
+                            <li><b>Leguminoase:</b> Anumite leguminoase pot conține cobalt în sol, dar nu în forma biodisponibilă direct pentru oameni.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Deoarece cobaltul este necesar în principal pentru sinteza vitaminei B12 de către microorganisme (nu de către plante sau animale direct), alimentele care conțin B12 sunt principalele surse.</p>
-                    <ul>
-                        <li><b>Produse de origine animală:</b>
-                            <ul>
-                                <li>Carne (vită, pui, porc).</li>
-                                <li>Ficat.</li>
-                                <li>Pește și fructe de mare.</li>
-                                <li>Ouă.</li>
-                                <li>Produse lactate.</li>
-                            </ul>
-                        </li>
-                        <li><b>Alimente fortificate cu B12:</b>
-                            <ul>
-                                <li>Cereale pentru micul dejun.</li>
-                                <li>Băuturi vegetale.</li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (deficiență de cobalt)</h3>
+                        <p>Deficiența primară de cobalt este extrem de rară la om, deoarece necesarul este acoperit prin aportul de Vitamina B12. Prin urmare, simptomele deficienței de cobalt sunt, în esență, cele ale deficienței de Vitamina B12.</p>
+                        <ol>
+                            <li><b>Anemie megaloblastică:</b> Caracterizată prin globule roșii mari și imature, ducând la oboseală extremă, slăbiciune, paloare, dificultăți de respirație și palpitații.</li>
+                            <li><b>Probleme neurologice:</b> Neuropatie (amorțeală, furnicături, slăbiciune la nivelul membrelor), dificultăți de echilibru și coordonare (ataxie), pierderea memoriei, confuzie, iritabilitate, modificări de dispoziție, depresie și, în cazuri severe, demență sau psihoză.</li>
+                            <li><b>Probleme gastrointestinale:</b> Inflamația limbii (glosită), pierderea poftei de mâncare, constipație.</li>
+                            <li><b>Slăbirea sistemului imunitar:</b> Reduce capacitatea de răspuns imun.</li>
+                            <li><b>Deficiențe de creștere:</b> La copii.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (toxicitate de cobalt)</h3>
+                        <p>Toxicitatea de cobalt este rară din aportul alimentar normal. Excesul este, de obicei, asociat cu expunerea industrială, implanturi medicale (de exemplu: proteze metalice) sau suplimentare excesivă cu săruri de cobalt.</p>
+                        <ol>
+                            <li><b>Cardiomiopatie:</b> Afectarea mușchiului cardiac, ducând la insuficiență cardiacă.</li>
+                            <li><b>Gușă și hipotiroidism:</b> Poate interfera cu funcția tiroidiană, ducând la mărirea glandei tiroide și la scăderea producției de hormoni tiroidieni.</li>
+                            <li><b>Probleme neurologice:</b> Neuropatie, pierderea auzului, probleme de vedere.</li>
+                            <li><b>Probleme hematologice:</b> Policitemie (creșterea numărului de globule roșii) sau anemie.</li>
+                            <li><b>Dermatite:</b> Reacții cutanate.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Cobalt: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, cobaltul, fiind componenta centrală a vitaminei B12, este adesea asociat cu <b>vitalitatea, direcția, scopul, creativitatea și conexiunea cu "scânteia" vieții</b>. Prin rolul său în formarea sângelui și funcția neurologică, cobaltul rezonează cu energia noastră vitală, capacitatea de a ne simți energizați și de a ne urma drumul în viață.</p>
+            <h2 class="section-title">Cobalt - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, cobaltul este profund asociat cu esența vitală, rădăcinile ancestrale, conexiunea profundă cu scopul vieții, memoria emoțională și capacitatea de a te simți energizat și ancorat în existență. Fiind un metal central pentru viață (în Vitamina B12) și esențial pentru formarea sângelui și sănătatea nervilor, cobaltul rezonează cu "esența" noastră vitală, cu sistemul nostru de operare emoțional și cu capacitatea de a ne mișca cu claritate și vigoare. Simbolizează, de asemenea, conexiunea cu pământul și cu moștenirea ancestrală.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de cobalt (sau, mai frecvent, de vitamina B12, în care cobaltul este esențial) poate fi legat de următoarele aspecte emoționale:</p>
+                    <p>Un deficit de cobalt (reflectând o deficiență de Vitamina B12) poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de entuziasm și de scop:</b> Un sentiment de apatie profundă, lipsa de motivație sau de direcție în viață. Senzația că "nu ai energie" pentru a-ți urma visurile sau pentru a te implica.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală, lipsă de energie, anemie megaloblastică.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dificultăți în a-ți găsi și a-ți urma chemarea:</b> O blocare a creativității sau a capacității de a te exprima autentic în lume. Senzația de a fi "pierdut" sau de a nu-ți găsi locul.</li>
-                        <li><b>Anxietate și probleme neurologice emoționale:</b> Fiind esențial pentru sănătatea sistemului nervos, un deficit poate rezonă cu stări de nervozitate, iritabilitate inexplicabilă, "ceață mentală" emoțională sau dificultăți de concentrare pe propriile obiective.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Amnezie, probleme neurologice.</li>
-                            </ul>
-                        </li>
-                        <li><b>Sentiment de deconectare:</b> O lipsă de conexiune cu propria esență, cu bucuria de a trăi sau cu ceilalți. Sentimentul de izolare sau de a nu fi "legat" de lume.</li>
-                        <li><b>Dificultăți în a procesa experiențele de viață:</b> Rolul său în metabolismul energetic și în sinteza ADN-ului poate sugera, simbolic, o dificultate în a "digera" și a integra evenimentele vieții, rămânând blocat în trecut.</li>
+                        <li><b>Deconectare de la "rădăcini" sau de la sine:</b> Un sentiment profund de izolare, de a fi "desprins" de familie, de comunitate sau de propria esență. Poate indica o lipsă de apartenență sau o dificultate în a-ți onora moștenirea ancestrală.</li>
+                        <li><b>Lipsa de vitalitate și oboseală sufletească:</b> Un sentiment profund de epuizare, lipsă de "poftă de viață", apatie, senzația că ești "golit/ă de energie" sau că nu te poți regenera la nivel profund.</li>
+                        <li><b>"Ceață mentală" și probleme de memorie:</b> Dificultăți în a-ți aminti evenimente sau informații, confuzie, lipsa de claritate în gândire. Aceasta poate reflecta o incapacitate de a integra și procesa experiențele din trecut sau de a te conecta cu înțelepciunea ancestrală.</li>
+                        <li><b>Lipsa de direcție și scop:</b> Dificultăți în a-ți aminti scopul, în a te concentra pe prezent sau pe viitor. O senzație de confuzie și de a fi "pierdut" emoțional.</li>
+                        <li><b>Dificultăți de "ancorare":</b> Lipsa unui sentiment de siguranță sau stabilitate, senzația de a fi "neconectat/ă" sau de a nu-ți găsi locul în lume.</li>
+                        <li><b>Probleme cu "fluxul" vieții și "rigiditate" neurologică:</b> Afectarea sistemului nervos poate rezonă cu o incapacitate de a te adapta fluid la schimbări, o rigiditate în reacții sau o senzație de a fi "înjghebat" emoțional.</li>
+                        <li><b>Tristețe profundă, melancolie, lipsa de bucurie:</b> Emoții persistente de tristețe care par să "dreneze" energia vitală, ducând la o lipsă de entuziasm.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de cobalt (foarte rar din dietă, mai des din expuneri industriale sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <p>Deși toxicitatea fizică a cobaltului din dietă este rară, un exces (chiar și simbolic, la nivel energetic) ar putea sugera:</p>
                     <ol>
-                        <li><b>Impulsivitate și supra-activitate:</b> O tendință de a fi prea "pasionat" sau impulsiv, de a acționa fără a gândi, o energie debordantă, dar necanalizată.</li>
-                        <li><b>Furia reprimată sau agresivitate:</b> Cobaltul poate fi asociat cu "focul" interior. Un exces ar putea indica o acumulare de furie sau agresivitate care este fie reprimată, fie se manifestă în moduri necontrolate.</li>
-                        <li><b>Rigiditate în obiective:</b> O obsesie cu atingerea unor obiective, fără a permite flexibilitate sau adaptare la circumstanțe noi, o "încăpățânare" energetică.</li>
+                        <li><b>Rigiditate în conexiuni și control:</b> O tendință de a impune conexiuni sau de a controla relațiile într-un mod rigid, fără a permite fluiditatea sau libertatea.</li>
+                        <li><b>"Împietrire" emoțională:</b> O tendință de a reține emoțiile, de a nu le lăsa să curgă liber, de a fi "împietrit" sau blocat emoțional.</li>
+                        <li><b>Supra-activare și agitație:</b> O energie mentală și fizică excesivă, o nevoie constantă de a fi ocupat sau de a acționa, uneori fără un scop clar, ducând la "arderea" resurselor interne.</li>
+                        <li><b>Memorie selectivă sau obsesivă:</b> O tendință de a se agăța de amintiri (trecute sau tipare mentale) într-un mod rigid, fără a permite fluiditatea sau noi perspective.</li>
+                        <li><b>Dificultăți în a "elibera" controlul asupra rădăcinilor:</b> O preocupare excesivă pentru controlul moștenirii, a trecutului sau a sentimentului de apartenență.</li>
                     </ol>
                 </div>
             </div>
@@ -268,36 +301,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau afecțiuni grave), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Exerciții de vizualizare</b> a scopului și a direcției în viață.</li>
-                        <li><b>Practici creative</b> (artă, muzică, scris) pentru a reconecta cu bucuria și inspirația.</li>
-                        <li><b>Meditații</b> pentru a spori vitalitatea și a elibera blocajele emoționale.</li>
-                        <li><b>Explorarea și integrarea experiențelor trecute</b> pentru a elibera energie.</li>
-                        <li><b>Activități</b> care conectează cu natura și cu simțul apartenenței.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente de origine animală care sunt surse naturale de Vitamina B12, asigurând astfel și aportul de cobalt. Pentru vegetarieni sau vegani, suplimentarea cu Vitamina B12 este esențială și se va face sub îndrumare. Educație nutrițională privind importanța acestei vitamine.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de reconectare cu rădăcinile și esența:</strong> Meditație centrată pe vitalitate profundă și pe sentimentul de apartenență. Exerciții de împământare pentru a te simți mai conectat cu realitatea și cu moștenirea ancestrală.</li>
+                                <li><strong>Terapii pentru eliberarea blocajelor emoționale legate de trecut:</strong> Jurnalism terapeutic, terapie pentru a procesa amintiri dureroase sau traume care contribuie la "ceața mentală" sau la lipsa de vitalitate.</li>
+                                <li><strong>Dezvoltarea clarității scopului:</strong> Practici de mindfulness pentru a îmbunătăți concentrarea și a reduce confuzia privind direcția în viață.</li>
+                                <li><strong>Restabilirea bucuriei și a entuziasmului:</strong> Timp petrecut în natură, hobby-uri, activități creative care aduc plăcere și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin vitalitatea, claritatea mentală și echilibrul emoțional (de exemplu: "Sunt conectat/ă cu esența mea vitală. Mă simt ancorat/ă și în siguranță. Îmi amintesc scopul meu și mă mișc cu vigoare.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de calmare și echilibrare</b> a energiei (yoga, tai chi, respirație profundă).</li>
-                        <li><b>Terapii</b> pentru gestionarea furiei și exprimarea sănătoasă a emoțiilor.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a reduce supra-activitatea mentală și fizică.</li>
-                        <li><b>Reevaluarea obiectivelor</b> și cultivarea flexibilității.</li>
+                        <li><strong>Nutrițional:</strong> Deoarece toxicitatea este rară din dietă, intervenția este mai puțin necesară, dar se va evita suplimentarea excesivă cu cobalt fără o indicație medicală clară.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de calmare și centrare:</strong> Meditație statică, respirație profundă, yoga restaurativă pentru a tempera supra-stimularea și agitația.</li>
+                                <li><strong>Terapii pentru eliberarea rigidității și a nevoii de control:</strong> Lucrul cu acceptarea imperfecțiunii și a limitelor, cultivarea fluidității în gândire și acțiune.</li>
+                                <li><strong>Cultivarea flexibilității și a spontaneității:</strong> Renunțarea la tiparele rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare, evitând "arderea" energetică prin suprasolicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
