@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borul și Echilibrul Mental</title>
+    <title>Bor - Vitalitate și Echilibru Mental</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,76 +187,104 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Borul și Echilibrul Mental
+            Bor - Codul Fundamental al Vitalității
         </div>
 
         <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <a href="index.html" class="index-button">&larr; Înapoi la indexul Ghidului Dual</a>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Bor - Perspectiva fizică</h2>
+            <h2 class="section-title">Bor - perspectiva fizică</h2>
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Borul este considerat un oligoelement important, chiar dacă nu este clasificat ca esențial în toate ghidurile.</p>
+                    <p>Borul este un oligoelement (mineral) a cărui funcție esențială în nutriția umană este încă în curs de cercetare, dar dovezile din studiile pe animale și observațiile umane sugerează un rol important. Este un element larg răspândit în natură, în special în sol și apă.</p>
                     <ul>
-                        <li><b>Metabolismul mineralelor și sănătatea oaselor:</b> Are un rol semnificativ în metabolismul calciului, magneziului și fosforului, contribuind astfel la sănătatea oaselor și la prevenirea osteoporozei.</li>
-                        <li><b>Funcția cognitivă și reglarea hormonală:</b> De asemenea, este implicat în funcția cognitivă (memorie și concentrare) și poate influența nivelurile de hormoni, în special estrogenul și testosteronul.</li>
+                        <li><b>Metabolismul calciului, magneziului și fosforului:</b> Borul este implicat în metabolismul acestor minerale esențiale pentru sănătatea oaselor.</li>
+                        <li><b>Metabolismul hormonilor steroizi:</b> Afectează nivelurile și activitatea hormonilor precum estrogenul și testosteronul, influențând densitatea osoasă și alte funcții hormonale.</li>
+                        <li><b>Funcția cerebrală:</b> Poate juca un rol în vigilența mentală și coordonare.</li>
+                        <li><b>Interacțiuni cu Vitamina D:</b> Poate influența reglarea metabolismului mineral în prezența Vitaminei D.</li>
                     </ul>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Borul se găsește în diverse alimente:</p>
+                    <p>Borul este cel mai abundent în alimentele de origine vegetală.</p>
                     <ul>
-                        <li><b>Fructe:</b> Mere, pere, struguri, piersici, prune uscate.</li>
-                        <li><b>Nuci:</b> Migdale, alune.</li>
-                        <li><b>Leguminoase:</b> Fasole, linte.</li>
-                        <li><b>Legume cu frunze verzi:</b> Spanac, varză.</li>
-                        <li><b>Miere.</b></li>
-                        <li><b>Vinul.</b></li>
+                        <li><b>Fructe:</b> Mere, pere, struguri, avocado, fructe de pădure, prune uscate, stafide.</li>
+                        <li><b>Legume:</b> Legume cu frunze verzi, broccoli, morcovi, cartofi.</li>
+                        <li><b>Nuci și semințe:</b> Migdale, alune de pădure, nuci.</li>
+                        <li><b>Leguminoase:</b> Fasole, linte, năut.</li>
+                        <li><b>Băuturi:</b> Vin, cidru, bere (în cantități semnificative).</li>
+                        <li><b>Apă:</b> Conținutul variază în funcție de sursa geologică.</li>
                     </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de deficit</h3>
+                    <p>Deficiența de bor nu este încă pe deplin caracterizată clinic la om, dar studiile sugerează:</p>
+                    <ol>
+                        <li><b>Probleme osoase:</b> Pierderea calciului și magneziului prin urină, ceea ce poate contribui la decalcifiere și la risc de osteoporoză, în special la femeile post-menopauză.</li>
+                        <li><b>Funcție cerebrală afectată:</b> Reducerea vigilenței mentale și a performanței cognitive.</li>
+                        <li><b>Dezechilibre hormonale:</b> Posibilă influență asupra nivelurilor de hormoni steroizi.</li>
+                        <li><b>Creștere întârziată:</b> Observată în studiile pe animale.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title">Simptome și boli cauzate de exces</h3>
+                    <p>Toxicitatea borului din alimente este rară. Excesul este, în general, bine tolerat, fiind excretat rapid prin urină. Cu toate acestea, la doze foarte mari sau din expuneri neobișnuite (de exemplu: borax), pot apărea:</p>
+                    <ol>
+                        <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree.</li>
+                        <li><b>Probleme dermatologice:</b> Erupții cutanate, eritem.</li>
+                        <li><b>Probleme neurologice:</b> Iritabilitate, convulsii (în cazuri extreme, la sugari).</li>
+                        <li><b>Anemie.</b></li>
+                    </ol>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Bor: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, borul este un oligoelement adesea asociat cu <b>claritatea mentală, intuiția, flexibilitatea gândirii, echilibrul hormonal și capacitatea de a integra informațiile</b>. Prin rolul său în sănătatea oaselor și a funcției cognitive, borul rezonează cu structura noastră internă (gânduri, credințe) și cu fluiditatea proceselor mentale și emoționale.</p>
+            <h2 class="section-title">Bor - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, borul este profund asociat cu structura, integritatea, echilibrul hormonal (yin/yang interior), claritatea mentală și capacitatea de a menține flexibilitatea și adaptabilitatea în fața schimbării. Influența sa asupra sănătății oaselor (fundația fizică) și a metabolismului hormonal rezonează cu "scheletul" nostru emoțional și spiritual, cu abilitatea de a ne menține coerența interioară și de a ne adapta la fluxurile vieții.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de bor poate fi legat de următoarele aspecte emoționale:</p>
+                    <p>Un "deficit" energetic sau metaforic de bor ar putea fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de claritate mentală și "ceață" emoțională:</b> Dificultăți de concentrare, o senzație de confuzie mentală sau emoțională, incapacitatea de a lua decizii clare. Poate indica o lipsă de direcție sau scop.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Dificultăți de concentrare, probleme de memorie.</li>
-                            </ul>
-                        </li>
-                        <li><b>Rigiditate în gândire și inflexibilitate:</b> O tendință de a fi blocat în tipare vechi de gândire, dificultatea de a accepta noi perspective sau de a se adapta la schimbare. Poate duce la resentimente și frustrare.</li>
-                        <li><b>Dezechilibre hormonale emoționale:</b> Fluctuții emoționale intense, iritabilitate sau instabilitate cauzate de dezechilibre hormonale la nivel subtil. Borul influențează hormoni precum estrogenul și testosteronul.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Simptome premenstruale accentuate, oboseală inexplicabilă.</li>
-                            </ul>
-                        </li>
-                        <li><b>Lipsa de intuiție sau de "ghidare interioară":</b> O deconectare de la vocea interioară, dificultatea de a avea încredere în propriile instincte.</li>
-                        <li><b>Sentiment de a fi "fragil" sau "neconstruit":</b> Având în vedere rolul său în sănătatea oaselor, un deficit poate rezonă cu un sentiment de fragilitate emoțională, de a nu avea o structură interioară solidă pe care să te bazezi.</li>
+                        <li><b>Fragilitate emoțională și lipsă de suport:</b> Un sentiment de a nu fi susținut, de a te simți "fragil" în fața provocărilor, lipsa unei "fundații" emoționale solide.</li>
+                        <li><b>Rigiditate mentală și inflexibilitate:</b> Dificultăți în a te adapta la noi idei sau situații, o tendință de a fi "încăpățânat" sau de a te agăța de vechi tipare, chiar și atunci când sunt dăunătoare.</li>
+                        <li><b>Dezechilibre emoționale legate de ciclul vieții:</b> Fluctuații de dispoziție, iritabilitate sau sentimente de dezechilibru, în special în perioadele de schimbări hormonale.</li>
+                        <li><b>Lipsa de claritate mentală și de viziune:</b> Dificultăți de concentrare, de a lua decizii clare, senzația de "ceață mentală" sau de lipsă de direcție.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de bor (rar din dietă, mai des din suplimente în doze foarte mari) ar putea sugera din perspectivă holistică:</p>
+                    <p>Dat fiind că excesul fizic este rar, un "exces" simbolic ar putea sugera:</p>
                     <ol>
-                        <li><b>Suprastimulare mentală și nervozitate:</b> O minte prea activă, tendința de a analiza excesiv, de a fi mereu "în cap" (cerebral) și de a nu te putea relaxa. Poate duce la insomnie și epuizare mentală.</li>
-                        <li><b>Rigiditate intelectuală:</b> O nevoie de a avea întotdeauna dreptate, o rezistență la alte opinii, dogmatism.</li>
-                        <li><b>Perfecționism exagerat:</b> O dorință obsesivă de perfecțiune, care poate duce la frustrare constantă și la presiuni interne mari.</li>
-                        <li><b>Control excesiv:</b> Tendința de a controla mediul și oamenii prin intelect, prin logică rigidă.</li>
+                        <li><b>Rigiditate excesivă și control:</b> O nevoie obsesivă de a controla fiecare aspect al vieții, de a impune structuri rigide, fără a permite fluiditatea sau spontaneitatea. O "împietrire" emoțională.</li>
+                        <li><b>Perfecționism obsesiv:</b> O preocupare exagerată pentru a fi "perfect" sau "impecabil", ducând la judecată acerbă față de propria persoană și față de ceilalți.</li>
+                        <li><b>Dificultate în a "curge" cu viața:</b> O rezistență la schimbare, o tendință de a "cristaliza" emoțiile sau ideile, fără a le permite să evolueze.</li>
+                        <li><b>Iluzii de stabilitate absolută:</b> O credință rigidă că totul trebuie să fie sub control, negând vulnerabilitatea naturală a vieții.</li>
                     </ol>
                 </div>
             </div>
@@ -253,36 +292,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de toxicitate), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de meditație și mindfulness</b> pentru a calma mintea și a spori claritatea.</li>
-                        <li><b>Practici de flexibilitate mentală:</b> Învățarea de noi abilități, cititul, discuții deschise.</li>
-                        <li><b>Terapii</b> care ajută la explorarea și eliberarea tiparelor de gândire limitative.</li>
-                        <li><b>Conectarea cu intuiția</b> prin jurnalism, artă, timp petrecut în natură.</li>
-                        <li><b>Practici de "împământare"</b> pentru a aduce stabilitate emoțională.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente vegetale care sunt surse naturale de bor (fructe, legume, nuci, leguminoase).</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de întărire a fundației și a stabilității interioare:</strong> Meditație centrată pe rădăcini, vizualizări ale unei baze solide și sigure. Exerciții de împământare (plimbări în natură, contact cu pământul) pentru a te simți mai ancorat și conectat.</li>
+                                <li><strong>Terapii pentru eliberarea rigidității mentale și emoționale:</strong> Coaching pentru dezvoltarea flexibilității cognitive și emoționale. Lucrul cu acceptarea vulnerabilității și a imperfecțiunilor.</li>
+                                <li><strong>Dezvoltarea adaptabilității:</strong> Practici precum yoga sau tai chi care încurajează fluiditatea mișcării și a gândirii.</li>
+                                <li><strong>Reconectarea cu fluxul vieții:</strong> Activități creative care stimulează spontaneitatea și bucuria.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin stabilitatea, flexibilitatea și echilibrul (de exemplu: "Sunt puternic/ă și flexibil/ă. Mă adaptez cu ușurință la schimbare. Mă simt ancorat/ă și în siguranță.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Tehnici de relaxare profundă:</b> Respirație, yoga, băi calde.</li>
-                        <li><b>Activități</b> care ajută la "ieșirea din cap" și la conectarea cu corpul (sport, dans, plimbări).</li>
-                        <li><b>Terapii</b> care ajută la eliberarea nevoii de control și la cultivarea acceptării.</li>
-                        <li><b>Practici</b> care încurajează empatia și ascultarea activă.</li>
+                        <li><strong>Nutrițional:</strong> Se va monitoriza aportul de bor din dietă și suplimente pentru a evita dozele excesive.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare pentru a evita "arderea" energetică prin supra-solicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
