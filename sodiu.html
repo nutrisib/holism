@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodiu - Echilibrul și Fluiditatea Socială</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #e9ecef;
+            color: #343a40;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #79a3b1;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #5f8694 transparent;
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #5f8694 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid #a3d9ff;
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
+        }
+        .subsection {
+            flex: 1;
+            min-width: 280px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+        .subsection:hover {
+            transform: translateY(-5px);
+        }
+        .subsection-title {
+            font-size: 1.3em;
+            color: #5f8694;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        .subsection p, .subsection ul, .subsection ol {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+        .subsection ul, .subsection ol {
+            padding-left: 20px;
+        }
+        .subsection li {
+            margin-bottom: 5px;
+        }
+        .subsection b {
+            color: #34495e;
+        }
+        .note {
+            font-size: 0.85em;
+            color: #777;
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .subsection ol ul {
+            list-style: circle;
+            margin-left: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .icon {
+            font-size: 1.8em;
+            margin-right: 10px;
+            color: #79a3b1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .icon-small {
+            font-size: 1.5em;
+            margin-right: 8px;
+            color: #79b18b;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .index-button-container {
+            text-align: center;
+            padding: 20px 40px;
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .index-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+        }
+        .index-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <div class="infographic-header">
+            Sodiu - Echilibrul și Fluiditatea Socială
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Sodiu - perspectiva fizică</h2>
+            <div class="section-content">
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Sodiul (Na) este un macromineral esențial, prezent în corpul uman în cantități semnificative, aproximativ 100 g (0.1% din greutatea corporală a unui adult). Este principalul ion pozitiv (cation) al fluidului extracelular, jucând un rol crucial în menținerea echilibrului fluidelor și a potențialului electric al membranelor celulare. Doza zilnică recomandată pentru adulți este de 1000 mg/zi (pentru menținere).</p>
+                        <ul>
+                            <li><b>Echilibrul fluidelor și electroliților:</b> Este principalul cation al fluidului extracelular, esențial pentru menținerea echilibrului hidric și osmotic între compartimentele celulare și extracelulare. Lucrează în sinergie cu potasiul și clorul pentru a regla volumul fluidelor corporale.</li>
+                            <li><b>Transmiterea impulsurilor nervoase:</b> Este crucial pentru generarea și transmiterea impulsurilor nervoase. Pompa sodiu-potasiu (Na+/K+-ATPaza) este fundamentală pentru menținerea potențialului de repaus al membranei celulare și pentru conducerea nervoasă.</li>
+                            <li><b>Contracția musculară:</b> Este implicat în contracția normală a mușchilor, inclusiv a mușchiului cardiac.</li>
+                            <li><b>Reglarea tensiunii arteriale:</b> Joacă un rol important în reglarea tensiunii arteriale, iar aportul excesiv este un factor major de risc pentru hipertensiune.</li>
+                            <li><b>Absorbția nutrienților:</b> Este implicat în co-transportul activ al unor nutrienți (de exemplu: glucoza, aminoacizi) în intestin.</li>
+                            <li><b>Echilibrul acido-bazic (pH):</b> Contribuie la menținerea pH-ului normal al sângelui și al fluidelor corporale.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Sodiul este omniprezent în dieta modernă, în special în alimentele procesate.</p>
+                        <ul>
+                            <li><b>Sare de masă (clorură de sodiu):</b> Aproximativ 1 linguriță (5 g) de sare conține 2300 mg de sodiu.</li>
+                            <li><b>Alimente procesate:</b> Reprezintă aproximativ 75% din aportul zilnic de sodiu.
+                                <ul>
+                                    <li>Mezeluri, brânzeturi procesate.</li>
+                                    <li>Conserve (legume, carne, pește).</li>
+                                    <li>Produse de panificație (pâine, biscuiți, produse de patiserie).</li>
+                                    <li>Mâncăruri preparate, fast-food, supe la plic, snacks-uri sărate (chipsuri, covrigei, popcorn).</li>
+                                    <li>Condimente și sosuri (ketchup, sos de soia, sosuri pentru salate).</li>
+                                </ul>
+                            </li>
+                            <li><b>Alimente naturale:</b> Fructe, legume, carne, lactate (conțin sodiu în cantități mult mai mici).</li>
+                            <li><b>Apă potabilă:</b> Conținutul variază.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hiponatremie)</h3>
+                        <p>Deficiența de sodiu este rară din cauze dietetice, dar poate apărea în cazuri de pierderi excesive de fluide (de exemplu: transpirație abundentă, vărsături severe, diaree prelungită, utilizarea diureticelor) sau în condiții medicale specifice.</p>
+                        <ol>
+                            <li><b>Dezechilibre fluide și electrolitice:</b> Poate duce la deshidratare, dezechilibre acido-bazice și, în cazuri severe, la edem cerebral.</li>
+                            <li><b>Crampe musculare și slăbiciune musculară:</b> Din cauza afectării funcției neuromusculare.</li>
+                            <li><b>Oboseală, letargie și apatie mentală.</b></li>
+                            <li><b>Dureri de cap, greață și vărsături.</b></li>
+                            <li><b>Tensiune arterială scăzută (hipotensiune).</b></li>
+                            <li>În cazuri severe: confuzie, convulsii și comă.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipernatremie)</h3>
+                        <p>Excesul de sodiu este comun în dietele moderne, fiind asociat în principal cu aportul crescut de sare.</p>
+                        <ol>
+                            <li><b>Retenție de fluide și edeme:</b> Excesul de sodiu determină corpul să rețină apă pentru a menține echilibrul osmotic.</li>
+                            <li><b>Hipertensiune arterială:</b> O relație puternică a fost observată între aportul crescut de sodiu și tensiunea arterială ridicată, crescând riscul de boli cardiovasculare și accident vascular cerebral.</li>
+                            <li><b>Sete excesivă și urinare frecventă.</b></li>
+                            <li><b>Probleme renale:</b> Poate suprasolicita rinichii.</li>
+                            <li><b>Dezechilibre electrolitice:</b> Poate afecta echilibrul potasiului.</li>
+                            <li><b>Probleme digestive:</b> Greață, diaree.</li>
+                            <li><b>Deshidratare</b> (la nivel celular, în ciuda retenției de apă).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Sodiu - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, Sodiul este profund asociat cu echilibrul social, fluiditatea în relații, capacitatea de a te adapta la mediul extern și de a menține conexiuni, precum și cu gestionarea granițelor personale. Fiind principalul ion al fluidului extracelular (care înconjoară celulele și facilitează comunicarea), Sodiul rezonează cu "fluiditatea" noastră socială, cu abilitatea de a interacționa, de a te adapta la normele sociale și de a menține armonia în grupuri.</p>
+
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
+                    <p>Un deficit de Sodiu poate fi legat de următoarele aspecte emoționale:</p>
+                    <ol>
+                        <li><b>Deconectare socială și izolare:</b> Sentimentul de a fi "desprins" de grup, de a nu te integra, o dificultate în a stabili sau menține conexiuni sociale.</li>
+                        <li><b>Lipsa de adaptabilitate socială:</b> O rigiditate în interacțiunile sociale, dificultăți în a "curge" cu dinamica grupului sau în a te adapta la noi medii.</li>
+                        <li><b>Vulnerabilitate la presiuni externe:</b> O lipsă de granițe emoționale sănătoase, permițând influențelor externe să te "dreneze" energetic.</li>
+                        <li><b>Oboseală emoțională și lipsă de vitalitate socială:</b> Un sentiment de epuizare după interacțiuni sociale, lipsa de entuziasm pentru activități de grup.</li>
+                        <li><b>Dificultăți în a "asimila" sprijinul social:</b> Incapacitatea de a primi ajutor sau "nutriție" emoțională din partea comunității.</li>
+                    </ol>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
+                    <p>Un exces de Sodiu (adesea legat de aportul excesiv de sare) ar putea sugera din perspectivă holistică:</p>
+                    <ol>
+                        <li><b>Rigiditate socială și control excesiv:</b> O nevoie obsesivă de a controla mediul social, de a impune reguli sau de a fi "șeful", ducând la tensiuni în relații.</li>
+                        <li><b>"Sărarea" relațiilor:</b> O tendință de a adăuga "dramă" sau "tensiune" în interacțiuni, de a fi excesiv de critic sau de a crea conflicte.</li>
+                        <li><b>Retenție emoțională și incapacitatea de a elibera:</b> Similar cu retenția de fluide, poate indica o tendință de a reține emoții, resentimente sau amintiri dureroase, fără a le elibera, ducând la "încordare" interioară.</li>
+                        <li><b>Presiune socială autoimpusă:</b> O nevoie de a fi mereu "la înălțime" în context social, de a performa sau de a menține o imagine perfectă, ducând la epuizare.</li>
+                        <li><b>Lipsa de flexibilitate în interacțiuni:</b> Refuzul de a vedea alte perspective sau de a face compromisuri în relațiile sociale.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces, cum ar fi hipertensiunea), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
+            <div class="section-content">
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Se va asigura un aport adecvat de Sodiu din surse naturale, evitând alimentele ultra-procesate. În cazuri de pierderi excesive (de exemplu: sportivi, climă caldă), se va monitoriza aportul de electroliți.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de reconectare socială și apartenență:</strong> Implicarea în comunitate, consolidarea relațiilor familiale și de prietenie.</li>
+                                <li><strong>Terapii pentru eliberarea sentimentului de izolare:</strong> Coaching pentru dezvoltarea abilităților sociale, terapie pentru a procesa traume legate de respingere sau deconectare.</li>
+                                <li><strong>Dezvoltarea adaptabilității sociale:</strong> Lucrul cu flexibilitatea în interacțiuni, renunțarea la rigiditate în abordarea relațiilor.</li>
+                                <li><strong>Restabilirea vitalității și a bucuriei sociale:</strong> Participarea la activități de grup care aduc plăcere și reconectează cu energia colectivă.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin conexiunea, apartenența și fluiditatea socială (de exemplu: "Sunt conectat/ă și susținut/ă. Mă adaptez cu ușurință în relații. Mă simt parte din comunitate.").</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="subsection">
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
+                    <ul>
+                        <li><strong>Nutrițional:</strong> Reducerea drastică a aportului de Sodiu din alimente procesate și fast-food. Concentrarea pe alimente integrale, neprocesate. Monitorizarea aportului de Sodiu sub îndrumare medicală, în special în caz de hipertensiune.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control în relații. Yoga sau tai chi pentru a cultiva fluiditatea.</li>
+                                <li><strong>Terapii pentru gestionarea furiei și a resentimentelor:</strong> Lucrul cu eliberarea emoțiilor toxice acumulate, cultivarea iertării (de sine și de alții).</li>
+                                <li><strong>Dezvoltarea flexibilității și a adaptabilității sociale:</strong> Renunțarea la tipare rigide în interacțiuni, permițând spontaneitatea și adaptarea la fluxul relațiilor.</li>
+                                <li><strong>Cultivarea umilinței și a compasiunii:</strong> Recunoașterea limitărilor umane și dezvoltarea empatiei față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Stabilirea unor granițe sănătoase:</strong> Învățarea de a-și gestiona energia în relații și de a nu se supra-implica.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
+        </div>
+
+        <div class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </div>
+    </div>
+</body>
+</html>
