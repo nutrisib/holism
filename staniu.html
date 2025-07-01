@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staniul și Stabilitatea Interioară</title>
+    <title>Staniu - Protecția și Conservarea</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,64 +187,105 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Staniul și Stabilitatea Interioară
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Staniu - Protecția și Conservarea
         </div>
 
         <div class="section">
-            <h2 class="section-title">Staniu - Perspectiva fizică</h2>
+            <h2 class="section-title">Staniu - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Staniul este un oligoelement a cărui esențialitate pentru om nu este pe deplin demonstrată, deși a fost considerat esențial pentru creștere la unele specii animale.</p>
-                    <ul>
-                        <li><b>Potențial în formarea oaselor și a cartilajelor:</b> Cercetările preliminare au sugerat că ar putea fi implicat în formarea oaselor și a cartilajelor. Cu toate acestea, este necesară mai multă cercetare pentru a-i defini cu precizie rolul fiziologic la oameni.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Staniul (Sn) este un oligoelement (mineral) prezent în corpul uman în cantități foarte mici, a cărui esențialitate pentru nutriția umană este încă în curs de cercetare și nu este pe deplin stabilită. Se estimează că un adult conține aproximativ 17 mg de staniu. Doza zilnică recomandată pentru adulți nu este stabilită oficial, dar aportul estimat este de aproximativ 8 µg/zi. Este recunoscut pentru rolul său în anumite procese biologice, deși mecanismele precise nu sunt pe deplin înțelese.</p>
+                        <ul>
+                            <li><b>Metabolismul energetic:</b> Poate fi implicat în metabolismul energetic și în utilizarea oxigenului.</li>
+                            <li><b>Creștere și dezvoltare:</b> Există dovezi că poate avea un rol în creștere și dezvoltare.</li>
+                            <li><b>Funcția enzimatică:</b> Poate influența funcția anumitor enzime.</li>
+                            <li><b>Interacțiuni minerale:</b> Are o interacțiune cu fierul și zincul.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Staniul este larg răspândit în alimente, dar conținutul poate varia. Cea mai semnificativă sursă dietetică este reprezentată de alimentele conservate în cutii de tablă, unde staniul poate migra în alimente.</p>
+                        <ul>
+                            <li><b>Alimente conservate:</b> Fructe, legume, sucuri, pește conservat în cutii de tablă (sursa majoră de staniu în dietă).</li>
+                            <li><b>Cereale integrale.</b></li>
+                            <li><b>Leguminoase.</b></li>
+                            <li><b>Carne și pește.</b></li>
+                            <li><b>Fructe și legume.</b></li>
+                            <li><b>Apă potabilă</b> (conținutul variază).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Staniul se găsește în cantități foarte mici în majoritatea alimentelor.</p>
-                    <ul>
-                        <li><b>Fructe și legume proaspete</b>.</li>
-                        <li><b>Carne</b>.</li>
-                        <li><b>Pește</b>.</li>
-                        <li><b>Considerații:</b> Prezența sa în alimente poate fi influențată de solul în care au crescut plantele sau de materialele de ambalare (de exemplu, conserve).</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipostaniemie)</h3>
+                        <p>Deficiența de staniu nu a fost observată sau caracterizată clinic la om, deoarece necesarul său este extrem de mic și este larg răspândit în mediu și alimente. Studiile pe animale au sugerat posibile efecte în caz de deficiență severă.</p>
+                        <ol>
+                            <li><b>Creștere întârziată:</b> Observată în studiile pe animale.</li>
+                            <li><b>Afectarea funcției de reproducere:</b> Observată la animale.</li>
+                            <li><b>Reducerea eficienței utilizării nutrienților.</b></li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hiperstaniemie / toxicitate de staniu)</h3>
+                        <p>Toxicitatea staniului din alimente este rară. Excesul este, de obicei, asociat cu expunerea la staniu din conservele alimentare (în special cele acide care pot coroda ambalajul), din mediul industrial sau din suplimentare excesivă.</p>
+                        <ol>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree, dureri abdominale (la ingestia acută de doze mari, în special din conserve corodate).</li>
+                            <li><b>Probleme hepatice și renale:</b> La expuneri cronice și doze foarte mari.</li>
+                            <li><b>Anemie.</b></li>
+                            <li><b>Dermatite:</b> Reacții cutanate.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Staniu: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, staniul (cositorul) este un oligoelement a cărui esențialitate pentru om nu este pe deplin demonstrată, dar este adesea asociat cu <b>stabilitatea, adaptabilitatea la mediu, formarea și structura (atât fizică, cât și simbolică)</b>. Având în vedere potențialul său rol în formarea oaselor și a cartilajelor, staniul rezonează cu capacitatea noastră de a ne construi și menține o structură interioară și de a interacționa cu mediul înconjurător.</p>
+            <h2 class="section-title">Staniu - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, staniul este profund asociat cu protecția, conservarea, capacitatea de a "păstra" și de a "sigila" experiențele, precum și cu reziliența și adaptabilitatea la mediul extern. Fiind un element utilizat în conservarea alimentelor și a structurilor, staniul rezonează cu abilitatea noastră de a ne proteja resursele interioare, de a ne menține integritatea în fața presiunilor externe și de a procesa experiențele pentru a le "conserva" în memorie.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Deși o deficiență de staniu nu este recunoscută clinic la om, din perspectivă holistică am putea explora:</p>
+                    <p>Un "deficit" energetic sau metaforic de staniu ar putea fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de stabilitate și sentiment de fragilitate:</b> Un sentiment de a fi lipsit de o bază solidă, de a fi ușor de "îndoit" sau de a te prăbuși sub presiune emoțională.</li>
-                        <li><b>Dificultăți în a te "construi" sau a te "consolida" emoțional:</b> Incapacitatea de a-ți forma convingeri puternice, de a-ți dezvolta o identitate stabilă sau de a-ți reconstrui viața după o experiență dificilă.</li>
-                        <li><b>Probleme de adaptare la mediu:</b> O dificultate de a te integra în noi grupuri, situații sau de a te simți confortabil în diverse contexte.</li>
-                        <li><b>Rigiditate ascunsă în fața schimbării:</b> O teamă profundă de a pierde ceea ce este stabil, ducând la o rezistență inconștientă la transformare.</li>
+                        <li><b>Vulnerabilitate și lipsă de protecție:</b> Sentimentul de a fi expus, de a nu putea face față influențelor externe, o lipsă de granițe sănătoase.</li>
+                        <li><b>Dificultăți în a "conserva" energia sau emoțiile:</b> O tendință de a te "drena" emoțional, de a nu-ți putea menține resursele interioare sau de a uita rapid lecțiile învățate.</li>
+                        <li><b>Lipsa de reziliență:</b> Incapacitatea de a te reface după stres sau traume, senzația de a fi "fragil" sau ușor de "corodat" emoțional.</li>
+                        <li><b>Probleme de "sigilare" a trecutului:</b> Dificultăți în a închide capitole vechi, de a elibera resentimente sau amintiri dureroase, lăsându-le "deschise" și vulnerabile.</li>
+                        <li><b>Lipsa de adaptabilitate:</b> O rigiditate în fața schimbărilor, o dificultate de a te "muta" cu ușurință prin experiențe noi.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de staniu (rar din dietă, mai des din expunere profesională sau prin contact cu anumite materiale, cum ar fi conservele) ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de staniu (adesea legat de expunerea la staniu din conserve) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Rigiditate emoțională extremă și încăpățânare:</b> O nevoie excesivă de a menține status quo-ul, de a te agăța de vechi tipare sau convingeri, chiar și atunci când nu mai sunt funcționale.</li>
-                        <li><b>Teama de schimbare și de "destrămare":</b> O obsesie cu menținerea controlului, cu structura, și o aversiune profundă față de orice proces care implică fluiditate sau transformare.</li>
-                        <li><b>Dificultate în a "elibera" trecutul:</b> O tendință de a reține resentimente, amintiri dureroase sau situații vechi, care te țin blocat.</li>
-                        <li><b>Izolare prin "bariere":</b> Construirea de ziduri emoționale rigide pentru a te proteja de influențele externe percepute ca amenințătoare, ducând la deconectare.</li>
+                        <li><b>Rigiditate excesivă și "încapsulare" emoțională:</b> O tendință de a te "sigila" emoțional, de a construi ziduri prea groase, ducând la izolare și dificultăți de conexiune autentică.</li>
+                        <li><b>Control obsesiv asupra trecutului:</b> O nevoie de a "conserva" amintirile sau experiențele într-un mod rigid, fără a permite evoluția sau eliberarea.</li>
+                        <li><b>"Coroziune" interioară:</b> O acumulare de emoții toxice (frică, resentimente) care "corodează" subtil bunăstarea interioară, chiar dacă la exterior pare o formă de protecție.</li>
+                        <li><b>Perfecționism și judecată excesivă:</b> O preocupare exagerată pentru a fi "impecabil" sau "perfect", ducând la judecată acerbă față de propria persoană și față de ceilalți.</li>
                     </ol>
                 </div>
             </div>
@@ -241,37 +293,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de toxicitate), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de "împământare"</b> și de consolidare a centrului interior (meditație, plimbări în natură, contact cu pământul).</li>
-                        <li><b>Terapii</b> care ajută la construirea stimei de sine și a rezilienței emoționale.</li>
-                        <li><b>Exerciții de adaptabilitate</b> și flexibilitate mentală.</li>
-                        <li><b>Explorarea și integrarea noilor experiențe</b> pentru a te simți mai stabil.</li>
-                        <li><b>Lucrul cu încrederea</b> în propriile forțe și capacitatea de auto-susținere.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă variată și echilibrată, care include o gamă largă de alimente integrale. Evitarea alimentelor ultra-procesate și a celor conservate în ambalaje deteriorate.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de întărire a granițelor personale și autoapărare energetică:</strong> Vizualizări ale unui scut protector, tehnici de împământare pentru a te simți mai stabil și protejat.</li>
+                                <li><strong>Dezvoltarea rezilienței și a capacității de recuperare:</strong> Meditații pentru a cultiva forța interioară și abilitatea de a te reface după provocări.</li>
+                                <li><strong>Eliberarea fricilor legate de vulnerabilitate:</strong> Terapii pentru a procesa sentimentele de expunere sau de a nu fi "suficient de puternic".</li>
+                                <li><strong>Cultivarea adaptabilității și a fluidității:</strong> Lucrul cu acceptarea schimbării, renunțarea la rigiditate în gândire și acțiune.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin protecția, reziliența și integritatea (de exemplu: "Sunt protejat/ă și rezilient/ă. Mă adaptez cu ușurință la schimbare. Îmi mențin integritatea interioară.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de eliberare a controlului</b> și de cultivare a fluidității (yoga, dans, tehnici de relaxare).</li>
-                        <li><b>Terapii</b> care ajută la explorarea și eliberarea fricii de schimbare și a rigidității.</li>
-                        <li><b>Lucrul cu iertarea</b> și renunțarea la resentimente sau la trecut.</li>
-                        <li><b>Practici de "deschidere"</b> către noi perspective și de acceptare a fluxului vieții.</li>
-                        <li><b>Exerciții</b> care încurajează adaptabilitatea și spontaneitatea.</li>
+                        <li><strong>Nutrițional:</strong> Evitarea consumului de alimente conservate în cutii de tablă deteriorate. Monitorizarea expunerii la staniu din surse industriale, dacă este cazul.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control. Yoga sau tai chi pentru a cultiva fluiditatea și a reduce tensiunea.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Eliberarea emoțiilor stagnante:</strong> Jurnalism terapeutic, art-terapie, pentru a procesa și elibera resentimente sau blocaje emoționale care "corodează" interiorul.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
