@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nichelul și Granițele Personale</title>
+    <title>Nichel - Sensibilitatea și Adaptarea</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,79 +187,113 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Nichelul și Granițele Personale
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Nichel - Sensibilitatea și Adaptarea
         </div>
 
         <div class="section">
-            <h2 class="section-title">Nichel - Perspectiva fizică</h2>
+            <h2 class="section-title">Nichel - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Nichelul este un oligoelement care, deși esențial în cantități minuscule pentru anumite organisme vii, rolul său exact și esențial în metabolismul uman este încă un subiect de cercetare și nu este pe deplin înțeles, spre deosebire de alte minerale. Acesta este considerat un oligoelement ultratrație, ceea ce înseamnă că necesarul său zilnic este extrem de mic.</p>
-                    <ul>
-                        <li><b>Activitatea enzimatică:</b> Se consideră că nichelul este un cofactor pentru anumite enzime, ajutând la catalizarea unor reacții biochimice. De exemplu, s-a sugerat un rol în activitatea unor enzime legate de metabolismul glucozei și a lipidelor.</li>
-                        <li><b>Metabolismul fierului:</b> Unele studii pe animale au sugerat că nichelul ar putea fi implicat în absorbția sau utilizarea fierului, dar acest lucru nu este ferm stabilit la oameni.</li>
-                        <li><b>Integritatea celulară:</b> Există speculații că ar putea avea un rol în menținerea structurii membranelor celulare.</li>
-                        <li><b>Producția hormonală:</b> Unii cercetători au explorat o posibilă legătură cu producția sau reglarea unor hormoni, dar dovezile sunt limitate.</li>
-                    </ul>
-                    <p><b>Important de reținut:</b> Necesitatea nichelului în corpul uman este încă neclară și nu există o deficiență de nichel recunoscută clinic la om, care să fie cauzată exclusiv de lipsa aportului alimentar. Majoritatea oamenilor obțin suficient nichel din dieta obișnuită.</p>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Nichelul (Ni) este un oligoelement (mineral) esențial, prezent în corpul uman în cantități extrem de mici (cantitatea exactă nu este stabilită, dar se estimează a fi sub 10 mg). Doza zilnică recomandată pentru adulți nu este stabilită oficial, dar se consideră un aport sigur sub 100 µg/zi. Este recunoscut în principal pentru rolul său de cofactor pentru anumite enzime și este implicat în diverse procese metabolice.</p>
+                        <ul>
+                            <li><b>Cofactor enzimatic:</b> Este o componentă a unor metaloenzime, deși rolul său specific în enzimele umane este mai puțin clar decât al altor oligoelemente. În plante, este o componentă a ureazei, esențială pentru metabolismul ureei.</li>
+                            <li><b>Metabolismul macronutrienților:</b> Poate fi implicat în metabolismul lipidelor, carbohidraților și proteinelor.</li>
+                            <li><b>Absorbția fierului:</b> Există dovezi că nichelul poate influența absorbția fierului, deși mecanismul exact nu este pe deplin înțeles.</li>
+                            <li><b>Sinteza hormonală:</b> Poate avea un rol în sinteza anumitor hormoni.</li>
+                            <li><b>Funcția celulară:</b> Contribuie la menținerea integrității membranelor celulare.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Nichelul este larg răspândit în alimente, dar conținutul variază în funcție de sol și de procesare.</p>
+                        <ul>
+                            <li><b>Cereale integrale:</b> Ovăz, grâu integral.</li>
+                            <li><b>Leguminoase:</b> Fasole, linte, năut, soia.</li>
+                            <li><b>Nuci și semințe:</b> Migdale, alune de pădure, semințe de floarea-soarelui.</li>
+                            <li><b>Ciocolată și cacao.</b></li>
+                            <li><b>Ceai.</b></li>
+                            <li><b>Unele legume:</b> Spanac, broccoli.</li>
+                            <li><b>Fructe</b> (în cantități mai mici).</li>
+                            <li><b>Apă potabilă</b> (conținutul variază).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Nichelul este destul de răspândit în natură și se găsește în multe alimente. Persoanele cu alergie la nichel pot fi sfătuite să limiteze consumul acestora.</p>
-                    <ul>
-                        <li><b>Cereale integrale:</b> Ovăz, grâu integral, hrișcă.</li>
-                        <li><b>Leguminoase:</b> Linte, fasole, năut, mazăre.</li>
-                        <li><b>Nuci și semințe:</b> Migdale, nuci, alune de pădure, semințe de floarea-soarelui.</li>
-                        <li><b>Cacao și ciocolată:</b> Ciocolata neagră are un conținut ridicat de nichel.</li>
-                        <li><b>Anumite legume:</b> Spanac, broccoli, varză, roșii.</li>
-                        <li><b>Fructe:</b> Pere, ananas, zmeură, prune.</li>
-                        <li><b>Fructe de mare:</b> Stridii, hering, somon.</li>
-                        <li><b>Ceai negru</b>.</li>
-                    </ul>
-                    <h2>Probleme legate de nichel</h2>
-                    <p>Mai degrabă decât o deficiență, problemele legate de nichel la oameni sunt mai frecvent asociate cu:</p>
-                    <ul>
-                        <li><b>Alergia la nichel:</b> Aceasta este o problemă comună și se manifestă adesea ca dermatită de contact (erupție cutanată, mâncărime, roșeață) atunci când pielea intră în contact direct cu obiecte care conțin nichel (bijuterii, catarame de curea, nasturi). Poate apărea și o alergie alimentară la nichel, manifestată prin simptome digestive sau cutanate.</li>
-                        <li><b>Toxicitatea la nichel (exces):</b> În cantități mari, nichelul poate fi toxic. Expunerea la niveluri ridicate de nichel, de obicei prin inhalare în medii industriale sau prin ingestia unor cantități foarte mari de suplimente (ceea ce nu este recomandat), poate duce la probleme respiratorii, neurologice sau la afectarea organelor.</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hiponichelemie)</h3>
+                        <p>Deficiența de nichel este extrem de rară la om și nu a fost caracterizată clinic în mod clar. Simptomele au fost observate predominant în studiile pe animale, sugerând un rol în creștere și metabolism.</p>
+                        <ol>
+                            <li><b>Creștere întârziată:</b> Observată în studiile pe animale.</li>
+                            <li><b>Tulburări de reproducere:</b> Afectarea fertilității.</li>
+                            <li><b>Anemie.</b></li>
+                            <li><b>Dezechilibre metabolice:</b> Afectarea metabolismului lipidelor și carbohidraților.</li>
+                            <li><b>Dermatite:</b> Leziuni cutanate.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipernichelemie / toxicitate de nichel)</h3>
+                        <p>Toxicitatea nichelului este mai frecventă din expunerea profesională (de exemplu: prin inhalare sau contact cutanat) sau din contactul cu obiecte care conțin nichel (de exemplu: bijuterii, monede). Toxicitatea din aportul alimentar este rară, dar poate apărea la doze foarte mari.</p>
+                        <ol>
+                            <li><b>Dermatită de contact alergică:</b> Este cea mai comună manifestare a toxicității, o reacție alergică la nichel care se manifestă prin erupții cutanate, mâncărime, roșeață și vezicule la locul de contact.</li>
+                            <li><b>Probleme respiratorii:</b> În cazul inhalării cronice (de exemplu: în mediul industrial), poate duce la astm, bronșită cronică și, în cazuri severe, la cancer pulmonar.</li>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree, dureri abdominale (la ingestia acută de doze mari).</li>
+                            <li><b>Toxicitate renală și hepatică:</b> La expuneri cronice și doze mari.</li>
+                            <li><b>Cardiomiopatie:</b> Afectarea mușchiului cardiac (rar).</li>
+                            <li><b>Creșterea riscului de cancer:</b> Nichelul este clasificat ca un potențial carcinogen.</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Nichel: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, nichelul este un oligoelement ultratrație, al cărui rol în corpul uman este încă în studiu, dar este adesea asociat cu <b>sensibilitatea, reacția la mediu (fizic și emoțional), adaptabilitatea și gestionarea granițelor personale</b>. Având în vedere că problemele legate de nichel sunt mai frecvent asociate cu alergii și toxicitate, holistic, el rezonează cu modul în care interacționăm și reacționăm la lumea externă și la stimuli.</p>
+            <h2 class="section-title">Nichel - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, nichelul este profund asociat cu sensibilitatea, adaptabilitatea la mediul subtil, capacitatea de a "filtra" influențele externe și de a menține granițe energetice sănătoase. Fiind un oligoelement prezent în cantități foarte mici și adesea legat de reacții de hipersensibilitate (alergii), nichelul rezonează cu "senzorii" noștri interiori, cu abilitatea de a percepe și de a răspunde la stimuli subtili, dar și cu dificultatea de a gestiona "iritanții" emoționali sau energetici.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Deși o deficiență de nichel recunoscută clinic la om, cauzată exclusiv de lipsa aportului alimentar, nu este pe deplin stabilită, din perspectivă holistică am putea explora:</p>
+                    <p>Un "deficit" energetic sau metaforic de nichel ar putea fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Dificultăți de adaptare la mediu sau la schimbare:</b> O lipsă de fluiditate în a te ajusta la noi situații, oameni sau circumstanțe. Senzația de a te simți "străin" sau inconfortabil în anumite medii.</li>
-                        <li><b>Hipersensibilitate emoțională ascunsă:</b> O tendință de a prelua energiile sau emoțiile negative din jur, fără a avea mecanisme clare de filtrare sau protecție.</li>
-                        <li><b>Lipsa de "ancorare" sau de rezistență:</b> Un sentiment de fragilitate interioară, de a fi ușor influențabil sau de a nu-ți putea menține integritatea în fața presiunilor externe.</li>
-                        <li><b>Probleme cu identitatea personală:</b> Incapacitatea de a-ți stabili granițe clare între tine și ceilalți, ducând la o diluare a propriei identități.</li>
+                        <li><b>Lipsa de sensibilitate sau "amorțeală" emoțională:</b> O deconectare de la propriile emoții sau de la cele ale altora, o incapacitate de a percepe nuanțele subtile ale interacțiunilor.</li>
+                        <li><b>Vulnerabilitate la influențe subtile:</b> O lipsă de protecție energetică, permițând energiilor negative sau "toxinelor" emoționale să pătrundă și să destabilizeze echilibrul interior.</li>
+                        <li><b>Dificultăți de adaptare la medii noi:</b> O rigiditate în fața schimbărilor sau a situațiilor nefamiliare, senzația de a fi "iritat" sau "alergic" la nou.</li>
+                        <li><b>Lipsa de "filtrare" emoțională:</b> Incapacitatea de a procesa și de a elibera emoțiile "iritante", ducând la acumularea de tensiune.</li>
+                        <li><b>Probleme de auto-exprimare:</b> Dificultăți în a-ți exprima autentic sinele, din teama de a nu fi "iritant" sau de a nu provoca reacții negative.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Problemele legate de nichel la oameni sunt mai frecvent asociate cu excesul sau cu alergia. Din perspectivă holistică, un exces ar putea sugera:</p>
+                    <p>Un exces de nichel (adesea legat de expunerea la nichel) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Reacții exagerate și intoleranță:</b> O tendință de a reacționa disproporționat la stimuli minori, fie fizic (alergii), fie emoțional (iritabilitate, intoleranță la opiniile altora).</li>
-                        <li><b>Rigiditate extremă și "ziduri" emoționale:</b> O protecție excesivă, o dificultate în a te deschide sau a permite vulnerabilitatea. Aceasta poate duce la izolare.</li>
-                        <li><b>Agresivitate pasivă sau activă:</b> O energie internă tensionată care se manifestă prin critici, judecată sau o nevoie de a controla mediul pentru a evita orice "intruziune".</li>
-                        <li><b>Dificultăți de a "elibera" toxine emoționale:</b> O tendință de a reține resentimente sau furie, ceea ce duce la o "toxicitate" emoțională internă care se poate manifesta fizic.</li>
-                        <li><b>Nevoi excesive de control asupra mediului:</b> O teamă profundă de a fi "contaminat" sau afectat de influențe externe, ceea ce duce la o nevoie compulsivă de a controla totul.</li>
+                        <li><b>Hipersensibilitate excesivă și reactivitate:</b> O tendință de a reacționa exagerat la stimuli minori, de a fi "alergic" emoțional la critici sau la situații percepute ca amenințătoare.</li>
+                        <li><b>"Iritație" cronică și furie reprimată:</b> O stare de iritabilitate constantă, o furie latentă care "erupe" la stimuli mici, similar cu o reacție alergică cutanată.</li>
+                        <li><b>Granițe emoționale rigide și "ziduri":</b> O tendință de a construi ziduri emoționale prea groase, ducând la izolare și dificultăți de conexiune autentică, din teama de a fi "rănit" sau "iritat".</li>
+                        <li><b>Control obsesiv asupra mediului:</b> O nevoie de a controla mediul și interacțiunile pentru a evita orice "iritant" sau "toxină" emoțională.</li>
+                        <li><b>"Otrăvire" emoțională a relațiilor:</b> O tendință de a "intoxica" relațiile prin critici excesive, negativitate sau o nevoie de a "purifica" pe alții, ducând la conflicte.</li>
                     </ol>
                 </div>
             </div>
@@ -256,37 +301,44 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de toxicitate sau alergii severe), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de stabilire a granițelor personale</b> (emoționale și energetice).</li>
-                        <li><b>Meditații de "împământare"</b> pentru a întări sentimentul de stabilitate internă.</li>
-                        <li><b>Terapii</b> care ajută la dezvoltarea stimei de sine și a identității personale.</li>
-                        <li><b>Exerciții de adaptabilitate și flexibilitate mentală</b> (mindfulness, yoga fluidă).</li>
-                        <li><b>Lucrul cu încrederea</b> și deschiderea controlată față de mediu.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de nichel (cereale integrale, leguminoase, nuci, ciocolată).</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de dezvoltare a sensibilității și intuiției:</strong> Meditație ghidată pentru a te conecta cu emoțiile subtile, jurnalism terapeutic pentru a explora sentimentele neexprimate.</li>
+                                <li><strong>Întărirea granițelor energetice:</strong> Vizualizări ale unui scut protector, tehnici de împământare pentru a te simți mai stabil și protejat.</li>
+                                <li><strong>Dezvoltarea adaptabilității și a flexibilității:</strong> Lucrul cu acceptarea schimbării, renunțarea la rigiditate în gândire și acțiune.</li>
+                                <li><strong>Eliberarea emoțiilor "iritante":</strong> Terapii pentru procesarea furiei, frustrării sau resentimentelor.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin sensibilitatea, protecția și adaptabilitatea (de exemplu: "Sunt sensibil/ă și protejat/ă. Mă adaptez cu ușurință la schimbare. Îmi exprim autentic sinele.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de eliberare emoțională</b> și de gestionare a furiei (jurnalism, art-terapie, discuții cu terapeutul).</li>
-                        <li><b>Tehnici de calmare</b> și reducere a reacțiilor exagerate (respirație profundă, meditație).</li>
-                        <li><b>Cultivarea empatiei</b> și a toleranței față de ceilalți.</li>
-                        <li><b>Recunoașterea și eliberarea nevoii de control.</b></li>
-                        <li><b>"Curățare" energetică</b> regulată pentru a elibera energiile externe preluate.</li>
+                        <li><strong>Nutrițional:</strong> Evitarea alimentelor cu conținut ridicat de nichel în cazul alergiilor confirmate. Monitorizarea aportului din dietă și suplimente.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de calmare și centrare:</strong> Meditație statică, respirație profundă, yoga restaurativă pentru a tempera hipersensibilitatea și agitația.</li>
+                                <li><strong>Terapii pentru eliberarea controlului și a rigidității:</strong> Lucrul cu nevoia de a impune propria viziune, cultivarea umilinței și a răbdării.</li>
+                                <li><strong>Gestionarea "iritării" emoționale:</strong> Terapii pentru procesarea și eliberarea furiei, resentimentelor și amărăciunii acumulate.</li>
+                                <li><strong>Dezvoltarea empatiei și a compasiunii:</strong> Lucrul cu acceptarea diversității de perspective și cu eliberarea judecății.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
