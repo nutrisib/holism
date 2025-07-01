@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanadiul și Disciplina Energetică</title>
+    <title>Vanadiu - Echilibrul și Transformarea</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,71 +187,108 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Vanadiul și Disciplina Energetică
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Vanadiu - Echilibrul și Transformarea
         </div>
 
         <div class="section">
-            <h2 class="section-title">Vanadiu - Perspectiva fizică</h2>
+            <h2 class="section-title">Vanadiu - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Rolul exact al vanadiului în corpul uman nu este pe deplin înțeles, dar studiile sugerează că ar putea fi un oligoelement esențial, implicat în metabolismul glucozei și al lipidelor.</p>
-                    <ul>
-                        <li><b>Potențial în reglarea glicemiei:</b> A fost cercetat pentru potențialul său de a imita acțiunea insulinei, având efecte benefice în reglarea glicemiei.</li>
-                        <li><b>Formarea oaselor și activitatea enzimatică:</b> De asemenea, poate juca un rol în formarea oaselor și în activitatea unor enzime.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Vanadiul (V) este un oligoelement (mineral) prezent în corpul uman în cantități foarte mici, a cărui esențialitate pentru nutriția umană este încă în curs de cercetare și nu este pe deplin stabilită. Doza zilnică recomandată pentru adulți nu este stabilită oficial, dar aportul estimat este de aproximativ 10 µg/zi. Este recunoscut pentru rolul său în anumite procese biologice, în special în metabolismul glucozei și în formarea oaselor.</p>
+                        <ul>
+                            <li><b>Metabolismul glucozei:</b> Este cel mai studiat rol al vanadiului. Poate mima acțiunea insulinei, ajutând la transportul glucozei în celule și la reglarea nivelului de zahăr din sânge. Este investigat pentru potențialul său terapeutic în diabetul zaharat.</li>
+                            <li><b>Sănătatea oaselor:</b> Poate contribui la formarea și menținerea sănătății oaselor.</li>
+                            <li><b>Metabolismul lipidelor:</b> Poate influența metabolismul colesterolului.</li>
+                            <li><b>Funcția tiroidiană:</b> Există unele dovezi că ar putea influența funcția glandei tiroide.</li>
+                            <li><b>Cofactor enzimatic:</b> Poate acționa ca un cofactor pentru anumite enzime.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Vanadiul este larg răspândit în alimente, dar conținutul său poate varia în funcție de concentrația din sol.</p>
+                        <ul>
+                            <li><b>Fructe de mare:</b> Stridii, scoici, pește.</li>
+                            <li><b>Cereale integrale.</b></li>
+                            <li><b>Leguminoase:</b> Fasole, linte.</li>
+                            <li><b>Legume:</b> Spanac, pătrunjel, ciuperci.</li>
+                            <li><b>Carne.</b></li>
+                            <li><b>Produse lactate.</b></li>
+                            <li><b>Apă potabilă</b> (conținutul variază).</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <ul>
-                        <li><b>Ciuperci:</b> Varietăți diverse.</li>
-                        <li><b>Fructe de mare:</b> Scoici, creveți, pește.</li>
-                        <li><b>Cereale integrale:</b> Ovăz, orz, grâu integral.</li>
-                        <li><b>Leguminoase:</b> Fasole verde, linte.</li>
-                        <li><b>Mărar, pătrunjel</b>.</li>
-                        <li><b>Unele uleiuri vegetale</b>.</li>
-                    </ul>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hipovanadiemie)</h3>
+                        <p>Deficiența de vanadiu nu a fost observată sau caracterizată clinic la om, deoarece necesarul său este extrem de mic și este larg răspândit în mediu și alimente. Studiile pe animale au sugerat posibile efecte în caz de deficiență severă.</p>
+                        <ol>
+                            <li><b>Creștere întârziată:</b> Observată în studiile pe animale.</li>
+                            <li><b>Tulburări de reproducere:</b> Afectarea fertilității.</li>
+                            <li><b>Dezechilibre metabolice:</b> Afectarea metabolismului glucozei și lipidelor.</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hipervanadiemie / toxicitate de vanadiu)</h3>
+                        <p>Toxicitatea vanadiului din aportul alimentar este rară. Excesul este, de obicei, asociat cu expunerea industrială sau cu suplimentarea excesivă.</p>
+                        <ol>
+                            <li><b>Probleme gastrointestinale:</b> Greață, vărsături, diaree, crampe abdominale.</li>
+                            <li><b>Toxicitate hepatică și renală:</b> La doze foarte mari.</li>
+                            <li><b>Anemie.</b></li>
+                            <li><b>Tulburări neurologice:</b> Tremor, paralizie.</li>
+                            <li><b>Iritații respiratorii</b> (în cazul inhalării).</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Vanadiu: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, vanadiul este un oligoelement a cărui esențialitate și roluri sunt încă în curs de explorare, dar este adesea asociat cu <b>metabolismul energetic la nivel subtil, reglarea, disciplina, voința și capacitatea de a transforma și de a atinge echilibrul</b>. Prin potențialul său de a imita acțiunea insulinei și de a regla glicemia, vanadiul rezonează cu modul în care ne gestionăm energia internă, disciplina emoțională și tendința de a atinge un nivel optim de funcționare.</p>
+            <h2 class="section-title">Vanadiu - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, vanadiul este profund asociat cu echilibrul, transformarea, adaptabilitatea metabolică și capacitatea de a "modula" și de a "potența" schimbările interioare. Fiind un element care poate mima acțiunea insulinei (reglarea "dulceții" vieții) și este implicat în procese subtile, vanadiul rezonează cu abilitatea noastră de a ne gestiona fluxurile energetice, de a ne adapta la provocări și de a ne transforma tiparele la nivel profund.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
-                    <p>Un deficit de vanadiu, deși rar și nespecific în termeni de manifestări clinice directe, ar putea fi legat din perspectivă holistică de următoarele aspecte emoționale:</p>
+                    <p>Un "deficit" energetic sau metaforic de vanadiu ar putea fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Lipsa de disciplină și de voință:</b> Dificultăți în a-ți menține angajamentele, în a-ți stabili rutine sănătoase sau în a-ți gestiona impulsurile. O lipsă de autocontrol emoțional.</li>
-                        <li><b>Dezechilibre energetice subtile:</b> O senzație de fluctuații de energie inexplicabile, dificultăți de a-ți menține un ritm constant, fie el fizic sau emoțional.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Posibile probleme în reglarea glicemiei.</li>
-                            </ul>
-                        </li>
-                        <li><b>Dificultăți în a-ți transforma obiceiurile sau tiparele:</b> Incapacitatea de a depăși vechi comportamente sau gânduri, chiar și atunci când sunt dăunătoare.</li>
-                        <li><b>Lipsa de claritate a obiectivelor:</b> Dificultatea de a-ți stabili scopuri clare și de a le urmări cu persistență. Un sentiment de a fi "pe derivă".</li>
-                        <li><b>Fragilitate emoțională în fața tentațiilor:</b> O lipsă de rezistență la influențe externe care pot duce la dezechilibre (ex: alimentație nesănătoasă, obiceiuri proaste).</li>
+                        <li><b>Lipsa de adaptabilitate și rigiditate:</b> Dificultăți în a te adapta la schimbări, o tendință de a fi inflexibil în gândire sau în reacții emoționale.</li>
+                        <li><b>Dificultăți în a "procesa" și "transforma" experiențele:</b> Incapacitatea de a digera evenimente dificile, de a le integra și de a le elibera, ducând la stagnare emoțională.</li>
+                        <li><b>Dezechilibre emoționale:</b> Fluctuații de dispoziție, iritabilitate, lipsa de armonie interioară, similar cu dezechilibrele glicemice.</li>
+                        <li><b>Lipsa de "potențial" sau de inițiativă:</b> Un sentiment de a nu-ți putea manifesta pe deplin potențialul, o lipsă de "scânteie" pentru a iniția schimbări.</li>
+                        <li><b>Sentiment de stagnare:</b> O senzație de a fi blocat în procesele de creștere și evoluție personală.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de vanadiu (foarte rar din dietă, mai des din expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de vanadiu (adesea legat de expunere industrială sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Rigiditate excesivă și control compulsiv:</b> O nevoie obsesivă de a controla fiecare aspect al vieții, o rigiditate mentală și emoțională, lipsa de flexibilitate.</li>
-                        <li><b>Perfecționism și auto-critică acerbă:</b> O tendință de a-ți impune standarde nerealiste, ducând la frustrare constantă și epuizare.</li>
-                        <li><b>Frica de imperfecțiune și de a "greși":</b> O aversiune față de orice abatere de la plan sau de la un ideal, ceea ce poate crea tensiune internă.</li>
-                        <li><b>"Arderea" excesivă a energiei:</b> O tendință de a fi "prea mult" sau de a te suprasolicita, forțând rezultatele și epuizând resursele interioare.</li>
+                        <li><b>Control excesiv și rigiditate:</b> O nevoie obsesivă de a controla mediul, oamenii sau situațiile, de a impune un ritm, fără a permite fluiditatea sau spontaneitatea.</li>
+                        <li><b>"Forțarea" transformării:</b> O tendință de a forța procesele de schimbare, fără a respecta ritmul natural al evoluției.</li>
+                        <li><b>"Toxicitate" emoțională:</b> Acumularea de emoții negative (frică, resentimente) care "intoxică" sistemul energetic, ducând la o stare de agitație sau iritabilitate.</li>
+                        <li><b>Lipsa de flexibilitate și adaptabilitate:</b> O rezistență la schimbare, o tendință de a fi inflexibil în gândire sau în abordarea situațiilor.</li>
                     </ol>
                 </div>
             </div>
@@ -248,37 +296,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de toxicitate), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de cultivare a disciplinei conștiente</b> și a voinței (ex: stabilirea unor obiective mici și atingerea lor, meditații de focus).</li>
-                        <li><b>Tehnici de reglare a energiei:</b> Exerciții fizice moderate, yoga, tai chi, respirație conștientă.</li>
-                        <li><b>Terapii</b> care ajută la identificarea și transformarea obiceiurilor limitative.</li>
-                        <li><b>Jurnalism terapeutic</b> pentru a clarifica obiectivele și a înțelege blocajele emoționale.</li>
-                        <li><b>Practici de "împământare"</b> pentru a aduce stabilitate și a gestiona fluctuațiile energetice.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă variată și echilibrată, bogată în alimente integrale, surse naturale de vanadiu (fructe de mare, cereale integrale, leguminoase, legume precum spanacul și pătrunjelul).</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de echilibrare și transformare:</strong> Meditație centrată pe echilibrul interior și pe vizualizarea transformării pozitive.</li>
+                                <li><strong>Terapii pentru dezvoltarea adaptabilității și a flexibilității:</strong> Coaching pentru a-ți gestiona stresul, a accepta schimbarea și a renunța la rigiditate mentală.</li>
+                                <li><strong>Restabilirea "scânteii" și a vitalității:</strong> Implicarea în activități care aduc bucurie, pasiune și entuziasm, reconectând cu potențialul interior.</li>
+                                <li><strong>Eliberarea blocajelor emoționale:</strong> Jurnalism terapeutic, art-terapie, sau consiliere pentru a procesa emoțiile stagnante.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin echilibrul, transformarea și vitalitatea (de exemplu: "Sunt în echilibru și mă transform cu ușurință. Îmi manifest potențialul. Mă adaptez fluid la schimbare.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de eliberare a controlului</b> și de cultivare a acceptării (meditații de renunțare, art-terapie).</li>
-                        <li><b>Terapii</b> care ajută la gestionarea perfecționismului și a fricii de imperfecțiune.</li>
-                        <li><b>Lucrul cu iertarea de sine</b> și a celorlalți pentru a elibera rigiditatea.</li>
-                        <li><b>Exerciții fizice</b> care încurajează fluiditatea și spontaneitatea (dans, mișcare liberă).</li>
-                        <li><b>Tehnici de relaxare profundă</b> pentru a reduce suprastimularea mentală și fizică.</li>
+                        <li><strong>Nutrițional:</strong> Monitorizarea aportului de vanadiu din dietă și suplimente pentru a evita dozele excesive, în special în cazul expunerii profesionale.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control. Yoga sau tai chi pentru a cultiva fluiditatea și a reduce tensiunea.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare pentru a evita "arderea" energetică prin supra-solicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
