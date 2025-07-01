@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleniul și Scutul Interior</title>
+    <title>Seleniu - Scutul Rezilienței și Echilibrul Energetic</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -80,6 +80,17 @@
             flex-wrap: wrap;
             gap: 25px;
             width: 100%;
+        }
+        /* New styling for the rows within section-content for physical perspective */
+        .physical-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 25px; /* Space between rows */
+        }
+        .physical-row:last-child {
+            margin-bottom: 0;
         }
         .subsection {
             flex: 1;
@@ -176,84 +187,118 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
+
+        @media (max-width: 768px) {
+            .section-content, .physical-row { /* Apply flex-direction column to both */
+                flex-direction: column;
+            }
+            .subsection {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
-            Seleniul și Scutul Interior
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            Seleniu - Scutul Rezilienței și Echilibrul Energetic
         </div>
 
         <div class="section">
-            <h2 class="section-title">Seleniu - Perspectiva fizică</h2>
+            <h2 class="section-title">Seleniu - perspectiva fizică</h2>
             <div class="section-content">
-                <div class="subsection">
-                    <h3 class="subsection-title">Rolul principal</h3>
-                    <p>Seleniul este un oligoelement esențial, renumit pentru proprietățile sale antioxidante și rolul crucial în funcția tiroidiană și imunitate.</p>
-                    <ul>
-                        <li><b>Antioxidant puternic (glutation peroxidază):</b> Este o componentă cheie a glutation peroxidazei, o enzimă antioxidantă majoră care ajută la protejarea celulelor de daunele cauzate de radicalii liberi (stresul oxidativ). Prin acest mecanism, seleniul contribuie la prevenirea bolilor cronice precum cele cardiovasculare, anumite tipuri de cancer și bolile neurodegenerative.</li>
-                        <li><b>Suport pentru funcția glandei tiroide:</b> Tiroida este organul cu cea mai mare concentrație de seleniu din corp. Seleniul este esențial pentru producția și metabolismul hormonilor tiroidieni, care reglează metabolismul, creșterea și dezvoltarea. De asemenea, pentru protejarea tiroidei de stresul oxidativ în timpul sintezei hormonale. Implicațiile sunt că un deficit de seleniu poate fi asociat cu afecțiuni tiroidiene precum tiroidita Hashimoto și hipotiroidismul.</li>
-                        <li><b>Întărirea sistemului imunitar:</b> Seleniul joacă un rol vital în funcționarea normală a sistemului imunitar, ajutând la producția de anticorpi și la răspunsul organismului împotriva infecțiilor virale și bacteriene. Implicațiile sunt că sprijină apărarea organismului împotriva infecțiilor virale și bacteriene.</li>
-                        <li><b>Sănătatea cardiovasculară:</b> Prin acțiunea sa antioxidantă și antiinflamatorie, seleniul poate contribui la menținerea sănătății inimii și a vaselor de sânge, reducând riscul de boli cardiovasculare.</li>
-                        <li><b>Fertilitatea masculină:</b> La bărbați, seleniul este important pentru producția de spermă sănătoasă și pentru motilitatea acesteia.</li>
-                        <li><b>Detoxifiere:</b> Poate contribui la protejarea organismului împotriva toxicității unor metale grele, cum ar fi mercurul și plumbul.</li>
-                        <li><b>Sănătatea părului și a unghiilor:</b> Seleniul contribuie la menținerea normală a structurii și sănătății părului și unghiilor.</li>
-                    </ul>
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Rolul principal</h3>
+                        <p>Seleniul (Se) este un oligoelement esențial, prezent în corpul uman în cantități foarte mici. Doza zilnică recomandată pentru adulți variază între 55-75 µg/zi (femei/bărbați). Este recunoscut în principal pentru rolul său antioxidant și pentru implicarea în funcția tiroidiană.</p>
+                        <ul>
+                            <li><b>Acțiune antioxidantă:</b> Este o componentă cheie a enzimelor glutation peroxidaza (GSH-Px), care fac parte din sistemul antioxidant al organismului. Aceste enzime protejează celulele de daunele oxidative cauzate de radicalii liberi și speciile reactive de oxigen. Lucrează în sinergie cu Vitamina E pentru a oferi protecție antioxidantă.</li>
+                            <li><b>Funcția tiroidiană:</b> Este esențial pentru metabolismul hormonilor tiroidieni. Este o componentă a iodotironin deiodinazelor, enzime necesare pentru conversia tiroxinei (T4) în triiodotironină (T3), forma activă a hormonului tiroidian. Deficiența de seleniu poate agrava efectele deficienței de iod.</li>
+                            <li><b>Sistemul imunitar:</b> Contribuie la funcționarea normală a sistemului imunitar, influențând activitatea celulelor imunitare și răspunsul organismului la infecții.</li>
+                            <li><b>Sănătatea reproductivă:</b> Joacă un rol în reproducere.</li>
+                            <li><b>Rol celular:</b> Este o componentă a selenoproteinelor, care au diverse funcții celulare, inclusiv controlul creșterii și diviziunii celulare.</li>
+                        </ul>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Surse alimentare</h3>
+                        <p>Conținutul de seleniu în alimente variază semnificativ în funcție de conținutul de seleniu din sol.</p>
+                        <ul>
+                            <li><b>Nuci braziliene:</b> Sunt considerate cea mai bogată sursă alimentară de seleniu, cu un conținut foarte variabil.</li>
+                            <li><b>Fructe de mare:</b> Pește (ton, somon, sardine), crustacee, scoici.</li>
+                            <li><b>Carne:</b> Organe (ficat, rinichi), carne de vită, pui.</li>
+                            <li><b>Ouă.</b></li>
+                            <li><b>Cereale integrale și produse cerealiere:</b> Grâu, orez (conținutul variază în funcție de sol).</li>
+                            <li><b>Drojdie de bere.</b></li>
+                            <li><b>Legume:</b> Broccoli, ciuperci, sparanghel.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="subsection">
-                    <h3 class="subsection-title">Surse alimentare</h3>
-                    <p>Cantitatea de seleniu din alimente poate varia în funcție de conținutul de seleniu din solul în care au fost cultivate plantele sau de unde au fost hrănite animalele.</p>
-                    <ul>
-                        <li><b>Nuci braziliene:</b> Sunt, de departe, cea mai bogată sursă de seleniu. Doar una sau două nuci braziliene pe zi pot asigura necesarul zilnic de seleniu (atenție la exces, pentru că un consum prea mare poate duce la toxicitate).</li>
-                        <li><b>Fructe de mare și pește:</b> Ton (în special tonul galben), sardine, somon, stridii, scoici, creveți, crab.</li>
-                        <li><b>Carne:</b> Vită, pui și curcan, porc, ficatul de vită.</li>
-                        <li><b>Ouă:</b> Un ou mare poate acoperi o parte semnificativă din necesarul zilnic.</li>
-                        <li><b>Cereale integrale:</b> Orez brun, ovăz, quinoa, pâine integrală (dacă grânele au fost cultivate în soluri bogate în seleniu).</li>
-                        <li><b>Leguminoase:</b> Năut, linte, fasole.</li>
-                        <li><b>Semințe:</b> Semințe de floarea-soarelui, semințe de chia.</li>
-                        <li><b>Ciuperci:</b> Ciupercile Shiitake sunt o sursă bună.</li>
-                    </ul>
-                    <p><b>Considerații:</b> Este important să menținem un echilibru în aportul de seleniu, deoarece atât deficiența, cât și excesul (selenoza) pot avea efecte adverse.</p>
+
+                <div class="physical-row">
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de deficit (hiposelenemie)</h3>
+                        <p>Deficiența de seleniu este asociată cu anumite afecțiuni, în special în zonele cu sol sărac în seleniu.</p>
+                        <ol>
+                            <li><b>Boala Keshan:</b> O cardiomiopatie endemică, adesea fatală, care afectează în principal copiii și femeile de vârstă fertilă din anumite regiuni ale Chinei și Asiei Centrale, unde solul este foarte sărac în seleniu. Este o deficiență combinată de seleniu și, posibil, Vitamina E.</li>
+                            <li><b>Boala Kashin-Beck:</b> O osteoartropatie endemică ce afectează cartilajele și oasele, în special la copii, asociată, de asemenea, cu niveluri scăzute de seleniu.</li>
+                            <li><b>Disfuncție tiroidiană:</b> Poate agrava hipotiroidismul și gușa în zonele cu deficiență de iod.</li>
+                            <li><b>Slăbiciune musculară și cardiomiopatie:</b> Observate la pacienții cu nutriție parenterală totală fără suplimentare adecvată de seleniu.</li>
+                            <li><b>Imunitate slăbită:</b> Susceptibilitate crescută la infecții.</li>
+                            <li><b>Probleme de reproducere.</b></li>
+                            <li><b>Oboseală, căderea părului, creștere în greutate</b> (simptome generale).</li>
+                        </ol>
+                    </div>
+                    <div class="subsection">
+                        <h3 class="subsection-title">Simptome și boli cauzate de exces (hiperselenemie / toxicitate de seleniu)</h3>
+                        <p>Toxicitatea seleniului (selenoză) este rară, dar poate apărea din expunerea la niveluri foarte ridicate în sol (în anumite zone endemice din China) sau din suplimentare excesivă.</p>
+                        <ol>
+                            <li><b>Simptome generale:</b> Miros de usturoi al respirației, greață, vărsături, diaree.</li>
+                            <li><b>Probleme dermatologice și ale anexelor:</b> Căderea părului, modificări ale unghiilor (fragilitate, decolorare, linii albe), leziuni cutanate (roșeață, vezicule).</li>
+                            <li><b>Probleme neurologice:</b> Parestezii (amorțeală, furnicături), paralizie, hemiplegie.</li>
+                            <li><b>Toxicitate hepatică:</b> Leziuni hepatice (observate la animale).</li>
+                            <li><b>Deteriorarea dinților.</b></li>
+                            <li><b>Tulburări gastrointestinale.</b></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title">Seleniu: Perspectiva emoțională</h2>
-            <p>Din perspectivă holistică, seleniul este un oligoelement adesea asociat cu <b>protecția, integritatea personală, autoapărarea, reziliența și capacitatea de a face față agresiunilor (fizice, energetice, emoționale)</b>. Prin rolul său puternic antioxidant și de susținere a sistemului imunitar și a glandei tiroide, seleniul rezonează cu "scutul" nostru interior, cu vitalitatea energetică și cu abilitatea de a menține echilibrul în fața provocărilor.</p>
+            <h2 class="section-title">Seleniu - perspectiva holistică</h2>
+            <p>Din perspectivă holistică, seleniul este profund asociat cu scutul rezilienței, protecția, capacitatea de a "curăța" și de a te "apăra" de influențele dăunătoare (fizice și emoționale), precum și cu menținerea vitalității și a echilibrului energetic. Fiind un antioxidant puternic și esențial pentru funcția tiroidiană (care reglează ritmul vieții), seleniul rezonează cu "scutul" nostru interior, cu abilitatea de a ne gestiona stresul oxidativ emoțional și de a menține o stare de coerență și sănătate profundă. Este legat de sentimentul de siguranță și de capacitatea de a te reface.</p>
 
             <div class="section-content">
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">💔</span> Deficit</h3>
                     <p>Un deficit de seleniu poate fi legat de următoarele aspecte emoționale:</p>
                     <ol>
-                        <li><b>Vulnerabilitate emoțională și lipsă de autoapărare:</b> Un sentiment profund de a fi expus, fragil, sau lipsit de protecție în fața criticilor, a energiilor negative sau a atacurilor emoționale. Aceasta poate duce la o senzație de a fi ușor "rănit" sau copleșit.
+                        <li><b>Vulnerabilitate emoțională și lipsă de protecție:</b> Sentimentul de a fi expus, de a nu putea face față atacurilor verbale sau energetice, o lipsă de granițe sănătoase.
                             <ul>
                                 <li><i>Manifestare fizică:</i> Imunitate slăbită, susceptibilitate la infecții.</li>
                             </ul>
                         </li>
-                        <li><b>Dezechilibre energetice și pierderea vitalității:</b> O lipsă de "scânteie" interioară, un sentiment de epuizare energetică care depășește oboseala fizică.
-                            <ul>
-                                <li><i>Manifestare fizică:</i> Oboseală, disfuncții tiroidiene (hipotiroidism).</li>
-                            </ul>
-                        </li>
-                        <li><b>Lipsa de încredere în propria intuiție sau ghidare interioară:</b> Afectarea funcției tiroidiene (asociată cu chakra gâtului) poate reflecta o lipsă de încredere în propria voce interioară sau o dificultate de a discerne "adevărul" personal.</li>
-                        <li><b>Tristețe profundă, melancolie, sentiment de victimizare:</b> O tendință de a se simți victimă a circumstanțelor sau a altor persoane, lipsa puterii de a se ridica deasupra situațiilor dificile.</li>
-                        <li><b>Perfecționism și auto-critică excesivă:</b> O nevoie de a fi perfect pentru a te simți în siguranță, teama de a face greșeli, ceea ce poate duce la un stres oxidativ intern (atât fizic, cât și emoțional).</li>
+                        <li><b>Dificultăți în a "neutraliza" emoțiile toxice:</b> Incapacitatea de a procesa și elibera resentimente, furie sau amărăciune, ducând la acumularea de "toxicitate" energetică internă.</li>
+                        <li><b>Lipsa de reziliență și capacitatea de auto-regenerare:</b> Dificultăți în a te reface după stres emoțional sau traume, senzația de a fi "uzat" de viață, lipsa capacității de a-ți "încărca bateriile".</li>
+                        <li><b>"Încetinire" sau lipsă de ritm:</b> Afectarea funcției tiroidiene poate rezonă cu o lipsă de ritm în viață, o apatie, o senzație de a fi "lent" emoțional sau mental.</li>
+                        <li><b>Frica de "otrăvire" sau de influențe negative:</b> O teamă de a fi afectat de mediul extern sau de relații toxice, lipsa încrederii în propria capacitate de apărare.</li>
                     </ol>
                 </div>
                 <div class="subsection">
                     <h3 class="subsection-title"><span class="icon">⚡</span> Exces</h3>
-                    <p>Un exces de seleniu (selenoză), deși rar din dietă (mai des din suplimentare excesivă), ar putea sugera din perspectivă holistică:</p>
+                    <p>Un exces de seleniu (adesea din expunere la soluri bogate în seleniu sau suplimentare excesivă) ar putea sugera din perspectivă holistică:</p>
                     <ol>
-                        <li><b>Defensivitate exagerată și rigiditate:</b> O nevoie excesivă de a te proteja, de a construi "ziduri" emoționale prea înalte, care te pot izola de ceilalți.</li>
-                        <li><b>Agresivitate sau tendințe de dominare:</b> O energie internă "fierbinte" care se manifestă prin control, critică excesivă sau o nevoie de a-i domina pe ceilalți pentru a te simți în siguranță.</li>
-                        <li><b>Intoleranță și judecată:</b> Dificultatea de a accepta imperfecțiunea, atât la propria persoană, cât și la ceilalți. O atitudine rigidă față de opinii sau stiluri de viață diferite.</li>
-                        <li><b>Suprasolicitare și energie "arzătoare":</b> O tendință de a "arde" energia prea repede, de a fi mereu în "luptă", chiar și atunci când nu este necesar.</li>
+                        <li><b>Supra-protecție și izolare:</b> O tendință de a te proteja excesiv, de a construi ziduri emoționale prea groase, ceea ce poate duce la izolare și dificultăți de conexiune autentică.</li>
+                        <li><b>Rigiditate în convingeri și dogmatism:</b> O "claritate" atât de puternică încât exclude alte perspective, ducând la intoleranță, judecată și o viziune îngustă.</li>
+                        <li><b>"Otrăvire" emoțională a relațiilor:</b> Similar cu toxicitatea fizică, poate indica o tendință de a "intoxica" relațiile prin critici excesive, negativitate sau o nevoie de a "purifica" pe alții.</li>
+                        <li><b>Nevoie de control și perfecționism:</b> O presiune de a fi mereu "impecabil" sau de a face totul "perfect", ducând la judecată acerbă față de propria persoană și față de ceilalți.</li>
+                        <li><b>"Arderea" resurselor interne:</b> Un consum rapid și necontrolat al energiei, din teama de a nu fi "suficient" sau de a nu face față.</li>
                     </ol>
                 </div>
             </div>
@@ -261,37 +306,43 @@
 
         <div class="section">
             <h2 class="section-title">Calea spre echilibru</h2>
+            <p>Pentru a aborda aceste dezechilibre din perspectivă holistică, pe lângă tratamentul medical necesar (în cazuri de deficit sever sau exces), se recomandă o abordare personalizată, care vizează atât aspectele fizice, cât și pe cele emoționale, mentale și energetice, în contextul misiunii de a trata problemele metabolice și cardiovasculare:</p>
             <div class="section-content">
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Deficit</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🧘‍♀️</span> Pentru deficit</h3>
                     <ul>
-                        <li><b>Practici de întărire a granițelor personale</b> și a autoapărării energetice (vizualizări de scuturi de protecție, afirmații).</li>
-                        <li><b>Lucrul cu stima de sine</b> și recunoașterea propriei valori.</li>
-                        <li><b>Terapii</b> pentru eliberarea sentimentelor de victimizare și cultivarea rezilienței.</li>
-                        <li><b>Meditații</b> pentru a reconecta cu vocea interioară și cu intuiția.</li>
-                        <li><b>Conectarea cu natura</b> pentru a absorbi energie vitală și a te simți în siguranță.</li>
+                        <li><strong>Nutrițional:</strong> Se va pune accent pe o dietă bogată în alimente integrale, surse naturale de seleniu (nuci braziliene, fructe de mare, carne, ouă, cereale integrale). În zonele cu sol sărac în seleniu, suplimentarea sau consumul de alimente fortificate poate fi necesară sub îndrumare.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de întărire a granițelor personale și autoapărare energetică:</strong> Vizualizări ale unui scut protector, tehnici de împământare pentru a te simți mai stabil și protejat.</li>
+                                <li><strong>Terapii pentru eliberarea emoțiilor toxice și a traumelor:</strong> Jurnalism terapeutic, art-terapie, sau consiliere pentru a procesa și elibera resentimente vechi, furie reprimată sau alte emoții "acumulate".</li>
+                                <li><strong>Dezvoltarea rezilienței și a capacității de auto-regenerare:</strong> Meditații pentru a cultiva forța interioară și abilitatea de a te reface după provocări.</li>
+                                <li><strong>Restabilirea ritmului și a vitalității:</strong> Timp petrecut în natură, hobby-uri, activități care aduc bucurie și reconectează cu "scânteia" interioară.</li>
+                                <li><strong>Afirmații pozitive:</strong> Formularea și repetarea de afirmații care susțin protecția, reziliența și vitalitatea (de exemplu: "Sunt protejat/ă și rezilient/ă. Mă regenerez cu ușurință. Mă simt plin/ă de vitalitate și energie.").</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="subsection">
-                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Exces</h3>
+                    <h3 class="subsection-title"><span class="icon-small">🌿</span> Pentru exces</h3>
                     <ul>
-                        <li><b>Practici de calmare și de "răcorire" a energiei</b> (meditație statică, respirație profundă, yoga restaurativă).</li>
-                        <li><b>Terapii</b> pentru gestionarea furiei și a tendințelor de control.</li>
-                        <li><b>Cultivarea acceptării, a iertării</b> și a empatiei.</li>
-                        <li><b>Exerciții de "împământare"</b> pentru a stabiliza energia.</li>
-                        <li><b>Practici de "eliberare"</b> a ceea ce nu mai servește (jurnalism, artă).</li>
+                        <li><strong>Nutrițional:</strong> Monitorizarea aportului de seleniu din dietă și suplimente pentru a evita dozele excesive, în special din nuci braziliene sau suplimente.</li>
+                        <li><strong>Minte-corp-spirit:</strong>
+                            <ul>
+                                <li><strong>Practici de eliberare a controlului și a rigidității:</strong> Meditații de acceptare, vizualizări ale renunțării la control. Yoga sau tai chi pentru a cultiva fluiditatea și a reduce tensiunea.</li>
+                                <li><strong>Terapii pentru gestionarea perfecționismului și a judecății:</strong> Lucrul cu ego-ul, cultivarea umilinței și a compasiunii față de propria persoană și față de ceilalți.</li>
+                                <li><strong>Cultivarea spontaneității și a fluidității:</strong> Renunțarea la planuri rigide, permițând adaptabilitatea la fluxul vieții.</li>
+                                <li><strong>Echilibrarea activității cu odihna:</strong> Conștientizarea nevoii de pauze și recuperare pentru a evita "arderea" energetică prin supra-solicitare.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <p class="note">Este esențial ca orice abordare holistică să fie <b>complementară</b> tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
-        </div>
-
-        <div class="index-button-container">
-            <a href="index.html" class="index-button">&larr; Înapoi la indexul mineralelor</a>
+            <p class="note">Este esențial ca orice abordare holistică să fie complementară tratamentului medical și să nu îl înlocuiască, mai ales în cazul unor afecțiuni serioase. Un terapeut holistic poate lucra alături de un medic pentru a oferi o îngrijire integrată.</p>
         </div>
 
         <div class="footer-copyright">
-            Copyright &copy; 2025 NUTRISIB
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
         </div>
     </div>
 </body>
