@@ -1,175 +1,95 @@
 <!DOCTYPE html>
 <html lang="ro">
-<!DOCTYPE html>
-<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan detox</title>
+    <title>Plante Medicinale: Detox & Scăderea Trigliceridelor</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link către fișierul CSS extern -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link către fișierul JS extern pentru paleta de culori și funcții comune -->
+    <script src="script.js"></script>
+    
     <style>
+        /* Culoarea de fundal specifică pentru această pagină suplimentară */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-            box-sizing: border-box;
+            background-color: #ffffff; /* Alb */
         }
-        .infographic-container {
+        .table-container { /* Reutilizăm clasa table-container pentru structura centrală */
             max-width: 900px;
-            width: 100%;
-            background: #ffffff;
+            margin: auto;
+            background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
             overflow: hidden;
             border: 1px solid #e0e0e0;
-        }
-        .infographic-header {
-            background-color: #79a3b1;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 2.2em;
-            font-weight: 700;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-            position: relative;
-        }
-        .infographic-header:before, .infographic-header:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
-        .infographic-header:before {
-            border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
-            bottom: 0;
-            left: 0;
-        }
-        .infographic-header:after {
-            border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
-            top: 0;
-            right: 0;
-        }
-
-        .section {
             padding: 30px 40px;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
         }
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
+        .section-title { /* Reutilizăm stilul pentru titlurile de secțiune */
             font-size: 1.8em;
-            color: #2c3e50;
+            color: #0A2463;
             margin-bottom: 20px;
-            font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
+            font-weight: 700;
+            border-bottom: 2px solid #3E92CC;
             padding-bottom: 5px;
             align-self: stretch;
+            text-align: center;
         }
-        .section-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-            width: 100%;
+        .grid-container { /* Nume nou pentru div-ul grid pentru a evita conflictele */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
-        .subsection {
-            flex: 1;
-            min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        .plant-card { /* Nume nou pentru card-uri */
+            background-color: #f8f9fa; /* Light background for cards */
+            padding: 1.5rem;
+            border-radius: 1rem; /* Rotunjire consistentă */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Umbră consistentă */
+            border-left: 4px solid #3E92CC; /* Culoare albastră consistentă */
             transition: transform 0.2s ease;
         }
-        .subsection:hover {
+        .plant-card:hover {
             transform: translateY(-5px);
         }
-        .subsection-title {
-            font-size: 1.3em;
-            color: #5f8694;
+        .plant-card h3 {
             margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 700; /* Bold */
+            color: #0A2463; /* Dark blue */
+            margin-bottom: 0.75rem;
         }
-        .subsection p, .subsection ul, .subsection ol {
+        .plant-card p {
+            margin: 0.25rem 0;
             font-size: 0.95em;
-            margin-bottom: 10px;
+            color: #475569;
         }
-        .subsection ul, .subsection ol {
-            padding-left: 20px;
+        .highlight {
+            font-weight: 600;
+            color: #0A2463; /* Dark blue from palette */
         }
-        .subsection li {
-            margin-bottom: 5px;
-        }
-        .subsection b {
-            color: #34495e;
-        }
-        .note {
-            font-size: 0.85em;
-            color: #777;
-            margin-top: 20px;
+        .back-button-container {
             text-align: center;
-            width: 100%;
+            margin-bottom: 20px;
         }
-
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #79a3b1;
+        .back-button {
             display: inline-block;
-            vertical-align: middle;
-        }
-        .icon-small {
-            font-size: 1.5em;
-            margin-right: 8px;
-            color: #79b18b;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
+            padding: 10px 20px;
+            background-color: #3E92CC;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+            transition: background-color 0.2s ease;
         }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
+        .back-button:hover {
+            background-color: #0A2463;
         }
-
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
@@ -178,24 +98,8 @@
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
         }
-
-        @media (max-width: 768px) {
-            .section-content {
-                flex-direction: column;
-            }
-            .subsection {
-                min-width: unset;
-            }
-            .infographic-header {
-                font-size: 1.8em;
-            }
-            .section-title {
-                font-size: 1.5em;
-            }
-        }
     </style>
 </head>
-<body>
 <body>
     <div class="infographic-container">
         <div class="infographic-header">
