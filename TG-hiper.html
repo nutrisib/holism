@@ -155,6 +155,31 @@
             min-width: 380px;
             padding: 0 15px;
         }
+          ul1 {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        @media (min-width: 768px) {
+            ul1 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        li1 {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 12px 20px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+        li1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -235,16 +260,16 @@
                     </ul>
                     <div class="columns-container">
                         <div class="column">
-                            <ul>
-                                <li><a href="TG-analize.html"> Analize medicale necesare</a></li>
-                                <li><a href="TG-plan10.html"> Plan de acțiune în 10 pași</a></li>
-                            </ul>
+                            <ul1>
+                                <li1><a href="TG-analize.html"> Analize medicale necesare</a></li1>
+                                <li1><a href="TG-plan10.html"> Plan de acțiune în 10 pași</a></li1>
+                            </ul1>
                         </div>
                         <div class="column">
-                            <ul>
-                                <li><a href="TG-fito.html"> Fito-tratament</a></li>
-                                <li><a href="TG-smoothie.html"> Rețete smoothie</a></li>
-                            </ul>
+                            <ul1>
+                                <li1><a href="TG-fito.html"> Fito-tratament</a></li1>
+                                <li1><a href="TG-smoothie.html"> Rețete smoothie</a></li1>
+                            </ul1>
                         </div>
                     </div>
                 </div>
