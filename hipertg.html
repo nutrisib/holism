@@ -10,18 +10,87 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Link către fișierul CSS extern -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Link către fișierul JS extern pentru paleta de culori și funcții comune -->
-    <script src="script.js"></script>
-    
     <style>
-        /* Culoarea de fundal pentru acest infografic (Pământ/metabolism/acumulare) */
+        /* Stiluri comune pentru infografice - integrate */
         body {
-            background-color: #fffbe6; /* Pale yellow/beige */
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #212529; /* Dark text */
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background-color: #fffbe6; /* Pale yellow/beige for Pământ/metabolism/acumulare */
         }
-        /* Stiluri specifice pentru cardurile de informații */
+        .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .infographic-header {
+            background-color: #0A2463; /* Dark blue from palette */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        .infographic-header:before, .infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #0A2463 transparent; /* Match header background */
+            bottom: 0;
+            left: 0;
+        }
+        .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #0A2463 transparent transparent transparent; /* Match header background */
+            top: 0;
+            right: 0;
+        }
+
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            color: #0A2463; /* Dark blue from palette */
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid #3E92CC; /* Medium blue from palette */
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
         .info-card {
+            flex: 1;
+            min-width: 280px;
             background-color: #ffffff;
             border-radius: 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -73,6 +142,22 @@
             color: #6c757d;
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
+            .info-card {
+                min-width: unset;
+            }
+            .infographic-header {
+                font-size: 1.8em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
