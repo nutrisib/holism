@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lipomul: Analiză holistică și plan terapeutic integrat</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+       
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+    .infographic-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+    .infographic-header {
+            background-color: #0A2463; /* Culoare primara din Fisierul 1 */
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            position: relative;
+        }
+    .infographic-header:before,.infographic-header:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+    .infographic-header:before {
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent #0A2463 transparent;
+            bottom: 0;
+            left: 0;
+        }
+    .infographic-header:after {
+            border-width: 20px 20px 0 0;
+            border-color: #0A2463 transparent transparent transparent;
+            top: 0;
+            right: 0;
+        }
+
+    .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    .section:last-child {
+            border-bottom: none;
+        }
+    .section-title {
+            font-size: 1.8em;
+            color: #0A2463; /* Culoare primara din Fisierul 1 */
+            margin-bottom: 20px;
+            font-weight: 700;
+            border-bottom: 2px solid #3E92CC; /* Culoare de accent din Fisierul 1 */
+            padding-bottom: 5px;
+            align-self: stretch;
+        }
+    .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            width: 100%;
+        }
+        
+        /*
+          STANDARDIZARE: Stilul '.info-card' din Fisierul 1 este folosit ca standard
+          pentru toate cardurile, inlocuind clasa '.card' din Fisierul 2.
+        */
+    .info-card {
+            flex: 1;
+            min-width: 280px;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+    .info-card:hover {
+            transform: translateY(-5px);
+        }
+    .info-card h3 {
+            font-size: 1.3em;
+            color: #0A2463;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+    .info-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 0.95em;
+            color: #475569;
+        }
+    .info-card li {
+            margin-bottom: 5px;
+        }
+    .info-card p {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+    .info-card.border-blue { border-left: 4px solid #3E92CC; }
+    .info-card.border-green { border-left: 4px solid #06D6A0; }
+    .info-card.border-crimson { border-left: 4px solid #D8315B; }
+    .info-card.border-yellow { border-left: 4px solid #F4C150; }
+
+        /* Stil pentru sectiunea de nutritie din Fisierul 2, adaptat */
+    .nutrition-columns {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+        }
+    .column { flex: 1; }
+    .column h3 {
+            font-size: 1.3em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+    .column-start h3 { color: #06D6A0; border-color: #06D6A0; } /* Adaptat la paleta Fisierului 1 */
+    .column-stop h3 { color: #D8315B; border-color: #D8315B; } /* Adaptat la paleta Fisierului 1 */
+    .column ul { list-style-type: none; padding: 0; }
+    .column li { margin-bottom: 12px; display: flex; align-items: center; font-size: 0.95em; color: #475569;}
+    .column li span { font-size: 1.5em; margin-right: 15px; width: 30px; text-align: center; }
+
+    .disclaimer {
+            font-size: 0.85em;
+            color: #D8315B;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #D8315B;
+            border-radius: 10px;
+            background-color: #ffebe6;
+        }
+    .footer-copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85em;
+            color: #6c757d;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+
+        /* --- STILURI PENTRU TAB-URI (MIGRATE DIN FISIERUL 2 SI ADAPTATE) --- */
+    .tabs {
+            display: flex;
+            background-color: #f0f2f5; /* Un gri neutru, in armonie cu paleta */
+            border-bottom: 1px solid #e0e0e0;
+        }
+    .tab-link {
+            padding: 15px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+            font-weight: 600; /* Aliniat la font-weight-ul din Fisierul 1 */
+            color: #475569;
+            transition: all 0.3s ease;
+            flex-grow: 1;
+            text-align: center;
+            border-bottom: 3px solid transparent; /* Tranzitie lina */
+        }
+    .tab-link:hover {
+            background-color: #e4e8ec;
+        }
+    .tab-link.active {
+            color: #0A2463; /* Culoare primara din Fisierul 1 */
+            border-bottom: 3px solid #3E92CC; /* Culoare de accent din Fisierul 1 */
+            background-color: #fff;
+        }
+    .tab-link.warning.active {
+            color: #D8315B; /* Culoare de avertizare din Fisierul 1 */
+            border-bottom: 3px solid #D8315B;
+        }
+
+    .tab-content-container {
+            padding: 0; /* Padding-ul este gestionat de clasa.section */
+        }
+    .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+    .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- STILURI RESPONSIVE (COMBINATE) --- */
+        @media (max-width: 768px) {
+        .section { padding: 20px; }
+        .section-content,.nutrition-columns {
+                flex-direction: column;
+            }
+        .info-card { min-width: unset; }
+        .infographic-header { font-size: 1.8em; }
+        .section-title { font-size: 1.5em; }
+        .tabs { flex-direction: column; }
+        .tab-link { border-bottom: 1px solid #ddd; }
+        .tab-link.active { border-bottom: 3px solid #3E92CC; }
+        .tab-link.warning.active { border-bottom: 3px solid #D8315B; }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        
+        <div class="infographic-header">
+            Lipomul: Analiză holistică și plan terapeutic integrat
+        </div>
+
+        <nav class="tabs">
+            <button class="tab-link active" data-tab="analiza">🔬 Analiză Holistică</button>
+            <button class="tab-link" data-tab="plan">📜 Plan Terapeutic</button>
+            <button class="tab-link" data-tab="echilibru">⚖️ Calea spre Echilibru</button>
+            <button class="tab-link warning" data-tab="avertisment">⚠️ Avertisment Medical</button>
+        </nav>
+
+        <div class="tab-content-container">
+
+            <div id="analiza" class="tab-content active">
+                <section class="section">
+                    <h2 class="section-title">Perspectiva fizică: înțelegerea lipomului</h2>
+                    <div class="section-content">
+                        <div class="info-card border-blue">
+                            <h3>Ce este un lipom?</h3>
+                            <p>Un lipom este o tumoră benignă (necanceroasă) formată din țesut adipos (grăsime). Este, de obicei, o masă moale, mobilă, nedureroasă, situată chiar sub piele.[5] Lipomii pot apărea oriunde pe corp unde există celule adipoase, dar sunt cel mai frecvent întâlniți pe trunchi, gât, umeri, spate și brațe.[6]</p>
+                            <ul>
+                                <li><b>Natură:</b> Benignă (necanceroasă).</li>
+                                <li><b>Compoziție:</b> Celule adipoase mature.</li>
+                                <li><b>Consistență:</b> Moale, cauciucată.</li>
+                                <li><b>Mobilitate:</b> Se mișcă ușor sub piele la palpare.</li>
+                                <li><b>Durere:</b> De obicei nedureroși, dar pot deveni dureroși dacă apasă pe nervi sau dacă sunt inflamați.[5]</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-green">
+                            <h3>Cauze fizice și factori de risc</h3>
+                            <p>Cauza exactă a lipomilor nu este pe deplin înțeleasă, dar se crede că o combinație de factori genetici și de mediu joacă un rol.[5, 7]</p>
+                            <ul>
+                                <li><b>Genetică:</b> Există o predispoziție familială, sugerând o componentă genetică. Persoanele cu istoric familial de lipoame sunt mai predispuse să le dezvolte.[8]</li>
+                                <li><b>Obezitate:</b> Deși nu este o cauză directă, obezitatea poate crește riscul de a dezvolta lipoame, deoarece implică o cantitate mai mare de țesut adipos.[9]</li>
+                                <li><b>Vârsta:</b> Sunt mai frecvente la adulții de vârstă mijlocie (între 40 și 60 de ani), dar pot apărea la orice vârstă.[5]</li>
+                                <li><b>Anumite condiții medicale:</b>
+                                    <ul>
+                                        <li><b>Sindromul Gardner:</b> O tulburare genetică rară care implică creșteri multiple de țesuturi, inclusiv lipoame.[5]</li>
+                                        <li><b>Adipoză dureroasă (boala Dercum):</b> O afecțiune rară caracterizată prin creșteri multiple, dureroase, de țesut adipos.[5]</li>
+                                        <li><b>Sindromul Madelung:</b> O afecțiune rară care provoacă acumulări simetrice de grăsime în jurul gâtului și umerilor.[10]</li>
+                                    </ul>
+                                </li>
+                                <li><b>Traumatisme:</b> Unele studii sugerează că un traumatism fizic minor într-o anumită zonă poate declanșa formarea unui lipom.[11, 12]</li>
+                                <li><b>Metabolismul lipidelor:</b> Posibile disfuncții în metabolismul grăsimilor la nivel local, cum ar fi hiperlipidemia.[7]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section-title">Perspectiva holistică: mesajul lipomului</h2>
+                    <p>Din perspectivă holistică, orice manifestare fizică în corp este considerată un mesaj al subconștientului, o expresie a unor emoții, gânduri sau tipare energetice nerezolvate. Lipomul, ca o acumulare benignă de grăsime, este adesea interpretat ca o "stocare" sau "îngrădire" a ceva la nivel emoțional sau energetic.</p>
+                    <div class="section-content">
+                        <div class="info-card border-yellow">
+                            <h3>Semnificația acumulării de grăsime (lipom)</h3>
+                            <ul>
+                                <li><b>Stocarea emoțiilor nerezolvate:</b> Grăsimea poate simboliza emoții sau traume pe care le "ținem" în noi, refuzând să le eliberăm. Poate fi furie, tristețe, resentimente, vinovăție sau frică.</li>
+                                <li><b>Protecție și autoapărare:</b> Lipomul poate fi o "barieră" fizică sau energetică pe care corpul o creează pentru a se proteja de o amenințare percepută, de durere emoțională sau de influențe externe.</li>
+                                <li><b>Sentiment de insecuritate:</b> Acumularea de grăsime poate fi legată de o nevoie profundă de siguranță și confort, o încercare a corpului de a crea o "rezervă" sau un "tampon".</li>
+                                <li><b>Dificultatea de a "lăsa să plece":</b> Poate indica o rezistență la schimbare, o dificultate de a renunța la vechi tipare, credințe sau relații care nu mai servesc.</li>
+                                <li><b>"Îngrădirea" vitalității sau a potențialului:</b> Grăsimea poate simboliza și un potențial neexprimat, o creativitate blocată sau o vitalitate care este "stocată".</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-crimson">
+                            <h3>Semnificația localizării: gât, sub ureche, față (partea dreaptă)</h3>
+                            <p>Localizarea specifică a lipomului adaugă straturi de semnificație holistică:</p>
+                            <ul>
+                                <li><b>Gâtul:</b> Este centrul comunicării și al auto-exprimării (asociat cu chakra gâtului - Vishuddha). Problemele la gât sunt adesea legate de dificultăți în a-ți exprima adevărul.</li>
+                                <li><b>Sub ureche:</b> Poate indica o dificultate de a "asculta" anumite lucruri (adevăruri neplăcute, critici) sau o senzație de a fi "bombardat" cu informații.</li>
+                                <li><b>Fața:</b> Reprezintă modul în care ne prezentăm lumii, identitatea noastră. Un lipom pe față poate indica probleme legate de auto-imagine, frica de judecată.</li>
+                                <li><b>Partea dreaptă a corpului:</b> În tradițiile holistice, partea dreaptă este asociată cu principiul masculin, lumea exterioară, acțiunea și controlul. Un lipom aici ar putea sugera o "stocare" de furie sau frustrare legată de aceste aspecte.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="plan" class="tab-content">
+                <section class="section">
+                    <h2 class="section-title">De ce apare un Lipom? (Perspectiva Holistică)</h2>
+                    <div class="section-content">
+                        <div class="info-card border-blue"><h3>💧 Stagnare Limfatică</h3><p>Sistemul de "curățenie" al organismului este lent sau blocat, o posibilă cauză a acumulărilor de țesut.[13]</p></div>
+                        <div class="info-card border-blue"><h3>⚖️ Ficat Supraîncărcat</h3><p>"Procesorul" de grăsimi al corpului este copleșit de toxine, ceea ce poate duce la abuz de alcool sau boli hepatice.[9]</p></div>
+                        <div class="info-card border-blue"><h3>⚙️ Dezechilibru Metabolic</h3><p>Dificultăți în procesarea eficientă a zahărului și a grăsimilor, cum ar fi în cazul diabetului sau intoleranței la glucoză.[14]</p></div>
+                        <div class="info-card border-blue"><h3>🔥 Inflamație Cronică</h3><p>O stare de "alertă" constantă în organism care favorizează diverse afecțiuni, inclusiv creșterea țesuturilor.[11]</p></div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Pilonul 1: Nutriția Anti-inflamatoare</h2>
+                    <div class="nutrition-columns">
+                        <div class="column column-start">
+                            <h3>✔️ START</h3>
+                            <ul>
+                                <li><span>🥦</span><strong>Crucifere:</strong> Broccoli, varză, conopidă pentru detoxifierea ficatului.</li>
+                                <li><span>🥬</span><strong>Frunze Verzi:</strong> Spanac, kale, salată pentru antioxidanți.[15]</li>
+                                <li><span>🐟</span><strong>Omega-3:</strong> Somon, sardine, nuci, semințe de in pentru a reduce inflamația.[16]</li>
+                                <li><span>🥑</span><strong>Grăsimi Sănătoase:</strong> Avocado, ulei de măsline extravirgin.</li>
+                                <li><span>🍓</span><strong>Fructe de Pădure:</strong> Afine, zmeură, mure, pline de antioxidanți.[16]</li>
+                                <li><span>💧</span><strong>Hidratare:</strong> Apă, ceai verde, ceai de păpădie.[17]</li>
+                            </ul>
+                        </div>
+                        <div class="column column-stop">
+                            <h3>❌ STOP</h3>
+                            <ul>
+                                <li><span>🍰</span><strong>Zahăr și Făină Albă:</strong> Dulciuri, patiserie, pâine albă.</li>
+                                <li><span>🍟</span><strong>Prăjeli și Grăsimi Nocive:</strong> Uleiuri vegetale procesate, margarină.</li>
+                                <li><span>🌭</span><strong>Alimente Procesate:</strong> Mezeluri, mâncare fast-food, aditivi.[16]</li>
+                                <li><span>🍷</span><strong>Alcool:</strong> Toxină directă pentru ficat, asociată cu anumite tipuri de lipomatoză.[10]</li>
+                                <li><span>🥛</span><strong>Lactate și Gluten:</strong> De testat eliminarea lor, pot fi pro-inflamatorii pentru anumite persoane.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Pilonul 2: Terapii Alternative & Stil de Viață</h2>
+                    <div class="section-content">
+                        <div class="info-card border-green">
+                            <h3>Aplicații Locale</h3>
+                            <ul>
+                                <li><strong>Ulei de Ricin:</strong> Compresă caldă pe zonă, 30-60 min. Deși dovezile științifice sunt limitate, se crede că stimulează circulația și reduce inflamația.[18, 19]</li>
+                                <li><strong>Uleiuri Esențiale:</strong> Masaj ușor cu amestec de Tămâie, Tea Tree și Grepfrut în ulei purtător. Acestea au proprietăți anti-inflamatorii.[20, 21]</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-green">
+                            <h3>Suport din Plante</h3>
+                             <ul>
+                                <li><strong>Armurariu (Milk Thistle):</strong> Protector și regenerator hepatic.[17]</li>
+                                <li><strong>Păpădie (Dandelion):</strong> Stimulează bila și detoxifierea.[17]</li>
+                                <li><strong>Turmeric (Curcumă):</strong> Puternic anti-inflamator natural.[15]</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-green">
+                            <h3>Terapii Fizice</h3>
+                            <ul>
+                                <li><strong>Drenaj Limfatic:</strong> Terapie CHEIE. Un specialist poate debloca limfa stagnantă prin masaj specific, blând.[22, 23]</li>
+                                <li><strong>Acupunctură:</strong> Poate ajuta la echilibrarea energiei meridianelor metabolice.</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-green">
+                            <h3>Stil de Viață</h3>
+                            <ul>
+                                <li><strong>Mișcare Zilnică:</strong> Mers pe jos, yoga, înot pentru a stimula circulația și transpirația.[13]</li>
+                                <li><strong>Managementul Stresului:</strong> Meditație, respirație profundă pentru a reduce cortizolul.[24]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div id="echilibru" class="tab-content">
+                <section class="section">
+                    <h2 class="section-title">Calea spre echilibru: o abordare holistică integrată</h2>
+                    <p>Abordarea unui lipom din perspectivă holistică implică explorarea și eliberarea tiparelor emoționale și energetice subiacente, alături de gestionarea aspectelor fizice. Este esențial ca această abordare să fie complementară tratamentului medical și să nu îl înlocuiască.</p>
+                    <div class="section-content">
+                        <div class="info-card border-blue">
+                            <h3>1. Suport fizic și nutrițional</h3>
+                            <ul>
+                                <li><b>Consult medical:</b> Primul pas este întotdeauna consultarea unui medic pentru un diagnostic precis și excluderea altor afecțiuni.[8]</li>
+                                <li><b>Detoxifiere și suport hepatic:</b> O dietă bogată în alimente integrale, cu accent pe legume verzi, fructe de pădure, alimente amare, care susțin funcția hepatică.[16]</li>
+                                <li><b>Hidratare optimă:</b> Consumul adecvat de apă pură pentru a susține eliminarea toxinelor.</li>
+                                <li><b>Suport limfatic:</b> Masaj limfatic, periaj uscat, activitate fizică moderată pentru a stimula circulația limfei.[22]</li>
+                                <li><b>Echilibru hormonal:</b> Evaluarea și, dacă este necesar, echilibrarea hormonală sub îndrumare medicală.</li>
+                                <li><b>Suplimente (sub îndrumare):</b> Colina, inozitol, L-metionină, extract de anghinare, armurariu. Omega-3 pentru reducerea inflamației.</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-yellow">
+                            <h3>2. Eliberare emoțională și echilibrare energetică</h3>
+                            <ul>
+                                <li><b>Jurnalism terapeutic:</b> Scrie despre emoțiile refulate și frustrările legate de comunicare.</li>
+                                <li><b>Terapie și coaching:</b> Lucrul cu un terapeut pentru a procesa traumele nerezolvate și a dezvolta strategii de comunicare asertivă.</li>
+                                <li><b>Practici de auto-exprimare:</b> Cântat, vorbit în public, art-terapie, scris creativ.</li>
+                                <li><b>Meditație și vizualizare:</b> Meditații de eliberare a tensiunii din gât și umeri.</li>
+                                <li><b>Lucrul cu relația paternă:</b> Explorarea relației cu tatăl sau cu arhetipul masculin poate fi benefică.</li>
+                                <li><b>Afirmații pozitive:</b> Formularea și repetarea de afirmații precum: "Îmi exprim adevărul cu ușurință și grație."</li>
+                            </ul>
+                        </div>
+                        <div class="info-card border-green">
+                            <h3>3. Stil de viață și managementul stresului</h3>
+                            <ul>
+                                <li><b>Gestionarea stresului:</b> Practici precum yoga, tai chi, respirația profundă, mindfulness reduc nivelul de cortizol.[24]</li>
+                                <li><b>Somn odihnitor:</b> Asigurarea unui somn de 7-8 ore pe noapte este crucială pentru regenerare.</li>
+                                <li><b>Activitate fizică regulată:</b> Mișcarea stimulează circulația sanguină și limfatică.</li>
+                                <li><b>Conexiunea cu natura:</b> Timpul petrecut în natură poate ajuta la eliberarea energiei stagnante.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div id="avertisment" class="tab-content">
+                <section class="section">
+                    <div class="disclaimer">
+                        <h2 class="section-title" style="color: #D8315B; border-color: #D8315B; text-align: left; font-size: 1.5em;">⚠️ ATENȚIE: Informație Crucială de Siguranță</h2>
+                        <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-top: 15px;">
+                            <li style="margin-bottom: 10px;"><strong>Consultați un medic!</strong> Acest plan este un suport complementar, NU un înlocuitor pentru diagnosticul și tratamentul medical avizat.</li>
+                            <li style="margin-bottom: 10px;"><strong>Confirmarea este esențială:</strong> Doar un medic (dermatolog, chirurg) poate confirma 100% că formațiunea este un lipom benign și nu o altă afecțiune (precum un liposarcom) care necesită tratament de urgență.[5, 8]</li>
+                            <li style="margin-bottom: 10px;"><strong>Discutați deschis cu medicul:</strong> Informați medicul despre intenția de a urma acest plan pentru a vă asigura că nu interferează cu alte condiții de sănătate sau tratamente pe care le urmați. Siguranța dumneavoastră este prioritară.</li>
+                            <li style="margin-bottom: 0;"><strong>Declinarea responsabilității:</strong> Informațiile prezentate aici sunt doar cu scop educațional și informativ. Nu trebuie să vă bazați pe ele pentru a diagnostica sau trata o afecțiune. Consultați întotdeauna un specialist calificat pentru orice problemă de sănătate.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section">
+                    <h2 class="section-title">Referințe</h2>
+                    <div class="info-card border-blue" style="flex-basis: 100%; min-width: 100%;">
+                        <ol style="padding-left: 20px; font-size: 0.9em; line-height: 1.5; color: #475569;">
+                            <li style="margin-bottom: 10px;">Termly. (2024, 1 februarie). *Medical Disclaimer Examples*. Preluat de pe <a href="https://termly.io/resources/articles/medical-disclaimer-examples/" target="_blank" style="color: #3E92CC;">https://termly.io/resources/articles/medical-disclaimer-examples/</a></li>
+                            <li style="margin-bottom: 10px;">GetTerms.io. *Medical Disclaimer Template*. Preluat de pe <a href="https://getterms.io/templates/medical-disclaimer-template" target="_blank" style="color: #3E92CC;">https://getterms.io/templates/medical-disclaimer-template</a></li>
+                            <li style="margin-bottom: 10px;">The Holistic Counseling Center. *Medical Disclaimer*. Preluat de pe <a href="https://www.theholisticcounseling.center/medical-disclaimer" target="_blank" style="color: #3E92CC;">https://www.theholisticcounseling.center/medical-disclaimer</a></li>
+                            <li style="margin-bottom: 10px;">UW Medicine. *Copyright and Healthcare Disclaimer*. Preluat de pe <a href="https://www.uwmedicine.org/about/compliance/disclaimer" target="_blank" style="color: #3E92CC;">https://www.uwmedicine.org/about/compliance/disclaimer</a></li>
+                            <li style="margin-bottom: 10px;">Cleveland Clinic. (2022). *Lipomas*. Preluat de pe <a href="https://my.clevelandclinic.org/health/diseases/15008-lipomas" target="_blank" style="color: #3E92CC;">https://my.clevelandclinic.org/health/diseases/15008-lipomas</a></li>
+                            <li style="margin-bottom: 10px;">drcolinhong.com. (2023, 30 martie). *Everything You Need to Know About Lipoma*. Preluat de pe <a href="https://www.drcolinhong.com/learn/everything-you-need-to-know-about-lipoma/" target="_blank" style="color: #3E92CC;">https://www.drcolinhong.com/learn/everything-you-need-to-know-about-lipoma/</a></li>
+                            <li style="margin-bottom: 10px;">Charifa, A., et al. (2023). *Lipoma*. NCBI Bookshelf. Preluat de pe <a href="https://www.ncbi.nlm.nih.gov/books/NBK482343/" target="_blank" style="color: #3E92CC;">https://www.ncbi.nlm.nih.gov/books/NBK482343/</a></li>
+                            <li style="margin-bottom: 10px;">OncoDaily. (2025, 5 februarie). *Lipoma: Symptoms, Causes, Stages, Diagnosis and Treatment*. Preluat de pe <a href="https://oncodaily.com/oncolibrary/cancer-types/lipoma" target="_blank" style="color: #3E92CC;">https://oncodaily.com/oncolibrary/cancer-types/lipoma</a></li>
+                            <li style="margin-bottom: 10px;">GoodRx. *Lipomas*. Preluat de pe <a href="https://www.goodrx.com/health-topic/dermatology/lipoma" target="_blank" style="color: #3E92CC;">https://www.goodrx.com/health-topic/dermatology/lipoma</a></li>
+                            <li style="margin-bottom: 10px;">Pharmeasy. *Best Home Remedies for Lipoma*. Preluat de pe <a href="https://pharmeasy.in/blog/best-home-remedies-for-lipoma/" target="_blank" style="color: #3E92CC;">https://pharmeasy.in/blog/best-home-remedies-for-lipoma/</a></li>
+                            <li style="margin-bottom: 10px;">Aust, M. C., et al. (2007). *Lipomas after blunt soft tissue trauma: Are they real? Analysis of 31 cases*. ResearchGate. Preluat de pe <a href="https://www.researchgate.net/publication/6283763_Lipomas_after_blunt_soft_tissue_trauma_Are_they_real_Analysis_of_31_cases" target="_blank" style="color: #3E92CC;">https://www.researchgate.net/publication/6283763_Lipomas_after_blunt_soft_tissue_trauma_Are_they_real_Analysis_of_31_cases</a></li>
+                            <li style="margin-bottom: 10px;">Cleveland Clinic. (2022). *Intramuscular Lipoma*. Preluat de pe <a href="https://my.clevelandclinic.org/health/diseases/23907-intramuscular-lipoma" target="_blank" style="color: #3E92CC;">https://my.clevelandclinic.org/health/diseases/23907-intramuscular-lipoma</a></li>
+                            <li style="margin-bottom: 10px;">Wikipedia. *Familial multiple lipomatosis*. Preluat de pe <a href="https://en.wikipedia.org/wiki/Familial_multiple_lipomatosis" target="_blank" style="color: #3E92CC;">https://en.wikipedia.org/wiki/Familial_multiple_lipomatosis</a></li>
+                            <li style="margin-bottom: 10px;">Al-Zoubaidi, M. S., et al. (2024). *Multiple Subcutaneous Lipomas: A Case Report and Review of the Literature*. PMC. Preluat de pe <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11993897/" target="_blank" style="color: #3E92CC;">https://pmc.ncbi.nlm.nih.gov/articles/PMC11993897/</a></li>
+                            <li style="margin-bottom: 10px;">Prodia Digital. *Foods That Help Reduce Lipoma*. Preluat de pe <a href="https://prodiadigital.com/en/articles/foods-that-help-reduce-lipoma" target="_blank" style="color: #3E92CC;">https://prodiadigital.com/en/articles/foods-that-help-reduce-lipoma</a></li>
+                            <li style="margin-bottom: 10px;">The Minor Surgery Center. (2025, 27 iunie). *New Research of Lipoma 2025: Groundbreaking Advances in Treatment and Understanding*. Preluat de pe <a href="https://www.theminorsurgerycenter.com/blog/new-research-of-lipoma-2025" target="_blank" style="color: #3E92CC;">https://www.theminorsurgerycenter.com/blog/new-research-of-lipoma-2025</a></li>
+                            <li style="margin-bottom: 10px;">Walmart. *Milk Thistle, Dandelion, and Turmeric Supplements*. Preluat de pe <a href="https://www.walmart.com/c/kp/milk-thistle-dandelion-and-turmeric-supplements-u" target="_blank" style="color: #3E92CC;">https://www.walmart.com/c/kp/milk-thistle-dandelion-and-turmeric-supplements-u</a></li>
+                            <li style="margin-bottom: 10px;">The Minor Surgery Center. (2025, 24 iunie). *Does Castor Oil Work for Lipomas?*. Preluat de pe <a href="https://www.theminorsurgerycenter.com/blog/does-castor-oil-work-for-lipomas" target="_blank" style="color: #3E92CC;">https://www.theminorsurgerycenter.com/blog/does-castor-oil-work-for-lipomas</a></li>
+                            <li style="margin-bottom: 10px;">Jain, A. (2025, 16 aprilie). *Castor Oil: A Natural Remedy for Lipoma Treatment?*. Preluat de pe <a href="https://www.dramitajain.com/blog/2025/04/16/castor-oil-natural-remedy-lipoma-treatment/" target="_blank" style="color: #3E92CC;">https://www.dramitajain.com/blog/2025/04/16/castor-oil-natural-remedy-lipoma-treatment/</a></li>
+                            <li style="margin-bottom: 10px;">eBay. *Lipoma essential oil blend roller*. Preluat de pe <a href="https://www.ebay.com/itm/224634706651" target="_blank" style="color: #3E92CC;">https://www.ebay.com/itm/224634706651</a></li>
+                            <li style="margin-bottom: 10px;">Alaska Dream Botanicals. *Lipoma Treatment Roll-on Healing Oils*. Preluat de pe <a href="https://alaskandreambotanicals.com/products/lipoma-treatment-roll-on-healing-oils" target="_blank" style="color: #3E92CC;">https://alaskandreambotanicals.com/products/lipoma-treatment-roll-on-healing-oils</a></li>
+                            <li style="margin-bottom: 10px;">Physio-pedia. *Manual Lymphatic Drainage*. Preluat de pe <a href="https://www.physio-pedia.com/Manual_Lymphatic_Drainage" target="_blank" style="color: #3E92CC;">https://www.physio-pedia.com/Manual_Lymphatic_Drainage</a></li>
+                            <li style="margin-bottom: 10px;">Lipedema.net. *Self Manual Lymph Drainage*. Preluat de pe <a href="https://lipedema.net/self-manual-lymph-drainage/" target="_blank" style="color: #3E92CC;">https://lipedema.net/self-manual-lymph-drainage/</a></li>
+                            <li style="margin-bottom: 10px;">The Minor Surgery Center. *How to Remove a Lipoma Yourself*. Preluat de pe <a href="https://www.theminorsurgerycenter.com/blog/how-to-remove-a-lipoma-yourself" target="_blank" style="color: #3E92CC;">https://www.theminorsurgerycenter.com/blog/how-to-remove-a-lipoma-yourself</a></li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+        <footer class="footer-copyright">
+            <p>Copyright: dr.ing. Radu Pascu - 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-link');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Elimina clasa 'active' de la toate tab-urile si continuturile
+                    tabs.forEach(item => item.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Adauga clasa 'active' la tab-ul apasat si la continutul corespunzator
+                    const targetContent = document.getElementById(this.dataset.tab);
+                    this.classList.add('active');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
