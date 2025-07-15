@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hipertrigliceridemie</title>
+    <title>Plan de acțiune: Hipertrigliceridemie Severă - ReDefine</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #e9ecef;
-            color: #343a40;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-            box-sizing: border-box;
+            background-color: #fffbe6; /* Pale yellow/beige for Pământ/metabolism/acumulare */
         }
         .infographic-container {
             max-width: 900px;
@@ -26,7 +27,7 @@
             border: 1px solid #e0e0e0;
         }
         .infographic-header {
-            background-color: #79a3b1;
+            background-color: #0A2463;
             color: white;
             padding: 30px 20px;
             text-align: center;
@@ -44,13 +45,13 @@
         }
         .infographic-header:before {
             border-width: 0 0 20px 20px;
-            border-color: transparent transparent #5f8694 transparent;
+            border-color: transparent transparent #0A2463 transparent;
             bottom: 0;
             left: 0;
         }
         .infographic-header:after {
             border-width: 20px 20px 0 0;
-            border-color: #5f8694 transparent transparent transparent;
+            border-color: #0A2463 transparent transparent transparent;
             top: 0;
             right: 0;
         }
@@ -68,10 +69,10 @@
 
         .section-title {
             font-size: 1.8em;
-            color: #2c3e50;
+            color: #0A2463;
             margin-bottom: 20px;
-            font-weight: 600;
-            border-bottom: 2px solid #a3d9ff;
+            font-weight: 700;
+            border-bottom: 2px solid #3E92CC;
             padding-bottom: 5px;
             align-self: stretch;
         }
@@ -81,93 +82,53 @@
             gap: 25px;
             width: 100%;
         }
-        .subsection {
+        .info-card {
             flex: 1;
             min-width: 280px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 1rem;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 20px;
             transition: transform 0.2s ease;
         }
-        .subsection:hover {
+        .info-card:hover {
             transform: translateY(-5px);
         }
-        .subsection-title {
+        .info-card h3 {
             font-size: 1.3em;
-            color: #5f8694;
+            color: #0A2463;
             margin-top: 0;
             margin-bottom: 15px;
             font-weight: 600;
-            display: flex;
-            align-items: center;
         }
-        .subsection p, .subsection ul, .subsection ol {
+        .info-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 0.95em;
+            color: #475569;
+        }
+        .info-card li {
+            margin-bottom: 5px;
+        }
+        .info-card p {
             font-size: 0.95em;
             margin-bottom: 10px;
         }
-        .subsection ul, .subsection ol {
-            padding-left: 20px;
-        }
-        .subsection li {
-            margin-bottom: 5px;
-        }
-        .subsection b {
-            color: #34495e;
-        }
-        .note {
+        .info-card.border-blue { border-left: 4px solid #3E92CC; }
+        .info-card.border-green { border-left: 4px solid #06D6A0; }
+        .info-card.border-crimson { border-left: 4px solid #D8315B; }
+        .info-card.border-yellow { border-left: 4px solid #F4C150; }
+
+        .disclaimer {
             font-size: 0.85em;
-            color: #777;
-            margin-top: 20px;
+            color: #D8315B;
             text-align: center;
-            width: 100%;
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px solid #D8315B;
+            border-radius: 10px;
+            background-color: #ffebe6;
         }
-
-        .subsection ol ul {
-            list-style: circle;
-            margin-left: 15px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        .icon {
-            font-size: 1.8em;
-            margin-right: 10px;
-            color: #79a3b1;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .icon-small {
-            font-size: 1.5em;
-            margin-right: 8px;
-            color: #79b18b;
-            display: inline-block;
-            vertical-align: middle;
-        }
-
-        .index-button-container {
-            text-align: center;
-            padding: 20px 40px;
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .index-button {
-            display: inline-block;
-            padding: 12px 25px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 1em;
-            transition: background-color 0.2s ease, transform 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-        }
-        .index-button:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
         .footer-copyright {
             text-align: center;
             padding: 20px 0;
@@ -175,21 +136,6 @@
             color: #6c757d;
             border-top: 1px solid #e0e0e0;
             margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .section-content {
-                flex-direction: column;
-            }
-            .subsection {
-                min-width: unset;
-            }
-            .infographic-header {
-                font-size: 1.8em;
-            }
-            .section-title {
-                font-size: 1.5em;
-            }
         }
     </style>
 </head>
@@ -200,11 +146,11 @@
         </div>
 
         <section class="section">
-            <h2 class="section-title">Recâștigă-ți controlul: înțelegerea mizei și a riscurilor</h2>
+            <h2 class="section-title">O. Recâștigă-ți controlul: înțelegerea mizei și a riscurilor</h2>
             <div class="section-content">
                 <div class="info-card border-crimson">
                     <h3>Miza discuției noastre: un semnal de alarmă serios</h3>
-                    <p><b>Stimate client,</b></p>
+                    <p>Stimate/ă client/ă,</p>
                     <p>Îți mulțumesc pentru încrederea acordată. Diagnosticul tău de **hipertrigliceridemie severă** nu este doar un simplu indicator biochimic depășit; este un semnal de alarmă serios pe care organismul ți-l transmite și care necesită o intervenție imediată și decisivă. Este un moment de cotitură, o oportunitate de a prelua controlul asupra sănătății tale și de a-ți redefini viitorul.</p>
                     <p>Trigliceridele (grăsimile) sunt principala formă de energie stocată de organism. Ele circulă în sânge pentru a fi utilizate imediat de celule sau depozitate în țesutul adipos. Când analizele tale de sânge indică valori care depășesc **1000 mg/dL**, intrăm în teritoriul **hipertrigliceridemiei severe**. La acest nivel, sângele tău își schimbă proprietățile fizice; devine lactescent, opac, similar ca aspect cu laptele. Vâscozitatea sângelui tău crește, iar microcirculația la nivelul organelor delicate este îngreunată.</p>
                 </div>
